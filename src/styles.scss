@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../src/assets/fonts/Poppins-Regular.ttf);
+}
+
+body {
+    font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
