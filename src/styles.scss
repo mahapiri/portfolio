@@ -3,7 +3,31 @@
     src: url(../src/assets/fonts/Poppins-Regular.ttf);
 }
 
+:root {
+    --dark-blue: rgba(20, 29, 47, 1);
+    --white: rgba(255, 255, 255, 1);
+
+}
+
 body {
     font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: var(--white);
     margin: 0;
+    background-color: var(--dark-blue);
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+.body-div {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    user-select: none;
 }

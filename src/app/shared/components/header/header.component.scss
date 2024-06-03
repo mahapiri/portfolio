@@ -1,0 +1,21 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    padding: 37px 100px;
+    width: 100%;
+    max-width: 1440px;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.header-links {
+    display: flex;
+    gap: 29px;
+
+
+} 
