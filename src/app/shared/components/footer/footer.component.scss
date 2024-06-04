@@ -1,9 +1,8 @@
 section {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    border-top: 4px solid var(--light-blue);
 }
 
 footer {
@@ -15,7 +14,6 @@ footer {
     width: 100%;
     height: 291px;
     max-width: 1440px;
-    border-top: 4px solid var(--light-blue);
 
     a {
         margin-left: 4px;
