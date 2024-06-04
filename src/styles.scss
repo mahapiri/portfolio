@@ -13,16 +13,14 @@ body {
     font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     color: var(--white);
-    margin: 0;
-    background-color: var(--dark-blue);
     width: 100vw;
     height: 100vh;
-    display: block;
+    margin: 0;
+    background-color: var(--dark-blue);
 }
 
-.body-div {
-    display: flex;
-    justify-content: center;
+.root-div {
+    width: 100%;
 }
 
 a {
