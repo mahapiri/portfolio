@@ -24,15 +24,3 @@ header {
     display: flex;
     gap: 29px;
 } 
-
-.logo {
-    font-variant: small-caps;
-    font-weight: bolder;
-    font-size: 64px;
-    font-weight: 600;
-    margin: 0;
-
-    &:first-letter {
-        color: #4B47FF;
-    } 
-}
