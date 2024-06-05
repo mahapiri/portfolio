@@ -1,1 +1,30 @@
-<p>work works!</p>
+<section *ngFor="let project of work; let i = index">
+    <div *ngIf="1 % 2 === 0; else oddTemplate">
+        <div class="left-section">
+            <img src="{{ project.img }}" alt="">
+        </div>
+        <div class="right-section">
+            <h3>{{ project.title }}</h3>
+            <h4>{{ project.subtitle }}</h4>
+            <p>{{ project.description }}</p>
+            <div class="btn-div">
+                <button class="livetest-btn">Live Test</button>
+                <button class="github-btn">Github</button>
+            </div>
+        </div>
+    </div>
+    <ng-template #oddTemplate>
+        <div class="right-section">
+            <h3>{{ project.title }}</h3>
+            <h4>{{ project.subtitle }}</h4>
+            <p>{{ project.description }}</p>
+            <div class="btn-div">
+                <button class="livetest-btn">Live Test</button>
+                <button class="github-btn">Github</button>
+            </div>
+        </div>
+        <div class="left-section">
+            <img src="{{ project.img }}" alt="">
+        </div>
+    </ng-template>
+</section>
