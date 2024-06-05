@@ -66,13 +66,6 @@
     transform: rotate(270deg);
 }
 
-.title-name {
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 108px;
-    margin: 0;
-}
-
 .title-profession {
     font-size: 58px;
     line-height: 69.6px;
@@ -98,6 +91,7 @@
 .contact-div {
     position: absolute;
     left: 0;
+    bottom: 210px;
 }
 
 .contact-section {
@@ -111,6 +105,7 @@
 .scroll-div {
     position: absolute;
     right: 0;
+    bottom: 255px;
 }
 
 .scroll-section {

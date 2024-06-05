@@ -1,0 +1,64 @@
+section {
+    display: flex;
+    justify-content: center;
+}
+
+
+.text-div {
+    gap: 35px;
+}
+
+.keys-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 35px;
+}
+
+.keys-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.icon {
+    width: 34.7px;
+    height: 50px;
+    margin-top: 4px;
+
+    &:hover {
+        transform: scale(1.2);
+        transition: linear 125ms ease-out;
+    }
+}
+
+.img-div {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 453px;
+    height: 453px;
+    border: 4px solid var(--light-blue);
+    border-radius: 50%;
+    object-fit: cover;
+
+    img {
+        width: 453px;
+        height: 453px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.border {
+    width: 267px;
+    height: 0;
+    border-top: 4px solid var(--light-blue);
+}
