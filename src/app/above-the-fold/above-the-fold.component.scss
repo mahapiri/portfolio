@@ -1,10 +1,10 @@
 .atf {
     height: 100vh;
     width: 100%;
-    background-image: url(/assets/img/atf-shape.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    // background-image: url(/assets/img/atf-shape.png);
+    // background-position: bottom;
+    // background-repeat: no-repeat;
+    // background-size: contain;
 
     button {
         border: 0px;
@@ -31,8 +31,15 @@
 .profile-img {
     width: 646px;
     height: 705px;
+    position: absolute;
 }
 
 .iam {
+    position: absolute;
     transform: rotate(270deg);
+}
+
+.shape {
+    width: 100%;
+    position: relative;
 }
