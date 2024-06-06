@@ -1,7 +1,10 @@
 section {
+    position: fixed;
+    z-index: 1;
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--dark-blue);
 }
 
 
@@ -22,5 +25,38 @@ header {
 
 .header-links {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 29px;
+
+    a{
+        font-size: 23px;
+        line-height: 27.6px;
+        height: 32px;
+    }
+
+    a:hover {
+        color: var(--light-blue);
+    }
+
+    a:visited {
+        content: '';
+        display: block;
+        border-bottom: 3px solid var(--purple);
+        width: 55.5px;
+        transition: linear 200ms ease-in-out;
+        margin-top: 4px;
+    }
 } 
+
+.about-me {
+    width: 114px;
+}
+
+.skills {
+    width: 57px;
+}
+
+.portfolios {
+    width: 95px;
+}
