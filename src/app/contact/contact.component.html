@@ -9,18 +9,25 @@
             <p>Need a Frontend developer? Contact me!</p>
         </div>
         <div class="input-div">
-            <input type="text" placeholder="Your name">
-            <input type="text" placeholder="Your email">
-            <textarea type="text" placeholder="Your message" cols="" rows="7" value=""></textarea>
-            <div class="checkbox-div">
-                <input type="checkbox" value="">
-                <p>I've read the
-                    <a href="">privacy policy </a>
-                    and agree to the processing of my data as outlined.
-                </p>
-            </div>
-            <button>Send message :)</button>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
+                <input [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" type="text" id="message" name="message" placeholder="Your message" rows="7" required></textarea>
+                @if (!message.valid && message.touched) {
+                    <span>Please enter a message</span>
+                }
+
+                <div class="checkbox-div">
+                    <input type="checkbox" value="">
+                    <p>I've read the
+                        <a href="">privacy policy </a>
+                        and agree to the processing of my data as outlined.
+                    </p>
+                </div>
+                <input type="submit" value="Send message :)" class="submit-btn">
+            </form>
         </div>
     </div>
     <a href=""><img class="goup-btn" src="assets/img/go-up-btn.png" alt="Go up"></a>
 </section>
+
