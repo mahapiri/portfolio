@@ -3,6 +3,11 @@
     src: url(../src/assets/fonts/Poppins-Regular.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 :root {
     --dark-blue: rgba(20, 29, 47, 1);
     --light-blue: rgba(0, 190, 232, 1);

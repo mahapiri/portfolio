@@ -1,7 +1,7 @@
-<section>
+<section id="skills">
     <div class="icon-div">
         <div *ngFor="let btn of icon" class="icon">
-            <img src="{{ btn.source }}" alt="{{ btn.name }}">
+            <img src="{{ 'assets/img/skill-icons/' + btn.source }}" alt="{{ btn.name }}">
             <p>{{ btn.name }}</p>
         </div>
     </div>

@@ -29,25 +29,21 @@ header {
     align-items: center;
     gap: 29px;
 
-    a{
+    a {
         font-size: 23px;
         line-height: 27.6px;
         height: 32px;
+
+        &:hover {
+            color: var(--light-blue);
+        }
+
     }
 
-    a:hover {
-        color: var(--light-blue);
-    }
 
-    a:visited {
-        content: '';
-        display: block;
-        border-bottom: 3px solid var(--purple);
-        width: 55.5px;
-        transition: linear 200ms ease-in-out;
-        margin-top: 4px;
-    }
-} 
+
+
+}
 
 .about-me {
     width: 114px;
@@ -59,4 +55,14 @@ header {
 
 .portfolios {
     width: 95px;
+}
+
+.visited {
+    content: '';
+    display: block;
+    border-bottom: 3px solid var(--purple);
+    color: var(--light-blue);
+    width: 55.5px;
+    transition: linear 200ms ease-in-out;
+    margin-top: 4px;
 }

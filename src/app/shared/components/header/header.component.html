@@ -3,9 +3,9 @@
         <p class="logo">Pirathib</p>
         <!-- <img src="../assets/img/favicon.png" alt="Name"> -->
         <div class="header-links">
-            <a class="about-me" href="">About me</a>
-            <a class="skills" href="">Skills</a>
-            <a class="portfolio" href="#portfolio" id="portfolio" (click)="visited()">Portfolio</a>
+            <a [ngClass]="{'visited': activeLink === 'about-me-title'}" class="about-me" href="#about-me" id="about-me-title" (click)="visited('about-me-title')">About me</a>
+            <a [ngClass]="{'visited': activeLink === 'skills-title'}" class="skills" href="#skills" id="skills-title" (click)="visited('skills-title')">Skills</a>
+            <a [ngClass]="{'visited': activeLink === 'portfolio-title'}" class="portfolio" href="#portfolio" id="portfolio-title" (click)="visited('portfolio-title')">Portfolio</a>
         </div>
     </header>
 </section>

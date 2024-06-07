@@ -35,10 +35,9 @@ button {
     color: white;
     cursor: pointer;
     margin-top: 32px;
+    transition: 300ms ease-out;
 
     &:hover {
-        transform: scale(1.2);
-        transition: linear 300ms ease-out;
         background-color: var(--light-blue);
     }
 }

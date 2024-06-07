@@ -14,47 +14,47 @@ import { CommonModule } from '@angular/common';
 export class MySkillsComponent {
   icon: Icon[] = [
     {
-      source: 'assets/img/skill-icons/angular.png',
+      source: 'angular.svg',
       name: 'Angular'
     },
     {
-      source: 'assets/img/skill-icons/api.png',
+      source: 'api.svg',
       name: 'Rest-Api'
     },
     {
-      source: 'assets/img/skill-icons/css.png',
+      source: 'css.svg',
       name: 'CSS'
     },
     {
-      source: 'assets/img/skill-icons/firebase.png',
+      source: 'firebase.svg',
       name: 'Firebase'
     },
     {
-      source: 'assets/img/skill-icons/git.png',
+      source: 'git.svg',
       name: 'GIT'
     },
     {
-      source: 'assets/img/skill-icons/html.png',
+      source: 'html.svg',
       name: 'HTML'
     },
     {
-      source: 'assets/img/skill-icons/js.png',
+      source: 'js.svg',
       name: 'JavaScript'
     },
     {
-      source: 'assets/img/skill-icons/md.png',
+      source: 'md.svg',
       name: 'Material design'
     },
     {
-      source: 'assets/img/skill-icons/scrum.png',
+      source: 'scrum.svg',
       name: 'Scrum'
     },
     {
-      source: 'assets/img/skill-icons/ts.png',
+      source: 'ts.svg',
       name: 'TypeScript'
     },
     {
-      source: 'assets/img/skill-icons/wp.png',
+      source: 'wp.svg',
       name: 'Wordpress'
     },
   ]

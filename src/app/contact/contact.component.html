@@ -1,4 +1,4 @@
-<section>
+<section id="contact">
     <div class="border"></div>
     <h2>Contact</h2>
     <div class="contact-div">
@@ -24,10 +24,10 @@
                         and agree to the processing of my data as outlined.
                     </p>
                 </div>
-                <input type="submit" value="Send message :)" class="submit-btn">
+                <input type="submit" value="Send message :)">
             </form>
         </div>
     </div>
-    <a href=""><img class="goup-btn" src="assets/img/go-up-btn.png" alt="Go up"></a>
+    <a href="#atf"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;" class="go-up-btn" [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'"  alt="Go up"></a>
 </section>
 

@@ -27,7 +27,15 @@ footer {
     img {
         width: 30px;
         height: 30px;
-    };
+        transition: 100ms ease-out;
+
+        &:hover {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
 }
 
 .copyright-div {

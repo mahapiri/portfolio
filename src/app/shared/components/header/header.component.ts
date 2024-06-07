@@ -9,11 +9,19 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  visited() {
-    console.log('klick', getComputedStyle);
-  }
 
-  data() {
-    let visited = getComputedStyle();
+  // visited(id: string) {
+  //   let div = document.querySelectorAll('.visited');
+  //   div.forEach(element => {
+  //     element.classList.remove('visited');
+  //   });
+  //   let element = document.getElementById(id);
+  //   element?.classList.add('visited');
+  // }
+
+  activeLink: string | null = null;
+
+  visited(id: string) {
+    this.activeLink = id;
   }
 }
