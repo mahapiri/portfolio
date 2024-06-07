@@ -77,16 +77,21 @@
 .border {
     width: 100px;
     border: 4px solid var(--purple);
-} 
+}
 
 .socialmedia-btns {
     display: flex;
-    gap: 72px;
+    gap: 42px;
 
     img {
         width: 30px;
         height: 30px;
-    };
+
+        &:hover {
+            transform: scale(1.25);
+            transform-origin: left center;
+        }
+    }
 }
 
 .contact-div {
@@ -121,7 +126,7 @@
         font-size: 23px;
         line-height: 27.6px;
     }
-    
+
 
     img {
         width: 16px;

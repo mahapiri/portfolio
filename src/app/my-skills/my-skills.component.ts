@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 
 
 export class MySkillsComponent {
-  icon: Icon[] = [
+  icons: Icon[] = [
     {
       source: 'angular.svg',
       name: 'Angular'

@@ -37,12 +37,7 @@ header {
         &:hover {
             color: var(--light-blue);
         }
-
     }
-
-
-
-
 }
 
 .about-me {
@@ -63,6 +58,6 @@ header {
     border-bottom: 3px solid var(--purple);
     color: var(--light-blue);
     width: 55.5px;
-    transition: linear 200ms ease-in-out;
+    transition: 200ms ease-in-out;
     margin-top: 4px;
 }

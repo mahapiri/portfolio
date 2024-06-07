@@ -1,8 +1,8 @@
 <section id="skills">
     <div class="icon-div">
-        <div *ngFor="let btn of icon" class="icon">
-            <img src="{{ 'assets/img/skill-icons/' + btn.source }}" alt="{{ btn.name }}">
-            <p>{{ btn.name }}</p>
+        <div *ngFor="let icon of icons" class="icons">
+            <a class="icon"><img src="{{ 'assets/img/skill-icons/' + icon.source }}" alt="{{ icon.name }}"></a>
+            <p>{{ icon.name }}</p>
         </div>
     </div>
     <div class="title-div">

@@ -3,7 +3,6 @@ section {
     justify-content: center;
 }
 
-
 .text-div {
     gap: 35px;
 }
@@ -27,13 +26,13 @@ section {
 }
 
 .icon {
-    width: 34.7px;
     height: 50px;
     margin-top: 4px;
+    padding: 0px, 2px;
 
     &:hover {
-        transform: scale(1.2);
-        transition: linear 125ms ease-out;
+        transform: scale(1.25) translateY(10px);
+        transition: 125ms ease-in-out;
     }
 }
 

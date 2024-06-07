@@ -20,6 +20,14 @@ footer {
     }
 }
 
+.left-section {
+    min-height: 120px;
+}
+
+.logo {
+    margin-bottom: 0;
+}
+
 .socialmedia-btns {
     display: flex;
     gap: 72px;
@@ -30,19 +38,27 @@ footer {
         transition: 100ms ease-out;
 
         &:hover {
-            width: 40px;
-            height: 40px;
+            transform: scale(1.25);
+            transform-origin: left top;
         }
     }
-
-
 }
 
 .copyright-div {
     font-size: 23px;
     font-weight: 400;
     line-height: 27.6px;
-    text-align: left;
+    text-align: center;
 }
 
+.imprint {
+    cursor: pointer;
 
+    &:hover {
+        border-bottom: 2px solid var(--light-blue);
+        content: '';
+        display: block;
+        width: 55.5px;
+        transition: 200ms ease-in-out;
+    }
+}

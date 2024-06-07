@@ -9,11 +9,12 @@ section {
 .icon-div {
     display: flex;
     flex-wrap: wrap;
-    gap: 54px;
+    gap: 123px;
+    row-gap: 56px;
 }
 
 
-.icon {
+.icons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,11 +27,24 @@ section {
         font-size: 16px;
         font-weight: 700;
         line-height: 19.2px;
+        margin: 0;
+        text-align: center;
     }
 
-    img {
-        height: 60px
-    };
+    a {
+        cursor: default;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.icon {
+    height: 60px;
+    transition: 100ms ease-in-out;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
 }
 
 
