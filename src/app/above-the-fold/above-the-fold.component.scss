@@ -81,15 +81,22 @@
 
 .socialmedia-btns {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 42px;
 
     img {
         width: 30px;
         height: 30px;
+        transition: 100ms ease-out;
 
-        &:hover {
+        &:hover{
             transform: scale(1.25);
             transform-origin: left center;
+        }
+
+        &:hover ~img {
+            transform: translateX(10px);
         }
     }
 }
