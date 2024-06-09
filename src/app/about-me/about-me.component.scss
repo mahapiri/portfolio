@@ -1,9 +1,34 @@
-section {
+.about-me {
+    position: relative;
+    top: 1081px;
     display: flex;
     justify-content: center;
+    border: 1px solid yellow;
+}
+
+.about-me-section {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    left: 100px;
+    gap: 34px;
 }
 
 .text-div {
+    display: flex;
+    flex-direction: column;
+    width: 471px;
     gap: 35px;
 }
 
@@ -11,15 +36,16 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-end;
     gap: 35px;
 }
 
 .keys-div {
     display: flex;
-    align-items: flex-start;
     gap: 35px;
 
     p {
+        width: 359px;
         padding: 0;
         margin: 0;
     }
@@ -47,6 +73,10 @@ section {
     border: 4px solid var(--light-blue);
     border-radius: 50%;
     object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
 
     img {
         width: 453px;

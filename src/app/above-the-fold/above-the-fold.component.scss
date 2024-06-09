@@ -23,6 +23,7 @@
     position: absolute;
     top: 377.6px;
     bottom: 0;
+    z-index: -1;
 }
 
 .atf-undersection {
@@ -46,7 +47,7 @@
     left: 47px;
     width: 646px;
     height: 705px;
-    z-index: -1;
+    z-index: -2;
 }
 
 .right-section {
