@@ -10,35 +10,50 @@
     src: url(../src/assets/fonts/Poppins-Bold.ttf);
 }
 
-html {
-    scroll-behavior: smooth;
-
-}
-
 :root {
     --dark-blue: rgba(20, 29, 47, 1);
     --light-blue: rgba(0, 190, 232, 1);
     --purple: rgba(75, 71, 255, 1);
     --white: rgba(255, 255, 255, 1);
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--light-blue) var(--dark-blue);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-blue);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     color: var(--white);
-    width: 100vw;
+    // width: 100vw;
     height: 100vh;
-    margin: 0;
     background-color: var(--dark-blue);
 }
-
-// .root-div {
-//     width: 100vw;
-//     max-width: 1440px;
-//     height: 100vh;
-//     border: 1000px solid red;
-// }
 
 h2 {
     font-size: 90px;

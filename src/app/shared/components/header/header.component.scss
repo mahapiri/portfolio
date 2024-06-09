@@ -5,11 +5,10 @@ section {
     display: flex;
     justify-content: center;
     background-color: var(--dark-blue);
+    border: 1px solid yellow;
 }
 
-
 header {
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
