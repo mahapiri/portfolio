@@ -16,11 +16,12 @@ header {
     padding: 37px 100px;
     width: 100%;
     max-width: 1440px;
+    height: auto;
 
-    // img {
-    //     width: 32px;
-    //     height: 32px;
-    // }
+    img {
+        width: 150px;
+        height: auto;
+    }
 }
 
 .header-links {
@@ -28,8 +29,14 @@ header {
     justify-content: center;
     align-items: center;
     gap: 29px;
+    cursor: pointer;
 
-    a {
+    p {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        position: relative;
         font-size: 23px;
         line-height: 27.6px;
         height: 32px;
@@ -48,16 +55,21 @@ header {
     width: 57px;
 }
 
-.portfolios {
+.portfolio {
     width: 95px;
 }
 
 .visited {
-    content: '';
-    display: block;
-    border-bottom: 3px solid var(--purple);
-    color: var(--light-blue);
-    width: 55.5px;
-    transition: 200ms ease-in-out;
-    margin-top: 4px;
+    div {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 55.5px;
+        border-bottom: 3px solid var(--purple);
+        transition: 200ms ease-in-out;
+    }
+
+    p {
+        color: var(--light-blue);
+    }
 }

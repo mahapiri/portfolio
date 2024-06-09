@@ -10,15 +10,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  // visited(id: string) {
-  //   let div = document.querySelectorAll('.visited');
-  //   div.forEach(element => {
-  //     element.classList.remove('visited');
-  //   });
-  //   let element = document.getElementById(id);
-  //   element?.classList.add('visited');
-  // }
-
   activeLink: string | null = null;
 
   visited(id: string) {

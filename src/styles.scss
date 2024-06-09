@@ -35,6 +35,7 @@ body {
 
 .root-div {
     width: 100%;
+    max-width: 1440px;
 }
 
 h2 {
@@ -49,16 +50,4 @@ a {
     color: white;
     cursor: pointer;
     user-select: none;
-}
-
-.logo {
-    font-variant: small-caps;
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 52px;
-    margin: 0;
-
-    &:first-letter {
-        color: var(--purple);
-    } 
 }
