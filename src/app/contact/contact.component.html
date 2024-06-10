@@ -1,33 +1,42 @@
-<section id="contact">
+<div class="contact" id="contact">
     <div class="border"></div>
-    <h2>Contact</h2>
-    <div class="contact-div">
-        <div class="text-div">
-            <h3>Got a problem to solve?</h3>
-            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
-                your projects with my work.</p>
-            <p>Need a Frontend developer? Contact me!</p>
-        </div>
-        <div class="input-div">
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
-                <input [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" type="text" id="message" name="message" placeholder="Your message" rows="7" required></textarea>
-                @if (!message.valid && message.touched) {
-                    <span>Please enter a message</span>
-                }
-
-                <div class="checkbox-div">
-                    <img src="assets/img/checkbox/default.svg" alt="">
-                    <p>I've read the
-                        <a href="">privacy policy </a>
-                        and agree to the processing of my data as outlined.
-                    </p>
+    <div class="contact-content">
+        <div class="contact-div">
+            <h2>Contact</h2>
+            <div class="contact-undersection">
+                <div class="text-div">
+                    <h3>Got a problem to solve?</h3>
+                    <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                        contributing to
+                        your projects with my work.</p>
+                    <p>Need a Frontend developer? Contact me!</p>
                 </div>
-                <input type="submit" value="Send message :)">
-            </form>
-        </div>
-    </div>
-    <a href="#atf"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;" class="go-up-btn" [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'"  alt="Go up"></a>
-</section>
+                <div class="input-div">
+                    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                        <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name"
+                            required>
+                        <input [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="Your email"
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                        <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" type="text"
+                            id="message" name="message" placeholder="Your message" rows="7" required></textarea>
+                        @if (!message.valid && message.touched) {
+                        <span>Please enter a message</span>
+                        }
+        
+                        <div class="checkbox-div">
+                            <img src="assets/img/checkbox/default.svg" alt="">
+                            <p>I've read the
+                                <a href="">privacy policy </a>
+                                and agree to the processing of my data as outlined.
+                            </p>
+                        </div>
+                        <input type="submit" value="Send message :)">
+                    </form>
+                </div>
+            </div>
 
+        </div>
+        <!-- <a href="#atf"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;" class="go-up-btn"
+            [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'" alt="Go up"></a> -->
+    </div>
+</div>
