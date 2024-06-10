@@ -1,18 +1,25 @@
-<section id="skills">
-    <div class="icon-div">
-        <div *ngFor="let icon of icons" class="icons">
-            <a class="icon"><img src="{{ 'assets/img/skill-icons/' + icon.source }}" alt="{{ icon.name }}"></a>
-            <p>{{ icon.name }}</p>
-        </div>
-    </div>
-    <div class="title-div">
-        <div>
-            <h2>My skills
+<div id="skills" class="skills">
+    <div class="skills-section">
+        <div class="skills-content">
+            <div class="icon-div">
+                <div *ngFor="let icon of icons" class="icons">
+                    <a class="icon"><img src="{{ 'assets/img/skill-icons/' + icon.source }}" alt="{{ icon.name }}"></a>
+                    <p>{{ icon.name }}</p>
+                </div>
+            </div>
+            <div class="title-content">
                 <div class="border"></div>
-            </h2>
-
+                <div class="title-header">
+                    <div class="title-div">
+                        <h2>My skills</h2>
+                        <p>I have grown my frontend developments skills that have allowed me to create different real
+                            projects.</p>
+                    </div>
+                    <div class="button-div">
+                        <button class="button">Get in touch</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
-        <button>Get in touch</button>
     </div>
-</section>
+</div>

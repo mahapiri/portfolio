@@ -1,6 +1,8 @@
 .about-me {
-    position: relative;
+    position: absolute;
     top: 1081px;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     border: 1px solid yellow;
@@ -76,13 +78,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -1;
 
     img {
         width: 453px;
         height: 453px;
         object-fit: cover;
         border-radius: 50%;
+        z-index: -1;
     }
 }
 
