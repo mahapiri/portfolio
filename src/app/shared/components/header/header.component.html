@@ -2,20 +2,18 @@
     <header>
         <a href="#atf"><img src="../assets/img/logo.png" alt="Name"></a>
         <div class="header-links">
-            <div [ngClass]="{'visited': activeLink === 'about-me-title'}" class="about-me" href="#about-me" id="about-me-title" (click)="visited('about-me-title')">
+            <a [ngClass]="{'visited': activeLink === 'about-me-title'}" class="about-me" href="#about-me" id="about-me-title" (click)="visited('about-me-title')">
                 <p>About me</p>
                 <div></div>
-            </div>
-            <div [ngClass]="{'visited': activeLink === 'skills-title'}" class="skills" href="#skills" id="skills-title" (click)="visited('skills-title')">
+            </a>
+            <a [ngClass]="{'visited': activeLink === 'skills-title'}" class="skills" href="#skills" id="skills-title" (click)="visited('skills-title')">
                 <p>Skills</p>
                 <div></div>
-            </div>
-            <div [ngClass]="{'visited': activeLink === 'portfolio-title'}" class="portfolio" href="#portfolio" id="portfolio-title" (click)="visited('portfolio-title')">
+            </a>
+            <a [ngClass]="{'visited': activeLink === 'portfolio-title'}" class="portfolio" href="#portfolio" id="portfolio-title" (click)="visited('portfolio-title')">
                 <p>Portfolio</p>
                 <div></div>
-            </div>
-
-
+            </a>
         </div>
     </header>
 </section>
