@@ -1,0 +1,52 @@
+.shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 10px solid pink;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.shadow-content {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    border: 10px solid green;
+}
+
+.shadow-1 {
+    position: relative;
+    top: 750px;
+    left: 1126.23px;
+}
+
+.shadow-2 {
+    position: relative;
+    top: 1149.96px;
+    transform: rotate(180deg) scaleX(-1);
+    right: 584px;
+}
+
+.shadow-3 {
+    position: relative;
+    top: 1500px;
+    right: 201px;
+}
+
+.shadow-4 {
+    transform: rotate(90deg);
+    position: relative;
+    top: 800px;
+    left: 1101px;
+}
+
+.shadow-5 {
+    transform: rotate(90deg);
+    position: relative;
+    top: 557px;
+    right: 501px;
+}

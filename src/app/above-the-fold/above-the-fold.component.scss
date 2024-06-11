@@ -41,21 +41,34 @@
     display: flex;
 }
 
+.photo-div {
+    display: flex;
+}
+
 .profile-img {
     position: relative;
-    // top: 140px;
     top: 200px;
-    left: 47px;
-    // width: 646px;
+    right: 809px;
     width: auto;
     height: 620px;
-    // height: 705px;
     z-index: -2;
+    // // top: 140px;
+    // left: 47px;
+    // // width: 646px;
+    // // height: 705px;
+}
+
+.shadow {
+    position: relative;
+    top: 370px;
+    z-index: -3;
+    transform: scale(1.2);
 }
 
 .right-section {
     position: relative;
     top: 255px;
+    right: 856px;
     // top: 297px;
     width: max-content;
     height: max-content;
@@ -131,12 +144,12 @@
         height: 30px;
         transition: 100ms ease-out;
 
-        &:hover{
+        &:hover {
             transform: scale(1.25);
             transform-origin: left center;
         }
 
-        &:hover ~img {
+        &:hover~img {
             transform: translateX(10px);
         }
     }
@@ -151,7 +164,7 @@
 .contact-div {
     position: relative;
     // top: 144px;
-    top: 220px;
+    top: 32px;
     // position: relative;
     // left: 0;
     // bottom: 210px;
@@ -167,8 +180,8 @@
 
 .scroll-div {
     position: relative;
+    bottom: 32px;
     // top: 70px;
-    top: 146px;
     // position: relative;
     // right: 0;
     // bottom: 255px;
