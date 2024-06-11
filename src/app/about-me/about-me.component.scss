@@ -1,18 +1,19 @@
 .about-me {
+    background-image: url(../../assets/img/shadows/about-me.svg);
+    background-repeat: no-repeat;
+    background-image: none;
     position: absolute;
     top: 1081px;
     right: 0;
     left: 0;
     display: flex;
     justify-content: center;
-    border: 1px solid yellow;
 }
 
 .about-me-section {
     width: 100%;
     max-width: 1440px;
     height: 100%;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
 }

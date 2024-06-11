@@ -6,8 +6,7 @@ section {
     width: 100%;
     display: flex;
     justify-content: center;
-    // border-top: 4px solid var(--light-blue);
-    border: 1px solid yellow;
+    border-top: 4px solid var(--light-blue);
     background-color: var(--dark-blue);
 }
 
@@ -18,7 +17,6 @@ footer {
     padding: 37px 100px;
     width: 100%;
     max-width: 1440px;
-    border: 1px solid red;
     height: 291px;
 
     a {
