@@ -141,6 +141,10 @@ input[type="submit"] {
             color: var(--purple);
             font-size: 14px;
             line-height: 16.8px;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

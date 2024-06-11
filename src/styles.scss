@@ -43,6 +43,11 @@
     border: 1px solid var(--dark-blue);
 }
 
+::-webkit-resizer {
+    background-image: url(assets/img/resizer.svg);
+    background-repeat: no-repeat;
+}
+
 html {
     scroll-behavior: smooth;
 }

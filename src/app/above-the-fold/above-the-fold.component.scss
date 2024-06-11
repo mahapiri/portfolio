@@ -137,17 +137,21 @@
     align-items: center;
     gap: 42px;
 
-    img {
-        width: 30px;
-        height: 30px;
+    a {
+        display: flex;
         transition: 100ms ease-out;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
 
         &:hover {
             transform: scale(1.25);
             transform-origin: left center;
         }
 
-        &:hover~img {
+        &:hover~a {
             transform: translateX(10px);
         }
     }
