@@ -1,17 +1,39 @@
 .imprint {
     position: absolute;
-    top: 140px;
+    top: 110px;
     right: 0;
     left: 0;
     display: flex;
     justify-content: center;
-    border: 1px solid yellow;
 }
 
 .imprint-content {
     width: 100%;
     max-width: 1440px;
     height: 100%;
-    border: 1px solid red;
-    padding-left: 100px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    overflow-x: clip;
+    background-image: url(../../assets/img/shadows/imprint.svg);
+    background-repeat: no-repeat;
+    background-position: 800px -600px;
+
+    p {
+        text-align: justify;
+        text-align-last: left;
+        margin-bottom: 32px;
+    }
+
+    // a {
+    //     color: var(--purple);
+    // }
 }
+
+// .address {
+//     &::first-line {
+//         color: var(--light-blue);
+//     } 
+// }

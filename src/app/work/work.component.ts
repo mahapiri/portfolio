@@ -17,7 +17,7 @@ export class WorkComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       link: 'https://google.com/',
       git: 'https://github.com/',
-      img: 'assets/img/laptop.png'
+      img: 'assets/img/mockup-join.png'
     },
     {
       title: 'El Pollo Loco',
@@ -25,7 +25,7 @@ export class WorkComponent {
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       link: 'https://google.com/',
       git: 'https://github.com/',
-      img: 'assets/img/laptop.png'
+      img: 'assets/img/mockup-elpollo.png'
     },
     {
       title: 'DaBubble',
@@ -33,7 +33,7 @@ export class WorkComponent {
       description: 'A messenger plattform ',
       link: 'https://google.com/',
       git: 'https://github.com/',
-      img: 'assets/img/laptop.png'
+      img: 'assets/img/mockup-vscode.png'
     },
     // {
     //   title: '',

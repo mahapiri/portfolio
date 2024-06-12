@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     let footer = document.getElementById('footer');
     if (footer) {
       if (url.includes('imprint')) {
-        footer.style.top = '1000px';
+        footer.style.top = '1472px';
       } else {
         footer.style.top = '5042px';
       }
