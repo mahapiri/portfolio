@@ -34,6 +34,8 @@ export class AppComponent implements OnInit {
     if (footer) {
       if (url.includes('imprint')) {
         footer.style.top = '1472px';
+      } else if (url.includes('privacy')) {
+        footer.style.top = '8744px';
       } else {
         footer.style.top = '5042px';
       }

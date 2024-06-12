@@ -1,0 +1,29 @@
+.privacy-policy {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.privacy-policy-content {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    overflow-x: clip;
+    background-image: url(../../assets/img/shadows/imprint.svg);
+    background-repeat: no-repeat;
+    background-position: 800px 6500px;
+
+    p {
+        text-align: justify;
+        text-align-last: left;
+        margin-bottom: 32px;
+    }
+}

@@ -35,13 +35,5 @@ export class WorkComponent {
       git: 'https://github.com/',
       img: 'assets/img/mockup-vscode.png'
     },
-    // {
-    //   title: '',
-    //   subtitle: '',
-    //   description: '',
-    //   link: 'https://google.com/',
-    //   git: 'https://github.com/',
-    //   img: 'assets/img/laptop.png'
-    // },
   ]
 }
