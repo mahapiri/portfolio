@@ -1,4 +1,4 @@
-section {
+.footer {
     position: absolute;
     top: 5042px;
     right: 0;
@@ -32,6 +32,10 @@ footer {
     img {
         width: 150px;
         height: auto;
+    }
+
+    a {
+        margin-bottom: -8px;
     }
 }
 

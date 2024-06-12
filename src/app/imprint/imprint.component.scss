@@ -1,0 +1,17 @@
+.imprint {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid yellow;
+}
+
+.imprint-content {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    border: 1px solid red;
+    padding-left: 100px;
+}
