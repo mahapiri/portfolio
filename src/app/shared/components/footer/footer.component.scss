@@ -62,14 +62,36 @@ footer {
     text-align: center;
 }
 
-.imprint {
-    cursor: pointer;
 
-    &:hover {
-        border-bottom: 2px solid var(--light-blue);
-        content: '';
-        display: block;
-        width: 55.5px;
-        transition: 200ms ease-in-out;
-    }
+.imprint {
+    position: relative;
+    display: block;
+    text-decoration: none;
 }
+
+.imprint::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-blue);
+    transition: height 200ms ease-in-out;
+}
+
+.imprint:hover::before {
+    width: 55.5px;
+}
+
+// .imprint {
+//     cursor: pointer;
+
+//     &:hover {
+//         border-bottom: 2px solid var(--light-blue);
+//         content: '';
+//         display: block;
+//         width: 55.5px;
+//         transition: 200ms ease-in-out;
+//     }
+// }
