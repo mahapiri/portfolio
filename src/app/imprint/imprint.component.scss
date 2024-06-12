@@ -4,14 +4,16 @@
     right: 0;
     left: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .imprint-content {
     width: 100%;
     max-width: 1440px;
     height: 100%;
-    padding: 100px;
+    padding: 46px 100px 100px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,14 +28,14 @@
         text-align-last: left;
         margin-bottom: 32px;
     }
-
-    // a {
-    //     color: var(--purple);
-    // }
 }
 
-// .address {
-//     &::first-line {
-//         color: var(--light-blue);
-//     } 
-// }
+.arrow {
+    width: 39px;
+    height: 39px;
+    position: relative;
+    top: 85px;
+    left: 1209px;
+    transform: rotate(270deg);
+    transition: 200ms ease-in-out;
+}
