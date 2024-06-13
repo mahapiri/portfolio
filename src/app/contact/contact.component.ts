@@ -12,7 +12,14 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
+  constructor() {
+    console.log(this.clicked)
+  }
+
   hover: boolean = false;
+  boxHover: boolean = false;
+  marked: boolean = false;
+  clicked: boolean = false;
   http = inject(HttpClient);
 
   contactData = {
@@ -21,7 +28,33 @@ export class ContactComponent {
     message: '',
   }
 
-  mailTest = true;
+  errorMsg = {
+    name: {
+      clicked: false,
+      message: 'Your name is required',
+      field: 'Your name',
+      placeholder: 'Your name',
+    },
+    email: {
+      clicked: false,
+      message: 'Your email is required'
+    },
+    message: {
+      clicked: false,
+      message: 'Your message is empty'
+    },
+    checkbox: {
+      clicked: false,
+      message: 'Please accept the privacy policy'
+    }
+  };
+
+  emptyPlaceholder: string = '';
+
+  errorSymbol: string = 'assets/img/error.svg';
+  doneSymbol: string = 'assets/img/done.svg';
+
+  mailTest = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -50,6 +83,18 @@ export class ContactComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+    }
+  }
+
+  checked(id: string) {
+    this.marked = !this.marked;
+
+    if(id == 'checkbox') {
+      this.errorMsg.checkbox.clicked = true;
+    }
+    if(id == 'name') {
+      this.errorMsg.name.clicked = true;
+      this.errorMsg.name.field = this.emptyPlaceholder;
     }
   }
 }

@@ -13,30 +13,54 @@
                 </div>
                 <div class="input-div">
                     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                        <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name"
-                            required>
-                        <input [(ngModel)]="contactData.email" type="text" id="email" name="email"
-                            placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-                        <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" type="text"
-                            id="message" name="message" placeholder="Your message" rows="7" required></textarea>
-                        @if (!message.valid && message.touched) {
-                        <span>Please enter a message</span>
-                        }
-                        <div class="checkbox-div">
-                            <img src="assets/img/checkbox/default.svg" alt="">
-                            <div>
-                                <p>I've read the <a href="/privacy">privacy policy</a> 
-                                    and agree to the processing of my data as outlined.</p>
+                        <div>
+                            <div class="input-field">
+                                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                                    [placeholder]="errorMsg.name.field" required (click)="checked('name')">
+                                <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="" [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
+                                @if (errorMsg.name.clicked) {
+                                    <span>{{ errorMsg.name.message }}</span>
+                                }
                             </div>
                         </div>
-                        <input type="submit" value="Send message :)">
+                        <div class="input-field">
+                            <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
+                                placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                required>
+                            <img src="assets/img/error.svg" alt="" ngClass="warn-symbol">
+                            @if (!email.valid && email.touched) {
+                                <span>{{ errorMsg.email.message }}</span>
+                            }
+                        </div>
+                        <div class="input-field">
+                            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" type="text"
+                                id="message" name="message" placeholder="Your message" rows="7" required></textarea>
+                            <img src="assets/img/error.svg" alt="" ngClass="warn-symbol pos-bottom">
+                            @if (!message.valid && message.touched) {
+                            <span>Please enter a message</span>
+                            }
+                        </div>
+                        <div class="checkbox-div">
+                            <div class="checkbox-content">
+                                <img id="checkbox" (mouseenter)="boxHover = true;" (mouseleave)="boxHover = false;"
+                                    [src]=" boxHover ? (marked ? 'assets/img/checkbox/checked-hover.svg' : 'assets/img/checkbox/default-hover.svg') 
+                                : (marked ? 'assets/img/checkbox/checked.svg' : 'assets/img/checkbox/default.svg')"
+                                    alt="Checkbox" (click)="checked('checkbox')">
+                                <p>I've read the <a href="/privacy">privacy policy</a>
+                                    and agree to the processing of my data as outlined.</p>
+                            </div>
+                            @if (!marked && errorMsg.checkbox.clicked) {
+                            <span class="error-msg">{{ errorMsg.checkbox.message }}</span>
+                            }
+                        </div>
+                        <input class="" type="submit" value="Send message :)">
                     </form>
                 </div>
             </div>
         </div>
         <div class="go-up">
             <a href="#atf" class="go-up-btn"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;"
-                [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'" alt="Go up"></a>    
+                    [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'" alt="Go up"></a>
         </div>
     </div>
 </div>

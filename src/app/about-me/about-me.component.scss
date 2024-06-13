@@ -56,10 +56,10 @@
     height: 50px;
     margin-top: 4px;
     padding: 0px, 2px;
+    transition: 125ms ease-in-out;
 
     &:hover {
         transform: scale(1.25) translateY(10px);
-        transition: 125ms ease-in-out;
     }
 }
 
