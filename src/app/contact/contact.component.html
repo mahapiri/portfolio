@@ -16,28 +16,38 @@
                         <div>
                             <div class="input-field">
                                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                                    [placeholder]="errorMsg.name.field" required (click)="checked('name')">
-                                <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="" [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
-                                @if (errorMsg.name.clicked) {
-                                    <span>{{ errorMsg.name.message }}</span>
+                                    [placeholder]="errorMsg.name.field" (click)="checked('name')" [ngClass]="
+                                    errorMsg.name.clicked ? (name.valid ? 'done-border' : 'error-border') : ''"
+                                    required>
+                                <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
+                                    [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
+                                @if (errorMsg.name.clicked && !name.valid) {
+                                <span>{{ errorMsg.name.message }}</span>
                                 }
                             </div>
                         </div>
                         <div class="input-field">
                             <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
-                                placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                [placeholder]="errorMsg.email.field"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (click)="checked('email')"
+                                [ngClass]="errorMsg.email.clicked ? (email.valid ? 'done-border' : 'error-border') : ''"
                                 required>
-                            <img src="assets/img/error.svg" alt="" ngClass="warn-symbol">
-                            @if (!email.valid && email.touched) {
-                                <span>{{ errorMsg.email.message }}</span>
+                            <img [src]="email.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
+                                [ngClass]="errorMsg.email.clicked ? 'warn-symbol' : 'd-none'">
+                            @if (errorMsg.email.clicked && !email.valid) {
+                            <span>{{ errorMsg.email.message }}</span>
                             }
                         </div>
                         <div class="input-field">
-                            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" type="text"
-                                id="message" name="message" placeholder="Your message" rows="7" required></textarea>
-                            <img src="assets/img/error.svg" alt="" ngClass="warn-symbol pos-bottom">
-                            @if (!message.valid && message.touched) {
-                            <span>Please enter a message</span>
+                            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="0" type="text"
+                                id="message" name="message" [placeholder]="errorMsg.message.field" rows="7"
+                                (click)="checked('message')"
+                                [ngClass]="errorMsg.message.clicked ? (message.valid ? 'done-border' : 'error-border') : ''"
+                                required></textarea>
+                            <img [src]="message.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
+                                [ngClass]="errorMsg.message.clicked ? 'warn-symbol pos-bottom' : 'd-none'">
+                            @if (errorMsg.message.clicked && !message.valid) {
+                            <span>{{ errorMsg.message.message }}</span>
                             }
                         </div>
                         <div class="checkbox-div">
@@ -53,7 +63,7 @@
                             <span class="error-msg">{{ errorMsg.checkbox.message }}</span>
                             }
                         </div>
-                        <input class="" type="submit" value="Send message :)">
+                        <input [ngClass]="marked ? 'success-btn' : ''" type="submit" value="Send message :)">
                     </form>
                 </div>
             </div>

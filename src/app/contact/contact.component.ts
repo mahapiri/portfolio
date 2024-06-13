@@ -33,15 +33,19 @@ export class ContactComponent {
       clicked: false,
       message: 'Your name is required',
       field: 'Your name',
-      placeholder: 'Your name',
+      placeholder: 'Your name'
     },
     email: {
       clicked: false,
-      message: 'Your email is required'
+      message: 'Your email is required',
+      field: 'Your email',
+      placeholder: 'Your email'
     },
     message: {
       clicked: false,
-      message: 'Your message is empty'
+      message: 'Your message is empty',
+      field: 'Your message',
+      placeholder: 'Your message'
     },
     checkbox: {
       clicked: false,
@@ -87,14 +91,23 @@ export class ContactComponent {
   }
 
   checked(id: string) {
-    this.marked = !this.marked;
 
-    if(id == 'checkbox') {
+
+    if (id == 'checkbox') {
       this.errorMsg.checkbox.clicked = true;
+      this.marked = !this.marked;
     }
-    if(id == 'name') {
+    if (id == 'name') {
       this.errorMsg.name.clicked = true;
       this.errorMsg.name.field = this.emptyPlaceholder;
+    }
+    if (id == 'email') {
+      this.errorMsg.email.clicked = true;
+      this.errorMsg.email.field = this.emptyPlaceholder;
+    }
+    if (id == 'message') {
+      this.errorMsg.message.clicked = true;
+      this.errorMsg.message.field = this.emptyPlaceholder;
     }
   }
 }

@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
       } else if (url.includes('privacy')) {
         footer.style.top = '8744px';
       } else {
-        footer.style.top = '5042px';
+        footer.style.top = '5142px';
       }
     }
   }

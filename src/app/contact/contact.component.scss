@@ -70,15 +70,17 @@ p {
     width: -webkit-fill-available;
 
     span {
+        height: 17px;
         font-size: 14px;
         line-height: 16.8px;
         color: var(--red);
         margin-left: 4px;
-        margin-top: -18px;
+        margin-top: -12px;
     }
 
     .error-msg {
         margin-top: 0;
+        transition: 200ms ease-out;
     }
 }
 
@@ -87,10 +89,9 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    // gap: 32px;
+    gap: 32px;
 
-    input[type="text"], 
+    input[type="text"],
     textarea {
         font-family: 'Poppins';
         font-size: 16px;
@@ -109,6 +110,22 @@ form {
             border-color: var(--blue-green);
             cursor: pointer;
         }
+    }
+
+    .error-border,
+    .error-border:focus,
+    .error-border:active,
+    .error-border:visited {
+        border-color: var(--red) !important;
+        outline: none;
+    }
+
+    .done-border,
+    .done-border:focus,
+    .done-border:active,
+    .done-border:visited {
+        border-color: var(--green) !important;
+        outline: none;
     }
 
     input[type="text"] {
@@ -130,10 +147,10 @@ input[type="submit"] {
     border: none;
     border-radius: 10px;
     padding: 15px 30px;
-    box-shadow: 4px 4px 4px 0px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     // gap: 10px;
-    position: relative;
-    top: 16px;
+    position: absolute;
+    top: 572px;
 }
 
 .checkbox-div {
@@ -154,7 +171,7 @@ input[type="submit"] {
         display: contents;
         font-size: 14px;
         line-height: 16.8px;
-        
+
         a {
             color: var(--purple);
             font-size: 14px;
@@ -171,24 +188,27 @@ input[type="submit"] {
     display: flex;
     align-items: center;
     gap: 4px;
-    
+
     img {
         margin-right: 6px;
     }
 }
 
 .go-up {
-    margin-top: 100px;
+    position: absolute;
 }
 
 .go-up-btn {
     width: 39px;
     height: 39px;
-    position: relative;
-    bottom: 28px;
-    left: 668px;
+    position: absolute;
     transition: 200ms ease-in-out;
-    margin-top: 100px;
+
+    img {
+        position: relative;
+        top: 860px;
+        left: 552px;
+    }
 }
 
 .input-field {
@@ -207,4 +227,9 @@ input[type="submit"] {
 
 .pos-bottom {
     bottom: 185px;
+}
+
+.success-btn {
+    background-color: var(--light-blue) !important;
+    cursor: pointer;
 }
