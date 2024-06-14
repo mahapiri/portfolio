@@ -75,7 +75,8 @@ p {
         line-height: 16.8px;
         color: var(--red);
         margin-left: 4px;
-        margin-top: -12px;
+        margin-top: -18px;
+        margin-bottom: 10px;
     }
 
     .error-msg {
@@ -89,7 +90,8 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    // gap: 32px;
+    gap: 12px;
 
     input[type="text"],
     textarea {
@@ -149,8 +151,27 @@ input[type="submit"] {
     padding: 15px 30px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     // gap: 10px;
+    // position: absolute;
+    // top: 572px;
+    // position: relative;
+    // top: 57px;
+}
+
+.checkbox-submit-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-div {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 572px;
+
+    input {
+        position: absolute;
+        top: 76px;
+        left: 201px;
+    }
 }
 
 .checkbox-div {
@@ -160,6 +181,7 @@ input[type="submit"] {
     align-items: flex-start;
     width: 617px;
     gap: 8px;
+    position: relative;
 
     img {
         height: 24px;
@@ -201,13 +223,13 @@ input[type="submit"] {
 .go-up-btn {
     width: 39px;
     height: 39px;
-    position: absolute;
     transition: 200ms ease-in-out;
+    position: relative;
 
     img {
         position: relative;
-        top: 860px;
-        left: 552px;
+        top: 815px;
+        left: 567px;
     }
 }
 
@@ -215,6 +237,15 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    // height: 76px;
+}
+
+.textfield-height {
+    height: 76px;
+}
+
+.messagefield-height {
+    height: 232px;
 }
 
 .warn-symbol {

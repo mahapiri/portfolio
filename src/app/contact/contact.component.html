@@ -14,19 +14,19 @@
                 <div class="input-div">
                     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                         <div>
-                            <div class="input-field">
+                            <div class="input-field textfield-height">
                                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
                                     [placeholder]="errorMsg.name.field" (click)="checked('name')" [ngClass]="
                                     errorMsg.name.clicked ? (name.valid ? 'done-border' : 'error-border') : ''"
                                     required>
-                                <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
-                                    [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
+                                <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
+                                    alt="Warn Symbol" [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
                                 @if (errorMsg.name.clicked && !name.valid) {
                                 <span>{{ errorMsg.name.message }}</span>
                                 }
                             </div>
                         </div>
-                        <div class="input-field">
+                        <div class="input-field textfield-height">
                             <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
                                 [placeholder]="errorMsg.email.field"
                                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (click)="checked('email')"
@@ -38,32 +38,37 @@
                             <span>{{ errorMsg.email.message }}</span>
                             }
                         </div>
-                        <div class="input-field">
+                        <div class="input-field messagefield-height">
                             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="0" type="text"
                                 id="message" name="message" [placeholder]="errorMsg.message.field" rows="7"
                                 (click)="checked('message')"
                                 [ngClass]="errorMsg.message.clicked ? (message.valid ? 'done-border' : 'error-border') : ''"
                                 required></textarea>
-                            <img [src]="message.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
+                            <img [src]="message.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
+                                alt="Warn Symbol"
                                 [ngClass]="errorMsg.message.clicked ? 'warn-symbol pos-bottom' : 'd-none'">
                             @if (errorMsg.message.clicked && !message.valid) {
                             <span>{{ errorMsg.message.message }}</span>
                             }
                         </div>
-                        <div class="checkbox-div">
-                            <div class="checkbox-content">
-                                <img id="checkbox" (mouseenter)="boxHover = true;" (mouseleave)="boxHover = false;"
-                                    [src]=" boxHover ? (marked ? 'assets/img/checkbox/checked-hover.svg' : 'assets/img/checkbox/default-hover.svg') 
-                                : (marked ? 'assets/img/checkbox/checked.svg' : 'assets/img/checkbox/default.svg')"
-                                    alt="Checkbox" (click)="checked('checkbox')">
-                                <p>I've read the <a href="/privacy">privacy policy</a>
-                                    and agree to the processing of my data as outlined.</p>
+                        <div class="checkbox-submit-box">
+                            <div class="checkbox-div">
+                                <div class="checkbox-content">
+                                    <img id="checkbox" (mouseenter)="boxHover = true;" (mouseleave)="boxHover = false;"
+                                        [src]=" boxHover ? (marked ? 'assets/img/checkbox/checked-hover.svg' : 'assets/img/checkbox/default-hover.svg') 
+                                    : (marked ? 'assets/img/checkbox/checked.svg' : 'assets/img/checkbox/default.svg')"
+                                        alt="Checkbox" (click)="checked('checkbox')">
+                                    <p>I've read the <a href="/privacy">privacy policy</a>
+                                        and agree to the processing of my data as outlined.</p>
+                                </div>
+                                @if (!marked && errorMsg.checkbox.clicked) {
+                                <span class="error-msg">{{ errorMsg.checkbox.message }}</span>
+                                }
                             </div>
-                            @if (!marked && errorMsg.checkbox.clicked) {
-                            <span class="error-msg">{{ errorMsg.checkbox.message }}</span>
-                            }
+                            <div class="submit-div">
+                                <input [ngClass]="marked ? 'success-btn' : ''" type="submit" value="Send message :)">
+                            </div>
                         </div>
-                        <input [ngClass]="marked ? 'success-btn' : ''" type="submit" value="Send message :)">
                     </form>
                 </div>
             </div>
