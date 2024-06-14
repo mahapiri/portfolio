@@ -12,12 +12,14 @@ import { BurgerMenuComponent } from '../../../burger-menu/burger-menu.component'
 export class HeaderComponent {
 
   activeLink: string | null = null;
+  clicked: boolean = false;
 
   visited(id: string) {
     this.activeLink = id;
   }
 
   openMenu() {
-    
+    console.log(this.clicked)
+    this.clicked = !this.clicked;
   }
 }
