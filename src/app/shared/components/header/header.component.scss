@@ -72,3 +72,24 @@ header {
         color: var(--light-blue);
     }
 }
+
+.burger-menu {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        height: 27.2px;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 390px) {
+    .header-links {
+        display: none;
+    }
+
+    header {
+        padding: 37px 25px;
+    }
+}

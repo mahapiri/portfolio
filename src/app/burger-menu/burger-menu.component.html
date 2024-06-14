@@ -1,23 +1,22 @@
-<section>
-    <header>
-        <a href="#atf"><img src="../assets/img/logo.png" alt="Name"></a>
+<div class="burger-menu">
+    <div class="burger-menu-content">
         <div class="header-links">
             <a [ngClass]="{'visited': activeLink === 'about-me-title'}" class="about-me" href="#about-me" id="about-me-title" (click)="visited('about-me-title')">
                 <p>About me</p>
                 <div></div>
             </a>
             <a [ngClass]="{'visited': activeLink === 'skills-title'}" class="skills" href="#skills" id="skills-title" (click)="visited('skills-title')">
-                <p>Skills</p>
+                <p>My Skills</p>
                 <div></div>
             </a>
             <a [ngClass]="{'visited': activeLink === 'portfolio-title'}" class="portfolio" href="#portfolio" id="portfolio-title" (click)="visited('portfolio-title')">
                 <p>Portfolio</p>
                 <div></div>
             </a>
+            <a [ngClass]="{'visited': activeLink === 'contact'}" class="contact" href="#contact" id="contact" (click)="visited('contact')">
+                <p>Contact</p>
+                <div></div>
+            </a>
         </div>
-        <div class="burger-menu" style="display: none;">
-            <img src="assets/img/burger-menu/default.svg" alt="Burger Menu" (click)="openMenu()">
-        </div>
-    </header>
-</section>
-<app-burger-menu></app-burger-menu>
+    </div>
+</div>
