@@ -1,5 +1,8 @@
 section {
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -79,17 +82,29 @@ header {
 
     img {
         height: 27.2px;
+        width: 30px;
         cursor: pointer;
     }
 }
 
+@media screen and (min-width: 390px) {
+    .burger-menu {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 390px) {
+    .burger-menu {
+        display: flex;
+    }
+
     .header-links {
         display: none;
     }
 
     header {
         padding: 37px 25px;
+        max-width: 390px;
+        z-index: 2;
     }
 }
