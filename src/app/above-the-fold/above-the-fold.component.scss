@@ -26,18 +26,15 @@
 }
 
 .shape-mobile {
-    // width: 390px;
-    // height: 467.43px;
-    // width: 190px;
-    // height: 267.43px;
+    display: none;
     position: absolute;
-    top: 345.09px;
-    width: 390px;
-    height: 267.43px;
-    // position: absolute;
-    // top: 377.6px;
-    // bottom: 0;
     z-index: -1;
+    width: 390px;
+    height: 467.43px;
+    top: 345.09px;
+    gap: 0px;
+    opacity: 0px;
+
 }
 
 .atf-undersection {
@@ -212,7 +209,6 @@
         line-height: 27.6px;
     }
 
-
     img {
         width: 24px;
         height: 24px;
@@ -239,15 +235,16 @@
 }
 
 @media screen and (max-width: 390px) {
-
     .atf {
-        border: 1px solid yellow;
         overflow-x: clip;
         position: unset;
     }
 
+    .shape-mobile {
+        display: block;
+    }
+
     .atf-undersection {
-        border: 1px solid red;
         width: 100%;
         max-width: 390px;
         height: 100%;
@@ -260,17 +257,20 @@
 
     .shadow {
         position: relative;
-        top: 1px;
-        width: 300px;
+        top: 22px;
+        left: 20px;
+        height: 477px;
+        overflow-y: clip;
     }
 
     .profile-img {
-        position: relative;
-        top: 277px;
+        position: absolute;
+        top: 149px;
+        right: unset;
+        left: 0px;
         z-index: -2;
         width: auto;
-        height: 50px;
-        z-index: 0;
+        height: 360px;
     }
 
     .mail-div {
@@ -284,113 +284,58 @@
     .atf-content {
         display: unset;
     }
-    
+
     .photo-div {
         position: absolute;
         top: 0;
-        display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         width: 100%;
     }
-    
-    .right-section {
-        position: unset;
-    }
-    
-    .title-div {
-        display: unset;
 
-    
+    .right-section {
+        position: relative;
+        // top: 579px;
+        top: 547px;
+        right: unset;
+        left: 8px;
+        width: unset;
+        height: unset;
+    }
+
+    .title-div {
+        width: 100%;
+        gap: 22px;
+
         button {
-            font-size: 10px;
-            line-height: 10.6px;
-            border: 0;
-            border-radius: 10px;
-            padding: 7px 15px;
-            box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            gap: 10px;
-            background-color: var(--light-blue);
-            color: white;
-            cursor: pointer;
-            transition: 125ms ease-out;
-    
-            &:hover {
-                padding: 10px 20px;
-                background-color: var(--purple);
-            }
+            font-size: 16px;
+            line-height: 19.2px;
         }
     }
-    
+
     .iam {
         position: relative;
-        top: 73px;
-        right: 340px;
-        font-size: 25px;
-        // line-height: 76.8px;
-        // font-size: 64px;
+        top: 46px;
+        right: 169px;
+        font-size: 26px;
         transform: rotate(270deg);
     }
-    
+
     .title-profession {
-        font-size: 7px;
-        line-height: 8px;
+        font-size: 29px;
+        line-height: 34px;
         color: var(--purple);
         margin: 0;
     }
-    
+
     .border {
         width: 64px;
-        border-bottom: 4px solid var(--purple);
     }
-    
-    .socialmedia-btns {
-        display: unset;
-    
-        a {
-            display: block;
-            transition: 100ms ease-out;
-    
-            img {
-                width: 10px;
-                height: 10px;
-            }
-    
-            &:hover {
-                transform: scale(1.25);
-                transform-origin: left center;
-            }
-    
-            &:hover~a {
-                transform: translateX(10px);
-            }
-        }
-    }
-    
-    .atf-links {
-        display: unset;
-    }
-    
+
     .contact-div {
-        position: unset;
-    }
-    
-    .contact-section {
-        display: unset;
-    }
-
-
-
-
-
-
-
-    h3 {
-        font-size: 10px;
-    }
-
-    p {
-        font-size: 7px;
+        display: flex;
+        position: absolute;
+        top: 778px;
     }
 }

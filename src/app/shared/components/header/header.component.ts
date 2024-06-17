@@ -19,7 +19,6 @@ export class HeaderComponent {
   }
 
   openMenu() {
-    console.log(this.clicked)
     this.clicked = !this.clicked;
   }
 }

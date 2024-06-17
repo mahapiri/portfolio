@@ -19,8 +19,7 @@
             </a>
         </div>
         <div class="burger-menu">
-            <img src="assets/img/burger-menu/default.svg" alt="Burger Menu" (click)="openMenu()"
-                [style]="clicked ? '' : ''">
+            <img src="assets/img/burger-menu/default.svg" alt="Burger Menu" (click)="openMenu()">
         </div>
     </header>
     <app-burger-menu [ngClass]="clicked ? '' : 'd-none'"></app-burger-menu>
