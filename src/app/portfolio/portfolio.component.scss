@@ -52,3 +52,45 @@ p {
     position: relative;
     
 }
+
+@media screen and (max-width: 390px) {
+    .portfolio {
+        top: 2529px;
+    }
+
+    .portfolio-content {
+        max-width: 390px;
+    }
+
+    .border-left {
+        top: unset;
+        width: 20px;
+    }
+
+    .border-right {
+        top: unset;
+        width: 75px;
+    }
+
+    .portfolio-header {
+        align-items: center;
+        h2 {
+            width: 390px;
+            align-items: center;
+        }
+
+        p {
+            margin-top: 22px;
+            text-align: center;
+            width: 340px;
+        }
+    }
+
+    .portfolio-mobileview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}

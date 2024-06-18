@@ -114,3 +114,59 @@ button {
 .flex-end {
     justify-content: flex-end;
 }
+
+
+@media screen and (max-width: 390px) {
+    .work-content {
+        gap: 35px;
+    }
+
+    .work-div {
+        flex-direction: column;
+        align-items: center;
+        margin-top: unset;
+        gap: unset;
+    }
+
+    .btn-div {
+        gap: 50px;
+
+        button {
+            display: flex;
+            margin-top: 22px;
+        }
+    }
+
+    .img-section {
+        width: 390px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .info-section {
+        width: 340px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h6 {
+            width: 263px;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .p-100 {
+        padding-left: unset;
+    }
+
+    .p-172 {
+        padding-right: unset;
+    }
+
+    .align-right {
+        flex-direction: column-reverse !important;
+    }
+}
