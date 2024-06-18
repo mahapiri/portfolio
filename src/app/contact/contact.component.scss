@@ -258,6 +258,7 @@ input[type="submit"] {
 @media screen and (max-width: 390px) {
     .contact {
         top: 4801px;
+        scroll-margin-top: 120px;
     }
 
     .contact-content {
@@ -331,8 +332,17 @@ input[type="submit"] {
 
     .go-up-btn {
         img {
-            top: 864px;
+            top: 872px;
             left: 148px;
         }
+    }
+
+    .warn-symbol {
+        left: 307px;
+        bottom: 32px;
+    }
+
+    .pos-bottom {
+        bottom: 154px !important;
     }
 }

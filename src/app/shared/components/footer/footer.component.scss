@@ -95,3 +95,35 @@ footer {
 //         transition: 200ms ease-in-out;
 //     }
 // }
+
+@media screen and (max-width: 390px) {
+    .footer {
+        top: 5765px !important;
+    }
+
+    footer {
+        max-width: 390px;
+        flex-direction: column;
+        padding: 37px 25px;
+        margin-bottom: 56px;
+    }
+
+    .imprint {
+        margin-bottom: 25px;
+        position: relative;
+        top: 208px;
+    }
+
+    .left-section {
+        align-items: center;
+        margin-left: unset;
+        margin-bottom: unset;
+    }
+
+    .copyright-div {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        text-align: center;
+    }
+}
