@@ -153,8 +153,7 @@
 
     .icon-div {
         margin-left: unset;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 35px 25px;
         gap: 54px;
     }
 
@@ -185,8 +184,8 @@
     }
 
     .button-div {
-        position: relative;
-        top: 712px;
+        position: absolute;
+        top: 812px;
 
         button {
             font-size: 16px;

@@ -5,7 +5,7 @@
             <h2>Contact</h2>
             <div class="contact-undersection">
                 <div class="text-div">
-                    <h3>Got a problem to solve?</h3>
+                    <h5>Got a problem to solve?</h5>
                     <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
                         contributing to
                         your projects with my work.</p>
@@ -58,8 +58,11 @@
                                         [src]=" boxHover ? (marked ? 'assets/img/checkbox/checked-hover.svg' : 'assets/img/checkbox/default-hover.svg') 
                                     : (marked ? 'assets/img/checkbox/checked.svg' : 'assets/img/checkbox/default.svg')"
                                         alt="Checkbox" (click)="checked('checkbox')">
-                                    <p>I've read the <a href="/privacy">privacy policy</a>
-                                        and agree to the processing of my data as outlined.</p>
+                                    <div class="checkbox-text">
+                                        <p>I've read the </p>
+                                        <a href="/privacy">privacy policy</a>
+                                        <p> and agree to the processing of my data as outlined.</p>
+                                    </div>   
                                 </div>
                                 @if (!marked && errorMsg.checkbox.clicked) {
                                 <span class="error-msg">{{ errorMsg.checkbox.message }}</span>

@@ -31,19 +31,7 @@
 h2 {
     margin-bottom: 70px;
     margin-left: 100px;
-}
-
-h3 {
-    font-size: 38px;
-    line-height: 38.4px;
-    font-weight: 700;
-}
-
-p {
-    font-size: 16px;
-    line-height: 19.2px;
-    font-weight: 400;
-}
+}   
 
 .contact-div {
     width: 100%;
@@ -188,20 +176,22 @@ input[type="submit"] {
         width: 24px;
         cursor: pointer;
     }
+}
 
+.checkbox-text {
     p {
         display: contents;
         font-size: 14px;
         line-height: 16.8px;
+    }
 
-        a {
-            color: var(--purple);
-            font-size: 14px;
-            line-height: 16.8px;
+    a {
+        color: var(--purple);
+        font-size: 14px;
+        line-height: 16.8px;
 
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
@@ -263,4 +253,86 @@ input[type="submit"] {
 .success-btn {
     background-color: var(--light-blue) !important;
     cursor: pointer;
+}
+
+@media screen and (max-width: 390px) {
+    .contact {
+        top: 4801px;
+    }
+
+    .contact-content {
+        max-width: 390px;
+        gap: unset;
+    }
+
+    .border {
+        width: 20px;
+        top: 30px;
+        right: 185px;
+    }
+
+    .contact-div {
+
+        h2 {
+            margin-bottom: 22px;
+            margin-left: 25px;
+        }
+
+    }
+
+    .contact-undersection {
+        flex-direction: column;
+        align-items: center;
+        margin-left: unset;
+        padding-left: 25px;
+        padding-right: 25px;
+        gap: 35px;
+    }
+
+    input[type="text"] {
+        width: 340px !important;
+        height: 40px !important;
+    }
+
+    textarea {
+        width: 340px !important;
+        height: 162px !important;
+    }
+
+    .textfield-height {
+        height: 64px;
+    }
+
+    .messagefield-height {
+        height: 200px;
+    }
+
+    .checkbox-div {
+        width: 340px;
+        gap: unset;
+    }
+
+    .checkbox-content {
+        align-items: flex-start;
+
+        img {
+            margin-top: 4px;
+        }
+    }
+
+    .submit-div {
+        width: 100%;
+
+        input {
+            left: unset;
+            top: 100px;
+        }
+    }
+
+    .go-up-btn {
+        img {
+            top: 864px;
+            left: 148px;
+        }
+    }
 }
