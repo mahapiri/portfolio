@@ -77,7 +77,7 @@ header {
 }
 
 .burger-menu {
-    display: flex;
+    display: none;
     justify-content: flex-end;
 
     img {
@@ -87,31 +87,18 @@ header {
     }
 }
 
-@media screen and (min-width: 391px) {
-    .burger-menu {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 390px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 37px 25px;
-        width: 100%;
         max-width: 390px;
-        height: auto;
         z-index: 2;
-        box-sizing: border-box;
-    
-        img {
-            width: 150px;
-            height: auto;
-        }
     }
 
     .header-links {
         display: none;
+    }
+
+    .burger-menu {
+        display: flex;
     }
 }
