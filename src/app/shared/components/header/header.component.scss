@@ -18,6 +18,7 @@ header {
     width: 100%;
     max-width: 1440px;
     height: auto;
+    z-index: 2;
 
     img {
         width: 150px;
@@ -84,21 +85,5 @@ header {
         height: 27.2px;
         width: 30px;
         cursor: pointer;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    header {
-        padding: 37px 25px;
-        max-width: 390px;
-        z-index: 2;
-    }
-
-    .header-links {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
     }
 }

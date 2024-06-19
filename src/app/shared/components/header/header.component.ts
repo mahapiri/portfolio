@@ -7,7 +7,7 @@ import { BurgerMenuComponent } from '../../../burger-menu/burger-menu.component'
   standalone: true,
   imports: [CommonModule, BurgerMenuComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss', './header-mobile.component.scss']
 })
 export class HeaderComponent {
 
