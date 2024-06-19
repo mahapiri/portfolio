@@ -1,0 +1,56 @@
+@media screen and (max-width: 1024px) {
+    footer {
+        max-width: 1024px;
+        flex-direction: column;
+        padding: 37px 50px;
+        margin-bottom: 56px;
+    }
+
+    .imprint {
+        margin-bottom: 25px;
+        position: relative;
+        top: 208px;
+    }
+
+    .left-section {
+        align-items: center;
+        margin-left: unset;
+        margin-bottom: unset;
+    }
+
+    .copyright-div {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        max-width: 768px;
+        padding: 37px 50px;
+    }
+
+    .copyright-div {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    footer {
+        max-width: 425px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    footer {
+        max-width: 375px;
+        padding: 37px 25px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        max-width: 320px;
+    }
+}

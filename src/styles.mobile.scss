@@ -1,0 +1,38 @@
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 425px) {
+
+}
+
+@media screen and (max-width: 375px) {
+    h2 {
+        font-size: 45px;
+        line-height: 54px;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 28px;
+        line-height: 37px;
+    }
+
+    h5 {
+        font-size: 23px;
+        line-height: 27.6px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+}
