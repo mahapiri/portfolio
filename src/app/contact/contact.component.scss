@@ -1,11 +1,8 @@
 .contact {
-    position: absolute;
-    top: 4146px;
-    right: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     scroll-margin-top: 180px;
+    height: 100%;
 }
 
 .contact-content {
@@ -257,7 +254,6 @@ input[type="submit"] {
 
 @media screen and (max-width: 390px) {
     .contact {
-        top: 4801px;
         scroll-margin-top: 120px;
     }
 

@@ -1,8 +1,4 @@
 .footer {
-    // position: absolute;
-    // top: 5142px;
-    // right: 0;
-    // left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -97,10 +93,6 @@ footer {
 // }
 
 @media screen and (max-width: 390px) {
-    .footer {
-        top: 5765px !important;
-    }
-
     footer {
         max-width: 390px;
         flex-direction: column;

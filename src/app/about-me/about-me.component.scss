@@ -1,8 +1,4 @@
 .about-me {
-    position: absolute;
-    top: 1081px;
-    right: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     scroll-margin-top: 180px;
@@ -99,7 +95,6 @@
 
 @media screen and (max-width: 390px) {
     .about-me {
-        top: 918px;
         scroll-margin-top: 120px;
     }
 

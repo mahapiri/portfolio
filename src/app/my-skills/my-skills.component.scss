@@ -1,8 +1,4 @@
 .skills {
-    position: absolute;
-    top: 1838px;
-    right: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     scroll-margin-top: 180px;
@@ -132,15 +128,8 @@
     border-top: 4px solid var(--purple);
 }
 
-@media screen and (min-width: 390px) {
-
-}
-
 @media screen and (max-width: 390px) {
     .skills {
-        top: 1532px;
-        right: unset;
-        left: unset;
         scroll-margin-top: 120px;
     }
 
