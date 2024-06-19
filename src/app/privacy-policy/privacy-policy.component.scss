@@ -1,8 +1,5 @@
 .privacy-policy {
-    position: absolute;
-    top: 110px;
-    right: 0;
-    left: 0;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
@@ -36,4 +33,21 @@
     left: 1209px;
     transform: rotate(270deg);
     transition: 200ms ease-in-out;
+}
+
+@media screen and (max-width: 390px) {
+    .privacy-policy-content {
+        padding: 100px 25px;
+
+        p {
+            margin-bottom: unset;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 34px;
+        left: unset;
+        right: 32px;
+    }
 }
