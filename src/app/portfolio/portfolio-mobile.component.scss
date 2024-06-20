@@ -30,10 +30,31 @@
     .border-left {
         width: 44px;
     }
+
+    .portfolio-header {
+        align-items: center;
+        h2 {
+            width: 100%;
+            align-items: center;
+        }
+
+        p {
+            margin-top: 22px;
+            text-align: center;
+            width: 100%;
+            padding-right: 25px;
+        }
+    }
 }
 
 @media screen and (max-width: 425px) {
+    .portfolio-header {
+        padding-left: unset;
+    }
 
+    .work {
+        padding-right: 25px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -57,16 +78,8 @@
     }
 
     .portfolio-header {
-        align-items: center;
-        h2 {
-            width: 390px;
-            align-items: center;
-        }
-
         p {
-            margin-top: 22px;
-            text-align: center;
-            width: 340px;
+            padding-right: 25px;
         }
     }
 

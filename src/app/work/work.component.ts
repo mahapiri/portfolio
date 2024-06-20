@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './work.component.html',
-  styleUrl: './work.component.scss'
+  styleUrls: ['./work.component.scss', './work-mobile.component.scss']
 })
 export class WorkComponent {
   work: Work[] = [

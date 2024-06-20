@@ -29,6 +29,7 @@ h2 {
 
 p {
     margin-top: 32px;
+    padding-right: 50px;
 }
 
 .border-left {
@@ -45,5 +46,8 @@ p {
 
 .work {
     position: relative;
-    
+    padding-right: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
