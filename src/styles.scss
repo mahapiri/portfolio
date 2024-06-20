@@ -74,11 +74,13 @@ body {
     font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     color: var(--white);
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: var(--dark-blue);
     position: absolute;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {

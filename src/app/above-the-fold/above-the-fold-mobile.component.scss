@@ -1,6 +1,11 @@
 @media screen and (max-width: 1440px) {
+    .atf {
+        margin-top: 388px;
+    }
+
     .atf-section {
         max-width: 1440px;
+        background-image: url('../../assets/img/atf-shape-mobile.svg');
     }
 
     .atf-content {
@@ -10,39 +15,26 @@
 
     .profile-img {
         height: 477px;
-        top: 62px;
-    }
-
-    .shape-div {
-        top: 320px;
-    }
-
-    .shape-mobile {
-        display: block;
-        height: 100%;
-    }
-
-    .shape {
-        display: none;
+        top: unset;
+        bottom: 88px;
     }
 
     .title-content {
         position: relative;
-        left: 24px;
     }
 
     .right-section {
         position: relative;
-        top: 66px;
+        bottom: unset;
+        right: unset;
     }
 
     .contact-div {
-        top: 144px;
+        bottom: 100px;
     }
 
     .scroll-div {
-        top: 34px;
-        left: 32px;
+        bottom: 200px;
     }
 }
 
@@ -51,16 +43,8 @@
         max-width: 1024px;
     }
 
-    .shape-div {
-        top: 255px;
-    }
-
     .scroll-section {
         display: none;
-    }
-
-    .contact-div {
-        top: 77px;
     }
 
     .mail-div {
@@ -70,7 +54,7 @@
 
 @media screen and (max-width: 768px) {
     .atf {
-        margin-bottom: 426px;
+        margin-top: 188px;
     }
 
     .atf-section {
@@ -79,10 +63,6 @@
 
     .mail-div {
         display: none;
-    }
-
-    .shape-div {
-        top: 100px;
     }
 
     .title-name {
@@ -115,7 +95,7 @@
     }
 
     .contact-div {
-        top: 144px;
+        bottom: 32px;
     }
 
     .title-div {
@@ -145,21 +125,9 @@
         max-width: 375px;
     }
 
-    .shadow {
-        display: none;
-        position: absolute;
-        top: 156px;
-        left: 9px;
-        height: 477px;
-    }
-
     .profile-img {
-        top: 100px;
+        top: 132px;
         height: 254px;
-    }
-
-    .shape-div {
-        top: 8px;
     }
 
     .title-name {
@@ -186,12 +154,13 @@
         gap: 32px;
     }
 
-    // .photo-div {
-    //     justify-content: center;
-    //     align-items: center;
-    //     height: 100%;
-    //     overflow-x: clip;
-    // }
+    .right-section {
+        top: 132px;
+    }
+
+    .contact-div {
+        bottom: 0;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -201,5 +170,16 @@
 
     .profile-img {
         top: 116px;
+    }
+}
+
+
+@media screen and (max-height: 1010px) {
+    .right-section {
+        top: 32px;
+    }
+
+    .contact-div {
+        bottom: 54px;
     }
 }
