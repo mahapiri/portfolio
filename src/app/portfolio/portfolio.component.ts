@@ -6,7 +6,7 @@ import { WorkComponent } from '../work/work.component';
   standalone: true,
   imports: [WorkComponent],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss', './portfolio-mobile.component.scss']
 })
 export class PortfolioComponent {
 
