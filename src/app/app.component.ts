@@ -9,7 +9,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', '../../src/styles.mobile.scss']
+  styleUrl: './app.component.scss'
 })
 
 export class AppComponent implements OnInit {

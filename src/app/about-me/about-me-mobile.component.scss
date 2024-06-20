@@ -1,0 +1,79 @@
+@media screen and (max-width: 1440px) {
+    .about-me-section {
+        max-width: 1440px;
+        justify-content: center;
+        padding: 37px 50px;
+    }
+
+    .about-me-content {
+        left: unset;
+    }
+
+
+
+    .img-div {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me-section {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-me-section {
+        max-width: 768px;
+        padding: 37px 25px;
+    }
+
+    .text-div {
+        width: 325px;
+    }
+
+    .keys-div {
+        p {
+            width: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-me-section {
+        max-width: 425px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .about-me {
+        scroll-margin-top: 120px;
+    }
+
+    .about-me-section {
+        max-width: 375px;
+    }
+
+    .text-div {
+        width: 280px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .puzzle {
+        padding-left: 6px;
+    }
+
+    .img-div {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about-me-section {
+        max-width: 320px;
+    }
+}
