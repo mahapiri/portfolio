@@ -1,0 +1,160 @@
+@media screen and (max-width: 1440px) {
+    .skills-section {
+        max-width: 1440px;
+    }
+
+    .icon-div {
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .icon-div {
+        gap: 70px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .icon-div {
+        gap: 40px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .skills-section {
+        max-width: 1024px;
+    }
+
+    .skills-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .icon-div {
+        margin-left: unset;
+        padding: 35px 25px;
+        gap: 54px;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .title-content {
+        width: 100%;
+        position: unset;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .title-header {
+        display: unset;
+        width: 100%;
+
+        p {
+            width: 338px;
+        }
+    }
+
+    .title-div {
+        padding-right: 25px;
+    }
+
+    .border {
+        width: 20px;
+        position: absolute;
+        top: 172px;
+        left: unset;
+        right: 0;
+    }
+
+    .button-div {
+        position: relative;
+        top: 412px;
+
+        button {
+            font-size: 16px;
+            line-height: 19.2px;
+        }
+    }
+
+    .icons {
+        width: 77px;
+
+        p {
+            font-size: 14px;
+            line-height: 16.8px;
+        }
+    }
+
+    .icon {
+        height: 100px;
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            height: 45px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills-section {
+        max-width: 768px;
+    }
+
+    .border {
+        top: 144px;
+    }
+
+    .button-div {
+        top: 564px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-div {
+        top: 540px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .button-div {
+        top: 700px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .skills-section {
+        max-width: 425px;
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .button-div {
+        top: 1004px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .skills {
+        scroll-margin-top: 120px;
+    }
+
+    .skills-section {
+        max-width: 375px;
+    }
+
+    .title-header {
+
+        p {
+            width: 270px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .skills-section {
+        max-width: 320px;
+    }
+}
