@@ -1,61 +1,83 @@
 .atf {
     width: 100%;
+    height: 100%;
     max-height: 100vh;
     margin-bottom: 256px;
+    display: flex;
+    justify-content: center;
 }
 
 .atf-section {
-    height: 100%;
-    gap: 120px;
-    display: flex;
-    justify-content: center;
-    // position: relative;
-}
-
-.shape {
-    display: block;
-    width: 1442px;
-    height: 1078.6px;
-    position: absolute;
-    top: 377.6px;
-    bottom: 0;
-    z-index: -1;
-}
-
-.shape-mobile {
-    display: none;
-    position: absolute;
-    z-index: -1;
-    width: 390px;
-    height: 467.43px;
-    top: 345.09px;
-    gap: 0px;
-    opacity: 0px;
-
-}
-
-.atf-undersection {
     width: 100%;
     max-width: 1440px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    max-height: 100vh;
+    // gap: 120px;
     // display: flex;
     // justify-content: center;
 }
 
+.shape-div {
+    height: 100%;
+    max-height: 100vh;
+    position: absolute;
+    top: 377.6px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    // border: 10px solid green;
+}
+
+.shape {
+    display: block;
+    width: 100%;
+    height: 1078.6px;
+    // position: absolute;
+    // top: 377.6px;
+    // bottom: 0;
+    // z-index: -1;
+}
+
+.shape-mobile {
+    display: none;
+    // position: absolute;
+    // z-index: -1;
+    width: 100%;
+    height: 467.43px;
+    // top: 345.09px;
+    // gap: 0px;
+    // opacity: 0px;
+}
+
+.atf-undersection {
+    // width: 100%;
+    // // max-width: 1440px;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // // display: flex;
+    // // justify-content: center;
+}
+
 .atf-content {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.photo-div {
-    display: flex;
-}
+// .photo-div {
+//     display: flex;
+// }
 
 .profile-img {
+    // position: relative;
+    // top: 200px;
+    // right: 809px;
     position: relative;
-    top: 200px;
-    right: 809px;
+    top: 190px;
     height: 620px;
     z-index: -2;
     // // top: 140px;
@@ -72,12 +94,12 @@
 }
 
 .right-section {
-    position: relative;
-    top: 255px;
-    right: 856px;
+    // position: relative;
+    // top: 255px;
+    // right: 856px;
     // top: 297px;
-    width: max-content;
-    height: max-content;
+    // width: max-content;
+    // height: max-content;
     text-align: center;
 }
 
@@ -161,15 +183,15 @@
 }
 
 .atf-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: flex-end;
 }
 
 .contact-div {
+    display: flex;
     position: relative;
-    // top: 144px;
-    top: 32px;
+    top: 244px;
     // position: relative;
     // left: 0;
     // bottom: 210px;
@@ -184,9 +206,10 @@
 }
 
 .scroll-div {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
-    bottom: 49px;
-    // top: 70px;
+    top: 135px;
     // position: relative;
     // right: 0;
     // bottom: 255px;
@@ -209,108 +232,5 @@
         width: 24px;
         height: 24px;
         transform: rotate(270deg);
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .atf {
-        // overflow-x: clip;
-        margin-bottom: 426px;
-    }
-
-    .shape-mobile {
-        display: block;
-    }
-
-    .atf-undersection {
-        width: 100%;
-        max-width: 390px;
-        height: 100%;
-    }
-
-    .shape {
-        display: none;
-    }
-
-    .shadow {
-        display: none;
-        position: absolute;
-        top: 156px;
-        left: 9px;
-        height: 477px;
-    }
-
-    .profile-img {
-        position: relative;
-        top: 180px;
-        right: unset;
-        left: 0px;
-        z-index: -2;
-        height: 335px;
-    }
-
-    .mail-div {
-        display: none;
-    }
-
-    .scroll-div {
-        display: none;
-    }
-
-    .atf-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo-div {
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        overflow-x: clip;
-    }
-
-    .right-section {
-        position: relative;
-        // top: 579px;
-        top: 190px;
-        right: unset;
-        left: 8px;
-        width: unset;
-        height: unset;
-    }
-
-    .title-div {
-        width: 100%;
-        gap: 22px;
-
-        button {
-            font-size: 16px;
-            line-height: 19.2px;
-        }
-    }
-
-    .iam {
-        position: relative;
-        top: 46px;
-        right: 169px;
-        font-size: 26px;
-        transform: rotate(270deg);
-    }
-
-    .title-profession {
-        font-size: 29px;
-        line-height: 34px;
-        color: var(--purple);
-        margin: 0;
-    }
-
-    .border {
-        width: 64px;
-    }
-
-    .contact-div {
-        display: flex;
-        position: absolute;
-        top: 778px;
     }
 }

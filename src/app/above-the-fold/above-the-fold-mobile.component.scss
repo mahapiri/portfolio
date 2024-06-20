@@ -1,0 +1,205 @@
+@media screen and (max-width: 1440px) {
+    .atf-section {
+        max-width: 1440px;
+    }
+
+    .atf-content {
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .profile-img {
+        height: 477px;
+        top: 62px;
+    }
+
+    .shape-div {
+        top: 320px;
+    }
+
+    .shape-mobile {
+        display: block;
+        height: 100%;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .title-content {
+        position: relative;
+        left: 24px;
+    }
+
+    .right-section {
+        position: relative;
+        top: 66px;
+    }
+
+    .contact-div {
+        top: 144px;
+    }
+
+    .scroll-div {
+        top: 34px;
+        left: 32px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .atf-section {
+        max-width: 1024px;
+    }
+
+    .shape-div {
+        top: 255px;
+    }
+
+    .scroll-section {
+        display: none;
+    }
+
+    .contact-div {
+        top: 77px;
+    }
+
+    .mail-div {
+        width: 271px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .atf {
+        margin-bottom: 426px;
+    }
+
+    .atf-section {
+        max-width: 768px;
+    }
+
+    .mail-div {
+        display: none;
+    }
+
+    .shape-div {
+        top: 100px;
+    }
+
+    .title-name {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .title-profession {
+        font-size: 29px;
+        line-height: 28.6px;
+    }
+
+    .iam {
+        top: 36px;
+        right: 166px;
+        font-size: 24px;
+    }
+
+    .title-content {
+        left: 8px;
+    }
+
+    .profile-img {
+        top: 100px;
+        height: 335px;
+    }
+
+    .right-section {
+        top: 100px;
+    }
+
+    .contact-div {
+        top: 144px;
+    }
+
+    .title-div {
+        width: 100%;
+        gap: 22px;
+
+        button {
+            font-size: 16px;
+            line-height: 19.2px;
+        }
+    }
+
+    .border {
+        width: 64px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .atf-section {
+        max-width: 768px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .atf-section {
+        max-width: 375px;
+    }
+
+    .shadow {
+        display: none;
+        position: absolute;
+        top: 156px;
+        left: 9px;
+        height: 477px;
+    }
+
+    .profile-img {
+        top: 100px;
+        height: 254px;
+    }
+
+    .shape-div {
+        top: 8px;
+    }
+
+    .title-name {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .title-profession {
+        font-size: 22.6px;
+        line-height: 22px;
+    }
+
+    .iam {
+        top: 31px;
+        right: 130px;
+        font-size: 18px;
+    }
+
+    .contact-section {
+        gap: 22px;
+    }
+
+    .socialmedia-btns {
+        gap: 32px;
+    }
+
+    // .photo-div {
+    //     justify-content: center;
+    //     align-items: center;
+    //     height: 100%;
+    //     overflow-x: clip;
+    // }
+}
+
+@media screen and (max-width: 320px) {
+    .atf-section {
+        max-width: 1024px;
+    }
+
+    .profile-img {
+        top: 116px;
+    }
+}
