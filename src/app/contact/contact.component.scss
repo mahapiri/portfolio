@@ -151,18 +151,19 @@ input[type="submit"] {
 .checkbox-submit-box {
     display: flex;
     flex-direction: column;
+    gap: 35px;
 }
 
 .submit-div {
     display: flex;
     justify-content: center;
-    position: absolute;
+    // position: absolute;
 
-    input {
-        position: absolute;
-        top: 76px;
-        left: 201px;
-    }
+    // input {
+    //     position: absolute;
+    //     top: 76px;
+    //     left: 201px;
+    // }
 }
 
 .checkbox-div {
@@ -170,7 +171,7 @@ input[type="submit"] {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 617px;
+    // width: 617px;
     gap: 8px;
     position: relative;
 
@@ -215,7 +216,7 @@ input[type="submit"] {
 .go-up {
     position: relative;
     top: 46px;
-    left: 625px;
+    right: -675px;
     margin-top: 122px;
 }
 
