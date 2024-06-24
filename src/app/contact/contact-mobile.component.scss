@@ -1,28 +1,49 @@
 @media screen and (max-width: 1440px) {
+    .contact-content {
+        max-width: 1440px;
+        padding: 37px 50px;
+        width: unset;
+    }
+
+    input[type="text"] {
+        width: 100% !important;
+        height: 40px !important;
+    }
+
+    textarea {
+        width: 100% !important;
+        height: 162px !important;
+    }
+
+    .go-up {
+        position: relative;
+        top: 46px;
+        left: 325px;
+        margin-top: 64px;
+    }
+
+    .contact-undersection {
+        flex-direction: column;
+    }
+
+    form {
+        align-items: unset;
+    }
 
 }
 
 @media screen and (max-width: 1024px) {
+    .contact-content {
+        max-width: 1024px;
+    }
 
 }
 
 @media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 425px) {
-
-}
-
-@media screen and (max-width: 375px) {
-    .contact {
-        scroll-margin-top: 120px;
-    }
-
     .contact-content {
-        max-width: 375px;
-        gap: unset;
+        max-width: 768px;
     }
+
 
     .border {
         width: 20px;
@@ -46,16 +67,6 @@
         padding-left: 25px;
         padding-right: 25px;
         gap: 35px;
-    }
-
-    input[type="text"] {
-        width: 340px !important;
-        height: 40px !important;
-    }
-
-    textarea {
-        width: 340px !important;
-        height: 162px !important;
     }
 
     .textfield-height {
@@ -105,6 +116,29 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
+    .contact-content {
+        max-width: 425px;
+    }
 
+    .checkbox-div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact {
+        scroll-margin-top: 120px;
+    }
+
+    .contact-content {
+        max-width: 325px;
+        gap: unset;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contact-content {
+        max-width: 320px;
+    }
 }
