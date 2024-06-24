@@ -22,7 +22,7 @@ export class WorkComponent {
     {
       title: 'El Pollo Loco',
       subtitle: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the endboss.',
       link: 'https://google.com/',
       git: 'https://github.com/',
       img: 'assets/img/mockup-elpollo.png'

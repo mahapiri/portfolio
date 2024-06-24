@@ -13,7 +13,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactComponent {
 
   constructor() {
-    console.log(this.clicked)
   }
 
   hover: boolean = false;
