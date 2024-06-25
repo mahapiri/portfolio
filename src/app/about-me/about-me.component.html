@@ -1,5 +1,5 @@
 <div id="about-me" class="about-me">
-    <div class="about-me-section">
+    <div class="about-me-section" [class.visibleS]="isVisible">
         <div class="about-me-content">
             <h2>About me</h2>
             <div class="text-div">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div class="img-div">
+        <div class="img-div" [class.visible]="isVisible">
             <div class="profile-img">
                 <img src="assets/img/piri-profile.png" alt="">
             </div>

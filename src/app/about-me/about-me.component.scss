@@ -14,6 +14,8 @@
     padding: 37px 0px 37px 100px;
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    transition: opacity 1250ms linear;
 }
 
 .about-me-content {
@@ -63,9 +65,28 @@
 }
 
 .img-div {
+    position: relative;
     width: 50%;
     display: flex;
     align-items: center;
+    scroll-snap-align: start;
+    opacity: 0;
+    transition: opacity 1250ms linear;
+}
+
+// #about-me:target .img-div {
+//     animation: slideIn 1250ms linear forwards;
+// }
+
+.visibleS {
+    animation: fadeIn 1250ms linear forwards;
+}
+.visible {
+    animation: slideIn 1250ms linear forwards;
+}
+
+html {
+    scroll-snap-type: y mandatory;
 }
 
 .profile-img {
@@ -91,4 +112,28 @@
     width: 267px;
     height: 0;
     border-top: 4px solid var(--light-blue);
+}
+
+@keyframes slideIn {
+    0% {
+       left: 1000px;
+       opacity: 0; 
+    }
+    50% {
+        left: 500px; 
+        opacity: 1; 
+    }
+    100% {
+        left: 0;
+        opacity: 1;  
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
