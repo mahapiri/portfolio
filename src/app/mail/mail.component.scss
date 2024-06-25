@@ -1,0 +1,28 @@
+.mail {
+    width: 100vw;
+    height: calc(100% - 114px - 300px);
+    margin-top: 114px;
+    display: flex;
+    justify-content: center;
+}
+
+.mail-content {
+    width: 100%;
+    max-width: 1440px;
+    padding: 37px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+
+    img{
+        width: 128px;
+        height: 128px;
+    }
+
+    h6 {
+        color: white;
+    }
+}

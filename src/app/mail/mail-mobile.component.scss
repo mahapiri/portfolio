@@ -1,0 +1,48 @@
+@media screen and (max-width: 1440px) {
+    .mail-content  {
+        max-width: 1440px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mail {
+        height: calc(100% - 114px - 360px);
+    }
+
+    .mail-content  {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mail-content  {
+        max-width: 768px;
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        h6 {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mail-content  {
+        max-width: 425px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .mail-content  {
+        max-width: 375px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mail-content  {
+        max-width: 320px;
+    }
+}

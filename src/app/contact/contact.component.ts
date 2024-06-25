@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -20,6 +21,7 @@ export class ContactComponent {
   marked: boolean = false;
   clicked: boolean = false;
   http = inject(HttpClient);
+  router = inject(Router);
 
   contactData = {
     name: '',
@@ -71,7 +73,14 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    // if(!ngForm.form.valid) {
+
+    //   this.checked('name');
+    //   this.checked('email');
+    //   this.checked('message');
+    // }
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.marked) {
+
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -83,15 +92,30 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
+        // this.router.navigate(['/mail']);
+        this.openNewTab();
+        this.marked = !this.marked;
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.marked = !this.marked;
       ngForm.resetForm();
+    } else {
+      this.checked('name');
+      this.checked('email');
+      this.checked('message');
+      this.proofCheckbox();
     }
   }
 
+
+  openNewTab() {
+    window.open('https://www.pirathib-mahalingam.ch/mail', '_blank');
+  }
+
+  proofCheckbox() {
+    this.errorMsg.checkbox.clicked = true;
+  }
+
   checked(id: string) {
-
-
     if (id == 'checkbox') {
       this.errorMsg.checkbox.clicked = true;
       this.marked = !this.marked;

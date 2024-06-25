@@ -21,24 +21,5 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
-    // this.router.events.subscribe(event => {
-    //   if (event instanceof NavigationEnd) {
-    //     this.adjustFooterPosition(event.url);
-    //   }
-    // })
-  }
-
-
-  adjustFooterPosition(url: string) {
-    let footer = document.getElementById('footer');
-    if (footer) {
-      if (url.includes('imprint')) {
-        footer.style.top = '1472px';
-      } else if (url.includes('privacy')) {
-        footer.style.top = '8744px';
-      } else {
-        footer.style.top = '5142px';
-      }
-    }
   }
 }
