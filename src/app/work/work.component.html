@@ -8,9 +8,19 @@
                 <td class="info-section p-172">
                     <h4>{{ project.title }}</h4>
                     <h6>{{ project.subtitle }}</h6>
-                    <p>{{ project.description }}</p>
+                    @if (languageService.language == 'English') {
+                    <p>{{ project.descriptionEn }}</p>
+                    }
+                    @if (languageService.language == 'German') {
+                    <p>{{ project.descriptionDe }}</p>
+                    }
                     <div class="btn-div flex-start">
+                        @if (languageService.language == 'English') {
                         <button class="livetest-btn">Live Test</button>
+                        }
+                        @if (languageService.language == 'German') {
+                        <button class="livetest-btn">Jetzt testen</button>
+                        }
                         <button class="github-btn">Github</button>
                     </div>
                 </td>
@@ -20,9 +30,19 @@
                     <td class="info-section p-100">
                         <h4>{{ project.title }}</h4>
                         <h6>{{ project.subtitle }}</h6>
-                        <p>{{ project.description }}</p>
+                        @if (languageService.language == 'English') {
+                        <p>{{ project.descriptionEn }}</p>
+                        }
+                        @if (languageService.language == 'German') {
+                        <p>{{ project.descriptionDe }}</p>
+                        }
                         <div class="btn-div flex-end">
+                            @if (languageService.language == 'English') {
                             <button class="livetest-btn">Live Test</button>
+                            }
+                            @if (languageService.language == 'German') {
+                            <button class="livetest-btn">Jetzt testen</button>
+                            }
                             <button class="github-btn">Github</button>
                         </div>
                     </td>

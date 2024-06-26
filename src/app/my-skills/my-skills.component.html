@@ -11,14 +11,28 @@
                 <div class="border"></div>
                 <div class="title-header">
                     <div class="title-div">
+                        @if (languageService.language == 'English') {
                         <h2>My skills</h2>
                         <p>I have grown my frontend developments skills that have allowed me to create different
                             real
                             projects.</p>
+                        }
+                        @if (languageService.language == 'German') {
+                        <h2>Kompetenzen</h2>
+                        <p>Ich habe meine Fähigkeiten in der Frontend-Entwicklung erweitert, was es mir ermöglicht hat,
+                            verschiedene reale Projekte zu erstellen.</p>
+                        }
+
                     </div>
                     <div class="button-div">
                         <a href="#contact">
+                            @if (languageService.language == 'English') {
                             <button class="button">Get in touch</button>
+                            }
+                            @if (languageService.language == 'German') {
+                            <button class="button">Kontakt</button>
+                            }
+
                         </a>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,8 @@ import { Router } from '@angular/router';
 })
 export class ContactComponent {
 
-  constructor() {
+  constructor(public languageService : LanguageService) {
+
   }
 
   hover: boolean = false;
@@ -32,25 +34,35 @@ export class ContactComponent {
   errorMsg = {
     name: {
       clicked: false,
-      message: 'Your name is required',
-      field: 'Your name',
-      placeholder: 'Your name'
+      messageEn: 'Your name is required',
+      messageDe: 'Ihr Name ist erforderlich',
+      fieldEn: 'Your name',
+      fieldDe: 'Ihr Name',
+      placeholderEn: 'Your name',
+      placeholderDe: 'Ihr Name'
     },
     email: {
       clicked: false,
-      message: 'Your email is required',
-      field: 'Your email',
-      placeholder: 'Your email'
+      messageEn: 'Your email is required',
+      messageDe: 'Ihre E-Mail ist erforderlich',
+      fieldEn: 'Your email',
+      fieldDe: 'Ihre E-Mail',
+      placeholderEn: 'Your email',
+      placeholderDe: 'Ihre E-Mail'
     },
     message: {
       clicked: false,
-      message: 'Your message is empty',
-      field: 'Your message',
-      placeholder: 'Your message'
+      messageEn: 'Your message is empty',
+      messageDe: 'Ihre Nachricht ist leer',
+      fieldEn: 'Your message',
+      fieldDe: 'Ihre Nachricht',
+      placeholderEn: 'Your message',
+      placeholderDe: 'Ihre Nachricht'
     },
     checkbox: {
       clicked: false,
-      message: 'Please accept the privacy policy'
+      messageEn: 'Please accept the privacy policy',
+      messageDe: 'Bitte akzeptieren Sie die Datenschutzerklärung'
     }
   };
 
@@ -122,15 +134,18 @@ export class ContactComponent {
     }
     if (id == 'name') {
       this.errorMsg.name.clicked = true;
-      this.errorMsg.name.field = this.emptyPlaceholder;
+      this.errorMsg.name.fieldEn = this.emptyPlaceholder;
+      this.errorMsg.name.fieldDe = this.emptyPlaceholder;
     }
     if (id == 'email') {
       this.errorMsg.email.clicked = true;
-      this.errorMsg.email.field = this.emptyPlaceholder;
+      this.errorMsg.email.fieldEn = this.emptyPlaceholder;
+      this.errorMsg.email.fieldDe = this.emptyPlaceholder;
     }
     if (id == 'message') {
       this.errorMsg.message.clicked = true;
-      this.errorMsg.message.field = this.emptyPlaceholder;
+      this.errorMsg.message.fieldEn = this.emptyPlaceholder;
+      this.errorMsg.message.fieldDe = this.emptyPlaceholder;
     }
   }
 }

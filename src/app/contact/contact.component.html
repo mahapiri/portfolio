@@ -2,53 +2,83 @@
     <div class="contact-content">
         <div class="contact-div">
             <!-- <div class="border"></div> -->
+            @if (languageService.language == 'English') {
             <h2>Contact</h2>
+            }
+            @if (languageService.language == 'German') {
+            <h2>Kontakt</h2>
+            }
             <div class="contact-undersection">
                 <div class="text-div">
+                    @if (languageService.language == 'English') {
                     <h5>Got a problem to solve?</h5>
                     <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
                         contributing to
                         your projects with my work.</p>
                     <p>Need a Frontend developer? <b>Contact me!</b></p>
+                    }
+                    @if (languageService.language == 'German') {
+                    <h5>Haben Sie ein Problem zu lösen?</h5>
+                    <p>Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von Ihnen zu hören, Ihre
+                        Ideen kennenzulernen und zu Ihren Projekten mit meiner Arbeit beizutragen.</p>
+                    <p>Brauchen Sie einen Frontend-Entwickler? <b>Kontaktieren Sie mich!</b></p>
+                    }
                 </div>
                 <div class="input-div">
                     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                         <div>
                             <div class="input-field textfield-height">
                                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                                    [placeholder]="errorMsg.name.field" (click)="checked('name')" [ngClass]="
+                                    [placeholder]="languageService.language == 'English' ? errorMsg.name.fieldEn : errorMsg.name.fieldDe"
+                                    (click)="checked('name')" [ngClass]="
                                     errorMsg.name.clicked ? (name.valid ? 'done-border' : 'error-border') : ''"
                                     required>
                                 <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
                                     alt="Warn Symbol" [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
                                 @if (errorMsg.name.clicked && !name.valid) {
-                                <span>{{ errorMsg.name.message }}</span>
+                                    @if (languageService.language == 'English') {
+                                    <span>{{ errorMsg.name.messageEn }}</span>
+                                    }
+                                    @if (languageService.language == 'German') {
+                                    <span>{{ errorMsg.name.messageDe }}</span>
+                                    }
                                 }
                             </div>
                         </div>
                         <div class="input-field textfield-height">
                             <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
-                                [placeholder]="errorMsg.email.field"
+                                [placeholder]="languageService.language == 'English' ? errorMsg.email.fieldEn : errorMsg.email.fieldDe"
                                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (click)="checked('email')"
                                 [ngClass]="errorMsg.email.clicked ? (email.valid ? 'done-border' : 'error-border') : ''"
                                 required>
                             <img [src]="email.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
                                 [ngClass]="errorMsg.email.clicked ? 'warn-symbol' : 'd-none'">
                             @if (errorMsg.email.clicked && !email.valid) {
-                            <span>{{ errorMsg.email.message }}</span>
+                                @if (languageService.language == 'English') {
+                                <span>{{ errorMsg.email.messageEn }}</span>
+                                }
+                                @if (languageService.language == 'German') {
+                                <span>{{ errorMsg.email.messageDe }}</span>
+                                }
                             }
                         </div>
                         <div class="input-field messagefield-height">
                             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="0" type="text"
-                                id="message" name="message" [placeholder]="errorMsg.message.field" rows="7"
-                                (click)="checked('message')"
+                                id="message" name="message"
+                                [placeholder]="languageService.language == 'English' ? errorMsg.message.fieldEn : errorMsg.message.fieldDe"
+                                rows="7" (click)="checked('message')"
                                 [ngClass]="errorMsg.message.clicked ? (message.valid ? 'done-border' : 'error-border') : ''"
                                 required></textarea>
                             <img [src]="message.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
                                 alt="Warn Symbol"
                                 [ngClass]="errorMsg.message.clicked ? 'warn-symbol pos-bottom' : 'd-none'">
                             @if (errorMsg.message.clicked && !message.valid) {
-                            <span>{{ errorMsg.message.message }}</span>
+                                @if (languageService.language == 'English') {
+                                    <span>{{ errorMsg.message.messageEn }}</span>
+                                    }
+                                @if (languageService.language == 'German') {
+                                <span>{{ errorMsg.message.messageDe }}</span>
+                                }
                             }
                         </div>
                         <div class="checkbox-submit-box">
@@ -59,17 +89,32 @@
                                     : (marked ? 'assets/img/checkbox/checked.svg' : 'assets/img/checkbox/default.svg')"
                                         alt="Checkbox" (click)="checked('checkbox')">
                                     <div class="checkbox-text">
+                                        @if (languageService.language == 'English') {
                                         <p>I've read the </p>
                                         <a href="/privacy">privacy policy</a>
                                         <p> and agree to the processing of my data as outlined.</p>
-                                    </div>   
+                                        }
+                                        @if (languageService.language == 'German') {
+                                        <p>Ich habe die </p>
+                                        <a href="/privacy">Datenschutzerklärung</a>
+                                        <p> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</p>
+                                        }
+                                    </div>
                                 </div>
                                 @if (!marked && errorMsg.checkbox.clicked) {
-                                <span class="error-msg">{{ errorMsg.checkbox.message }}</span>
+                                    @if (languageService.language == 'English') {
+                                        <span class="error-msg">{{ errorMsg.checkbox.messageEn }}</span>
+                                        }
+                                    @if (languageService.language == 'German') {
+                                        <span class="error-msg">{{ errorMsg.checkbox.messageDe }}</span>
+                                    }
                                 }
                             </div>
                             <div class="submit-div">
-                                <input [ngClass]="marked ? 'success-btn' : ''" type="submit" value="Send message :)">
+                                <input *ngIf="languageService.language == 'English'" type="submit"
+                                    value="Send message :)">
+                                <input *ngIf="languageService.language == 'German'" type="submit"
+                                    value="Nachricht senden :)">
                             </div>
                         </div>
                     </form>

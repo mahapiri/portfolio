@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Icon } from '../../models/icon.interface';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -12,6 +13,8 @@ import { CommonModule } from '@angular/common';
 
 
 export class MySkillsComponent {
+  constructor(public languageService: LanguageService) { }
+
   icons: Icon[] = [
     {
       source: 'angular.svg',

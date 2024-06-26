@@ -7,7 +7,14 @@
                     Portfolio
                     <div class="border-right"></div>
                 </h2>
-                <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>    
+                @if (languageService.language == 'English') {
+                <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+                }
+                @if (languageService.language == 'German') {
+                <p>Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine
+                    Fähigkeiten in Aktion zu sehen.</p>
+                }
+
             </div>
         </div>
         <app-work class="work"></app-work>

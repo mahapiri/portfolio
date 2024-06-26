@@ -1,7 +1,8 @@
 export interface Work {
     title: string;
     subtitle: string;
-    description: string;
+    descriptionEn: string;
+    descriptionDe: string;
     link: string;
     git: string;
     img: string;

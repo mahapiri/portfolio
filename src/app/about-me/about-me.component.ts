@@ -38,7 +38,7 @@ export class AboutMeComponent implements OnInit {
   ngOnInit(): void {
       setTimeout(() => {
           this.onWindowScroll();
-      }, 1000000);
+      }, 100);
   }
 
 }
