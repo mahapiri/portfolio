@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ShadowComponent } from '../shadow/shadow.component';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
@@ -10,7 +10,17 @@ import { LanguageService } from '../language.service';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
-  constructor(public languageService: LanguageService) { }
+export class PrivacyPolicyComponent implements OnInit {
   hover: boolean = false;
+  currentLanguage: string;
+
+  constructor(public languageService: LanguageService) { 
+    this.currentLanguage = this.languageService.getLanguage();
+    this.languageService.language = this.currentLanguage;
+  }
+
+  ngOnInit(): void {
+
+  }
+
 }

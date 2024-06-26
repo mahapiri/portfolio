@@ -4,18 +4,23 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LanguageService {
+  language: string;
 
-  public language: string;
 
-  constructor() { 
+  constructor() {
+    // Beim Initialisieren des Service die gespeicherte Sprache aus dem localStorage laden oder Standardwert 'English' setzen
     this.language = 'English';
   }
 
   setLanguage(language: string) {
-    this.language = language;
+    // Sprache im localStorage speichern
+    localStorage.setItem('language', JSON.stringify(language));
+    this.language = language; // Aktuellen Service-Zustand aktualisieren
   }
 
   getLanguage() {
-    return this.language;
+    let localStored: any = localStorage.getItem('language'); 
+    // Aktuelle Sprache aus dem Service-Zustand abrufen
+    return this.language ? JSON.parse(localStored) : 'English';
   }
 }

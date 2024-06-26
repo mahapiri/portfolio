@@ -64,5 +64,5 @@
             <img src="assets/img/burger-menu/default.svg" alt="Burger Menu" (click)="openMenu()">
         </div>
     </header>
-    <app-burger-menu [ngClass]="clickedMenu ? '' : 'd-none'"></app-burger-menu>
+    <app-burger-menu class="burger-menu-content" [ngStyle]="{ 'display': clickedMenu ? 'block' : 'none'}"></app-burger-menu>
 </section>

@@ -11,6 +11,10 @@ import { LanguageService } from '../language.service';
 })
 export class ImprintComponent {
   hover: boolean = false;
+  currentLanguage: string;
 
-  constructor(public languageService: LanguageService) {}
+  constructor(public languageService: LanguageService) { 
+    this.currentLanguage = this.languageService.getLanguage();
+    this.languageService.language = this.currentLanguage;
+  }
 }
