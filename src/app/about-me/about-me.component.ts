@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,6 +10,10 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
   isVisible: boolean = false;
+
+  constructor(public languageService : LanguageService) {
+
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -31,10 +36,9 @@ export class AboutMeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      // Use a timeout to ensure that the element is rendered before checking visibility
       setTimeout(() => {
-          this.onWindowScroll(); // Check visibility on init
-      }, 100);
+          this.onWindowScroll();
+      }, 1000000);
   }
 
 }

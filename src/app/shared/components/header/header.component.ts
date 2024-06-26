@@ -11,9 +11,7 @@ import { LanguageService } from '../../../language.service';
   styleUrls: ['./header.component.scss', './header-mobile.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor(public languageService: LanguageService) {
-    console.log(    this.languageService.getLanguage());
-   }
+  constructor(public languageService: LanguageService) { }
 
   activeLink: string | null = null;
   clickedMenu: boolean = false;

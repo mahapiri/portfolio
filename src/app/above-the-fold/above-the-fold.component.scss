@@ -79,12 +79,21 @@
     }
 }
 
-.iam {
+.verticalText {
     position: relative;
+    transform: rotate(270deg);
+}
+
+.iam {
     top: 73px;
     right: 340px;
     font-size: 50px;
-    transform: rotate(270deg);
+}
+
+.ichbin {
+    top: 71px;
+    right: 330px;
+    font-size: 32px;
 }
 
 .title-profession {

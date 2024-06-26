@@ -13,7 +13,6 @@ export class LanguageService {
 
   setLanguage(language: string) {
     this.language = language;
-    console.log(this.language)
   }
 
   getLanguage() {

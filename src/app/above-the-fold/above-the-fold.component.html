@@ -9,11 +9,29 @@
                 <div class="right-section">
                     <div class="title-div">
                         <span class="title-content">
-                            <p class="iam">I am</p>
+                            @if (languageService.language == 'English') {
+                            <p class="verticalText iam">I am</p>
+                            }
+                            @if (languageService.language == 'German') {
+                            <p class="verticalText ichbin">Ich bin</p>
+                            }
                             <h3 class="title-name">Pirathib Mahalingam</h3>
+                            @if (languageService.language == 'English') {
                             <p class="title-profession">FRONTEND DEVELOPER</p>
+                            }
+                            @if (languageService.language == 'German') {
+                            <p class="title-profession">FRONTEND-ENTWICKLER</p>
+                            }
+
                         </span>
-                        <a href="#contact"><button>Let's talk!</button></a>
+                        <a href="#contact">
+                            @if (languageService.language == 'English') {
+                            <button>Let's talk!</button>
+                            }
+                            @if (languageService.language == 'German') {
+                            <button>Sprechen wir!</button>
+                            }
+                        </a>
                     </div>
                 </div>
             </div>
@@ -33,7 +51,12 @@
                 </div>
                 <div class="scroll-div">
                     <div class="scroll-section">
+                        @if (languageService.language == 'English') {
                         <p>Scroll down</p>
+                        }
+                        @if (languageService.language == 'German') {
+                        <p>Scrollen</p>
+                        }
                         <img src="assets/img/arrow-down-line.svg" alt="Arrow-down">
                     </div>
                 </div>

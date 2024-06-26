@@ -1,17 +1,54 @@
 <div id="about-me" class="about-me">
     <div class="about-me-section" [class.visibleS]="isVisible">
         <div class="about-me-content">
+            @if (languageService.language == 'English') {
             <h2>About me</h2>
+            }
+            @if (languageService.language == 'German') {
+            <h2>Über mich</h2>
+            }
             <div class="text-div">
-                <p>Hi, I am a Front-end developer based in Kreuzlingen, Switzerland. I am passionate about creating efficient and innovative web solutions. I have a diverse skill set, including proficiency in JavaScript, Angular, REST APIs, and more. I aim to continue my journey as a Fullstack Developer and complete my Computer Science degree.</p>
+                @if (languageService.language == 'English') {
+                <p>Hi, I am a Front-end developer based in Kreuzlingen, Switzerland. I am passionate about creating
+                    efficient and innovative web solutions. I have a diverse skill set, including proficiency in
+                    JavaScript, Angular, REST APIs, and more. I aim to continue my journey as a Fullstack Developer and
+                    complete my Computer Science degree.</p>
+                }
+                @if (languageService.language == 'German') {
+                <p>Hallo, ich bin Frontend-Entwickler mit Sitz in Kreuzlingen, Schweiz. Ich habe eine Leidenschaft für
+                    die Erstellung effizienter und innovativer Web-Lösungen. Mein vielseitiges Können umfasst unter
+                    anderem fundierte Kenntnisse in JavaScript, Angular, REST APIs und mehr. Mein Ziel ist es, meine
+                    Laufbahn als Fullstack-Entwickler fortzusetzen und mein Informatikstudium abzuschließen.</p>
+                }
                 <div class="keys-section">
                     <div class="keys-div">
                         <img class="icon" src="assets/img/bulb.svg" alt="">
-                        <p>I am fascinated by the process of creating new web solutions and continuously building my skills. I find great joy in problem-solving and turning complex challenges into simple, user-friendly experiences. My curiosity drives me to explore new technologies and stay updated with industry trends.</p>
+                        @if (languageService.language == 'English') {
+                        <p>I am fascinated by the process of creating new web solutions and continuously building my
+                            skills. I find great joy in problem-solving and turning complex challenges into simple,
+                            user-friendly experiences. My curiosity drives me to explore new technologies and stay
+                            updated with industry trends.</p>
+                        }
+                        @if (languageService.language == 'German') {
+                        <p>Ich bin fasziniert vom Prozess, neue Web-Lösungen zu schaffen und kontinuierlich meine
+                            Fähigkeiten zu erweitern. Es bereitet mir große Freude, Probleme zu lösen und komplexe
+                            Herausforderungen in einfache, benutzerfreundliche Erlebnisse zu verwandeln. Meine Neugier
+                            treibt mich dazu, neue Technologien zu erkunden und stets auf dem Laufenden mit
+                            Branchentrends zu bleiben.</p>
+                        }
                     </div>
                     <div class="keys-div">
                         <img class="icon puzzle" src="assets/img/puzzle.svg" alt="">
-                        <p>Beyond coding, I enjoy collaborating with others, sharing knowledge, and learning from different perspectives. I believe that the best solutions come from a combination of technical expertise and creative thinking.</p>
+                        @if (languageService.language == 'English') {
+                        <p>Beyond coding, I enjoy collaborating with others, sharing knowledge, and learning from
+                            different perspectives. I believe that the best solutions come from a combination of
+                            technical expertise and creative thinking.</p>
+                        }
+                        @if (languageService.language == 'German') {
+                        <p>Neben dem Programmieren genieße ich die Zusammenarbeit mit anderen, das Teilen von Wissen und
+                            das Lernen aus verschiedenen Perspektiven. Ich bin der Überzeugung, dass die besten Lösungen
+                            aus einer Kombination von technischem Fachwissen und kreativem Denken entstehen.</p>
+                        }
                     </div>
                 </div>
             </div>

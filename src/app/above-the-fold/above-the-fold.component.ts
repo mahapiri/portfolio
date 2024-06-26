@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./above-the-fold.component.scss', './above-the-fold-mobile.component.scss']
 })
 export class AboveTheFoldComponent {
+  constructor(public languageService : LanguageService) {
 
+  }
 }

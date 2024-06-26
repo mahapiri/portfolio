@@ -39,12 +39,22 @@
                         <div class="languageSelection-text" [class.blue]="languageService.getLanguage() == 'English'"
                             (click)="languageService.setLanguage('English')">
                             <a class="arrow">></a>
+                            @if (languageService.language == 'English') {
                             <a href="#">English</a>
+                            }
+                            @if (languageService.language == 'German') {
+                            <a href="#">Englisch</a>
+                            }
                         </div>
                         <div class="languageSelection-text" [class.blue]="languageService.getLanguage() == 'German'"
                             (click)="languageService.setLanguage('German')">
                             <a class="arrow">></a>
+                            @if (languageService.language == 'English') {
                             <a href="#">German</a>
+                            }
+                            @if (languageService.language == 'German') {
+                            <a href="#">Deutsch</a>
+                            }
                         </div>
                     </div>
                 </div>
