@@ -42,7 +42,7 @@ header {
         font-size: 23px;
         line-height: 27.6px;
         height: 32px;
-        transition: 200ms ease-in-out;
+        transition: 125ms ease-in-out;
 
         &:hover {
             color: var(--light-blue);
@@ -50,17 +50,17 @@ header {
     }
 }
 
-.about-me {
-    width: 114px;
-}
+// .about-me {
+//     width: 114px;
+// }
 
-.skills {
-    width: 57px;
-}
+// .skills {
+//     width: 57px;
+// }
 
-.portfolio {
-    width: 95px;
-}
+// .portfolio {
+//     width: 95px;
+// }
 
 .visited {
     div {
@@ -77,6 +77,61 @@ header {
     }
 }
 
+.language {
+    position: relative;
+}
+
+.language-icon {
+    width: 27.6px;
+    height: 27.6px;
+    transition: 125ms ease-in-out;
+    margin-left: 19px;
+
+    &:hover path {
+        fill: var(--light-blue);
+    }
+}
+
+.language-icon-active path {
+    fill: var(--light-blue);
+}
+
+.languageSelection {
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    color: var(--white);
+    background-color: var(--blue-gray);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 75ms ease-in-out;
+}
+
+.languageSelection-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.languageSelection-text {
+    display: flex;
+    gap: 8px;
+    transition: 125ms ease-out;
+
+    &:hover a {
+        color: var(--light-blue) !important;
+    }
+
+    &:hover .arrow {
+        animation: 1s ease-in-out infinite moveRight;
+    }
+}
+
+.arrow {
+    position: relative;
+}
+
 .burger-menu {
     display: none;
     justify-content: flex-end;
@@ -85,5 +140,19 @@ header {
         height: 27.2px;
         width: 30px;
         cursor: pointer;
+    }
+}
+
+.blue a {
+    color: var(--light-blue);
+}
+
+@keyframes moveRight {
+    from {
+        left: 5px;
+    }
+
+    to {
+        left: 0px;
     }
 }

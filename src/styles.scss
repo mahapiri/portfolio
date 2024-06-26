@@ -12,12 +12,13 @@
 
 :root {
     --dark-blue: rgba(20, 29, 47, 1);
-    --light-blue: rgba(0, 190, 232, 1);
-    --purple: rgba(75, 71, 255, 1);
+    --light-blue: rgb(0, 190, 232);
+    --purple: rgb(75, 71, 255);
     --white: rgba(255, 255, 255, 1);
     --blue-green: rgba(28, 230, 182, 1);
     --red: rgba(230, 28, 64, 1);
     --green: rgba(112, 230, 28, 1);
+    --blue-gray: rgba(32, 43, 64, 1)
 }
 
 * {
@@ -122,6 +123,8 @@ p {
 }
 
 a {
+    font-size: 16px;
+    line-height: 19.2px;
     text-decoration: none;
     color: white;
     cursor: pointer;

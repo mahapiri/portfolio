@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BurgerMenuComponent } from '../../../burger-menu/burger-menu.component';
+import { LanguageService } from '../../../language.service';
 
 @Component({
   selector: 'app-header',
@@ -9,16 +10,28 @@ import { BurgerMenuComponent } from '../../../burger-menu/burger-menu.component'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss', './header-mobile.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  constructor(public languageService: LanguageService) {
+    console.log(    this.languageService.getLanguage());
+   }
 
   activeLink: string | null = null;
-  clicked: boolean = false;
+  clickedMenu: boolean = false;
+  clickedLanguage: boolean = false;
+
+  ngOnInit(): void {
+
+  }
 
   visited(id: string) {
     this.activeLink = id;
   }
 
   openMenu() {
-    this.clicked = !this.clicked;
+    this.clickedMenu = !this.clickedMenu;
+  }
+
+  openLanguage() {
+    this.clickedLanguage = !this.clickedLanguage;
   }
 }
