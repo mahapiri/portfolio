@@ -2,7 +2,13 @@
     <footer>
         <div class="left-section">
             <a href="#atf"><img src="assets/img/logo.png" alt="Logo"></a>
+            @if (languageService.language == 'English') {
             <a href="/imprint" class="imprint">Legal Notice</a>
+            }
+            @if (languageService.language == 'German') {
+            <a href="/imprint" class="imprint">Impressum</a>
+            }
+
         </div>
         <span class="copyright-div">&copy; Pirathib Mahalingam 2024</span>
         <div class="socialmedia-btns">

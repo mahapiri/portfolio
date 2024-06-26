@@ -1,7 +1,9 @@
 <div class="imprint">
     <div class="imprint-content">
         <a href="/"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;"
-            [src]="hover ? '../../assets/img/arrow-blue.svg' : '../../assets/img/arrow-default.svg'" alt="Back Home" class="arrow"></a>
+                [src]="hover ? '../../assets/img/arrow-blue.svg' : '../../assets/img/arrow-default.svg'" alt="Back Home"
+                class="arrow"></a>
+        @if (languageService.language == 'English') {
         <h3>Legal Notice</h3>
 
         <p class="address">Pirathib Mahalingam<br />
@@ -32,6 +34,53 @@
             copyright. Exceptions must be approved in writing by the website operators or rights holders. Individual
             copies are only permitted for private use and may not be used directly or indirectly for commercial
             purposes. Unauthorized use of copyrighted material is punishable under Section 106.</p>
-            <p>Source: <a href="http://impressumgeneratorenglisch.de/">impressumgeneratorenglisch.de</a></p>
-        </div>
+        <p>Source: <a href="http://impressumgeneratorenglisch.de/">impressumgeneratorenglisch.de</a></p>
+        }
+        @if (languageService.language == 'German') {
+        <h3>Impressum</h3>
+
+        <p class="address">Pirathib Mahalingam<br />
+            Remisbergstrasse 47<br />
+            8280 Kreuzlingen<br />
+            Schweiz</p>
+
+        <h4>Kontakt</h4>
+        <p>Telefon: +41 (0)76 433 499 2<br /><br />
+            E-Mail: hello&commat;pirathib-mahalingam.com</p>
+        <h4>Haftungsausschluss</h4>
+        <h6>Haftung für Inhalte</h6>
+        <p>Die Inhalte unserer Webseiten wurden mit größter Sorgfalt erstellt. Dennoch können wir keine Gewähr für die
+            Aktualität, Zuverlässigkeit oder Vollständigkeit der Inhalte übernehmen. Gemäß den gesetzlichen Bestimmungen
+            sind wir
+            für eigene Inhalte verantwortlich. In diesem Zusammenhang möchten wir klarstellen, dass wir nicht für
+            Informationen verantwortlich sind, die von Dritten bereitgestellt oder gesammelt wurden. Wir kontrollieren
+            weder die
+            übermittelten Informationen noch verfolgen wir mögliche illegale Aktivitäten. Sollten illegale Aktivitäten
+            erkannt
+            werden, werden wir unserer Verpflichtung nachkommen, die entsprechenden Inhalte zu sperren oder zu löschen,
+            gemäß
+            den Paragraphen 8 bis 10 des Telemediengesetzes (TMG).</p>
+        <h6>Haftung für Links</h6>
+        <p>Die Verantwortung für Inhalte von Drittanbieter-Links (externe Inhalte) liegt bei den jeweiligen
+            Webseitenbetreibern.
+            Zum Zeitpunkt der Verlinkung auf unseren Seiten waren keine illegalen Aktivitäten in diesen Links erkennbar.
+            Sobald
+            wir Kenntnis von illegalen Aktivitäten oder Rechtsverletzungen erlangen, werden wir den entsprechenden Link
+            entfernen.</p>
+        <h6>Urheberrecht</h6>
+        <p>Unsere Webseiten und deren Inhalte (Texte, Fotos, Grafiken, Design) unterliegen dem deutschen Urheberrecht.
+            Sofern
+            nicht anders gesetzlich vereinbart, unterliegen die Nutzung, Vervielfältigung, Kopie oder Modifikation der
+            Inhalte
+            dem Urheberrecht. Ausnahmen müssen schriftlich von den Webseitenbetreibern oder Rechteinhabern genehmigt
+            werden.
+            Einzelne Kopien sind nur für den privaten Gebrauch gestattet und dürfen weder direkt noch indirekt für
+            kommerzielle
+            Zwecke verwendet werden. Unbefugte Nutzung urheberrechtlich geschützter Materialien ist nach § 106 strafbar.
+        </p>
+        <p>Quelle: <a href="http://impressumgeneratorenglisch.de/">impressumgeneratorenglisch.de</a></p>
+
+        }
+
+    </div>
 </div>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-imprint',
@@ -10,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class ImprintComponent {
   hover: boolean = false;
+
+  constructor(public languageService: LanguageService) {}
 }

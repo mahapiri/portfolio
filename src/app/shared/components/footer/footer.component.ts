@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../../language.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss', './footer-mobile.component.scss']
 })
 export class FooterComponent {
-
+  constructor(public languageService: LanguageService) { }
 }

@@ -111,9 +111,9 @@
                                 }
                             </div>
                             <div class="submit-div">
-                                <input *ngIf="languageService.language == 'English'" type="submit"
+                                <input [ngClass]="marked ? 'success-btn' : ''" *ngIf="languageService.language == 'English'" type="submit"
                                     value="Send message :)">
-                                <input *ngIf="languageService.language == 'German'" type="submit"
+                                <input [ngClass]="marked ? 'success-btn' : ''" *ngIf="languageService.language == 'German'" type="submit"
                                     value="Nachricht senden :)">
                             </div>
                         </div>
