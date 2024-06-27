@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Work } from '../../models/work.interface';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language/language.service';
+import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visibility-on-scroll.service';
 
 @Component({
   selector: 'app-work',
@@ -11,9 +12,6 @@ import { LanguageService } from '../services/language/language.service';
   styleUrls: ['./work.component.scss', './work-mobile.component.scss']
 })
 export class WorkComponent {
-  constructor(public languageService: LanguageService) {}
-
-
   work: Work[] = [
     {
       title: 'Join',
@@ -43,4 +41,35 @@ export class WorkComponent {
       img: 'assets/img/mockup-vscode.png'
     },
   ]
+  isVisible: boolean = false;
+
+  constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
+
+
+  ngOnInit(): void {
+    this.checkVisibility();
+  }
+
+
+  @HostListener('window:scroll', [])
+
+
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+
+  checkVisibility() {
+    setTimeout(() => {
+      for (let i = 0; i < this.work.length; i++) {
+        let elementId = `work-${i}`;
+        this.visibilityOnScrollService.onWindowScroll(elementId);
+        this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
+      }
+    }, 100);
+  }
+
+  isElementVisible(index: number): boolean {
+    return this.visibilityOnScrollService.isElementVisible(`work-${index}`);
+  }
 }

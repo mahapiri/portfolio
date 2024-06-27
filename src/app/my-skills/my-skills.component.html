@@ -1,7 +1,7 @@
 <div id="skills" class="skills">
     <div class="skills-section">
         <div class="skills-content">
-            <div class="icon-div">
+            <div class="icon-div" [class.animationSlideInLeft]="isVisible">
                 <div *ngFor="let icon of icons" class="icons">
                     <a class="icon"><img src="{{ 'assets/img/skill-icons/' + icon.source }}" alt="{{ icon.name }}"></a>
                     <p>{{ icon.name }}</p>
@@ -9,7 +9,7 @@
             </div>
             <div class="title-content">
                 <div class="border"></div>
-                <div class="title-header">
+                <div class="title-header" [class.animationFadeIn]="isVisible">
                     <div class="title-div">
                         @if (languageService.language == 'English') {
                         <h2>My skills</h2>

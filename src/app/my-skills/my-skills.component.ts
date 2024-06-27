@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Icon } from '../../models/icon.interface';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language/language.service';
+import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visibility-on-scroll.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -12,9 +13,7 @@ import { LanguageService } from '../services/language/language.service';
 })
 
 
-export class MySkillsComponent {
-  constructor(public languageService: LanguageService) { }
-
+export class MySkillsComponent implements OnInit {
   icons: Icon[] = [
     {
       source: 'angular.svg',
@@ -61,5 +60,28 @@ export class MySkillsComponent {
       name: 'Wordpress'
     },
   ]
+  isVisible: boolean = false;
 
+  constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
+
+  ngOnInit(): void {
+    this.checkVisibility();
+  }
+
+
+  @HostListener('window:scroll', [])
+
+
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+
+  checkVisibility() {
+    setTimeout(() => {
+      let elementId = 'skills';
+      this.visibilityOnScrollService.onWindowScroll(elementId);
+      this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
+    }, 100);
+  }
 }

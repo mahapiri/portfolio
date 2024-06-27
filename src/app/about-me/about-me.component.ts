@@ -13,8 +13,7 @@ import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visi
 export class AboutMeComponent implements OnInit {
     isVisible: boolean = false;
 
-    constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) {
-    }
+    constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
 
     ngOnInit(): void {
@@ -29,7 +28,7 @@ export class AboutMeComponent implements OnInit {
         this.checkVisibility();
     }
 
-    
+
     checkVisibility() {
         setTimeout(() => {
             let elementId = 'about-me';

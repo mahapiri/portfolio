@@ -1,11 +1,11 @@
-<table>
+<table id="work">
     <tbody class="work-content">
         <ng-container *ngFor="let project of work; let i = index">
-            <tr *ngIf="i % 2 === 0; else oddTemplate" class="work-div align-left">
-                <td class="img-section right">
+            <tr *ngIf="i % 2 === 0; else oddTemplate" class="work-div align-left" [attr.id]="'work-' + i">
+                <td class="img-section right" [class.animationSlideInLeft]="isElementVisible(i)">
                     <img src="{{ project.img }}" alt="">
                 </td>
-                <td class="info-section p-172">
+                <td class="info-section p-172" [class.animationSlideInRight]="isElementVisible(i)">
                     <h4>{{ project.title }}</h4>
                     <h6>{{ project.subtitle }}</h6>
                     @if (languageService.language == 'English') {
@@ -26,8 +26,8 @@
                 </td>
             </tr>
             <ng-template #oddTemplate>
-                <tr class="work-div align-right">
-                    <td class="info-section p-100">
+                <tr class="work-div align-right" [attr.id]="'work-' + i">
+                    <td class="info-section p-100" [class.animationSlideInLeft]="isElementVisible(i)">
                         <h4>{{ project.title }}</h4>
                         <h6>{{ project.subtitle }}</h6>
                         @if (languageService.language == 'English') {
@@ -46,7 +46,7 @@
                             <button class="github-btn">Github</button>
                         </div>
                     </td>
-                    <td class="img-section">
+                    <td class="img-section" [class.animationSlideInRight]="isElementVisible(i)">
                         <img src="{{ project.img }}" alt="">
                     </td>
                 </tr>

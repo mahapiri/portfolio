@@ -1,5 +1,5 @@
 <section>
-    <header>
+    <header id="header" class="header" [class.animationFadeIn]="isVisible">
         <a href="#atf" class="logo"><img src="../assets/img/logo.png" alt="Name"></a>
         <div class="header-links">
             <a [ngClass]="{'visited': activeLink === 'about-me-title'}" class="about-me" href="#about-me"

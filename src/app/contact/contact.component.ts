@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LanguageService } from '../services/language/language.service';
+import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visibility-on-scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,12 +13,7 @@ import { LanguageService } from '../services/language/language.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss', 'contact-mobile.component.scss']
 })
-export class ContactComponent {
-
-  constructor(public languageService : LanguageService) {
-
-  }
-
+export class ContactComponent implements OnInit {
   hover: boolean = false;
   boxHover: boolean = false;
   marked: boolean = false;
@@ -83,6 +79,29 @@ export class ContactComponent {
       },
     },
   };
+  isVisible: boolean = false;
+
+  constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
+
+  ngOnInit(): void {
+    this.checkVisibility();
+  }
+
+  @HostListener('window:scroll', [])
+
+
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+
+  checkVisibility() {
+    setTimeout(() => {
+      let elementId = 'contact';
+      this.visibilityOnScrollService.onWindowScroll(elementId);
+      this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
+    }, 100);
+  }
 
   onSubmit(ngForm: NgForm) {
     // if(!ngForm.form.valid) {
@@ -104,9 +123,9 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-        // this.router.navigate(['/mail']);
-        this.openNewTab();
-        this.marked = !this.marked;
+      // this.router.navigate(['/mail']);
+      this.openNewTab();
+      this.marked = !this.marked;
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.marked = !this.marked;
       ngForm.resetForm();

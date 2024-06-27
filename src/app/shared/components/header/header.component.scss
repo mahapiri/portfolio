@@ -3,14 +3,14 @@ section {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--dark-blue);
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +18,8 @@ header {
     width: 100%;
     max-width: 1440px;
     height: auto;
-    z-index: 2;
+    z-index: 4;
+    opacity: 0;
 
     img {
         width: 150px;

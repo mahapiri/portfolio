@@ -136,33 +136,84 @@ a {
     display: none;
 }
 
-.animationFadeLeft {
+.animationFadeIn {
     animation: fadeIn 1250ms linear forwards;
 }
-.animationSlideIn {
+
+.animationSlideInRight {
     animation: slideInRight 1250ms linear forwards;
+}
+
+.animationSlideInLeft {
+    animation: slideInLeft 1250ms linear forwards;
+}
+
+.animationOscillation {
+    animation: oscillation 700ms infinite;
 }
 
 @keyframes slideInRight {
     0% {
-       left: 1000px;
-       opacity: 0; 
+        left: 1000px;
+        opacity: 0;
     }
+
     50% {
-        left: 500px; 
-        opacity: 1; 
+        left: 500px;
+        opacity: 1;
     }
+
     100% {
         left: 0;
-        opacity: 1;  
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        right: 1000px;
+        opacity: 0;
+    }
+
+    50% {
+        right: 500px;
+        opacity: 1;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
     }
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0.2;
     }
+
     to {
         opacity: 1;
+    }
+}
+
+@keyframes oscillation {
+    0% {
+        bottom: 264px;
+    }
+
+    25% {
+        bottom: 260px;
+    }
+
+    50% {
+        bottom: 256px;
+    }
+
+    75% {
+        bottom: 260px;
+    }
+
+    100% {
+        bottom: 264px;
     }
 }

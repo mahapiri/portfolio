@@ -21,6 +21,8 @@
     flex-wrap: wrap;
     gap: 123px;
     row-gap: 56px;
+    position: relative;
+    opacity: 0;
 }
 
 .icons {
@@ -73,6 +75,7 @@
     flex-direction: column;
     align-items: center;
     gap: 35px;
+    opacity: 0;
 
     h2 {
         display: flex;

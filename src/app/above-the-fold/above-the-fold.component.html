@@ -1,4 +1,4 @@
-<div id="atf" class="atf">
+<div id="atf" class="atf" [class.animationFadeIn]="isVisible">
     <div class="atf-section">
         <div class="atf-undersection">
             <div class="atf-content">
@@ -49,7 +49,7 @@
                         <a href="#contact" class="mail-div">hello&#64;pirathib-mahalingam.ch</a>
                     </div>
                 </div>
-                <div class="scroll-div">
+                <div class="scroll-div" [class.animationOscillation]="isVisible">
                     <div class="scroll-section">
                         @if (languageService.language == 'English') {
                         <p>Scroll down</p>
