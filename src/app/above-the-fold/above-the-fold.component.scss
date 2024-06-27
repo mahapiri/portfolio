@@ -50,6 +50,7 @@
     position: relative;
     right: 100px;
     bottom: 47px;
+    opacity: 0;
 }
 
 .title-div {
@@ -173,5 +174,26 @@
         width: 24px;
         height: 24px;
         transform: rotate(270deg);
+    }
+}
+
+.animationSlideInRight {
+    animation: slideInRightTitle 1250ms linear forwards;
+}
+
+@keyframes slideInRightTitle {
+    0% {
+        right: -1000px;
+        opacity: 0;
+    }
+
+    50% {
+        right: -500px;
+        opacity: 1;
+    }
+
+    100% {
+        right: 100px;
+        opacity: 1;
     }
 }

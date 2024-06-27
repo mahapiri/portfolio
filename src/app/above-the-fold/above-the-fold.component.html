@@ -6,7 +6,7 @@
                     <!-- <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow"> -->
                     <img class="profile-img" src="assets/img/piri.png" alt="Piri">
                 </div>
-                <div class="right-section">
+                <div class="right-section" [class.animationSlideInRight]="isVisible">
                     <div class="title-div">
                         <span class="title-content">
                             @if (languageService.language == 'English') {
