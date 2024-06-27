@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
-  isLoading = true;
+  // isLoading = false;
+  // loaded: boolean = false;
 
   constructor(private router: Router) {
 
@@ -22,12 +24,15 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
+
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.isLoading = false
-      console.log('geladen')
-    }, 2000)
+    // if (!this.loaded) {
+    //   setTimeout(() => {
+    //     this.loaded = true;
+    //     this.isLoading = false
+    //   }, 0)
+    // }
   }
 }
