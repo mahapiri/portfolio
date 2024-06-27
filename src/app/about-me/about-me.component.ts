@@ -1,44 +1,40 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language/language.service';
+import { AppComponent } from '../app.component';
+import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visibility-on-scroll.service';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [],
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss', './about-me-mobile.component.scss']
+    selector: 'app-about-me',
+    standalone: true,
+    imports: [AppComponent],
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.scss', './about-me-mobile.component.scss']
 })
 export class AboutMeComponent implements OnInit {
-  isVisible: boolean = false;
+    isVisible: boolean = false;
 
-  constructor(public languageService : LanguageService) {
+    constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) {
+    }
 
-  }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-      const aboutMeSection = document.getElementById('about-me');
-      if (aboutMeSection) {
-          const bounding = aboutMeSection.getBoundingClientRect();
-          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    ngOnInit(): void {
+        this.checkVisibility();
+    }
 
-          // console.log('Bounding Rect:', bounding);
-          // console.log('Window Height:', windowHeight);
 
-          if (bounding.top < windowHeight && bounding.bottom > 0) {
-              this.isVisible = true;
-              console.log('Element is visible');
-          } else {
-              this.isVisible = false;
-              // console.log('Element is not visible');
-          }
-      }
-  }
+    @HostListener('window:scroll', [])
 
-  ngOnInit(): void {
-      setTimeout(() => {
-          this.onWindowScroll();
-      }, 100);
-  }
 
+    onWindowScroll() {
+        this.checkVisibility();
+    }
+
+    
+    checkVisibility() {
+        setTimeout(() => {
+            let elementId = 'about-me';
+            this.visibilityOnScrollService.onWindowScroll(elementId);
+            this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
+        }, 100);
+    }
 }

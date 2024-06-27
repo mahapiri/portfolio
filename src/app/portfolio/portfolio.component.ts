@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WorkComponent } from '../work/work.component';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language/language.service';
 
 @Component({
   selector: 'app-portfolio',

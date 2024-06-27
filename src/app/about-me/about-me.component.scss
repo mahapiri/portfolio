@@ -74,21 +74,6 @@
     transition: opacity 1250ms linear;
 }
 
-// #about-me:target .img-div {
-//     animation: slideIn 1250ms linear forwards;
-// }
-
-.visibleS {
-    animation: fadeIn 1250ms linear forwards;
-}
-.visible {
-    animation: slideIn 1250ms linear forwards;
-}
-
-html {
-    scroll-snap-type: y mandatory;
-}
-
 .profile-img {
     width: 453px;
     height: 453px;
@@ -114,26 +99,3 @@ html {
     border-top: 4px solid var(--light-blue);
 }
 
-@keyframes slideIn {
-    0% {
-       left: 1000px;
-       opacity: 0; 
-    }
-    50% {
-        left: 500px; 
-        opacity: 1; 
-    }
-    100% {
-        left: 0;
-        opacity: 1;  
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}

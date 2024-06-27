@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Work } from '../../models/work.interface';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language/language.service';
 
 @Component({
   selector: 'app-work',

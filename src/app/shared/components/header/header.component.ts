@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { BurgerMenuComponent } from '../../../burger-menu/burger-menu.component';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-header',

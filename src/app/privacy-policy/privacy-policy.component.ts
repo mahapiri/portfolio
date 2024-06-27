@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShadowComponent } from '../shadow/shadow.component';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language/language.service';
 
 @Component({
   selector: 'app-privacy-policy',

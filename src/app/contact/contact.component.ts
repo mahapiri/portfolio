@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language/language.service';
 
 @Component({
   selector: 'app-contact',

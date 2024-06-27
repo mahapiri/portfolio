@@ -69,6 +69,7 @@ select:-webkit-autofill:focus {
 
 html {
     scroll-behavior: smooth;
+    // scroll-snap-type: y mandatory;
 }
 
 body {
@@ -133,4 +134,35 @@ a {
 
 .d-none {
     display: none;
+}
+
+.animationFadeLeft {
+    animation: fadeIn 1250ms linear forwards;
+}
+.animationSlideIn {
+    animation: slideInRight 1250ms linear forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+       left: 1000px;
+       opacity: 0; 
+    }
+    50% {
+        left: 500px; 
+        opacity: 1; 
+    }
+    100% {
+        left: 0;
+        opacity: 1;  
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
