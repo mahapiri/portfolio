@@ -20,7 +20,9 @@ section {
     height: auto;
     z-index: 4;
     // opacity: 0;
+}
 
+.logo {
     img {
         width: 150px;
         height: auto;
@@ -136,12 +138,28 @@ section {
 .burger-menu {
     display: none;
     justify-content: flex-end;
+    align-items: center;
+    position: relative;
 
-    img {
-        height: 27.2px;
-        width: 30px;
-        cursor: pointer;
+    &:hover .menu-icon-hover {
+        opacity: 1;
     }
+    
+    &:hover .menu-icon:not(.menu-icon-hover) {
+        opacity: 0;
+    }
+}
+
+.menu-icon {
+    height: 27.2px;
+    width: 30px;
+    position: absolute;
+    transition: opacity 125ms ease-in-out;
+    cursor: pointer;
+}
+
+.menu-icon-hover {
+    opacity: 0;
 }
 
 .burger-menu-content {

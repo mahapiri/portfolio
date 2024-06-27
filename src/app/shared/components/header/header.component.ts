@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { BurgerMenuComponent } from '../../../burger-menu/burger-menu.component';
 import { LanguageService } from '../../../services/language/language.service';
-import { VisibilityOnScrollService } from '../../../services/visibility-on-scroll/visibility-on-scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -12,20 +11,23 @@ import { VisibilityOnScrollService } from '../../../services/visibility-on-scrol
   styleUrls: ['./header.component.scss', './header-mobile.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isVisible: boolean = false;
   activeLink: string | null = null;
   clickedMenu: boolean = false;
   clickedLanguage: boolean = false;
+  imagesLoaded: boolean = false;
 
-  constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
+  constructor(public languageService: LanguageService, private eRef: ElementRef) { }
 
 
   ngOnInit(): void {
-    this.checkVisibility();
+    setTimeout(() => {
+      this.imagesLoaded = true;
+    }, 500);
   }
 
   visited(id: string) {
     this.activeLink = id;
+    this.clickedMenu = false;
   }
 
   openMenu() {
@@ -36,18 +38,11 @@ export class HeaderComponent implements OnInit {
     this.clickedLanguage = !this.clickedLanguage;
   }
 
-  @HostListener('window:scroll', [])
 
-  onWindowScroll() {
-    this.checkVisibility();
-  }
-
-
-  checkVisibility() {
-    setTimeout(() => {
-      let elementId = 'header';
-      this.visibilityOnScrollService.onWindowScroll(elementId);
-      this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
-    }, 100);
+  @HostListener('document:click', ['$event'])
+  handleOutsideClick(event: Event) {
+    if (!this.eRef.nativeElement.contains(event.target)) {
+      this.clickedLanguage = false;
+    }
   }
 }
