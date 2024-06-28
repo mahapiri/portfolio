@@ -8,7 +8,6 @@ export class LanguageService {
 
 
   constructor() {
-    // Beim Initialisieren des Service die gespeicherte Sprache aus dem localStorage laden oder Standardwert 'English' setzen
     this.language = 'English';
   }
 
@@ -20,7 +19,6 @@ export class LanguageService {
 
   getLanguage() {
     let localStored: any = localStorage.getItem('language'); 
-    // Aktuelle Sprache aus dem Service-Zustand abrufen
-    return this.language ? JSON.parse(localStored) : 'English';
+    return this.language ? JSON.parse(localStored) : this.setLanguage('English');
   }
 }
