@@ -2,9 +2,9 @@
     <div class="atf-section">
         <div class="atf-undersection">
             <div class="atf-content">
-                <div class="photo-div">
-                    <!-- <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow"> -->
-                    <img class="profile-img" src="assets/img/piri.png" alt="Piri">
+                <div class="photo-div" [class.animationFadeIn]="isVisible">
+                    <img class="profile-img" src="assets/img/piri.png" alt="Piri"> 
+                        <!-- <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow">    -->
                 </div>
                 <div class="right-section" [class.animationSlideInRight]="isVisible">
                     <div class="title-div">
