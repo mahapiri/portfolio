@@ -1,13 +1,13 @@
 .atf {
     width: 100vw;
-    height: 100%;
-    max-height: 100vh;
+    // height: 100%;
+    height: 100vh;
     // margin-top: 344px;
     // margin-bottom: 200px;
     padding-top: 114px;
     display: flex;
     justify-content: center;
-    scroll-margin-top: 414px;
+    scroll-margin-top: 114px;
     opacity: 0;
 }
 
@@ -18,22 +18,33 @@
     max-height: 100vh;
     display: flex;
     justify-content: center;
-    background-image: url('../../assets/img/atf-shape.svg');
-    background-size: cover;
-    background-position: center 144px;
-    background-repeat: no-repeat;
+    // background-image: url('../../assets/img/atf-shape.svg');
+    // background-size: cover;
+    // background-position: center 144px;
+    // background-repeat: no-repeat;
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    bottom: -514px;
+}
+
+.shape-mobile {
+    display: none;
 }
 
 .atf-undersection {
-    position: relative;
+    width: 100%;
+    // position: relative;
 }
 
 .shadow {
     // width: 690px;
     // height: 671px;
     position: absolute;
-    bottom: 10px;
-    right: 562px;
+    bottom: -110px;
+    right: 500px;
     z-index: -3;
 }
 
@@ -60,17 +71,18 @@
 }
 
 .profile-img {
-    position: relative;
-    top: 30px;
+    position: absolute;
+    left: 100px;
+    bottom: 124px;
     height: 620px;
     z-index: -2;
 }
 
 .right-section {
     text-align: center;
-    position: relative;
-    right: 100px;
-    bottom: 140px;
+    position: absolute;
+    right: 115px;
+    bottom: 374px;
     opacity: 0;
 }
 
@@ -102,20 +114,26 @@
     }
 }
 
+.title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .verticalText {
     position: relative;
     transform: rotate(270deg);
 }
 
 .iam {
-    top: 73px;
-    right: 340px;
+    top: 70px;
+    right: 88px;
     font-size: 50px;
 }
 
 .ichbin {
-    top: 71px;
-    right: 330px;
+    top: 69px;
+    right: 76px;
     font-size: 32px;
 }
 
@@ -159,8 +177,8 @@
 
 .contact-div {
     display: flex;
-    position: relative;
-    bottom: 155px;
+    position: absolute;
+    bottom: 32px;
 }
 
 .contact-section {
@@ -174,9 +192,9 @@
 .scroll-div {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    left: 32px;
-    bottom: 264px;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
 }
 
 .scroll-section {
@@ -203,6 +221,10 @@
     animation: slideInRightTitle 1250ms linear forwards;
 }
 
+.animationOscillation {
+    animation: oscillation 700ms infinite;
+}
+
 @keyframes slideInRightTitle {
     0% {
         right: -700px;
@@ -215,7 +237,29 @@
     }
 
     100% {
-        right: 100px;
+        right: 115px;
         opacity: 1;
+    }
+}
+
+@keyframes oscillation {
+    0% {
+        bottom: 100px;
+    }
+
+    25% {
+        bottom: 96px;
+    }
+
+    50% {
+        bottom: 92px;
+    }
+
+    75% {
+        bottom: 96px;
+    }
+
+    100% {
+        bottom: 100px;
     }
 }

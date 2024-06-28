@@ -6,37 +6,64 @@
 
     .atf-section {
         max-width: 1440px;
-        background-image: url('../../assets/img/atf-shape-mobile.svg');
+        // background-image: url('../../assets/img/atf-shape-mobile.svg');
+    }
+
+    .atf-undersection {
+        display: flex;
+        justify-content: center;
+    }
+
+    .shadow {
+        width: 800px;
+        right: unset;
+        bottom: 55px;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .shape-mobile {
+        display: block;
+        position: absolute;
+        bottom: -314px;
     }
 
     .atf-content {
         flex-direction: column;
-        justify-content: unset;
+        justify-content: space-around;
+    }
+
+    .photo-div {
+        display: flex;
+        justify-content: center;
+        height: unset;
     }
 
     .profile-img {
-        height: 477px;
-        top: unset;
-        bottom: 88px;
-    }
-
-    .title-content {
-        position: relative;
+        height: 377px;
+        left: unset;
+        bottom: 387px;
     }
 
     .right-section {
-        position: relative;
-        bottom: unset;
-        right: unset;
+        position: unset;
+    }
+
+    .title-content {
+
+    }
+
+    .right-section {
+
     }
 
     .contact-div {
-        bottom: 100px;
+        left: 0;
     }
 
-    .scroll-div {
-        bottom: 200px;
-    }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -44,12 +71,12 @@
         max-width: 1024px;
     }
 
-    .scroll-section {
+    .mail-div {
         display: none;
     }
 
-    .mail-div {
-        width: 271px;
+    .scroll-div {
+        display: none;
     }
 }
 
@@ -187,40 +214,40 @@
 }
 
 
-@media screen and (max-height: 1010px) and (max-width: 1440px) {
-    .right-section {
-        top: 32px;
-    }
+// @media screen and (max-height: 1010px) and (max-width: 1440px) {
+//     .right-section {
+//         top: 32px;
+//     }
 
-    .contact-div {
-        bottom: 54px;
-    }
-}
+//     .contact-div {
+//         bottom: 54px;
+//     }
+// }
 
-@media screen and (min-height: 1050px) {
-    .atf-undersection {
-        position: relative;
-        top: 111px;
-    }
-}
+// @media screen and (min-height: 1050px) {
+//     .atf-undersection {
+//         position: relative;
+//         top: 111px;
+//     }
+// }
 
-@media screen and (min-height: 1450px) {
-    .atf-undersection {
-        position: relative;
-        top: 300px;
-    }
-}
+// @media screen and (min-height: 1450px) {
+//     .atf-undersection {
+//         position: relative;
+//         top: 300px;
+//     }
+// }
 
-@media screen and (min-height: 1900px) {
-    .atf-undersection {
-        position: relative;
-        top: 366px;
-    }
-}
+// @media screen and (min-height: 1900px) {
+//     .atf-undersection {
+//         position: relative;
+//         top: 366px;
+//     }
+// }
 
-@media screen and (max-width: 1440px) {
-    .atf-undersection {
-        top: 182px;
-    }
-}
+// @media screen and (max-width: 1440px) {
+//     .atf-undersection {
+//         top: 182px;
+//     }
+// }
 
