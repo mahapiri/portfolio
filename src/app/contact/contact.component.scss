@@ -3,7 +3,7 @@
     justify-content: center;
     scroll-margin-top: 0px;
     height: 100%;
-    margin-bottom: 356px;
+    margin-bottom: 114px;
 }
 
 .contact-content {
@@ -19,6 +19,15 @@
     margin-top: 114px;
     padding: 37px 100px;
     position: relative;
+    overflow-y: hidden;
+    overflow-x: clip;
+}
+
+.shadow {
+    position: absolute;
+    transform: scaleX(-1) rotate(88deg);
+    top: 143px;
+    right: 855px;
 }
 
 h2 {

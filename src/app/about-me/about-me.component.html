@@ -1,6 +1,7 @@
 <div id="about-me" class="about-me">
-    <div class="about-me-section" [class.animationFadeIn]="isVisible">
-        <div class="about-me-content">
+    <div class="about-me-section">
+        <img src="/assets/img/shadows/about-me.svg" alt="Shadow" class="shadow">
+        <div class="about-me-content" [class.animationFadeIn]="isVisible">
             @if (languageService.language == 'English') {
             <h2>About me</h2>
             }

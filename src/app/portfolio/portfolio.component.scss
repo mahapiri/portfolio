@@ -13,6 +13,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    overflow-y: visible;
+    overflow-x: clip;
+}
+
+.shadow {
+    position: absolute;
+}
+
+.shadow-1 {
+    top: 400px;
+    right: 1110px;
+}
+
+.shadow-2 {
+    transform: rotate(77deg);
+    top: 910px;
+    left: 1101px;
 }
 
 .portfolio-header {

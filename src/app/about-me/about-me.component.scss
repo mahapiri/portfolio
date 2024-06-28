@@ -6,6 +6,15 @@
     z-index: 1;
 }
 
+.shadow {
+    position: absolute;
+    position: absolute;
+    bottom: 163px;
+    left: 1138px;
+    /* width: 572px; */
+    /* height: 608px; */
+}
+
 .about-me-section {
     width: 100%;
     max-width: 1440px;
@@ -13,8 +22,10 @@
     padding: 37px 0px 37px 100px;
     display: flex;
     justify-content: space-between;
-    opacity: 0;
     transition: opacity 1250ms linear;
+    position: relative;
+    overflow-y: visible;
+    overflow-x: clip;
 }
 
 .about-me-content {
@@ -24,6 +35,7 @@
     justify-content: space-between;
     position: relative;
     gap: 34px;
+    opacity: 0;
 }
 
 .text-div {
