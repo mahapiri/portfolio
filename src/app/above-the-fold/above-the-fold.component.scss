@@ -39,7 +39,7 @@
 
 .atf-undersection {
     width: 100%;
-    // position: relative;
+    // // position: relative;
 }
 
 .shadow {
@@ -54,8 +54,8 @@
 
 .shadow-1 {
     position: absolute;
-    top: 663px;
-    left: 1138px;
+    top: -37px;
+    left: -110px;
     z-index: 3;
 }
 
@@ -95,8 +95,9 @@
     text-align: center;
     position: absolute;
     right: 115px;
-    bottom: 374px;
+    bottom: 433px;
     opacity: 0;
+    z-index: 1;
 }
 
 .title-div {
@@ -106,6 +107,12 @@
     align-items: center;
     justify-content: center;
     gap: 35px;
+    position: relative;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
 
     button {
         font-size: 23px;
@@ -119,6 +126,7 @@
         color: white;
         cursor: pointer;
         transition: 125ms ease-out;
+        position: absolute;
 
         &:hover {
             padding: 20px 40px;

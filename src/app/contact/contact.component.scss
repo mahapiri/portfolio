@@ -3,7 +3,7 @@
     justify-content: center;
     scroll-margin-top: 0px;
     // height: 100%;
-    margin-bottom: 174px;
+    // margin-bottom: 174px;
 }
 
 .contact-content {
@@ -25,7 +25,6 @@
 .shadow {
     position: absolute;
     transform: scaleX(-1) rotate(88deg);
-    top: 143px;
     right: 855px;
 }
 
@@ -158,6 +157,7 @@ input[type="submit"] {
 }
 
 .checkbox-submit-box {
+    width: 617px;
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -224,9 +224,8 @@ input[type="submit"] {
 // }
 .go-up {
     position: relative;
-    top: 46px;
-    right: -675px;
-    margin-top: 122px;
+    // top: 46px;
+    left: 668px;
 }
 
 .go-up-btn {
