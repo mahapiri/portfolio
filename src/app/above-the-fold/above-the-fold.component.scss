@@ -54,9 +54,9 @@
 
 .shadow-1 {
     position: absolute;
-    top: -37px;
-    left: -110px;
-    z-index: 3;
+    top: -237px;
+    left: 1189px;
+    z-index: -1;
 }
 
 .atf-content {
@@ -78,7 +78,7 @@
     // background-size: contain;
     // background-position: -44px 112px;
     // background-repeat: no-repeat;
-    z-index: 1;
+    z-index: 0;
     opacity: 0;
 }
 
@@ -87,8 +87,7 @@
     left: 100px;
     bottom: 124px;
     height: 620px;
-    z-index: 0;
-    opacity: 0;
+    z-index: -1;
 }
 
 .right-section {
