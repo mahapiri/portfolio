@@ -139,7 +139,7 @@ export class ContactComponent implements OnInit {
 
 
   openNewTab() {
-    window.open('https://www.pirathib-mahalingam.ch/mail', '_blank');
+    window.open('/mail', '_blank');
   }
 
   proofCheckbox() {

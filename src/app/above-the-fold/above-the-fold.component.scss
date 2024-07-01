@@ -8,7 +8,6 @@
     display: flex;
     justify-content: center;
     scroll-margin-top: 114px;
-    opacity: 0;
 }
 
 .atf-section {
@@ -23,6 +22,7 @@
     // background-position: center 144px;
     // background-repeat: no-repeat;
     position: relative;
+    overflow-x: clip;
 }
 
 .shape {
@@ -50,6 +50,13 @@
     bottom: -110px;
     right: 500px;
     z-index: 0;
+}
+
+.shadow-1 {
+    position: absolute;
+    top: 663px;
+    left: 1138px;
+    z-index: 3;
 }
 
 .atf-content {
@@ -103,7 +110,7 @@
     button {
         font-size: 23px;
         line-height: 27.6px;
-        border: 0;
+        border: unset;
         border-radius: 10px;
         padding: 15px 30px;
         box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -157,7 +164,7 @@
 
 .atf-links {
     position: relative;
-    z-index: 3;
+    z-index: 4;
 }
 
 .socialmedia-btns {

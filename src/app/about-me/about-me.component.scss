@@ -8,9 +8,9 @@
 
 .shadow {
     position: absolute;
-    position: absolute;
     bottom: 163px;
     left: 1138px;
+    z-index: 3;
     /* width: 572px; */
     /* height: 608px; */
 }
@@ -22,7 +22,7 @@
     padding: 37px 0px 37px 100px;
     display: flex;
     justify-content: space-between;
-    transition: opacity 1250ms linear;
+    transition: opacity 125ms linear;
     position: relative;
     overflow-y: visible;
     overflow-x: clip;
@@ -82,7 +82,7 @@
     align-items: center;
     scroll-snap-align: start;
     opacity: 0;
-    transition: opacity 1250ms linear;
+    transition: opacity 125ms linear;
 }
 
 .profile-img {
@@ -100,7 +100,7 @@
         height: 453px;
         object-fit: cover;
         border-radius: 50%;
-        z-index: -1;
+        z-index: 4;
         opacity: 0;
     }
 }
