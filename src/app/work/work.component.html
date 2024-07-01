@@ -21,7 +21,9 @@
                         @if (languageService.language == 'German') {
                         <button class="livetest-btn">Jetzt testen</button>
                         }
-                        <button class="github-btn">Github</button>
+                        <a href="{{ project.git }}">
+                            <button class="github-btn">Github</button>
+                        </a>
                     </div>
                 </td>
             </tr>
@@ -43,7 +45,9 @@
                             @if (languageService.language == 'German') {
                             <button class="livetest-btn">Jetzt testen</button>
                             }
-                            <button class="github-btn">Github</button>
+                            <a href="{{ project.git }}">
+                                <button class="github-btn">Github</button>
+                            </a>
                         </div>
                     </td>
                     <td class="img-section" [class.animationSlideInRight]="isElementVisible(i)">
