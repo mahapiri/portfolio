@@ -28,10 +28,13 @@
 .shape {
     position: absolute;
     bottom: -514px;
+    z-index: 1;
 }
 
 .shape-mobile {
     display: none;
+    width: 100vw;
+    z-index: 1;
 }
 
 .atf-undersection {
@@ -42,14 +45,16 @@
 .shadow {
     // width: 690px;
     // height: 671px;
+    max-width: 100%;
     position: absolute;
     bottom: -110px;
     right: 500px;
-    z-index: -3;
+    z-index: 0;
 }
 
 .atf-content {
     width: 100%;
+    max-width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -66,7 +71,7 @@
     // background-size: contain;
     // background-position: -44px 112px;
     // background-repeat: no-repeat;
-    z-index: -3;
+    z-index: 1;
     opacity: 0;
 }
 
@@ -75,7 +80,8 @@
     left: 100px;
     bottom: 124px;
     height: 620px;
-    z-index: -2;
+    z-index: 0;
+    opacity: 0;
 }
 
 .right-section {
@@ -147,6 +153,11 @@
 .border {
     width: 100px;
     border-bottom: 4px solid var(--purple);
+}
+
+.atf-links {
+    position: relative;
+    z-index: 3;
 }
 
 .socialmedia-btns {
