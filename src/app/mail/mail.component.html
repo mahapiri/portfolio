@@ -1,6 +1,11 @@
 <div class="mail">
     <div class="mail-content">
         <img src="/assets/img/success.png" alt="">
+        @if (languageService.language == 'English') {
         <h6>Your message has been successfully sent.</h6>
+        }
+        @if (languageService.language == 'German') {
+        <h6>Ihre Nachricht wurde erfolgreich gesendet.</h6>
+        }
     </div>
 </div>
