@@ -1,7 +1,13 @@
 <div class="in-progress">
     <div class="in-progress-content">
         <img src="assets/img/in-progress.png" alt="In Progress">
+        @if (languageService.language == 'English') {
         <h5>Web App is under construction</h5>
         <h6>COMING SOON</h6>
+        }
+        @if (languageService.language == 'German') {
+        <h5>Die Web-App befindet sich im Aufbau</h5>
+        <h6>KOMMT BALD</h6>
+        }
     </div>
 </div>

@@ -3,7 +3,7 @@
     justify-content: center;
     scroll-margin-top: 114px;
     position: relative;
-    z-index: 1;
+    z-index: 4;
 }
 
 .shadow {
@@ -101,7 +101,6 @@
         object-fit: cover;
         border-radius: 50%;
         z-index: 4;
-        opacity: 0;
     }
 }
 
