@@ -214,40 +214,37 @@
 }
 
 
-// @media screen and (max-height: 1010px) and (max-width: 1440px) {
-//     .right-section {
-//         top: 32px;
-//     }
+@media screen and (max-height: 1010px) and (max-width: 1440px) {
+    .right-section {
 
-//     .contact-div {
-//         bottom: 54px;
-//     }
-// }
+    }
 
-// @media screen and (min-height: 1050px) {
-//     .atf-undersection {
-//         position: relative;
-//         top: 111px;
-//     }
-// }
+    .contact-div {
 
-// @media screen and (min-height: 1450px) {
-//     .atf-undersection {
-//         position: relative;
-//         top: 300px;
-//     }
-// }
+    }
+}
 
-// @media screen and (min-height: 1900px) {
-//     .atf-undersection {
-//         position: relative;
-//         top: 366px;
-//     }
-// }
+@media screen and (min-height: 1050px) {
+    .atf-undersection {
 
-// @media screen and (max-width: 1440px) {
-//     .atf-undersection {
-//         top: 182px;
-//     }
-// }
+    }
+}
+
+@media screen and (min-height: 1450px) {
+    .atf-undersection {
+
+    }
+}
+
+@media screen and (min-height: 1900px) {
+    .atf-undersection {
+
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .atf-undersection {
+
+    }
+}
 

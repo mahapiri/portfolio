@@ -150,12 +150,12 @@ a {
 
 @keyframes slideInRight {
     0% {
-        left: 1000px;
+        left: 2000px;
         opacity: 0;
     }
 
     50% {
-        left: 500px;
+        left: 1000px;
         opacity: 1;
     }
 
@@ -167,12 +167,12 @@ a {
 
 @keyframes slideInLeft {
     0% {
-        right: 1000px;
+        right: 2000px;
         opacity: 0;
     }
 
     50% {
-        right: 500px;
+        right: 1000px;
         opacity: 1;
     }
 

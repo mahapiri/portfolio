@@ -4,7 +4,7 @@
     height: 100vh;
     // margin-top: 344px;
     // margin-bottom: 200px;
-    padding-top: 114px;
+    padding-top: 214px;
     display: flex;
     justify-content: center;
     scroll-margin-top: 114px;
@@ -22,10 +22,11 @@
     // background-position: center 144px;
     // background-repeat: no-repeat;
     position: relative;
-    overflow-x: clip;
+    // overflow-x: clip;
 }
 
 .shape {
+    width: 100%;
     position: absolute;
     bottom: -514px;
     z-index: 1;
@@ -84,7 +85,7 @@
 .profile-img {
     position: absolute;
     left: 111px;
-    bottom: 114px;
+    bottom: 125px;
     height: 965px;
     z-index: -1;
 }
