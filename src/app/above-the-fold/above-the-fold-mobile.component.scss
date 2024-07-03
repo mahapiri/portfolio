@@ -1,54 +1,55 @@
 @media screen and (max-width: 1440px) {
     .atf {
         // margin-top: 388px;
-        opacity: 0;
+        // opacity: 0;
     }
 
     .atf-section {
-        max-width: 1440px;
+        // max-width: 1440px;
         // background-image: url('../../assets/img/atf-shape-mobile.svg');
+        overflow-x: clip;
     }
 
     .atf-undersection {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
     }
 
     .shadow {
-        width: 800px;
-        right: unset;
-        bottom: 55px;
+        // width: 800px;
+        // right: unset;
+        // bottom: 55px;
     }
 
     .shape {
-        display: none;
+        // display: none;
     }
 
     .shape-mobile {
-        display: block;
-        position: absolute;
-        bottom: -314px;
+        // display: block;
+        // position: absolute;
+        // bottom: -314px;
     }
 
     .atf-content {
-        flex-direction: column;
-        justify-content: space-around;
+        // flex-direction: column;
+        // justify-content: space-around;
     }
 
     .photo-div {
-        display: flex;
-        justify-content: center;
-        height: unset;
+        // display: flex;
+        // justify-content: center;
+        // height: unset;
     }
 
     .profile-img {
-        height: 377px;
-        left: unset;
-        bottom: 387px;
+        // height: 377px;
+        // left: unset;
+        // bottom: 387px;
     }
 
     .right-section {
-        position: unset;
+        // position: unset;
     }
 
     .title-content {
@@ -68,148 +69,148 @@
 
 @media screen and (max-width: 1024px) {
     .atf-section {
-        max-width: 1024px;
+        // max-width: 1024px;
     }
 
     .mail-div {
-        display: none;
+        // display: none;
     }
 
     .scroll-div {
-        display: none;
+        // display: none;
     }
 }
 
 @media screen and (max-width: 768px) {
     .atf {
-        margin-top: 188px;
+        // margin-top: 188px;
     }
 
     .atf-section {
-        max-width: 768px;
+        // max-width: 768px;
     }
 
     .mail-div {
-        display: none;
+        // display: none;
     }
 
     .title-name {
-        font-size: 28px;
-        line-height: 28px;
+        // font-size: 28px;
+        // line-height: 28px;
     }
 
     .title-profession {
-        font-size: 29px;
-        line-height: 28.6px;
+        // font-size: 29px;
+        // line-height: 28.6px;
     }
 
     .iam {
-        top: 36px;
-        right: 166px;
-        font-size: 24px;
+        // top: 36px;
+        // right: 166px;
+        // font-size: 24px;
     }
 
     .ichbin {
-        top: 38px;
-        right: 165px;
-        font-size: 15px;
+        // top: 38px;
+        // right: 165px;
+        // font-size: 15px;
     }
 
     .title-content {
-        left: 8px;
+        // left: 8px;
     }
 
     .profile-img {
-        top: 100px;
-        height: 335px;
+        // top: 100px;
+        // height: 335px;
     }
 
     .right-section {
-        top: 100px;
+        // top: 100px;
     }
 
     .contact-div {
-        bottom: 32px;
+        // bottom: 32px;
     }
 
     .title-div {
-        width: 100%;
-        gap: 22px;
+        // width: 100%;
+        // gap: 22px;
 
         button {
-            font-size: 16px;
-            line-height: 19.2px;
+            // font-size: 16px;
+            // line-height: 19.2px;
         }
     }
 
     .border {
-        width: 64px;
+        // width: 64px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .atf-section {
-        max-width: 768px;
+        // max-width: 768px;
     }
 
 }
 
 @media screen and (max-width: 375px) {
     .atf-section {
-        max-width: 375px;
+        // max-width: 375px;
     }
 
     .profile-img {
-        top: 132px;
-        height: 254px;
+        // top: 132px;
+        // height: 254px;
     }
 
     .title-name {
-        font-size: 22px;
-        line-height: 22px;
+        // font-size: 22px;
+        // line-height: 22px;
     }
 
     .title-profession {
-        font-size: 22.6px;
-        line-height: 22px;
+        // font-size: 22.6px;
+        // line-height: 22px;
     }
 
     .iam {
-        top: 31px;
-        right: 130px;
-        font-size: 18px;
+        // top: 31px;
+        // right: 130px;
+        // font-size: 18px;
     }
 
     .ichbin {
-        top: 32px;
-        right: 129px;
-        font-size: 11px;
+        // top: 32px;
+        // right: 129px;
+        // font-size: 11px;
     }
 
     .contact-section {
-        gap: 22px;
+        // gap: 22px;
     }
 
     .socialmedia-btns {
-        gap: 32px;
+        // gap: 32px;
     }
 
     .right-section {
-        top: 132px;
+        // top: 132px;
     }
 
     .contact-div {
-        bottom: 0;
+        // bottom: 0;
     }
 }
 
 @media screen and (max-width: 320px) {
     .atf-section {
-        max-width: 1024px;
+        // max-width: 1024px;
     }
 
     .profile-img {
-        top: 116px;
+        // top: 116px;
     }
 }
 

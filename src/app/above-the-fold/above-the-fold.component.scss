@@ -13,8 +13,8 @@
 .atf-section {
     width: 100%;
     max-width: 1440px;
-    height: 100%;
-    max-height: 100vh;
+    // height: 100%;
+    // max-height: 100vh;
     display: flex;
     justify-content: center;
     // background-image: url('../../assets/img/atf-shape.svg');
@@ -26,7 +26,7 @@
 }
 
 .shape {
-    width: 100%;
+    width: 100vw;
     position: absolute;
     bottom: -514px;
     z-index: 1;
@@ -46,7 +46,7 @@
 .shadow {
     // width: 690px;
     // height: 671px;
-    max-width: 100%;
+    // max-width: 100%;
     position: absolute;
     bottom: -37px;
     right: 616px;
@@ -58,6 +58,10 @@
     top: -237px;
     left: 1189px;
     z-index: -1;
+}
+
+.shadow-1:before {
+
 }
 
 .atf-content {
@@ -73,21 +77,40 @@
 }
 
 .photo-div {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     // background-image: url(../../assets/img/shadows/photo-bgr.svg);
     // background-size: contain;
     // background-position: -44px 112px;
     // background-repeat: no-repeat;
     z-index: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.photo-div::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -400px;
+    bottom: -100px;
+    left: -400px;
+    background-image: url(/assets/img/shadows/photo-bgr.svg);
+    background-size: 1300px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
 }
 
 .profile-img {
-    position: absolute;
-    left: 111px;
+    position: relative;
+    // left: 111px;
     bottom: 125px;
     height: 965px;
     z-index: -1;
+    opacity: 1;
 }
 
 .right-section {
@@ -202,7 +225,7 @@
 
 .contact-div {
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 44px;
 }
 
@@ -217,7 +240,7 @@
 .scroll-div {
     display: flex;
     justify-content: flex-end;
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 112px;
 }
@@ -258,12 +281,12 @@
 
     50% {
         right: -300px;
-        opacity: 1;
+        opacity: 0;
     }
 
     100% {
         right: 115px;
-        opacity: 1;
+        opacity: 0;
     }
 }
 
