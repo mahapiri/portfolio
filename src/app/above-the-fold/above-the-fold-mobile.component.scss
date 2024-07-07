@@ -7,7 +7,7 @@
     .atf-section {
         // max-width: 1440px;
         // background-image: url('../../assets/img/atf-shape-mobile.svg');
-        overflow-x: clip;
+        // overflow-x: clip;
     }
 
     .atf-undersection {
@@ -23,6 +23,7 @@
 
     .shape {
         // display: none;
+        width: 100%;
     }
 
     .shape-mobile {
@@ -231,7 +232,15 @@
     }
 }
 
-@media screen and (min-height: 1450px) {
+@media screen and (min-height: 1250px) {
+    .profile-img {
+        height: 1005px;
+    }
+
+    .right-section {
+        margin-right: 50px;
+    }
+
     .atf-undersection {
 
     }

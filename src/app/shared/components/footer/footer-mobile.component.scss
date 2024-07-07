@@ -1,10 +1,9 @@
 @media screen and (max-width: 1024px) {
-    footer {
+    .footer {
         max-width: 1024px;
         flex-direction: column;
         padding: 37px 50px;
         margin-bottom: 56px;
-        display: none;
     }
 
     .imprint {
@@ -25,9 +24,8 @@
 }
 
 @media screen and (max-width: 768px) {
-    footer {
+    .footer {
         max-width: 768px;
-        padding: 37px 50px;
     }
 
     .copyright-div {
@@ -38,20 +36,20 @@
 }
 
 @media screen and (max-width: 425px) {
-    footer {
+    .footer {
         max-width: 425px;
     }
 }
 
 @media screen and (max-width: 375px) {
-    footer {
+    .footer {
         max-width: 375px;
         padding: 37px 25px;
     }
 }
 
 @media screen and (max-width: 320px) {
-    footer {
+    .footer {
         max-width: 320px;
     }
 }

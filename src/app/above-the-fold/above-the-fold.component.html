@@ -1,39 +1,43 @@
+<!-- <div class="shape-div">
+    <img src="assets/img/atf-shape.svg" alt="Shape" class="shape">
+    <img src="assets/img/atf-shape-mobile.svg" alt="Shape" class="shape-mobile">    
+</div> -->
 <div id="atf" class="atf">
     <div class="atf-section">
-        <img src="assets/img/atf-shape.svg" alt="Shape" class="shape">
-        <img src="assets/img/atf-shape-mobile.svg" alt="Shape" class="shape-mobile">    
         <div class="atf-undersection">
             <!-- <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow"> -->
             <div class="atf-content">
-                <div class="photo-div">
-                    <img class="profile-img" src="assets/img/piri.png" alt="Piri">
-                </div>
-                <div class="right-section" [class.animationSlideInRight]="isVisible">
-                    <div class="title-div">
-                        <span class="title-content">
-                            @if (languageService.language == 'English') {
-                            <p class="verticalText iam">I am</p>
-                            }
-                            @if (languageService.language == 'German') {
-                            <p class="verticalText ichbin">Ich bin</p>
-                            }
-                            <h3 class="title-name">Pirathib Mahalingam</h3>
-                            @if (languageService.language == 'English') {
-                            <p class="title-profession">FRONTEND DEVELOPER</p>
-                            }
-                            @if (languageService.language == 'German') {
-                            <p class="title-profession">FRONTEND-ENTWICKLER</p>
-                            }
+                <div class="atf-title">
+                    <div class="photo-div">
+                        <img class="profile-img" src="assets/img/piri.png" alt="Piri">
+                    </div>
+                    <div class="right-section" [class.animationSlideInRight]="isVisible">
+                        <div class="title-div">
+                            <span class="title-content">
+                                @if (languageService.language == 'English') {
+                                <p class="verticalText iam">I am</p>
+                                }
+                                @if (languageService.language == 'German') {
+                                <p class="verticalText ichbin">Ich bin</p>
+                                }
+                                <h3 class="title-name">Pirathib Mahalingam</h3>
+                                @if (languageService.language == 'English') {
+                                <p class="title-profession">FRONTEND DEVELOPER</p>
+                                }
+                                @if (languageService.language == 'German') {
+                                <p class="title-profession">FRONTEND-ENTWICKLER</p>
+                                }
 
-                        </span>
-                        <a href="#contact" class="button-div">
-                            @if (languageService.language == 'English') {
-                            <button>Let's talk!</button>
-                            }
-                            @if (languageService.language == 'German') {
-                            <button>Sprechen wir!</button>
-                            }
-                        </a>
+                            </span>
+                            <a href="#contact" class="button-div">
+                                @if (languageService.language == 'English') {
+                                <button>Let's talk!</button>
+                                }
+                                @if (languageService.language == 'German') {
+                                <button>Sprechen wir!</button>
+                                }
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,10 +68,10 @@
                         </div>
                     </div>
                     <div class="shadow-1"></div>
-                    <!-- <img src="/assets/img/shadows/about-me.svg" alt="Shadow" class="shadow-1"> -->
+                    <img src="/assets/img/shadows/about-me.svg" alt="Shadow" class="shadow-1">
                 </div>
-
             </div>
+            <img src="assets/img/atf-shape.svg" alt="Shape" class="shape" draggable="false">
         </div>
     </div>
 </div>

@@ -1,14 +1,15 @@
-.footer {
-    width: 100%;
+section {
+    width: 100vw;
     display: flex;
     justify-content: center;
     border-top: 4px solid var(--light-blue);
     background-color: var(--dark-blue);
     position: relative;
-    z-index: 6;
+    z-index: 4;
+    margin-top: 114px;
 }
 
-footer {
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
