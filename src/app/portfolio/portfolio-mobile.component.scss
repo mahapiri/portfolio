@@ -6,6 +6,10 @@
     .border-left {
         width: 90px;
     }
+
+    .shadow-1 {
+        right: 810px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -16,10 +20,16 @@
     .border-left {
         width: 64px;
     }
+
+    .shadow-1 {
+        right: 610px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-
+    .shadow-1 {
+        right: 410px;
+    }
 }
 
 @media screen and (max-width: 622px) {
@@ -45,6 +55,10 @@
             padding-right: 25px;
         }
     }
+
+    .shadow-1 {
+        right: 310px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -54,6 +68,10 @@
 
     .work {
         padding-right: 25px;
+    }
+
+    .shadow-1 {
+        right: 210px;
     }
 }
 
@@ -87,6 +105,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .shadow-1 {
+        right: 110px;
     }
 }
 

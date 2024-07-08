@@ -40,14 +40,6 @@
     position: relative;
 }
 
-// .shadow-1 {
-//     position: absolute;
-//     top: 0;
-//     right: -200px;
-//     z-index: -1;
-//     overflow: visible; /* Allow overflow for the image */
-// }
-
 .shadow-1-img {
     position: absolute;
     top: -100px;
@@ -119,10 +111,6 @@
     position: relative;
     top: 147px;
     left: -134px;
-}
-
-.shadow-1::after {
-    
 }
 
 .right-section {
