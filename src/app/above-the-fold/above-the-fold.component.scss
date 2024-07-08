@@ -4,8 +4,7 @@
     justify-content: center;
     scroll-margin-top: 114px;
     padding-top: 114px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: clip;
 }
 
 .atf-section {
@@ -41,20 +40,18 @@
     position: relative;
 }
 
-.shadow {
-    // width: 690px;
-    // height: 671px;
-    // max-width: 100%;
-    // position: absolute;
-    bottom: -37px;
-    right: 616px;
-    z-index: 0;
-}
+// .shadow-1 {
+//     position: absolute;
+//     top: 0;
+//     right: -200px;
+//     z-index: -1;
+//     overflow: visible; /* Allow overflow for the image */
+// }
 
-.shadow-1 {
+.shadow-1-img {
     position: absolute;
-    top: -237px;
-    left: 1189px;
+    top: -100px;
+    right: -500px;
     z-index: -1;
 }
 
@@ -62,7 +59,7 @@
     width: 100%;
     height: 65%;
     position: absolute;
-    bottom: 250px;
+    bottom: 247px;
 }
 
 .atf-title {
@@ -109,6 +106,23 @@
     pointer-events: none;
     z-index: 2;
     opacity: 1;
+}
+
+.shadow-block {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.shadow {
+    width: 967px;
+    position: relative;
+    top: 147px;
+    left: -134px;
+}
+
+.shadow-1::after {
+    
 }
 
 .right-section {
