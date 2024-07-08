@@ -28,8 +28,8 @@
     }
 
     .atf-content {
-        height: 70%;
-        bottom: 360px;
+        height: 80%;
+        bottom: 340px;
     }
 
     .photo-div {
@@ -53,7 +53,7 @@
 
     .profile-img {
         position: absolute;
-        bottom: -118px;
+        bottom: -150px;
         margin-left: unset;
     }
 
@@ -80,6 +80,11 @@
 
     .atf-undersection {
         min-height: 710px;
+    }
+
+    .atf-content {
+        height: 77%;
+        bottom: 345px;
     }
 
     .mail-div {
@@ -114,6 +119,10 @@
             font-size: 16px;
             line-height: 19.2px;
         }
+    }
+
+    .atf-links {
+        bottom: 170px;
     }
 
     .border {
@@ -151,6 +160,10 @@
         line-height: 22px;
     }
 
+    .profile-img {
+        bottom: -154px;
+    }
+
     .iam {
         top: 31px;
         right: 30px;
@@ -161,6 +174,10 @@
         top: 32px;
         right: 29px;
         font-size: 11px;
+    }
+
+    .atf-links {
+        bottom: 200px;
     }
 
     .contact-section {
@@ -177,6 +194,3 @@
         max-width: 320px;
     }
 }
-
-
-
