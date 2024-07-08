@@ -75,10 +75,10 @@
                                 [ngClass]="errorMsg.message.clicked ? 'warn-symbol pos-bottom' : 'd-none'">
                             @if (errorMsg.message.clicked && !message.valid) {
                                 @if (languageService.language == 'English') {
-                                    <span>{{ errorMsg.message.messageEn }}</span>
+                                    <span class="warn-pos-bottom">{{ errorMsg.message.messageEn }}</span>
                                     }
                                 @if (languageService.language == 'German') {
-                                <span>{{ errorMsg.message.messageDe }}</span>
+                                <span class="warn-pos-bottom">{{ errorMsg.message.messageDe }}</span>
                                 }
                             }
                         </div>
@@ -122,9 +122,9 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="go-up">
+        <div class="go-up">
             <a href="#atf" class="go-up-btn"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;"
                     [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'" alt="Go up"></a>
-        </div> -->
+        </div>
     </div>
 </div>

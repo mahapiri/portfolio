@@ -1,7 +1,10 @@
 .contact {
+    width: 100%;
     display: flex;
     justify-content: center;
     scroll-margin-top: 0px;
+    padding-bottom: 114px;
+    overflow-y: clip;
     // height: 100%;
     // margin-bottom: 174px;
 }
@@ -42,9 +45,9 @@ h2 {
 }
 
 .border {
-    position: relative;
+    position: absolute;
     top: 54px;
-    right: 100px;
+    left: -100px;
     width: 50px;
     border-top: 4px solid var(--purple);
 }
@@ -66,7 +69,7 @@ h2 {
 
 .input-div {
     position: relative;
-    width: -webkit-fill-available;
+    width: 100%;
 
     span {
         height: 17px;
@@ -76,12 +79,18 @@ h2 {
         margin-left: 4px;
         margin-top: -18px;
         margin-bottom: 10px;
+        position: absolute;
+        bottom: -4px;
     }
 
     .error-msg {
         margin-top: 0;
         transition: 125ms ease-out;
     }
+}
+
+.checkbox-div .error-msg {
+    bottom: -32px;
 }
 
 form {
@@ -157,10 +166,11 @@ input[type="submit"] {
 }
 
 .checkbox-submit-box {
-    width: 617px;
+    // width: 617px;
+    width: 95%;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 64px;
 }
 
 .submit-div {
@@ -180,6 +190,7 @@ input[type="submit"] {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
     // width: 617px;
     gap: 8px;
     position: relative;
@@ -219,32 +230,27 @@ input[type="submit"] {
     }
 }
 
-// .go-up {
-//     position: absolute;
-// }
 .go-up {
     position: relative;
-    // top: 46px;
-    left: 668px;
+    width: 100%;
+    height: 39px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .go-up-btn {
     width: 39px;
     height: 39px;
     transition: 125ms ease-in-out;
-    // position: relative;
-
-    // img {
-    //     position: relative;
-    //     top: 815px;
-    //     left: 567px;
-    // }
+    position: absolute;
+    top: 84px;
 }
 
 .input-field {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
     // height: 76px;
 }
 
@@ -259,13 +265,17 @@ input[type="submit"] {
 .warn-symbol {
     width: 25px;
     height: 25px;
-    position: relative;
-    left: 576px;
-    bottom: 37px;
+    position: absolute;
+    right: 16px;
+    bottom: 43px;
 }
 
 .pos-bottom {
-    bottom: 185px;
+    bottom: 194px;
+}
+
+.warn-pos-bottom{
+    bottom: -4px !important;
 }
 
 .success-btn {

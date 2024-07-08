@@ -2,7 +2,6 @@
     .contact-content {
         max-width: 1440px;
         padding: 37px 50px;
-        width: unset;
     }
 
     input[type="text"] {
@@ -15,12 +14,23 @@
         height: 162px !important;
     }
 
-    .go-up {
-        position: relative;
-        top: 46px;
-        right: -126px;
-        margin-top: 22px
+    .input-div {
+
+        span {
+            bottom: 0px;
+        }
     }
+
+    .warn-pos-bottom {
+        bottom: 32px !important;
+    }
+
+    // .go-up {
+    //     position: relative;
+    //     top: 46px;
+    //     right: -126px;
+    //     margin-top: 22px
+    // }
 
     .contact-undersection {
         flex-direction: column;
@@ -30,6 +40,16 @@
         align-items: unset;
     }
 
+    .border {
+        width: 20px;
+        left: -50px;
+    }
+
+    .shadow {
+        right: 1055px;
+        top: 201px;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -37,6 +57,9 @@
         max-width: 1024px;
     }
 
+    .shadow {
+        right: 855px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -44,29 +67,21 @@
         max-width: 768px;
     }
 
-
-    .border {
-        width: 20px;
-        top: 30px;
-        right: 185px;
-    }
-
     .contact-div {
 
         h2 {
             margin-bottom: 22px;
-            margin-left: 25px;
         }
 
     }
 
     .contact-undersection {
-        flex-direction: column;
-        align-items: center;
-        margin-left: unset;
-        padding-left: 25px;
-        padding-right: 25px;
-        gap: 35px;
+        // flex-direction: column;
+        // align-items: center;
+        // margin-left: unset;
+        // padding-left: 25px;
+        // padding-right: 25px;
+        // gap: 35px;
     }
 
     .textfield-height {
@@ -75,11 +90,6 @@
 
     .messagefield-height {
         height: 200px;
-    }
-
-    .checkbox-div {
-        width: 340px;
-        gap: unset;
     }
 
     .checkbox-content {
@@ -99,30 +109,44 @@
         }
     }
 
-    .go-up-btn {
-        img {
-            top: 872px;
-            left: 148px;
+    // .go-up-btn {
+    //     img {
+    //         top: 872px;
+    //         left: 148px;
+    //     }
+    // }
+
+    .input-div {
+        
+        span {
+            bottom: -8px;
         }
     }
 
+    .warn-pos-bottom {
+        bottom: 4px !important;
+    }
+
     .warn-symbol {
-        left: 307px;
         bottom: 32px;
     }
 
     .pos-bottom {
-        bottom: 154px !important;
+        bottom: 164px !important;
+    }
+
+    .border {
+        top: 26px;
+    }
+
+    .shadow {
+        right: 455px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .contact-content {
         max-width: 425px;
-    }
-
-    .checkbox-div {
-        width: 100%;
     }
 }
 
@@ -132,8 +156,12 @@
     }
 
     .contact-content {
-        max-width: 325px;
+        max-width: 375px;
         gap: unset;
+    }
+
+    .shadow {
+        right: 355px;
     }
 }
 
