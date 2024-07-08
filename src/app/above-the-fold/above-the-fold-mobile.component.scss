@@ -28,19 +28,21 @@
     }
 
     .atf-content {
-        height: 80%;
-        bottom: 340px;
+        height: 45%;
+        bottom: 485px;
     }
 
-    .photo-div {
+    .img-block {
         display: flex;
         justify-content: center;
         position: relative;
+        bottom: -161px;
+        margin-left: unset;
     }
 
     .right-section {
         margin-right: unset;
-        bottom: -100px;
+        bottom: -118px;
     }
 
     .title-div {
@@ -50,13 +52,6 @@
     .title-content {
         margin-left: 32px;
     }
-
-    .profile-img {
-        position: absolute;
-        bottom: -150px;
-        margin-left: unset;
-    }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -83,8 +78,8 @@
     }
 
     .atf-content {
-        height: 77%;
-        bottom: 345px;
+        height: 53%;
+        bottom: 430px;
     }
 
     .mail-div {
@@ -122,7 +117,7 @@
     }
 
     .atf-links {
-        bottom: 170px;
+        bottom: 160px;
     }
 
     .border {
@@ -130,7 +125,7 @@
     }
 
     .shape-mobile {
-        bottom: -269px;
+        bottom: -325px;
     }
 }
 
@@ -160,10 +155,6 @@
         line-height: 22px;
     }
 
-    .profile-img {
-        bottom: -154px;
-    }
-
     .iam {
         top: 31px;
         right: 30px;
@@ -177,7 +168,7 @@
     }
 
     .atf-links {
-        bottom: 200px;
+        bottom: 190px;
     }
 
     .contact-section {

@@ -1,13 +1,12 @@
 @media screen and (max-width: 1024px) {
-    header {
+    .header {
         padding: 37px 50px;
         max-width: 1024px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    header {
-        padding: 37px 50px;
+    .header {
         max-width: 768px;
     }
 
@@ -21,20 +20,20 @@
 }
 
 @media screen and (max-width: 425px) {
-    header {
+    .header {
         padding: 37px 25px;
         max-width: 425px;
     }
 }
 
 @media screen and (max-width: 375px) {
-    header {
+    .header {
         max-width: 375px;
     }
 }
 
 @media screen and (max-width: 320px) {
-    header {
+    .header {
         max-width: 320px;
     }
 }
