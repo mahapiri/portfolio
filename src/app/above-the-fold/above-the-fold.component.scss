@@ -2,9 +2,11 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     scroll-margin-top: 114px;
     padding-top: 114px;
     overflow-x: clip;
+    position: relative;
 }
 
 .atf-section {
@@ -18,10 +20,14 @@
 }
 
 .shape {
-    width: 1440px;
-    height: 1080px;
+    width: 100vw;
+    min-width: 1440px;
+    max-width: 2000px;
+    // width: 1440px;
+    // height: 1080px;
     position: absolute;
-    bottom: -400px;
+    bottom: -34%;
+    // bottom: -400px;
     z-index: 1;
     user-select: none;
 }
