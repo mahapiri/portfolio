@@ -1,5 +1,5 @@
 .atf {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     scroll-margin-top: 114px;
@@ -82,7 +82,7 @@
     height: 100%;
     position: relative;
     z-index: 1;
-    opacity: 1;
+    opacity: 0; // temporarly 
     object-fit: cover;
 }
 
@@ -97,7 +97,7 @@
     background-size: cover;
     pointer-events: none;
     z-index: 2;
-    opacity: 1;
+    opacity: 0; // temporarly 
 }
 
 .shadow-block {
