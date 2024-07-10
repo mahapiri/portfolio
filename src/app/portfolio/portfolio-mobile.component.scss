@@ -66,10 +66,6 @@
 
     .portfolio-header {
         align-items: center;
-        h2 {
-            width: 100%;
-            align-items: center;
-        }
 
         p {
             margin-top: 22px;
@@ -77,6 +73,11 @@
             width: 100%;
             // padding-right: 25px;
         }
+    }
+
+    .portfolio-header-content {
+        width: 100%;
+        align-items: center;
     }
 
     .shadow-1 {
@@ -113,19 +114,11 @@
     }
 
     .border-left {
-        top: unset;
         width: 20px;
     }
 
     .border-right {
-        top: unset;
         width: 75px;
-    }
-
-    .portfolio-header {
-        // p {
-        //     padding-right: 25px;
-        // }
     }
 
     .portfolio-mobileview {

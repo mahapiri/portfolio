@@ -1,14 +1,14 @@
 <div class="portfolio" id="portfolio">
     <div class="portfolio-content">
-        <img src="assets/img/shadows/portfolio-1.svg" alt="Shadow" class="shadow shadow-1">   
-        <!-- <img src="assets/img/shadows/portfolio-2.svg" alt="Shadow" class="shadow shadow-2"> -->
+        <!-- <img src="assets/img/shadows/portfolio-1.svg" alt="Shadow" class="shadow shadow-1">   
+        <img src="assets/img/shadows/portfolio-2.svg" alt="Shadow" class="shadow shadow-2"> -->
         <div class="portfolio-header">
             <div class="portfolio-mobileview" [class.animationFadeIn]="isVisible">
-                <h2>
+                <div class="portfolio-header-content">
                     <div class="border-left"></div>
-                    Portfolio
+                    <h2>Portfolio</h2>
                     <div class="border-right"></div>
-                </h2>
+                </div>
                 @if (languageService.language == 'English') {
                 <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
                 }
@@ -19,6 +19,6 @@
 
             </div>
         </div>
-        <app-work class="work"></app-work>
+        <!-- <app-work class="work"></app-work> -->
     </div>
 </div>
