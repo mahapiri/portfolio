@@ -1,4 +1,7 @@
 <div id="atf" class="atf">
+    <div class="shape-content">
+        <img src="assets/img/atf-shape.svg" alt="Shape" class="shape" draggable="false">
+    </div>
     <div class="atf-section">
         <div class="atf-undersection">
             <div class="atf-content">
@@ -11,21 +14,21 @@
                             <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow">
                         </div>
                     </div>
-                    <div class="right-section" [class.animationSlideInRight]="isVisible">
+                    <div class="right-section">
                         <div class="title-div">
                             <span class="title-content">
                                 @if (languageService.language == 'English') {
-                                <p class="verticalText iam">I am</p>
+                                <p class="verticalText iam" [class.animationRotation]="isVisible">I am</p>
                                 }
                                 @if (languageService.language == 'German') {
-                                <p class="verticalText ichbin">Ich bin</p>
+                                <p class="verticalText ichbin" [class.animationRotation]="isVisible">Ich bin</p>
                                 }
-                                <h3 class="title-name">Pirathib Mahalingam</h3>
+                                <h3 class="title-name" [class.animationSlideInRight]="isVisible">Pirathib Mahalingam</h3>
                                 @if (languageService.language == 'English') {
-                                <p class="title-profession">FRONTEND DEVELOPER</p>
+                                <p class="title-profession" [class.typewriter]="isVisible">FRONTEND DEVELOPER</p>
                                 }
                                 @if (languageService.language == 'German') {
-                                <p class="title-profession">FRONTEND-ENTWICKLER</p>
+                                <p class="title-profession" [class.typewriter]="isVisible">FRONTEND-ENTWICKLER</p>
                                 }
 
                             </span>
@@ -43,7 +46,7 @@
             </div>
             <div class="atf-links">
                 <div class="contact-div">
-                    <div class="contact-section">
+                    <div class="contact-section" [class.animationSlideInLeft]="isVisible">
                         <div class="border"></div>
                         <div class="socialmedia-btns">
                             <a href="https://github.com/mahapiri" target="_blank"><img src="assets/img/github-btn.svg"
@@ -56,7 +59,7 @@
                     </div>
                 </div>
                 <div class="scroll-shadow-div">
-                    <div class="scroll-div" [class.animationOscillation]="isVisible">
+                    <div class="scroll-div" [class.animationOscillation]="isVisible" >
                         <div class="scroll-section">
                             @if (languageService.language == 'English') {
                             <p>Scroll down</p>
@@ -72,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/img/atf-shape.svg" alt="Shape" class="shape" draggable="false">
+            <!-- <img src="assets/img/atf-shape.svg" alt="Shape" class="shape" draggable="false"> -->
             <img src="assets/img/atf-shape-mobile.svg" alt="Shape" class="shape-mobile" draggable="false">  
         </div>
     </div>

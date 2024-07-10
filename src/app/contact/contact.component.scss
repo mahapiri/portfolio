@@ -282,3 +282,30 @@ input[type="submit"] {
     background-color: var(--light-blue) !important;
     cursor: pointer;
 }
+
+
+.animationOscillation {
+    animation: oscillation 700ms infinite;
+}
+
+@keyframes oscillation {
+    0% {
+        top: 84px;
+    }
+
+    25% {
+        top: 80px;
+    }
+
+    50% {
+        top: 76px;
+    }
+
+    75% {
+        top: 80px;
+    }
+
+    100% {
+        top: 84px;
+    }
+}

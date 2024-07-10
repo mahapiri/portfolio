@@ -1,11 +1,20 @@
 .atf {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     scroll-margin-top: 114px;
     padding-top: 114px;
     overflow-x: clip;
+    position: relative;
 }
+
+.shape-content {
+    width: 100vw;
+    max-width: 2876px;
+    position: absolute;
+    z-index: 1;
+} 
 
 .atf-section {
     width: 100%;
@@ -18,12 +27,22 @@
 }
 
 .shape {
-    width: 1440px;
-    height: 1080px;
-    position: absolute;
-    bottom: -400px;
+    width: 100%;
+    position: relative;
+    bottom: -515px;
     z-index: 1;
+    -webkit-user-select: none;
     user-select: none;
+    // width: 100vw;
+    // min-width: 1440px;
+    // max-width: 2000px;
+    // width: 1440px;
+    // height: 1080px;
+    // position: absolute;
+    // bottom: -34%;
+    // bottom: -400px;
+    // z-index: 1;
+    // user-select: none;
 }
 
 .shape-mobile {
@@ -97,7 +116,7 @@
     background-size: cover;
     pointer-events: none;
     z-index: 2;
-    opacity: 1;
+    opacity: 0; // temporarly 
 }
 
 .shadow-block {
@@ -116,7 +135,6 @@
 .right-section {
     text-align: center;
     position: relative;
-    opacity: 0;
     z-index: 2;
 }
 
@@ -165,6 +183,12 @@
 .verticalText {
     position: relative;
     transform: rotate(270deg);
+    opacity: 0;
+}
+
+.title-name {
+    position: relative;
+    opacity: 0;
 }
 
 .iam {
@@ -184,6 +208,7 @@
     line-height: 69.6px;
     color: var(--purple);
     margin: 0;
+    opacity: 0;
 }
 
 .border {
@@ -236,6 +261,8 @@
     justify-content: center;
     align-items: center;
     gap: 42px;
+    position: relative;
+    opacity: 0;
 }
 
 .scroll-div {
@@ -267,14 +294,35 @@
 }
 
 .animationSlideInRight {
-    animation: slideInRightTitle 1250ms linear forwards;
+    animation: slideInRight 1250ms linear forwards;
 }
 
 .animationOscillation {
-    animation: oscillation 700ms infinite;
+    animation: popup 700ms, oscillation 700ms infinite 1s;
 }
 
-@keyframes slideInRightTitle {
+.animationSlideInLeft {
+    animation: slideInLeft 1250ms linear forwards;
+}
+
+.animationRotation {
+    animation: 
+        rotation 1s .8s linear forwards;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 4px solid var(--light-blue);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: auto;
+    animation:
+        typing 2.5s .5s steps(40, end),
+        blink-caret .75s .5s step-end infinite,
+        stop-caret 0s 3.2s forwards;
+}
+
+@keyframes slideInRight {
     0% {
         right: -700px;
         opacity: 0;
@@ -312,3 +360,77 @@
         bottom: 112px;
     }
 }
+
+@keyframes slideInLeft {
+    0% {
+        left: -700px;
+        opacity: 0;
+    }
+
+    50% {
+        left: -300px;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+        opacity: 1;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+        opacity: 1;
+    }
+
+    50% {
+        border-color: var(--light-blue);
+    }
+}
+
+@keyframes stop-caret {
+    from, to {
+        border-color: transparent;
+        opacity: 1;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg); 
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(270deg); 
+        opacity: 1;
+    }
+}
+
