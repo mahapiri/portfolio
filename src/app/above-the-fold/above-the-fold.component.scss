@@ -13,7 +13,7 @@
     width: 100vw;
     max-width: 2876px;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
 } 
 
 .atf-section {
@@ -30,7 +30,7 @@
     width: 100%;
     position: relative;
     bottom: -515px;
-    z-index: 1;
+    z-index: 2;
     -webkit-user-select: none;
     user-select: none;
     // width: 100vw;
@@ -48,7 +48,7 @@
 .shape-mobile {
     display: none;
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
 }
 
 .atf-undersection {
@@ -63,14 +63,14 @@
     position: absolute;
     top: -100px;
     right: -500px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .atf-content {
     width: 100%;
     height: 65%;
     position: absolute;
-    bottom: 247px;
+    bottom: 277px;
 }
 
 .atf-title {
@@ -100,7 +100,7 @@
 .profile-img {
     height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
     object-fit: cover;
 }
@@ -115,14 +115,14 @@
     background: url('../../assets/img/piri-layer.png') no-repeat;
     background-size: cover;
     pointer-events: none;
-    z-index: 2;
-    opacity: 0; // temporarly 
+    z-index: 4;
+    opacity: 1;
 }
 
 .shadow-block {
     position: absolute;
     top: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 .shadow {
@@ -135,7 +135,7 @@
 .right-section {
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 }
 
 .title-div {

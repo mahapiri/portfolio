@@ -1,8 +1,14 @@
+@media screen and (max-width: 1440px) {
+    .footer {
+        max-width: 1440px;
+        padding: 37px 50px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .footer {
         max-width: 1024px;
         flex-direction: column;
-        padding: 37px 50px;
         margin-bottom: 56px;
     }
 
@@ -26,6 +32,7 @@
 @media screen and (max-width: 768px) {
     .footer {
         max-width: 768px;
+        padding: 37px 25px;
     }
 
     .copyright-div {

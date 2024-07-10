@@ -1,3 +1,9 @@
+@media screen and (min-width: 2300px) {
+    .atf-content {
+        bottom: 365px;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .atf-section {
         max-width: 1440px;
@@ -22,8 +28,8 @@
     }
 
     .atf-content {
-        height: 45%;
-        bottom: 485px;
+        height: 50%;
+        bottom: 444px;
     }
 
     .img-block {
@@ -37,7 +43,7 @@
     .shadow {
         width: unset;
         top: 47px;
-        left: -234px;
+        left: -334px;
     }
 
     .right-section {
@@ -78,7 +84,7 @@
     }
 
     .atf-content {
-        height: 53%;
+        height: 54%;
         bottom: 430px;
     }
 
@@ -117,7 +123,7 @@
     }
 
     .atf-links {
-        bottom: 160px;
+        bottom: 150px;
     }
 
     .border {
@@ -133,11 +139,20 @@
     }
 }
 
+@media screen and (max-width: 560px) {
+    .atf-section {
+        max-width: 560px;
+    }
+
+    .atf-content {
+        height: 40%;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .atf-section {
         max-width: 425px;
     }
-
 }
 
 @media screen and (max-width: 375px) {
@@ -147,6 +162,10 @@
 
     .atf-title {
         height: 96%;
+    }
+
+    .atf-content {
+        height: 32%;
     }
 
     .title-name {
@@ -187,5 +206,9 @@
 @media screen and (max-width: 320px) {
     .atf-section {
         max-width: 320px;
+    }
+
+    .atf-content {
+        height: 30%;
     }
 }

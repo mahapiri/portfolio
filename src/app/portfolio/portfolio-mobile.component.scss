@@ -1,6 +1,12 @@
 @media screen and (max-width: 1440px) {
+    .portfolio-content {
+        max-width: 1440px;
+        padding: 37px 50px;
+    }
+
     .border-right {
         width: 384px;
+        margin-right: -50px;
     }
 
     .border-left {
@@ -13,6 +19,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .portfolio-content {
+        max-width: 1024px;
+    }
+
     .border-right {
         width: 184px;
     }
@@ -27,12 +37,25 @@
 }
 
 @media screen and (max-width: 768px) {
+    .portfolio-content {
+        max-width: 768px;
+        padding: 37px 25px;
+    }
+
     .shadow-1 {
         right: 410px;
+    }
+
+    .border-right {
+        margin-right: -25px;
     }
 }
 
 @media screen and (max-width: 622px) {
+    .portfolio-content {
+        max-width: 622px;
+    }
+
     .border-right {
         width: 124px;
     }
@@ -52,7 +75,7 @@
             margin-top: 22px;
             text-align: center;
             width: 100%;
-            padding-right: 25px;
+            // padding-right: 25px;
         }
     }
 
@@ -62,13 +85,17 @@
 }
 
 @media screen and (max-width: 425px) {
-    .portfolio-header {
-        padding-left: unset;
+    .portfolio-content {
+        max-width: 425px;
     }
 
-    .work {
-        padding-right: 25px;
-    }
+    // .portfolio-header {
+    //     padding-left: unset;
+    // }
+
+    // .work {
+    //     padding-right: 25px;
+    // }
 
     .shadow-1 {
         right: 210px;
@@ -82,7 +109,7 @@
 
     .portfolio-content {
         max-width: 375px;
-        padding: 37px 0px 37px 25px;
+        // padding: 37px 25px;
     }
 
     .border-left {
@@ -96,9 +123,9 @@
     }
 
     .portfolio-header {
-        p {
-            padding-right: 25px;
-        }
+        // p {
+        //     padding-right: 25px;
+        // }
     }
 
     .portfolio-mobileview {
@@ -113,5 +140,8 @@
 }
 
 @media screen and (max-width: 320px) {
+    .portfolio-content {
+        max-width: 320px;
+    }
 
 }
