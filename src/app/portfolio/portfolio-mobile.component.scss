@@ -2,6 +2,7 @@
     .portfolio-content {
         max-width: 1440px;
         padding: 37px 50px;
+        // overflow-x: clip;
     }
 
     .border-right {
@@ -15,6 +16,10 @@
 
     .shadow-1 {
         right: 810px;
+    }
+
+    .shadow-2 {
+        left: 801px;
     }
 }
 
@@ -34,6 +39,10 @@
     .shadow-1 {
         right: 610px;
     }
+
+    .shadow-2 {
+        left: 601px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -44,6 +53,10 @@
 
     .shadow-1 {
         right: 410px;
+    }
+
+    .shadow-2 {
+        left: 401px;
     }
 
     .border-right {
@@ -83,6 +96,10 @@
     .shadow-1 {
         right: 310px;
     }
+
+    .shadow-2 {
+        left: 301px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -100,6 +117,10 @@
 
     .shadow-1 {
         right: 210px;
+    }
+
+    .shadow-2 {
+        left: 201px;
     }
 }
 
@@ -129,6 +150,10 @@
 
     .shadow-1 {
         right: 110px;
+    }
+
+    .shadow-2 {
+        left: 101px;
     }
 }
 

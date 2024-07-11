@@ -3,6 +3,7 @@
     justify-content: center;
     scroll-margin-top: 114px;
     margin-top: 114px;
+    overflow-x: clip;
 }
 
 .portfolio-content {
@@ -13,9 +14,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    // overflow-y: visible;
+}
+
+.shadow-content {
     position: relative;
-    overflow-y: visible;
-    // overflow-x: clip;
 }
 
 .shadow {
