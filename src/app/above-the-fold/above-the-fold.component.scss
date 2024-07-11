@@ -19,7 +19,6 @@
 .atf-section {
     width: 100%;
     max-width: 1440px;
-    // overflow-x: clip;
 }
 
 .shape-div {
@@ -30,20 +29,9 @@
     width: 100%;
     position: relative;
     bottom: -515px;
-    // bottom: -234px;
     z-index: 2;
     -webkit-user-select: none;
     user-select: none;
-    // width: 100vw;
-    // min-width: 1440px;
-    // max-width: 2000px;
-    // width: 1440px;
-    // height: 1080px;
-    // position: absolute;
-    // bottom: -34%;
-    // bottom: -400px;
-    // z-index: 1;
-    // user-select: none;
 }
 
 .shape-mobile {
@@ -88,7 +76,6 @@
     height: 100%;
     display: flex;
     align-items: flex-end;
-    // z-index: 0;
 }
 
 .img-block {
@@ -148,7 +135,6 @@
     justify-content: center;
     gap: 35px;
     position: relative;
-    // left: 100px;
 }
 
 .button-div {
@@ -169,7 +155,6 @@
         color: white;
         cursor: pointer;
         transition: 125ms ease-out;
-        // position: absolute;
 
         &:hover {
             padding: 20px 40px;
@@ -255,8 +240,6 @@
 
 .contact-div {
     display: flex;
-    // position: relative;
-    // bottom: 44px;
 }
 
 .contact-section {
@@ -316,18 +299,10 @@
 
 .typewriter {
     overflow: hidden;
-    // border-right: 4px solid var(--light-blue);
     white-space: nowrap;
     margin: 0 auto;
-    // letter-spacing: auto;
     animation: typing 2.5s steps(40, end);
 }
-
-// .typewriter::after {
-//     content: '';
-//     border-right: 4px solid var(--light-blue);
-//     animation: blink-caret 0.75s .5s step-end infinite, stop-caret 0s 3.2s forwards;
-// }
 
 @keyframes slideInRight {
     0% {
@@ -404,27 +379,12 @@
         width: 0%;
         opacity: 1;
     }
+
     to {
         width: 100%;
         opacity: 1;
     }
 }
-
-// @keyframes blink-caret {
-//     from, to {
-//         border-color: transparent;
-//     }
-
-//     50% {
-//         border-color: var(--light-blue);
-//     }
-// }
-
-// @keyframes stop-caret {
-//     from, to {
-//         border-color: transparent;
-//     }
-// }
 
 @keyframes rotation {
     from {

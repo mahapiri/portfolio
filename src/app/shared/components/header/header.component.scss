@@ -19,7 +19,6 @@ section {
     max-width: 1440px;
     height: auto;
     z-index: 6;
-    // opacity: 0;
 }
 
 .logo {
@@ -52,18 +51,6 @@ section {
         }
     }
 }
-
-// .about-me {
-//     width: 114px;
-// }
-
-// .skills {
-//     width: 57px;
-// }
-
-// .portfolio {
-//     width: 95px;
-// }
 
 .visited {
     div {
@@ -144,7 +131,7 @@ section {
     &:hover .menu-icon-hover {
         opacity: 1;
     }
-    
+
     &:hover .menu-icon:not(.menu-icon-hover) {
         opacity: 0;
     }

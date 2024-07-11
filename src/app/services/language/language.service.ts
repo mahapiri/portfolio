@@ -11,11 +11,12 @@ export class LanguageService {
     this.language = 'English';
   }
 
+  
   setLanguage(language: string) {
-    // Sprache im localStorage speichern
     localStorage.setItem('language', JSON.stringify(language));
-    this.language = language; // Aktuellen Service-Zustand aktualisieren
+    this.language = language;
   }
+
 
   getLanguage() {
     let localStored: any = localStorage.getItem('language'); 

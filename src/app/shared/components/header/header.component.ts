@@ -25,14 +25,17 @@ export class HeaderComponent implements OnInit {
     }, 500);
   }
 
+
   visited(id: string) {
     this.activeLink = id;
     this.clickedMenu = false;
   }
 
+
   openMenu() {
     this.clickedMenu = !this.clickedMenu;
   }
+
 
   openLanguage() {
     this.clickedLanguage = !this.clickedLanguage;

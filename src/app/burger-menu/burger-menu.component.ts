@@ -19,12 +19,14 @@ export class BurgerMenuComponent implements OnInit {
   constructor(public languageService: LanguageService) { }
 
   ngOnInit(): void {
-    
+
   }
+
 
   openLanguage() {
     this.clickedLanguage = !this.clickedLanguage;
   }
+
 
   visited(id: string) {
     this.activeLink = id;

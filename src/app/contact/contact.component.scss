@@ -5,8 +5,6 @@
     scroll-margin-top: 0px;
     padding-bottom: 114px;
     overflow-y: clip;
-    // height: 100%;
-    // margin-bottom: 174px;
 }
 
 .contact-content {
@@ -15,14 +13,11 @@
     height: 100%;
     display: flex;
     gap: 10px;
-    // flex-direction: column;
-    // justify-content: space-between;
     flex-direction: column;
     align-items: center;
     margin-top: 114px;
     padding: 37px 100px;
     position: relative;
-    // overflow-x: clip;
 }
 
 .shadow {
@@ -33,8 +28,7 @@
 
 h2 {
     margin-bottom: 70px;
-    // margin-left: 100px;
-}   
+}
 
 .contact-div {
     width: 100%;
@@ -55,7 +49,6 @@ h2 {
 .contact-undersection {
     display: flex;
     align-items: flex-start;
-    // margin-left: 100px;
     gap: 35px
 }
 
@@ -63,7 +56,6 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // max-width: 473px;
     gap: 35px;
 }
 
@@ -98,7 +90,6 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // gap: 32px;
     gap: 12px;
 
     input[type="text"],
@@ -158,15 +149,9 @@ input[type="submit"] {
     border-radius: 10px;
     padding: 15px 30px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    // gap: 10px;
-    // position: absolute;
-    // top: 572px;
-    // position: relative;
-    // top: 57px;
 }
 
 .checkbox-submit-box {
-    // width: 617px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -176,13 +161,6 @@ input[type="submit"] {
 .submit-div {
     display: flex;
     justify-content: center;
-    // position: absolute;
-
-    // input {
-    //     position: absolute;
-    //     top: 76px;
-    //     left: 201px;
-    // }
 }
 
 .checkbox-div {
@@ -191,7 +169,6 @@ input[type="submit"] {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    // width: 617px;
     gap: 8px;
     position: relative;
 
@@ -251,7 +228,6 @@ input[type="submit"] {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    // height: 76px;
 }
 
 .textfield-height {
@@ -274,7 +250,7 @@ input[type="submit"] {
     bottom: 194px;
 }
 
-.warn-pos-bottom{
+.warn-pos-bottom {
     bottom: -4px !important;
 }
 

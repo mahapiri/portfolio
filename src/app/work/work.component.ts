@@ -69,6 +69,7 @@ export class WorkComponent {
     }, 100);
   }
 
+  
   isElementVisible(index: number): boolean {
     return this.visibilityOnScrollService.isElementVisible(`work-${index}`);
   }

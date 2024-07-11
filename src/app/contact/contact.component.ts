@@ -13,6 +13,7 @@ import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visi
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss', 'contact-mobile.component.scss']
 })
+
 export class ContactComponent implements OnInit {
   hover: boolean = false;
   boxHover: boolean = false;
@@ -83,9 +84,11 @@ export class ContactComponent implements OnInit {
 
   constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
+
   ngOnInit(): void {
     this.checkVisibility();
   }
+
 
   @HostListener('window:scroll', [])
 
@@ -103,13 +106,8 @@ export class ContactComponent implements OnInit {
     }, 100);
   }
 
-  onSubmit(ngForm: NgForm) {
-    // if(!ngForm.form.valid) {
 
-    //   this.checked('name');
-    //   this.checked('email');
-    //   this.checked('message');
-    // }
+  onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.marked) {
 
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -123,7 +121,6 @@ export class ContactComponent implements OnInit {
           },
           complete: () => console.info('send post complete'),
         });
-      // this.router.navigate(['/mail']);
       this.openNewTab();
       this.marked = !this.marked;
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
@@ -142,10 +139,12 @@ export class ContactComponent implements OnInit {
     window.open('/mail', '_blank');
   }
 
+
   proofCheckbox() {
     this.errorMsg.checkbox.clicked = true;
   }
 
+  
   checked(id: string) {
     if (id == 'checkbox') {
       this.errorMsg.checkbox.clicked = true;

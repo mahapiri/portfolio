@@ -1,6 +1,6 @@
 <div class="contact" id="contact">
     <div class="contact-content">
-        <img src="assets/img/shadows/contact.svg" alt="Shadow" class="shadow">   
+        <img src="assets/img/shadows/contact.svg" alt="Shadow" class="shadow">
         <div class="contact-div" [class.animationFadeIn]="isVisible">
             <div class="border"></div>
             @if (languageService.language == 'English') {
@@ -37,12 +37,12 @@
                                 <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
                                     alt="Warn Symbol" [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
                                 @if (errorMsg.name.clicked && !name.valid) {
-                                    @if (languageService.language == 'English') {
-                                    <span>{{ errorMsg.name.messageEn }}</span>
-                                    }
-                                    @if (languageService.language == 'German') {
-                                    <span>{{ errorMsg.name.messageDe }}</span>
-                                    }
+                                @if (languageService.language == 'English') {
+                                <span>{{ errorMsg.name.messageEn }}</span>
+                                }
+                                @if (languageService.language == 'German') {
+                                <span>{{ errorMsg.name.messageDe }}</span>
+                                }
                                 }
                             </div>
                         </div>
@@ -55,12 +55,12 @@
                             <img [src]="email.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
                                 [ngClass]="errorMsg.email.clicked ? 'warn-symbol' : 'd-none'">
                             @if (errorMsg.email.clicked && !email.valid) {
-                                @if (languageService.language == 'English') {
-                                <span>{{ errorMsg.email.messageEn }}</span>
-                                }
-                                @if (languageService.language == 'German') {
-                                <span>{{ errorMsg.email.messageDe }}</span>
-                                }
+                            @if (languageService.language == 'English') {
+                            <span>{{ errorMsg.email.messageEn }}</span>
+                            }
+                            @if (languageService.language == 'German') {
+                            <span>{{ errorMsg.email.messageDe }}</span>
+                            }
                             }
                         </div>
                         <div class="input-field messagefield-height">
@@ -74,12 +74,12 @@
                                 alt="Warn Symbol"
                                 [ngClass]="errorMsg.message.clicked ? 'warn-symbol pos-bottom' : 'd-none'">
                             @if (errorMsg.message.clicked && !message.valid) {
-                                @if (languageService.language == 'English') {
-                                    <span class="warn-pos-bottom">{{ errorMsg.message.messageEn }}</span>
-                                    }
-                                @if (languageService.language == 'German') {
-                                <span class="warn-pos-bottom">{{ errorMsg.message.messageDe }}</span>
-                                }
+                            @if (languageService.language == 'English') {
+                            <span class="warn-pos-bottom">{{ errorMsg.message.messageEn }}</span>
+                            }
+                            @if (languageService.language == 'German') {
+                            <span class="warn-pos-bottom">{{ errorMsg.message.messageDe }}</span>
+                            }
                             }
                         </div>
                         <div class="checkbox-submit-box">
@@ -103,18 +103,19 @@
                                     </div>
                                 </div>
                                 @if (!marked && errorMsg.checkbox.clicked) {
-                                    @if (languageService.language == 'English') {
-                                        <span class="error-msg">{{ errorMsg.checkbox.messageEn }}</span>
-                                        }
-                                    @if (languageService.language == 'German') {
-                                        <span class="error-msg">{{ errorMsg.checkbox.messageDe }}</span>
-                                    }
+                                @if (languageService.language == 'English') {
+                                <span class="error-msg">{{ errorMsg.checkbox.messageEn }}</span>
+                                }
+                                @if (languageService.language == 'German') {
+                                <span class="error-msg">{{ errorMsg.checkbox.messageDe }}</span>
+                                }
                                 }
                             </div>
                             <div class="submit-div">
-                                <input [ngClass]="marked ? 'success-btn' : ''" *ngIf="languageService.language == 'English'" type="submit"
-                                    value="Send message :)">
-                                <input [ngClass]="marked ? 'success-btn' : ''" *ngIf="languageService.language == 'German'" type="submit"
+                                <input [ngClass]="marked ? 'success-btn' : ''"
+                                    *ngIf="languageService.language == 'English'" type="submit" value="Send message :)">
+                                <input [ngClass]="marked ? 'success-btn' : ''"
+                                    *ngIf="languageService.language == 'German'" type="submit"
                                     value="Nachricht senden :)">
                             </div>
                         </div>
@@ -123,7 +124,8 @@
             </div>
         </div>
         <div class="go-up">
-            <a href="#atf" class="go-up-btn" [class.animationOscillation]="isVisible"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;"
+            <a href="#atf" class="go-up-btn" [class.animationOscillation]="isVisible"><img (mouseenter)="hover = true;"
+                    (mouseleave)="hover = false;"
                     [src]="hover ? 'assets/img/go-up-btn-hover.svg' : 'assets/img/go-up-btn.svg'" alt="Go up"></a>
         </div>
     </div>

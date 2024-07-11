@@ -60,7 +60,6 @@ section {
     text-align: center;
 }
 
-
 .imprint {
     position: relative;
     display: block;
@@ -81,15 +80,3 @@ section {
 .imprint:hover::before {
     width: 55.5px;
 }
-
-// .imprint {
-//     cursor: pointer;
-
-//     &:hover {
-//         border-bottom: 2px solid var(--light-blue);
-//         content: '';
-//         display: block;
-//         width: 55.5px;
-//         transition: 200ms ease-in-out;
-//     }
-// }

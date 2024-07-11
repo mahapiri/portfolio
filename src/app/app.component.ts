@@ -15,8 +15,6 @@ import { filter } from 'rxjs/operators';
 
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
-  // isLoading = false;
-  // loaded: boolean = false;
 
   constructor(private router: Router) {
 
@@ -27,12 +25,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   }
 
+  
   ngAfterViewInit(): void {
-    // if (!this.loaded) {
-    //   setTimeout(() => {
-    //     this.loaded = true;
-    //     this.isLoading = false
-    //   }, 0)
-    // }
   }
 }
