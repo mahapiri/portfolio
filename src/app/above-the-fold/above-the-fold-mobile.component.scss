@@ -84,6 +84,7 @@
 
     .right-section {
         margin-right: unset;
+        top: unset;
         bottom: -118px;
     }
 
@@ -93,6 +94,10 @@
 
     .title-content {
         margin-left: 32px;
+    }
+
+    .button-div {
+        position: unset;
     }
 }
 

@@ -14,7 +14,7 @@
     max-width: 2876px;
     position: absolute;
     z-index: 3;
-} 
+}
 
 .atf-section {
     width: 100%;
@@ -136,6 +136,7 @@
 .right-section {
     text-align: center;
     position: relative;
+    top: -40px;
     z-index: 4;
 }
 
@@ -146,13 +147,15 @@
     align-items: center;
     justify-content: center;
     gap: 35px;
-    // position: relative;
+    position: relative;
     // left: 100px;
 }
 
 .button-div {
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: 164px;
 
     button {
         font-size: 23px;
@@ -209,7 +212,7 @@
     line-height: 69.6px;
     color: var(--purple);
     margin: 0;
-    opacity: 0;
+    opacity: 1;
 }
 
 .border {
@@ -220,7 +223,7 @@
 .atf-links {
     width: 100%;
     position: absolute;
-    bottom: 100px;
+    bottom: 124px;
     z-index: 4;
 }
 
@@ -307,21 +310,24 @@
 }
 
 .animationRotation {
-    animation: 
+    animation:
         rotation 1s .8s linear forwards;
 }
 
 .typewriter {
     overflow: hidden;
-    border-right: 4px solid var(--light-blue);
+    // border-right: 4px solid var(--light-blue);
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: auto;
-    animation:
-        typing 2.5s .5s steps(40, end),
-        blink-caret .75s .5s step-end infinite,
-        stop-caret 0s 3.2s forwards;
+    // letter-spacing: auto;
+    animation: typing 2.5s steps(40, end);
 }
+
+// .typewriter::after {
+//     content: '';
+//     border-right: 4px solid var(--light-blue);
+//     animation: blink-caret 0.75s .5s step-end infinite, stop-caret 0s 3.2s forwards;
+// }
 
 @keyframes slideInRight {
     0% {
@@ -398,40 +404,36 @@
         width: 0%;
         opacity: 1;
     }
-
     to {
         width: 100%;
         opacity: 1;
     }
 }
 
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-        opacity: 1;
-    }
+// @keyframes blink-caret {
+//     from, to {
+//         border-color: transparent;
+//     }
 
-    50% {
-        border-color: var(--light-blue);
-    }
-}
+//     50% {
+//         border-color: var(--light-blue);
+//     }
+// }
 
-@keyframes stop-caret {
-    from, to {
-        border-color: transparent;
-        opacity: 1;
-    }
-}
+// @keyframes stop-caret {
+//     from, to {
+//         border-color: transparent;
+//     }
+// }
 
 @keyframes rotation {
     from {
-        transform: rotate(0deg); 
+        transform: rotate(0deg);
         opacity: 1;
     }
 
     to {
-        transform: rotate(270deg); 
+        transform: rotate(270deg);
         opacity: 1;
     }
 }
-
