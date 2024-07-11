@@ -36,6 +36,7 @@
     row-gap: 56px;
     position: relative;
     opacity: 0;
+    z-index: 3;
 }
 
 .icons {
@@ -87,7 +88,7 @@
     align-items: center;
     gap: 35px;
     opacity: 0;
-    margin-right: 100px;
+    margin-right: 14px;
 
     h2 {
         display: flex;
@@ -146,7 +147,7 @@
 .border {
     position: absolute;
     top: 56px;
-    right: 0;
+    right: -49px;
     width: 58px;
     border-top: 4px solid var(--purple);
 }

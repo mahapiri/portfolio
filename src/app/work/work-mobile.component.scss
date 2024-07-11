@@ -74,6 +74,10 @@
     .align-right {
         flex-direction: column-reverse !important;
     }
+
+    h4 {
+        text-align: center;
+    }  
 }
 
 @media screen and (max-width: 768px) {
@@ -87,7 +91,9 @@
 }
 
 @media screen and (max-width: 425px) {
-
+    button {
+        padding: 15px 14px;
+    }
 }
 
 @media screen and (max-width: 375px) {

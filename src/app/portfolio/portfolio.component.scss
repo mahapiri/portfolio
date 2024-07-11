@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    // overflow-x: clip;
     // overflow-y: visible;
 }
 
@@ -38,7 +39,7 @@
 
 .portfolio-header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .portfolio-header-content {
@@ -48,8 +49,26 @@
     position: relative;
 }
 
-h2 {
+.title {
+    position: relative;
+}
 
+.title::before {
+    content: "";
+    position: absolute;
+    left: -117px;
+    top: 54px;
+    width: 109px;
+    border-top: 4px solid var(--purple);
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    right: -480px;
+    top: 54px;
+    width: 472px;
+    border-top: 4px solid var(--purple);
 }
 
 p {
@@ -60,21 +79,23 @@ p {
     opacity: 0;
 }
 
-.border-left {
-    position: absolute;
-    left: 69px;
-    margin-right: 10px;
-    width: 109px;
-    border-top: 4px solid var(--purple);
-}
+// .border-left {
+//     position: absolute;
+//     left: 0;
+//     margin-right: 10px;
+//     // width: 109px;
+//     width: 20%;
+//     border-top: 4px solid var(--purple);
+// }
 
-.border-right {
-    position: absolute;
-    right: 0;
-    margin-left: 10px;
-    width: 484px;
-    border-top: 4px solid var(--purple);
-}
+// .border-right {
+//     position: absolute;
+//     left: 522px;
+//     margin-left: 10px;
+//     // width: 484px;
+//     width: 85%;
+//     border-top: 4px solid var(--purple);
+// }
 
 .work {
     position: relative;
