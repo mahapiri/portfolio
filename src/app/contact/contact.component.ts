@@ -85,19 +85,25 @@ export class ContactComponent implements OnInit {
   constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
 
+  /**
+  * Initializes the component and checks the visibility of the contact element.
+  */
   ngOnInit(): void {
     this.checkVisibility();
   }
 
 
+  /**
+  * Listens to window scroll events and triggers visibility check.
+  */
   @HostListener('window:scroll', [])
-
-
   onWindowScroll() {
     this.checkVisibility();
   }
 
-
+  /**
+  * Checks the visibility of the contact element on scroll.
+  */
   checkVisibility() {
     setTimeout(() => {
       let elementId = 'contact';
@@ -107,6 +113,11 @@ export class ContactComponent implements OnInit {
   }
 
 
+  /**
+  * Handles the form submission, validates the form and sends contact data.
+  * 
+  * @param {NgForm} ngForm - The form to be submitted.
+  */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.marked) {
 
@@ -135,16 +146,27 @@ export class ContactComponent implements OnInit {
   }
 
 
+  /**
+  * Opens a new tab with the mail URL.
+  */
   openNewTab() {
     window.open('/mail', '_blank');
   }
 
 
+  /**
+  * Triggers the checkbox error message.
+  */
   proofCheckbox() {
     this.errorMsg.checkbox.clicked = true;
   }
 
-  
+
+  /**
+  * Marks the form field as checked and updates the error messages.
+  * 
+  * @param {string} id - The ID of the form field to be checked.
+  */
   checked(id: string) {
     if (id == 'checkbox') {
       this.errorMsg.checkbox.clicked = true;

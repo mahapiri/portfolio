@@ -1,0 +1,2166 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>portfolio documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">portfolio documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  ContactComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/contact/contact.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-contact</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>FormsModule</code>
+                            <code>CommonModule</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./contact.component.scss,<br>contact-mobile.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./contact.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#boxHover" >boxHover</a>
+                            </li>
+                            <li>
+                                <a href="#clicked" >clicked</a>
+                            </li>
+                            <li>
+                                <a href="#contactData" >contactData</a>
+                            </li>
+                            <li>
+                                <a href="#doneSymbol" >doneSymbol</a>
+                            </li>
+                            <li>
+                                <a href="#emptyPlaceholder" >emptyPlaceholder</a>
+                            </li>
+                            <li>
+                                <a href="#errorMsg" >errorMsg</a>
+                            </li>
+                            <li>
+                                <a href="#errorSymbol" >errorSymbol</a>
+                            </li>
+                            <li>
+                                <a href="#hover" >hover</a>
+                            </li>
+                            <li>
+                                <a href="#http" >http</a>
+                            </li>
+                            <li>
+                                <a href="#isVisible" >isVisible</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#languageService" >languageService</a>
+                            </li>
+                            <li>
+                                <a href="#mailTest" >mailTest</a>
+                            </li>
+                            <li>
+                                <a href="#marked" >marked</a>
+                            </li>
+                            <li>
+                                <a href="#post" >post</a>
+                            </li>
+                            <li>
+                                <a href="#router" >router</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checked" >checked</a>
+                            </li>
+                            <li>
+                                <a href="#checkVisibility" >checkVisibility</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#onWindowScroll" >onWindowScroll</a>
+                            </li>
+                            <li>
+                                <a href="#openNewTab" >openNewTab</a>
+                            </li>
+                            <li>
+                                <a href="#proofCheckbox" >proofCheckbox</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:scroll" >window:scroll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(languageService: <a href="../injectables/LanguageService.html" target="_self">LanguageService</a>, visibilityOnScrollService: <a href="../injectables/VisibilityOnScrollService.html" target="_self">VisibilityOnScrollService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/contact/contact.component.ts:83</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>languageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>visibilityOnScrollService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/VisibilityOnScrollService.html" target="_self" >VisibilityOnScrollService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section data-compodoc="block-methods">
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:scroll"></a>
+                    <span class="name">
+                        <span ><b>window:scroll</b></span>
+                        <a href="#window:scroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:scroll()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:100</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Listens to window scroll events and triggers visibility check.</p>
+</div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checked"></a>
+                    <span class="name">
+                        <span ><b>checked</b></span>
+                        <a href="#checked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checked(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="170"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:170</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Marks the form field as checked and updates the error messages.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the form field to be checked.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkVisibility"></a>
+                    <span class="name">
+                        <span ><b>checkVisibility</b></span>
+                        <a href="#checkVisibility"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkVisibility()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="107"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:107</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Checks the visibility of the contact element on scroll.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Initializes the component and checks the visibility of the contact element.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit(ngForm: NgForm)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Handles the form submission, validates the form and sends contact data.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ngForm</td>
+                                            <td>
+                                                        <code>NgForm</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The form to be submitted.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onWindowScroll"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>onWindowScroll</b></span>
+                        <a href="#onWindowScroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onWindowScroll()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;window:scroll&#x27;, undefined)<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:100</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Listens to window scroll events and triggers visibility check.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openNewTab"></a>
+                    <span class="name">
+                        <span ><b>openNewTab</b></span>
+                        <a href="#openNewTab"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openNewTab()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="152"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:152</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Opens a new tab with the mail URL.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="proofCheckbox"></a>
+                    <span class="name">
+                        <span ><b>proofCheckbox</b></span>
+                        <a href="#proofCheckbox"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>proofCheckbox()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="160"
+                                    class="link-to-prism">src/app/contact/contact.component.ts:160</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Triggers the checkbox error message.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="boxHover"></a>
+                    <span class="name">
+                        <span ><b>boxHover</b></span>
+                        <a href="#boxHover"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/contact/contact.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clicked"></a>
+                    <span class="name">
+                        <span ><b>clicked</b></span>
+                        <a href="#clicked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/contact/contact.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contactData"></a>
+                    <span class="name">
+                        <span ><b>contactData</b></span>
+                        <a href="#contactData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    name: &#x27;&#x27;,
+    email: &#x27;&#x27;,
+    message: &#x27;&#x27;,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/contact/contact.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doneSymbol"></a>
+                    <span class="name">
+                        <span ><b>doneSymbol</b></span>
+                        <a href="#doneSymbol"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;assets/img/done.svg&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/contact/contact.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="emptyPlaceholder"></a>
+                    <span class="name">
+                        <span ><b>emptyPlaceholder</b></span>
+                        <a href="#emptyPlaceholder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/contact/contact.component.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorMsg"></a>
+                    <span class="name">
+                        <span ><b>errorMsg</b></span>
+                        <a href="#errorMsg"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    name: {
+      clicked: false,
+      messageEn: &#x27;Your name is required&#x27;,
+      messageDe: &#x27;Ihr Name ist erforderlich&#x27;,
+      fieldEn: &#x27;Your name&#x27;,
+      fieldDe: &#x27;Ihr Name&#x27;,
+      placeholderEn: &#x27;Your name&#x27;,
+      placeholderDe: &#x27;Ihr Name&#x27;
+    },
+    email: {
+      clicked: false,
+      messageEn: &#x27;Your email is required&#x27;,
+      messageDe: &#x27;Ihre E-Mail ist erforderlich&#x27;,
+      fieldEn: &#x27;Your email&#x27;,
+      fieldDe: &#x27;Ihre E-Mail&#x27;,
+      placeholderEn: &#x27;Your email&#x27;,
+      placeholderDe: &#x27;Ihre E-Mail&#x27;
+    },
+    message: {
+      clicked: false,
+      messageEn: &#x27;Your message is empty&#x27;,
+      messageDe: &#x27;Ihre Nachricht ist leer&#x27;,
+      fieldEn: &#x27;Your message&#x27;,
+      fieldDe: &#x27;Ihre Nachricht&#x27;,
+      placeholderEn: &#x27;Your message&#x27;,
+      placeholderDe: &#x27;Ihre Nachricht&#x27;
+    },
+    checkbox: {
+      clicked: false,
+      messageEn: &#x27;Please accept the privacy policy&#x27;,
+      messageDe: &#x27;Bitte akzeptieren Sie die Datenschutzerklärung&#x27;
+    }
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/contact/contact.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorSymbol"></a>
+                    <span class="name">
+                        <span ><b>errorSymbol</b></span>
+                        <a href="#errorSymbol"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;assets/img/error.svg&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/contact/contact.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hover"></a>
+                    <span class="name">
+                        <span ><b>hover</b></span>
+                        <a href="#hover"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/contact/contact.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="http"></a>
+                    <span class="name">
+                        <span ><b>http</b></span>
+                        <a href="#http"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(HttpClient)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/contact/contact.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isVisible"></a>
+                    <span class="name">
+                        <span ><b>isVisible</b></span>
+                        <a href="#isVisible"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/contact/contact.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="languageService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>languageService</b></span>
+                        <a href="#languageService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/contact/contact.component.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mailTest"></a>
+                    <span class="name">
+                        <span ><b>mailTest</b></span>
+                        <a href="#mailTest"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/contact/contact.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="marked"></a>
+                    <span class="name">
+                        <span ><b>marked</b></span>
+                        <a href="#marked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/contact/contact.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="post"></a>
+                    <span class="name">
+                        <span ><b>post</b></span>
+                        <a href="#post"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    endPoint: &#x27;https://pirathib-mahalingam.ch/sendMail.php&#x27;,
+    body: (payload: any) &#x3D;&gt; JSON.stringify(payload),
+    options: {
+      headers: {
+        &#x27;Content-Type&#x27;: &#x27;text/plain&#x27;,
+        responseType: &#x27;text&#x27;,
+      },
+    },
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/contact/contact.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(Router)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/contact/contact.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Component, HostListener, OnInit, inject } from &#x27;@angular/core&#x27;;
+import { FormsModule, NgForm } from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { LanguageService } from &#x27;../services/language/language.service&#x27;;
+import { VisibilityOnScrollService } from &#x27;../services/visibility-on-scroll/visibility-on-scroll.service&#x27;;
+
+@Component({
+  selector: &#x27;app-contact&#x27;,
+  standalone: true,
+  imports: [FormsModule, CommonModule],
+  templateUrl: &#x27;./contact.component.html&#x27;,
+  styleUrls: [&#x27;./contact.component.scss&#x27;, &#x27;contact-mobile.component.scss&#x27;]
+})
+
+export class ContactComponent implements OnInit {
+  hover: boolean &#x3D; false;
+  boxHover: boolean &#x3D; false;
+  marked: boolean &#x3D; false;
+  clicked: boolean &#x3D; false;
+  http &#x3D; inject(HttpClient);
+  router &#x3D; inject(Router);
+
+  contactData &#x3D; {
+    name: &#x27;&#x27;,
+    email: &#x27;&#x27;,
+    message: &#x27;&#x27;,
+  }
+
+  errorMsg &#x3D; {
+    name: {
+      clicked: false,
+      messageEn: &#x27;Your name is required&#x27;,
+      messageDe: &#x27;Ihr Name ist erforderlich&#x27;,
+      fieldEn: &#x27;Your name&#x27;,
+      fieldDe: &#x27;Ihr Name&#x27;,
+      placeholderEn: &#x27;Your name&#x27;,
+      placeholderDe: &#x27;Ihr Name&#x27;
+    },
+    email: {
+      clicked: false,
+      messageEn: &#x27;Your email is required&#x27;,
+      messageDe: &#x27;Ihre E-Mail ist erforderlich&#x27;,
+      fieldEn: &#x27;Your email&#x27;,
+      fieldDe: &#x27;Ihre E-Mail&#x27;,
+      placeholderEn: &#x27;Your email&#x27;,
+      placeholderDe: &#x27;Ihre E-Mail&#x27;
+    },
+    message: {
+      clicked: false,
+      messageEn: &#x27;Your message is empty&#x27;,
+      messageDe: &#x27;Ihre Nachricht ist leer&#x27;,
+      fieldEn: &#x27;Your message&#x27;,
+      fieldDe: &#x27;Ihre Nachricht&#x27;,
+      placeholderEn: &#x27;Your message&#x27;,
+      placeholderDe: &#x27;Ihre Nachricht&#x27;
+    },
+    checkbox: {
+      clicked: false,
+      messageEn: &#x27;Please accept the privacy policy&#x27;,
+      messageDe: &#x27;Bitte akzeptieren Sie die Datenschutzerklärung&#x27;
+    }
+  };
+
+  emptyPlaceholder: string &#x3D; &#x27;&#x27;;
+
+  errorSymbol: string &#x3D; &#x27;assets/img/error.svg&#x27;;
+  doneSymbol: string &#x3D; &#x27;assets/img/done.svg&#x27;;
+
+  mailTest &#x3D; false;
+
+  post &#x3D; {
+    endPoint: &#x27;https://pirathib-mahalingam.ch/sendMail.php&#x27;,
+    body: (payload: any) &#x3D;&gt; JSON.stringify(payload),
+    options: {
+      headers: {
+        &#x27;Content-Type&#x27;: &#x27;text/plain&#x27;,
+        responseType: &#x27;text&#x27;,
+      },
+    },
+  };
+  isVisible: boolean &#x3D; false;
+
+  constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
+
+
+  /**
+  * Initializes the component and checks the visibility of the contact element.
+  */
+  ngOnInit(): void {
+    this.checkVisibility();
+  }
+
+
+  /**
+  * Listens to window scroll events and triggers visibility check.
+  */
+  @HostListener(&#x27;window:scroll&#x27;, [])
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+  /**
+  * Checks the visibility of the contact element on scroll.
+  */
+  checkVisibility() {
+    setTimeout(() &#x3D;&gt; {
+      let elementId &#x3D; &#x27;contact&#x27;;
+      this.visibilityOnScrollService.onWindowScroll(elementId);
+      this.isVisible &#x3D; this.visibilityOnScrollService.isElementVisible(elementId);
+    }, 100);
+  }
+
+
+  /**
+  * Handles the form submission, validates the form and sends contact data.
+  * 
+  * @param {NgForm} ngForm - The form to be submitted.
+  */
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted &amp;&amp; ngForm.form.valid &amp;&amp; !this.mailTest &amp;&amp; this.marked) {
+
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) &#x3D;&gt; {
+
+            ngForm.resetForm();
+          },
+          error: (error) &#x3D;&gt; {
+            console.error(error);
+          },
+          complete: () &#x3D;&gt; console.info(&#x27;send post complete&#x27;),
+        });
+      this.openNewTab();
+      this.marked &#x3D; !this.marked;
+    } else if (ngForm.submitted &amp;&amp; ngForm.form.valid &amp;&amp; this.mailTest) {
+      this.marked &#x3D; !this.marked;
+      ngForm.resetForm();
+    } else {
+      this.checked(&#x27;name&#x27;);
+      this.checked(&#x27;email&#x27;);
+      this.checked(&#x27;message&#x27;);
+      this.proofCheckbox();
+    }
+  }
+
+
+  /**
+  * Opens a new tab with the mail URL.
+  */
+  openNewTab() {
+    window.open(&#x27;/mail&#x27;, &#x27;_blank&#x27;);
+  }
+
+
+  /**
+  * Triggers the checkbox error message.
+  */
+  proofCheckbox() {
+    this.errorMsg.checkbox.clicked &#x3D; true;
+  }
+
+
+  /**
+  * Marks the form field as checked and updates the error messages.
+  * 
+  * @param {string} id - The ID of the form field to be checked.
+  */
+  checked(id: string) {
+    if (id &#x3D;&#x3D; &#x27;checkbox&#x27;) {
+      this.errorMsg.checkbox.clicked &#x3D; true;
+      this.marked &#x3D; !this.marked;
+    }
+    if (id &#x3D;&#x3D; &#x27;name&#x27;) {
+      this.errorMsg.name.clicked &#x3D; true;
+      this.errorMsg.name.fieldEn &#x3D; this.emptyPlaceholder;
+      this.errorMsg.name.fieldDe &#x3D; this.emptyPlaceholder;
+    }
+    if (id &#x3D;&#x3D; &#x27;email&#x27;) {
+      this.errorMsg.email.clicked &#x3D; true;
+      this.errorMsg.email.fieldEn &#x3D; this.emptyPlaceholder;
+      this.errorMsg.email.fieldDe &#x3D; this.emptyPlaceholder;
+    }
+    if (id &#x3D;&#x3D; &#x27;message&#x27;) {
+      this.errorMsg.message.clicked &#x3D; true;
+      this.errorMsg.message.fieldEn &#x3D; this.emptyPlaceholder;
+      this.errorMsg.message.fieldDe &#x3D; this.emptyPlaceholder;
+    }
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;contact&quot; id&#x3D;&quot;contact&quot;&gt;
+    &lt;div class&#x3D;&quot;contact-content&quot;&gt;
+        &lt;img src&#x3D;&quot;assets/img/shadows/contact.svg&quot; alt&#x3D;&quot;Shadow&quot; class&#x3D;&quot;shadow&quot;&gt;
+        &lt;div class&#x3D;&quot;contact-div&quot; [class.animationFadeIn]&#x3D;&quot;isVisible&quot;&gt;
+            &lt;div class&#x3D;&quot;border&quot;&gt;&lt;/div&gt;
+            @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+            &lt;h2&gt;Contact&lt;/h2&gt;
+            }
+            @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+            &lt;h2&gt;Kontakt&lt;/h2&gt;
+            }
+            &lt;div class&#x3D;&quot;contact-undersection&quot;&gt;
+                &lt;div class&#x3D;&quot;text-div&quot;&gt;
+                    @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                    &lt;h5&gt;Got a problem to solve?&lt;/h5&gt;
+                    &lt;p&gt;Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                        contributing to
+                        your projects with my work.&lt;/p&gt;
+                    &lt;p&gt;Need a Frontend developer? &lt;b&gt;Contact me!&lt;/b&gt;&lt;/p&gt;
+                    }
+                    @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                    &lt;h5&gt;Haben Sie ein Problem zu lösen?&lt;/h5&gt;
+                    &lt;p&gt;Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von Ihnen zu hören, Ihre
+                        Ideen kennenzulernen und zu Ihren Projekten mit meiner Arbeit beizutragen.&lt;/p&gt;
+                    &lt;p&gt;Brauchen Sie einen Frontend-Entwickler? &lt;b&gt;Kontaktieren Sie mich!&lt;/b&gt;&lt;/p&gt;
+                    }
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;input-div&quot;&gt;
+                    &lt;form (ngSubmit)&#x3D;&quot;onSubmit(contactForm)&quot; #contactForm&#x3D;&quot;ngForm&quot;&gt;
+                        &lt;div&gt;
+                            &lt;div class&#x3D;&quot;input-field textfield-height&quot;&gt;
+                                &lt;input #name&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;contactData.name&quot; type&#x3D;&quot;text&quot; id&#x3D;&quot;name&quot; name&#x3D;&quot;name&quot;
+                                    [placeholder]&#x3D;&quot;languageService.language &#x3D;&#x3D; &#x27;English&#x27; ? errorMsg.name.fieldEn : errorMsg.name.fieldDe&quot;
+                                    (click)&#x3D;&quot;checked(&#x27;name&#x27;)&quot; [ngClass]&#x3D;&quot;
+                                    errorMsg.name.clicked ? (name.valid ? &#x27;done-border&#x27; : &#x27;error-border&#x27;) : &#x27;&#x27;&quot;
+                                    required&gt;
+                                &lt;img [src]&#x3D;&quot;name.valid ? &#x27;assets/img/done.svg&#x27; : &#x27;assets/img/error.svg&#x27;&quot;
+                                    alt&#x3D;&quot;Warn Symbol&quot; [ngClass]&#x3D;&quot;errorMsg.name.clicked ? &#x27;warn-symbol&#x27; : &#x27;d-none&#x27;&quot;&gt;
+                                @if (errorMsg.name.clicked &amp;&amp; !name.valid) {
+                                @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                                &lt;span&gt;{{ errorMsg.name.messageEn }}&lt;/span&gt;
+                                }
+                                @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                                &lt;span&gt;{{ errorMsg.name.messageDe }}&lt;/span&gt;
+                                }
+                                }
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;input-field textfield-height&quot;&gt;
+                            &lt;input #email&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;contactData.email&quot; type&#x3D;&quot;text&quot; id&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot;
+                                [placeholder]&#x3D;&quot;languageService.language &#x3D;&#x3D; &#x27;English&#x27; ? errorMsg.email.fieldEn : errorMsg.email.fieldDe&quot;
+                                pattern&#x3D;&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot; (click)&#x3D;&quot;checked(&#x27;email&#x27;)&quot;
+                                [ngClass]&#x3D;&quot;errorMsg.email.clicked ? (email.valid ? &#x27;done-border&#x27; : &#x27;error-border&#x27;) : &#x27;&#x27;&quot;
+                                required&gt;
+                            &lt;img [src]&#x3D;&quot;email.valid ? &#x27;assets/img/done.svg&#x27; : &#x27;assets/img/error.svg&#x27;&quot; alt&#x3D;&quot;Warn Symbol&quot;
+                                [ngClass]&#x3D;&quot;errorMsg.email.clicked ? &#x27;warn-symbol&#x27; : &#x27;d-none&#x27;&quot;&gt;
+                            @if (errorMsg.email.clicked &amp;&amp; !email.valid) {
+                            @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                            &lt;span&gt;{{ errorMsg.email.messageEn }}&lt;/span&gt;
+                            }
+                            @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                            &lt;span&gt;{{ errorMsg.email.messageDe }}&lt;/span&gt;
+                            }
+                            }
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;input-field messagefield-height&quot;&gt;
+                            &lt;textarea #message&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;contactData.message&quot; minlength&#x3D;&quot;0&quot; type&#x3D;&quot;text&quot;
+                                id&#x3D;&quot;message&quot; name&#x3D;&quot;message&quot;
+                                [placeholder]&#x3D;&quot;languageService.language &#x3D;&#x3D; &#x27;English&#x27; ? errorMsg.message.fieldEn : errorMsg.message.fieldDe&quot;
+                                rows&#x3D;&quot;7&quot; (click)&#x3D;&quot;checked(&#x27;message&#x27;)&quot;
+                                [ngClass]&#x3D;&quot;errorMsg.message.clicked ? (message.valid ? &#x27;done-border&#x27; : &#x27;error-border&#x27;) : &#x27;&#x27;&quot;
+                                required&gt;&lt;/textarea&gt;
+                            &lt;img [src]&#x3D;&quot;message.valid ? &#x27;assets/img/done.svg&#x27; : &#x27;assets/img/error.svg&#x27;&quot;
+                                alt&#x3D;&quot;Warn Symbol&quot;
+                                [ngClass]&#x3D;&quot;errorMsg.message.clicked ? &#x27;warn-symbol pos-bottom&#x27; : &#x27;d-none&#x27;&quot;&gt;
+                            @if (errorMsg.message.clicked &amp;&amp; !message.valid) {
+                            @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                            &lt;span class&#x3D;&quot;warn-pos-bottom&quot;&gt;{{ errorMsg.message.messageEn }}&lt;/span&gt;
+                            }
+                            @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                            &lt;span class&#x3D;&quot;warn-pos-bottom&quot;&gt;{{ errorMsg.message.messageDe }}&lt;/span&gt;
+                            }
+                            }
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;checkbox-submit-box&quot;&gt;
+                            &lt;div class&#x3D;&quot;checkbox-div&quot;&gt;
+                                &lt;div class&#x3D;&quot;checkbox-content&quot;&gt;
+                                    &lt;img id&#x3D;&quot;checkbox&quot; (mouseenter)&#x3D;&quot;boxHover &#x3D; true;&quot; (mouseleave)&#x3D;&quot;boxHover &#x3D; false;&quot;
+                                        [src]&#x3D;&quot; boxHover ? (marked ? &#x27;assets/img/checkbox/checked-hover.svg&#x27; : &#x27;assets/img/checkbox/default-hover.svg&#x27;) 
+                                    : (marked ? &#x27;assets/img/checkbox/checked.svg&#x27; : &#x27;assets/img/checkbox/default.svg&#x27;)&quot;
+                                        alt&#x3D;&quot;Checkbox&quot; (click)&#x3D;&quot;checked(&#x27;checkbox&#x27;)&quot;&gt;
+                                    &lt;div class&#x3D;&quot;checkbox-text&quot;&gt;
+                                        @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                                        &lt;p&gt;I&#x27;ve read the &lt;/p&gt;
+                                        &lt;a href&#x3D;&quot;/privacy&quot;&gt;privacy policy&lt;/a&gt;
+                                        &lt;p&gt; and agree to the processing of my data as outlined.&lt;/p&gt;
+                                        }
+                                        @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                                        &lt;p&gt;Ich habe die &lt;/p&gt;
+                                        &lt;a href&#x3D;&quot;/privacy&quot;&gt;Datenschutzerklärung&lt;/a&gt;
+                                        &lt;p&gt; gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.&lt;/p&gt;
+                                        }
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                @if (!marked &amp;&amp; errorMsg.checkbox.clicked) {
+                                @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                                &lt;span class&#x3D;&quot;error-msg&quot;&gt;{{ errorMsg.checkbox.messageEn }}&lt;/span&gt;
+                                }
+                                @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                                &lt;span class&#x3D;&quot;error-msg&quot;&gt;{{ errorMsg.checkbox.messageDe }}&lt;/span&gt;
+                                }
+                                }
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;submit-div&quot;&gt;
+                                &lt;input [ngClass]&#x3D;&quot;marked ? &#x27;success-btn&#x27; : &#x27;&#x27;&quot;
+                                    *ngIf&#x3D;&quot;languageService.language &#x3D;&#x3D; &#x27;English&#x27;&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Send message :)&quot;&gt;
+                                &lt;input [ngClass]&#x3D;&quot;marked ? &#x27;success-btn&#x27; : &#x27;&#x27;&quot;
+                                    *ngIf&#x3D;&quot;languageService.language &#x3D;&#x3D; &#x27;German&#x27;&quot; type&#x3D;&quot;submit&quot;
+                                    value&#x3D;&quot;Nachricht senden :)&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;go-up&quot;&gt;
+            &lt;a href&#x3D;&quot;#atf&quot; class&#x3D;&quot;go-up-btn&quot; [class.animationOscillation]&#x3D;&quot;isVisible&quot;&gt;&lt;img (mouseenter)&#x3D;&quot;hover &#x3D; true;&quot;
+                    (mouseleave)&#x3D;&quot;hover &#x3D; false;&quot;
+                    [src]&#x3D;&quot;hover ? &#x27;assets/img/go-up-btn-hover.svg&#x27; : &#x27;assets/img/go-up-btn.svg&#x27;&quot; alt&#x3D;&quot;Go up&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./contact.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 0px;
+    padding-bottom: 114px;
+    overflow-y: clip;
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 114px;
+    padding: 37px 100px;
+    position: relative;
+}
+
+.shadow {
+    position: absolute;
+    transform: scaleX(-1) rotate(88deg);
+    right: 855px;
+}
+
+h2 {
+    margin-bottom: 70px;
+}
+
+.contact-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+}
+
+.border {
+    position: absolute;
+    top: 54px;
+    left: -100px;
+    width: 50px;
+    border-top: 4px solid var(--purple);
+}
+
+.contact-undersection {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+}
+
+.input-div {
+    position: relative;
+
+    span {
+        height: 17px;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: var(--red);
+        margin-left: 4px;
+        margin-top: -18px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: -4px;
+    }
+
+    .error-msg {
+        margin-top: 0;
+        transition: 125ms ease-out;
+    }
+}
+
+.checkbox-div .error-msg {
+    bottom: -32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    input[type&#x3D;&quot;text&quot;],
+    textarea {
+        font-family: &#x27;Poppins&#x27;;
+        font-size: 16px;
+        line-height: 19.2px;
+        background-color: var(--dark-blue);
+        border-radius: 10px;
+        border: 1px solid var(--purple);
+        color: white;
+        padding: 15px 25px;
+
+        &amp;::placeholder {
+            color: white;
+        }
+
+        &amp;:hover {
+            border-color: var(--blue-green);
+            cursor: pointer;
+        }
+    }
+
+    .error-border,
+    .error-border:focus,
+    .error-border:active,
+    .error-border:visited {
+        border-color: var(--red) !important;
+        outline: none;
+    }
+
+    .done-border,
+    .done-border:focus,
+    .done-border:active,
+    .done-border:visited {
+        border-color: var(--green) !important;
+        outline: none;
+    }
+
+    input[type&#x3D;&quot;text&quot;] {
+        width: 617px;
+        height: 50px;
+    }
+
+    textarea {
+        width: 617px;
+        height: 202px;
+    }
+}
+
+input[type&#x3D;&quot;submit&quot;] {
+    font-size: 23px;
+    line-height: 27.6px;
+    color: white;
+    background-color: rgba(182, 182, 182, 1);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-submit-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.submit-div {
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
+    position: relative;
+
+    img {
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+    }
+}
+
+.checkbox-text {
+    p {
+        display: contents;
+        font-size: 14px;
+        line-height: 16.8px;
+    }
+
+    a {
+        color: var(--purple);
+        font-size: 14px;
+        line-height: 16.8px;
+
+        &amp;:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.checkbox-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    img {
+        margin-right: 6px;
+    }
+}
+
+.go-up {
+    position: relative;
+    width: 100%;
+    height: 39px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.go-up-btn {
+    width: 39px;
+    height: 39px;
+    transition: 125ms ease-in-out;
+    position: absolute;
+    top: 84px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.textfield-height {
+    height: 76px;
+}
+
+.messagefield-height {
+    height: 232px;
+}
+
+.warn-symbol {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 16px;
+    bottom: 38px;
+}
+
+.pos-bottom {
+    bottom: 194px;
+}
+
+.warn-pos-bottom {
+    bottom: -4px !important;
+}
+
+.success-btn {
+    background-color: var(--light-blue) !important;
+    cursor: pointer;
+}
+
+.animationOscillation {
+    animation: oscillation 700ms infinite;
+}
+
+@keyframes oscillation {
+    0% {
+        top: 84px;
+    }
+
+    25% {
+        top: 80px;
+    }
+
+    50% {
+        top: 76px;
+    }
+
+    75% {
+        top: 80px;
+    }
+
+    100% {
+        top: 84px;
+    }
+}</code></pre>
+                <p class="comment">
+                    <code>contact-mobile.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@media screen and (max-width: 1440px) {
+    .contact-content {
+        max-width: 1440px;
+        padding: 37px 50px;
+    }
+
+    input[type&#x3D;&quot;text&quot;] {
+        width: 100% !important;
+        height: 40px !important;
+    }
+
+    textarea {
+        width: 100% !important;
+        height: 162px !important;
+    }
+
+    .input-div {
+        width: 100%;
+        span {
+            bottom: 0px;
+        }
+    }
+
+    .warn-pos-bottom {
+        bottom: 32px !important;
+    }
+
+    .contact-undersection {
+        flex-direction: column;
+    }
+
+    form {
+        align-items: unset;
+    }
+
+    .border {
+        width: 20px;
+        left: -50px;
+    }
+
+    .shadow {
+        right: 1055px;
+        top: 201px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-content {
+        max-width: 1024px;
+    }
+
+    .shadow {
+        right: 855px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content {
+        max-width: 768px;
+        padding: 37px 25px;
+    }
+
+    .contact-div {
+
+        h2 {
+            margin-bottom: 22px;
+        }
+
+    }
+
+    .textfield-height {
+        height: 64px;
+    }
+
+    .messagefield-height {
+        height: 200px;
+    }
+
+    .checkbox-content {
+        align-items: flex-start;
+
+        img {
+            margin-top: 4px;
+        }
+    }
+
+    .submit-div {
+        width: 100%;
+
+        input {
+            left: unset;
+            top: 100px;
+        }
+    }
+
+    .input-div {
+
+        span {
+            bottom: -8px;
+        }
+    }
+
+    .warn-pos-bottom {
+        bottom: 4px !important;
+    }
+
+    .warn-symbol {
+        bottom: 32px;
+    }
+
+    .pos-bottom {
+        bottom: 164px !important;
+    }
+
+    .border {
+        top: 26px;
+    }
+
+    .shadow {
+        right: 455px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contact-content {
+        max-width: 425px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact {
+        scroll-margin-top: 120px;
+    }
+
+    .contact-content {
+        max-width: 375px;
+        gap: unset;
+    }
+
+    .shadow {
+        right: 355px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contact-content {
+        max-width: 320px;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="contact" id="contact">    <div class="contact-content">        <img src="assets/img/shadows/contact.svg" alt="Shadow" class="shadow">        <div class="contact-div" [class.animationFadeIn]="isVisible">            <div class="border"></div>            @if (languageService.language == \'English\') {            <h2>Contact</h2>            }            @if (languageService.language == \'German\') {            <h2>Kontakt</h2>            }            <div class="contact-undersection">                <div class="text-div">                    @if (languageService.language == \'English\') {                    <h5>Got a problem to solve?</h5>                    <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and                        contributing to                        your projects with my work.</p>                    <p>Need a Frontend developer? <b>Contact me!</b></p>                    }                    @if (languageService.language == \'German\') {                    <h5>Haben Sie ein Problem zu lösen?</h5>                    <p>Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von Ihnen zu hören, Ihre                        Ideen kennenzulernen und zu Ihren Projekten mit meiner Arbeit beizutragen.</p>                    <p>Brauchen Sie einen Frontend-Entwickler? <b>Kontaktieren Sie mich!</b></p>                    }                </div>                <div class="input-div">                    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">                        <div>                            <div class="input-field textfield-height">                                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"                                    [placeholder]="languageService.language == \'English\' ? errorMsg.name.fieldEn : errorMsg.name.fieldDe"                                    (click)="checked(\'name\')" [ngClass]="                                    errorMsg.name.clicked ? (name.valid ? \'done-border\' : \'error-border\') : \'\'"                                    required>                                <img [src]="name.valid ? \'assets/img/done.svg\' : \'assets/img/error.svg\'"                                    alt="Warn Symbol" [ngClass]="errorMsg.name.clicked ? \'warn-symbol\' : \'d-none\'">                                @if (errorMsg.name.clicked && !name.valid) {                                @if (languageService.language == \'English\') {                                <span>{{ errorMsg.name.messageEn }}</span>                                }                                @if (languageService.language == \'German\') {                                <span>{{ errorMsg.name.messageDe }}</span>                                }                                }                            </div>                        </div>                        <div class="input-field textfield-height">                            <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"                                [placeholder]="languageService.language == \'English\' ? errorMsg.email.fieldEn : errorMsg.email.fieldDe"                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (click)="checked(\'email\')"                                [ngClass]="errorMsg.email.clicked ? (email.valid ? \'done-border\' : \'error-border\') : \'\'"                                required>                            <img [src]="email.valid ? \'assets/img/done.svg\' : \'assets/img/error.svg\'" alt="Warn Symbol"                                [ngClass]="errorMsg.email.clicked ? \'warn-symbol\' : \'d-none\'">                            @if (errorMsg.email.clicked && !email.valid) {                            @if (languageService.language == \'English\') {                            <span>{{ errorMsg.email.messageEn }}</span>                            }                            @if (languageService.language == \'German\') {                            <span>{{ errorMsg.email.messageDe }}</span>                            }                            }                        </div>                        <div class="input-field messagefield-height">                            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="0" type="text"                                id="message" name="message"                                [placeholder]="languageService.language == \'English\' ? errorMsg.message.fieldEn : errorMsg.message.fieldDe"                                rows="7" (click)="checked(\'message\')"                                [ngClass]="errorMsg.message.clicked ? (message.valid ? \'done-border\' : \'error-border\') : \'\'"                                required></textarea>                            <img [src]="message.valid ? \'assets/img/done.svg\' : \'assets/img/error.svg\'"                                alt="Warn Symbol"                                [ngClass]="errorMsg.message.clicked ? \'warn-symbol pos-bottom\' : \'d-none\'">                            @if (errorMsg.message.clicked && !message.valid) {                            @if (languageService.language == \'English\') {                            <span class="warn-pos-bottom">{{ errorMsg.message.messageEn }}</span>                            }                            @if (languageService.language == \'German\') {                            <span class="warn-pos-bottom">{{ errorMsg.message.messageDe }}</span>                            }                            }                        </div>                        <div class="checkbox-submit-box">                            <div class="checkbox-div">                                <div class="checkbox-content">                                    <img id="checkbox" (mouseenter)="boxHover = true;" (mouseleave)="boxHover = false;"                                        [src]=" boxHover ? (marked ? \'assets/img/checkbox/checked-hover.svg\' : \'assets/img/checkbox/default-hover.svg\')                                     : (marked ? \'assets/img/checkbox/checked.svg\' : \'assets/img/checkbox/default.svg\')"                                        alt="Checkbox" (click)="checked(\'checkbox\')">                                    <div class="checkbox-text">                                        @if (languageService.language == \'English\') {                                        <p>I\'ve read the </p>                                        <a href="/privacy">privacy policy</a>                                        <p> and agree to the processing of my data as outlined.</p>                                        }                                        @if (languageService.language == \'German\') {                                        <p>Ich habe die </p>                                        <a href="/privacy">Datenschutzerklärung</a>                                        <p> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</p>                                        }                                    </div>                                </div>                                @if (!marked && errorMsg.checkbox.clicked) {                                @if (languageService.language == \'English\') {                                <span class="error-msg">{{ errorMsg.checkbox.messageEn }}</span>                                }                                @if (languageService.language == \'German\') {                                <span class="error-msg">{{ errorMsg.checkbox.messageDe }}</span>                                }                                }                            </div>                            <div class="submit-div">                                <input [ngClass]="marked ? \'success-btn\' : \'\'"                                    *ngIf="languageService.language == \'English\'" type="submit" value="Send message :)">                                <input [ngClass]="marked ? \'success-btn\' : \'\'"                                    *ngIf="languageService.language == \'German\'" type="submit"                                    value="Nachricht senden :)">                            </div>                        </div>                    </form>                </div>            </div>        </div>        <div class="go-up">            <a href="#atf" class="go-up-btn" [class.animationOscillation]="isVisible"><img (mouseenter)="hover = true;"                    (mouseleave)="hover = false;"                    [src]="hover ? \'assets/img/go-up-btn-hover.svg\' : \'assets/img/go-up-btn.svg\'" alt="Go up"></a>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutMeComponent', 'selector': 'app-about-me'},{'name': 'AboveTheFoldComponent', 'selector': 'app-above-the-fold'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BurgerMenuComponent', 'selector': 'app-burger-menu'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImprintComponent', 'selector': 'app-imprint'},{'name': 'InProgressComponent', 'selector': 'app-in-progress'},{'name': 'MailComponent', 'selector': 'app-mail'},{'name': 'MySkillsComponent', 'selector': 'app-my-skills'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'WorkComponent', 'selector': 'app-work'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ContactComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ContactComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

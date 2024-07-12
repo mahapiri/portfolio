@@ -1,0 +1,1374 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>portfolio documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">portfolio documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  HeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/header/header.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-header</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                                <code><a href="../components/BurgerMenuComponent.html" target="_self" >BurgerMenuComponent</a></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./header.component.scss,<br>./header-mobile.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeLink" >activeLink</a>
+                            </li>
+                            <li>
+                                <a href="#clickedLanguage" >clickedLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#clickedMenu" >clickedMenu</a>
+                            </li>
+                            <li>
+                                <a href="#imagesLoaded" >imagesLoaded</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#languageService" >languageService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#handleOutsideClick" >handleOutsideClick</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openLanguage" >openLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#openMenu" >openMenu</a>
+                            </li>
+                            <li>
+                                <a href="#visited" >visited</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#document:click" >document:click</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(languageService: <a href="../injectables/LanguageService.html" target="_self">LanguageService</a>, eRef: ElementRef)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/components/header/header.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Creates an instance of HeaderComponent.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>languageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>The language service to manage language settings.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>eRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>ElementRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Reference to the element for handling outside click events.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section data-compodoc="block-methods">
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="document:click"></a>
+                    <span class="name">
+                        <span ><b>document:click</b></span>
+                        <a href="#document:click"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>document:click(event: Event)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="72"
+                                    class="link-to-prism">src/app/shared/components/header/header.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Handles clicks outside the component to close the language selection dropdown.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The click event.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleOutsideClick"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>handleOutsideClick</b></span>
+                        <a href="#handleOutsideClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleOutsideClick(event: Event)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;document:click&#x27;, [&#x27;$event&#x27;])<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="72"
+                                    class="link-to-prism">src/app/shared/components/header/header.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Handles clicks outside the component to close the language selection dropdown.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                        <code>Event</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The click event.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="32"
+                                    class="link-to-prism">src/app/shared/components/header/header.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Initializes the component and sets the imagesLoaded property after a delay.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openLanguage"></a>
+                    <span class="name">
+                        <span ><b>openLanguage</b></span>
+                        <a href="#openLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openLanguage()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/app/shared/components/header/header.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Toggles the state of the language selection dropdown.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openMenu"></a>
+                    <span class="name">
+                        <span ><b>openMenu</b></span>
+                        <a href="#openMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openMenu()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="53"
+                                    class="link-to-prism">src/app/shared/components/header/header.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Toggles the state of the menu between open and closed.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="visited"></a>
+                    <span class="name">
+                        <span ><b>visited</b></span>
+                        <a href="#visited"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>visited(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="44"
+                                    class="link-to-prism">src/app/shared/components/header/header.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Marks the provided link as visited and closes the menu.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the link to be marked as visited.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activeLink"></a>
+                    <span class="name">
+                        <span ><b>activeLink</b></span>
+                        <a href="#activeLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/components/header/header.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickedLanguage"></a>
+                    <span class="name">
+                        <span ><b>clickedLanguage</b></span>
+                        <a href="#clickedLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/components/header/header.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickedMenu"></a>
+                    <span class="name">
+                        <span ><b>clickedMenu</b></span>
+                        <a href="#clickedMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/components/header/header.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imagesLoaded"></a>
+                    <span class="name">
+                        <span ><b>imagesLoaded</b></span>
+                        <a href="#imagesLoaded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/components/header/header.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="languageService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>languageService</b></span>
+                        <a href="#languageService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/shared/components/header/header.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- The language service to manage language settings.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Component, ElementRef, HostListener, OnInit } from &#x27;@angular/core&#x27;;
+import { BurgerMenuComponent } from &#x27;../../../burger-menu/burger-menu.component&#x27;;
+import { LanguageService } from &#x27;../../../services/language/language.service&#x27;;
+
+@Component({
+  selector: &#x27;app-header&#x27;,
+  standalone: true,
+  imports: [CommonModule, BurgerMenuComponent],
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrls: [&#x27;./header.component.scss&#x27;, &#x27;./header-mobile.component.scss&#x27;]
+})
+export class HeaderComponent implements OnInit {
+  activeLink: string | null &#x3D; null;
+  clickedMenu: boolean &#x3D; false;
+  clickedLanguage: boolean &#x3D; false;
+  imagesLoaded: boolean &#x3D; false;
+
+
+  /**
+  * Creates an instance of HeaderComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  * @param {ElementRef} eRef - Reference to the element for handling outside click events.
+  */
+  constructor(public languageService: LanguageService, private eRef: ElementRef) { }
+
+
+  /**
+  * Initializes the component and sets the imagesLoaded property after a delay.
+  */
+  ngOnInit(): void {
+    setTimeout(() &#x3D;&gt; {
+      this.imagesLoaded &#x3D; true;
+    }, 500);
+  }
+
+
+  /**
+  * Marks the provided link as visited and closes the menu.
+  * 
+  * @param {string} id - The ID of the link to be marked as visited.
+  */
+  visited(id: string) {
+    this.activeLink &#x3D; id;
+    this.clickedMenu &#x3D; false;
+  }
+
+
+  /**
+  * Toggles the state of the menu between open and closed.
+  */
+  openMenu() {
+    this.clickedMenu &#x3D; !this.clickedMenu;
+  }
+
+
+  /**
+  * Toggles the state of the language selection dropdown.
+  */
+  openLanguage() {
+    this.clickedLanguage &#x3D; !this.clickedLanguage;
+  }
+
+  
+  /**
+  * Handles clicks outside the component to close the language selection dropdown.
+  * 
+  * @param {Event} event - The click event.
+  */
+  @HostListener(&#x27;document:click&#x27;, [&#x27;$event&#x27;])
+  handleOutsideClick(event: Event) {
+    if (!this.eRef.nativeElement.contains(event.target)) {
+      this.clickedLanguage &#x3D; false;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section&gt;
+    &lt;header id&#x3D;&quot;header&quot; class&#x3D;&quot;header&quot;&gt;
+        &lt;a href&#x3D;&quot;#atf&quot; class&#x3D;&quot;logo&quot;&gt;&lt;img src&#x3D;&quot;../assets/img/logo.png&quot; alt&#x3D;&quot;Name&quot;&gt;&lt;/a&gt;
+        &lt;div class&#x3D;&quot;header-links&quot;&gt;
+            &lt;a [ngClass]&#x3D;&quot;{&#x27;visited&#x27;: activeLink &#x3D;&#x3D;&#x3D; &#x27;about-me-title&#x27;}&quot; class&#x3D;&quot;about-me&quot; href&#x3D;&quot;#about-me&quot;
+                id&#x3D;&quot;about-me-title&quot; (click)&#x3D;&quot;visited(&#x27;about-me-title&#x27;)&quot;&gt;
+                @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                &lt;p&gt;About me&lt;/p&gt;
+                }
+                @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                &lt;p&gt;Über mich&lt;/p&gt;
+                }
+                &lt;div&gt;&lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a [ngClass]&#x3D;&quot;{&#x27;visited&#x27;: activeLink &#x3D;&#x3D;&#x3D; &#x27;skills-title&#x27;}&quot; class&#x3D;&quot;skills&quot; href&#x3D;&quot;#skills&quot; id&#x3D;&quot;skills-title&quot;
+                (click)&#x3D;&quot;visited(&#x27;skills-title&#x27;)&quot;&gt;
+                @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                &lt;p&gt;Skills&lt;/p&gt;
+                }
+                @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                &lt;p&gt;Kompetenzen&lt;/p&gt;
+                }
+                &lt;div&gt;&lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a [ngClass]&#x3D;&quot;{&#x27;visited&#x27;: activeLink &#x3D;&#x3D;&#x3D; &#x27;portfolio-title&#x27;}&quot; class&#x3D;&quot;portfolio&quot; href&#x3D;&quot;#portfolio&quot;
+                id&#x3D;&quot;portfolio-title&quot; (click)&#x3D;&quot;visited(&#x27;portfolio-title&#x27;)&quot;&gt;
+                &lt;p&gt;Portfolio&lt;/p&gt;
+                &lt;div&gt;&lt;/div&gt;
+            &lt;/a&gt;
+            &lt;div class&#x3D;&quot;language&quot; (click)&#x3D;&quot;openLanguage()&quot;&gt;
+                &lt;svg class&#x3D;&quot;language-icon&quot; [class.language-icon-active]&#x3D;&quot;clickedLanguage&quot; viewBox&#x3D;&quot;0 0 1024 1024&quot;
+                    version&#x3D;&quot;1.1&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path
+                        d&#x3D;&quot;M836.522667 187.463111C749.866667 100.792889 634.609778 53.048889 512.028444 53.048889 258.958222 53.048889 53.063111 258.944 53.048889 512c0.014222 253.056 205.909333 458.951111 458.979555 458.951111 122.581333 0 237.838222-47.744 324.494223-134.442667C923.235556 749.838222 970.965333 634.581333 970.951111 512c0.014222-122.581333-47.729778-237.838222-134.428444-324.536889z m-70.641778 494.520889c11.619556-45.312 18.759111-94.350222 20.465778-145.706667h126.919111a398.094222 398.094222 0 0 1-70.769778 204.643556c-16.113778-22.357333-42.439111-42.368-76.615111-58.936889zM590.634667 906.396444a404.536889 404.536889 0 0 1-61.496889 7.239112V661.205333c77.781333 1.792 149.148444 15.644444 203.093333 36.949334-28.928 97.379556-79.800889 172.970667-141.596444 208.241777zM291.797333 698.140444c55.281778-21.831111 128.881778-35.811556 208.896-37.020444v252.643556a403.399111 403.399111 0 0 1-67.584-7.523556c-61.667556-35.370667-112.426667-110.876444-141.312-208.099556z m-110.165333 42.595556a399.488 399.488 0 0 1-70.883556-204.458667h126.933334c1.720889 51.342222 8.860444 100.394667 20.48 145.692445-34.104889 16.526222-60.401778 36.48-76.529778 58.766222zM110.037333 507.832889a399.544889 399.544889 0 0 1 65.863111-216.092445c14.691556 24.974222 41.870222 47.36 78.492445 65.678223-10.780444 46.933333-16.782222 97.592889-17.080889 150.414222H110.037333z m156.103111 28.444444h37.077334a14.222222 14.222222 0 1 0 0-28.444444h-37.461334c0.284444-48.64 5.489778-95.331556 14.876445-138.652445 58.538667 23.608889 134.997333 38.158222 220.074667 39.352889v99.299556H374.328889a14.222222 14.222222 0 1 0 0 28.444444h126.364444v96.398223c-83.299556 1.166222-158.336 15.118222-216.391111 37.888a662.044444 662.044444 0 0 1-18.161778-134.286223zM433.095111 117.76a400.782222 400.782222 0 0 1 67.598222-7.537778v269.866667c-82.119111-1.237333-157.525333-15.914667-213.276444-38.741333 27.960889-104.647111 80.768-186.368 145.678222-223.587556z m303.502222 223.587556c-54.414222 22.286222-127.601778 36.821333-207.459555 38.656V110.350222c20.835556 0.867556 41.386667 3.256889 61.511111 7.239111 65.038222 37.134222 117.944889 118.940444 145.948444 223.758223zM529.137778 408.462222c82.744889-1.763556 157.056-16.199111 214.257778-39.281778 9.386667 43.320889 14.577778 90.012444 14.876444 138.652445H529.137778V408.462222z m0 224.284445v-96.469334h228.750222a663.182222 663.182222 0 0 1-18.161778 134.300445c-56.718222-22.229333-129.607111-36.110222-210.588444-37.831111z m257.564444-124.913778c-0.298667-52.821333-6.286222-103.480889-17.066666-150.414222 36.736-18.389333 63.971556-40.860444 78.634666-65.948445 42.026667 63.800889 64.896 138.311111 65.678222 216.348445h-127.246222z m42.638222-242.631111c-7.708444 23.836444-31.601778 45.909333-66.872888 64.199111-21.916444-78.421333-57.457778-144.739556-101.731556-191.075556a401.180444 401.180444 0 0 1 168.604444 126.876445zM362.951111 138.709333c-44.117333 46.307556-79.516444 112.483556-101.376 190.691556-35.157333-18.232889-59.008-40.206222-66.801778-63.957333A404.010667 404.010667 0 0 1 362.951111 138.709333zM199.594667 764.700444c11.264-20.465778 34.432-39.324444 66.346666-55.168 22.072889 71.708444 55.736889 132.423111 97.009778 175.744a403.84 403.84 0 0 1-163.356444-120.576z m461.127111 120.96c41.443556-43.363556 75.235556-104.206222 97.365333-176.113777 32 15.886222 55.224889 34.816 66.446222 55.367111-8.832 10.851556-18.218667 21.333333-28.245333 31.36a400.952889 400.952889 0 0 1-135.566222 89.386666z&quot;
+                        fill&#x3D;&quot;rgb(255, 255, 255)&quot; /&gt;
+                &lt;/svg&gt;
+                &lt;div class&#x3D;&quot;languageSelection&quot; [ngClass]&#x3D;&quot;clickedLanguage ? &#x27;&#x27; : &#x27;d-none&#x27;&quot;&gt;
+                    &lt;div class&#x3D;&quot;languageSelection-content&quot;&gt;
+                        &lt;div class&#x3D;&quot;languageSelection-text&quot; [class.blue]&#x3D;&quot;languageService.getLanguage() &#x3D;&#x3D; &#x27;English&#x27;&quot;
+                            (click)&#x3D;&quot;languageService.setLanguage(&#x27;English&#x27;)&quot;&gt;
+                            &lt;a class&#x3D;&quot;arrow&quot;&gt;&gt;&lt;/a&gt;
+                            @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                            &lt;a&gt;English&lt;/a&gt;
+                            }
+                            @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                            &lt;a&gt;Englisch&lt;/a&gt;
+                            }
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;languageSelection-text&quot; [class.blue]&#x3D;&quot;languageService.getLanguage() &#x3D;&#x3D; &#x27;German&#x27;&quot;
+                            (click)&#x3D;&quot;languageService.setLanguage(&#x27;German&#x27;)&quot;&gt;
+                            &lt;a class&#x3D;&quot;arrow&quot;&gt;&gt;&lt;/a&gt;
+                            @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+                            &lt;a&gt;German&lt;/a&gt;
+                            }
+                            @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+                            &lt;a&gt;Deutsch&lt;/a&gt;
+                            }
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;burger-menu&quot; (click)&#x3D;&quot;openMenu()&quot;&gt;
+            &lt;img [src]&#x3D;&quot;clickedMenu ? &#x27;assets/img/burger-menu/close.svg&#x27; : &#x27;assets/img/burger-menu/default.svg&#x27;&quot;
+                class&#x3D;&quot;menu-icon&quot; alt&#x3D;&quot;Burger Menu&quot; *ngIf&#x3D;&quot;imagesLoaded&quot;&gt;
+            &lt;img [src]&#x3D;&quot;clickedMenu ? &#x27;assets/img/burger-menu/close-hover.svg&#x27; : &#x27;assets/img/burger-menu/default-hover.svg&#x27;&quot;
+                class&#x3D;&quot;menu-icon menu-icon-hover&quot; alt&#x3D;&quot;Burger Menu&quot; *ngIf&#x3D;&quot;imagesLoaded&quot;&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;app-burger-menu class&#x3D;&quot;burger-menu-content&quot; [ngStyle]&#x3D;&quot;{ &#x27;display&#x27;: clickedMenu ? &#x27;block&#x27; : &#x27;none&#x27;}&quot;
+        (linkVisited)&#x3D;&quot;visited($event)&quot;&gt;&lt;/app-burger-menu&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./header.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">section {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-blue);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 100px;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    z-index: 6;
+}
+
+.logo {
+    img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+    cursor: pointer;
+
+    p {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        font-size: 23px;
+        line-height: 27.6px;
+        height: 32px;
+        transition: 125ms ease-in-out;
+
+        &amp;:hover {
+            color: var(--light-blue);
+        }
+    }
+}
+
+.visited {
+    div {
+        content: &#x27;&#x27;;
+        display: block;
+        position: absolute;
+        width: 55.5px;
+        border-bottom: 3px solid var(--purple);
+        transition: 125ms ease-in-out;
+    }
+
+    p {
+        color: var(--light-blue);
+    }
+}
+
+.language {
+    position: relative;
+}
+
+.language-icon {
+    width: 27.6px;
+    height: 27.6px;
+    transition: 125ms ease-in-out;
+    margin-left: 19px;
+
+    &amp;:hover path {
+        fill: var(--light-blue);
+    }
+}
+
+.language-icon-active path {
+    fill: var(--light-blue);
+}
+
+.languageSelection {
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    color: var(--white);
+    background-color: var(--blue-gray);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 75ms ease-in-out;
+}
+
+.languageSelection-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.languageSelection-text {
+    display: flex;
+    gap: 8px;
+    transition: 125ms ease-out;
+
+    &amp;:hover a {
+        color: var(--light-blue) !important;
+    }
+
+    &amp;:hover .arrow {
+        animation: 1s ease-in-out infinite moveRight;
+    }
+}
+
+.arrow {
+    position: relative;
+}
+
+.burger-menu {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    &amp;:hover .menu-icon-hover {
+        opacity: 1;
+    }
+
+    &amp;:hover .menu-icon:not(.menu-icon-hover) {
+        opacity: 0;
+    }
+}
+
+.menu-icon {
+    height: 27.2px;
+    width: 30px;
+    position: absolute;
+    transition: opacity 125ms ease-in-out;
+    cursor: pointer;
+}
+
+.menu-icon-hover {
+    opacity: 0;
+}
+
+.burger-menu-content {
+    display: none;
+}
+
+.blue a {
+    color: var(--light-blue);
+}
+
+@keyframes moveRight {
+    from {
+        left: 5px;
+    }
+
+    to {
+        left: 0px;
+    }
+}</code></pre>
+                <p class="comment">
+                    <code>./header-mobile.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@media screen and (max-width: 1440px) {
+    .header {
+        max-width: 1440px;
+        padding: 37px 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        max-width: 768px;
+        padding: 37px 25px;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header {
+        max-width: 425px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        max-width: 375px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        max-width: 320px;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section>    <header id="header" class="header">        <a href="#atf" class="logo"><img src="../assets/img/logo.png" alt="Name"></a>        <div class="header-links">            <a [ngClass]="{\'visited\': activeLink === \'about-me-title\'}" class="about-me" href="#about-me"                id="about-me-title" (click)="visited(\'about-me-title\')">                @if (languageService.language == \'English\') {                <p>About me</p>                }                @if (languageService.language == \'German\') {                <p>Über mich</p>                }                <div></div>            </a>            <a [ngClass]="{\'visited\': activeLink === \'skills-title\'}" class="skills" href="#skills" id="skills-title"                (click)="visited(\'skills-title\')">                @if (languageService.language == \'English\') {                <p>Skills</p>                }                @if (languageService.language == \'German\') {                <p>Kompetenzen</p>                }                <div></div>            </a>            <a [ngClass]="{\'visited\': activeLink === \'portfolio-title\'}" class="portfolio" href="#portfolio"                id="portfolio-title" (click)="visited(\'portfolio-title\')">                <p>Portfolio</p>                <div></div>            </a>            <div class="language" (click)="openLanguage()">                <svg class="language-icon" [class.language-icon-active]="clickedLanguage" viewBox="0 0 1024 1024"                    version="1.1" xmlns="http://www.w3.org/2000/svg">                    <path                        d="M836.522667 187.463111C749.866667 100.792889 634.609778 53.048889 512.028444 53.048889 258.958222 53.048889 53.063111 258.944 53.048889 512c0.014222 253.056 205.909333 458.951111 458.979555 458.951111 122.581333 0 237.838222-47.744 324.494223-134.442667C923.235556 749.838222 970.965333 634.581333 970.951111 512c0.014222-122.581333-47.729778-237.838222-134.428444-324.536889z m-70.641778 494.520889c11.619556-45.312 18.759111-94.350222 20.465778-145.706667h126.919111a398.094222 398.094222 0 0 1-70.769778 204.643556c-16.113778-22.357333-42.439111-42.368-76.615111-58.936889zM590.634667 906.396444a404.536889 404.536889 0 0 1-61.496889 7.239112V661.205333c77.781333 1.792 149.148444 15.644444 203.093333 36.949334-28.928 97.379556-79.800889 172.970667-141.596444 208.241777zM291.797333 698.140444c55.281778-21.831111 128.881778-35.811556 208.896-37.020444v252.643556a403.399111 403.399111 0 0 1-67.584-7.523556c-61.667556-35.370667-112.426667-110.876444-141.312-208.099556z m-110.165333 42.595556a399.488 399.488 0 0 1-70.883556-204.458667h126.933334c1.720889 51.342222 8.860444 100.394667 20.48 145.692445-34.104889 16.526222-60.401778 36.48-76.529778 58.766222zM110.037333 507.832889a399.544889 399.544889 0 0 1 65.863111-216.092445c14.691556 24.974222 41.870222 47.36 78.492445 65.678223-10.780444 46.933333-16.782222 97.592889-17.080889 150.414222H110.037333z m156.103111 28.444444h37.077334a14.222222 14.222222 0 1 0 0-28.444444h-37.461334c0.284444-48.64 5.489778-95.331556 14.876445-138.652445 58.538667 23.608889 134.997333 38.158222 220.074667 39.352889v99.299556H374.328889a14.222222 14.222222 0 1 0 0 28.444444h126.364444v96.398223c-83.299556 1.166222-158.336 15.118222-216.391111 37.888a662.044444 662.044444 0 0 1-18.161778-134.286223zM433.095111 117.76a400.782222 400.782222 0 0 1 67.598222-7.537778v269.866667c-82.119111-1.237333-157.525333-15.914667-213.276444-38.741333 27.960889-104.647111 80.768-186.368 145.678222-223.587556z m303.502222 223.587556c-54.414222 22.286222-127.601778 36.821333-207.459555 38.656V110.350222c20.835556 0.867556 41.386667 3.256889 61.511111 7.239111 65.038222 37.134222 117.944889 118.940444 145.948444 223.758223zM529.137778 408.462222c82.744889-1.763556 157.056-16.199111 214.257778-39.281778 9.386667 43.320889 14.577778 90.012444 14.876444 138.652445H529.137778V408.462222z m0 224.284445v-96.469334h228.750222a663.182222 663.182222 0 0 1-18.161778 134.300445c-56.718222-22.229333-129.607111-36.110222-210.588444-37.831111z m257.564444-124.913778c-0.298667-52.821333-6.286222-103.480889-17.066666-150.414222 36.736-18.389333 63.971556-40.860444 78.634666-65.948445 42.026667 63.800889 64.896 138.311111 65.678222 216.348445h-127.246222z m42.638222-242.631111c-7.708444 23.836444-31.601778 45.909333-66.872888 64.199111-21.916444-78.421333-57.457778-144.739556-101.731556-191.075556a401.180444 401.180444 0 0 1 168.604444 126.876445zM362.951111 138.709333c-44.117333 46.307556-79.516444 112.483556-101.376 190.691556-35.157333-18.232889-59.008-40.206222-66.801778-63.957333A404.010667 404.010667 0 0 1 362.951111 138.709333zM199.594667 764.700444c11.264-20.465778 34.432-39.324444 66.346666-55.168 22.072889 71.708444 55.736889 132.423111 97.009778 175.744a403.84 403.84 0 0 1-163.356444-120.576z m461.127111 120.96c41.443556-43.363556 75.235556-104.206222 97.365333-176.113777 32 15.886222 55.224889 34.816 66.446222 55.367111-8.832 10.851556-18.218667 21.333333-28.245333 31.36a400.952889 400.952889 0 0 1-135.566222 89.386666z"                        fill="rgb(255, 255, 255)" />                </svg>                <div class="languageSelection" [ngClass]="clickedLanguage ? \'\' : \'d-none\'">                    <div class="languageSelection-content">                        <div class="languageSelection-text" [class.blue]="languageService.getLanguage() == \'English\'"                            (click)="languageService.setLanguage(\'English\')">                            <a class="arrow">></a>                            @if (languageService.language == \'English\') {                            <a>English</a>                            }                            @if (languageService.language == \'German\') {                            <a>Englisch</a>                            }                        </div>                        <div class="languageSelection-text" [class.blue]="languageService.getLanguage() == \'German\'"                            (click)="languageService.setLanguage(\'German\')">                            <a class="arrow">></a>                            @if (languageService.language == \'English\') {                            <a>German</a>                            }                            @if (languageService.language == \'German\') {                            <a>Deutsch</a>                            }                        </div>                    </div>                </div>            </div>        </div>        <div class="burger-menu" (click)="openMenu()">            <img [src]="clickedMenu ? \'assets/img/burger-menu/close.svg\' : \'assets/img/burger-menu/default.svg\'"                class="menu-icon" alt="Burger Menu" *ngIf="imagesLoaded">            <img [src]="clickedMenu ? \'assets/img/burger-menu/close-hover.svg\' : \'assets/img/burger-menu/default-hover.svg\'"                class="menu-icon menu-icon-hover" alt="Burger Menu" *ngIf="imagesLoaded">        </div>    </header>    <app-burger-menu class="burger-menu-content" [ngStyle]="{ \'display\': clickedMenu ? \'block\' : \'none\'}"        (linkVisited)="visited($event)"></app-burger-menu></section></div>'
+    var COMPONENTS = [{'name': 'AboutMeComponent', 'selector': 'app-about-me'},{'name': 'AboveTheFoldComponent', 'selector': 'app-above-the-fold'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BurgerMenuComponent', 'selector': 'app-burger-menu'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImprintComponent', 'selector': 'app-imprint'},{'name': 'InProgressComponent', 'selector': 'app-in-progress'},{'name': 'MailComponent', 'selector': 'app-mail'},{'name': 'MySkillsComponent', 'selector': 'app-my-skills'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'WorkComponent', 'selector': 'app-work'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

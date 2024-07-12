@@ -18,16 +18,25 @@ export class BurgerMenuComponent implements OnInit {
 
   constructor(public languageService: LanguageService) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 
+  /**
+   * Toggles the language selection dropdown.
+   * 
+   * Toggles the `clickedLanguage` property between `true` and `false`,
+   * effectively opening or closing the language selection dropdown.
+   */
   openLanguage() {
     this.clickedLanguage = !this.clickedLanguage;
   }
 
 
+  /**
+   * Marks the provided link as visited and emits an event.
+   * 
+   * @param {string} id - The ID of the link to be marked as visited.
+   */
   visited(id: string) {
     this.activeLink = id;
     this.linkVisited.emit(id);

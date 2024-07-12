@@ -12,22 +12,35 @@ import { VisibilityOnScrollService } from '../../../services/visibility-on-scrol
 export class FooterComponent implements OnInit {
   isVisible: boolean = false;
 
+
+  /**
+  * Creates an instance of FooterComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  * @param {VisibilityOnScrollService} visibilityOnScrollService - The service to check element visibility on scroll.
+  */
   constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
 
+  /**
+  * Initializes the component and checks the visibility of the footer element.
+  */
   ngOnInit(): void {
       this.checkVisibility();
   }
 
-
+  /**
+  * Listens to window scroll events and triggers visibility check.
+  */
   @HostListener('window:scroll', [])
-
-
   onWindowScroll() {
       this.checkVisibility();
   }
 
-
+  
+  /**
+  * Checks the visibility of the footer element on scroll.
+  */
   checkVisibility() {
       setTimeout(() => {
           let elementId = 'footer';

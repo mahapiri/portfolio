@@ -1,0 +1,619 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>portfolio documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">portfolio documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  ImprintComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/imprint/imprint.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-imprint</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./imprint.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./imprint.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentLanguage" >currentLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#hover" >hover</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#languageService" >languageService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(languageService: <a href="../injectables/LanguageService.html" target="_self">LanguageService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/imprint/imprint.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Creates an instance of ImprintComponent.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>languageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>The language service to manage language settings.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentLanguage"></a>
+                    <span class="name">
+                        <span ><b>currentLanguage</b></span>
+                        <a href="#currentLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/imprint/imprint.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hover"></a>
+                    <span class="name">
+                        <span ><b>hover</b></span>
+                        <a href="#hover"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/imprint/imprint.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="languageService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>languageService</b></span>
+                        <a href="#languageService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/imprint/imprint.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- The language service to manage language settings.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Component } from &#x27;@angular/core&#x27;;
+import { LanguageService } from &#x27;../services/language/language.service&#x27;;
+
+@Component({
+  selector: &#x27;app-imprint&#x27;,
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: &#x27;./imprint.component.html&#x27;,
+  styleUrl: &#x27;./imprint.component.scss&#x27;
+})
+export class ImprintComponent {
+  hover: boolean &#x3D; false;
+  currentLanguage: string;
+
+
+  /**
+  * Creates an instance of ImprintComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  */
+  constructor(public languageService: LanguageService) {
+    this.currentLanguage &#x3D; this.languageService.getLanguage();
+    this.languageService.language &#x3D; this.currentLanguage;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;imprint&quot;&gt;
+    &lt;div class&#x3D;&quot;imprint-content&quot;&gt;
+        &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;arrow-div&quot;&gt;&lt;img (mouseenter)&#x3D;&quot;hover &#x3D; true;&quot; (mouseleave)&#x3D;&quot;hover &#x3D; false;&quot;
+                [src]&#x3D;&quot;hover ? &#x27;../../assets/img/arrow-blue.svg&#x27; : &#x27;../../assets/img/arrow-default.svg&#x27;&quot; alt&#x3D;&quot;Back Home&quot;
+                class&#x3D;&quot;arrow&quot;&gt;&lt;/a&gt;
+        @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+        &lt;h3&gt;Legal Notice&lt;/h3&gt;
+
+        &lt;p class&#x3D;&quot;address&quot;&gt;Pirathib Mahalingam&lt;br /&gt;
+            Remisbergstrasse 47&lt;br /&gt;
+            8280 Kreuzlingen&lt;br /&gt;
+            Switzerland&lt;/p&gt;
+
+        &lt;h4&gt;Contact&lt;/h4&gt;
+        &lt;p&gt;Phone: +41 (0)76 433 499 2&lt;br /&gt;&lt;br /&gt;
+            E-Mail: hello&amp;commat;pirathib-mahalingam.ch&lt;/p&gt;
+        &lt;h4&gt;Disclaimer&lt;/h4&gt;
+        &lt;h6&gt;Responsibility for Content&lt;/h6&gt;
+        &lt;p&gt;The content of our websites has been created with the utmost care. Nevertheless, we cannot guarantee that the
+            content is current, reliable, or complete. According to legal regulations, we are responsible for the
+            content we create ourselves. In this context, we would like to clarify that we are not responsible for
+            information provided by third parties or collected by them. We neither control the information sent nor do
+            we track any potential illegal activities. If illegal activities are identified, we will fulfill our
+            obligation to block or delete the corresponding content, in accordance with paragraphs 8 to 10 of the
+            Telemedia Act (TMG).&lt;/p&gt;
+        &lt;h6&gt;Responsibility for Links&lt;/h6&gt;
+        &lt;p&gt;The responsibility for content from third-party links (external content) lies with the respective website
+            operators. At the time of inserting the links used on our pages, no illegal activities were identified in
+            them. Once we become aware of illegal activities or violations,
+            we will remove the corresponding link.&lt;/p&gt;
+        &lt;h6&gt;Copyright&lt;/h6&gt;
+        &lt;p&gt;Our websites and their content (texts, photos, graphics, design) are subject to German copyright law. Unless
+            otherwise legally agreed, the use, reproduction, copying, or modification of the content is subject to
+            copyright. Exceptions must be approved in writing by the website operators or rights holders. Individual
+            copies are only permitted for private use and may not be used directly or indirectly for commercial
+            purposes. Unauthorized use of copyrighted material is punishable under Section 106.&lt;/p&gt;
+        &lt;p&gt;Source: &lt;a href&#x3D;&quot;http://impressumgeneratorenglisch.de/&quot;&gt;impressumgeneratorenglisch.de&lt;/a&gt;&lt;/p&gt;
+        }
+        @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+        &lt;h3&gt;Impressum&lt;/h3&gt;
+
+        &lt;p class&#x3D;&quot;address&quot;&gt;Pirathib Mahalingam&lt;br /&gt;
+            Remisbergstrasse 47&lt;br /&gt;
+            8280 Kreuzlingen&lt;br /&gt;
+            Schweiz&lt;/p&gt;
+
+        &lt;h4&gt;Kontakt&lt;/h4&gt;
+        &lt;p&gt;Telefon: +41 (0)76 433 499 2&lt;br /&gt;&lt;br /&gt;
+            E-Mail: hello&amp;commat;pirathib-mahalingam.ch&lt;/p&gt;
+        &lt;h4&gt;Haftungsausschluss&lt;/h4&gt;
+        &lt;h6&gt;Haftung für Inhalte&lt;/h6&gt;
+        &lt;p&gt;Die Inhalte unserer Webseiten wurden mit größter Sorgfalt erstellt. Dennoch können wir keine Gewähr für die
+            Aktualität, Zuverlässigkeit oder Vollständigkeit der Inhalte übernehmen. Gemäß den gesetzlichen Bestimmungen
+            sind wir
+            für eigene Inhalte verantwortlich. In diesem Zusammenhang möchten wir klarstellen, dass wir nicht für
+            Informationen verantwortlich sind, die von Dritten bereitgestellt oder gesammelt wurden. Wir kontrollieren
+            weder die
+            übermittelten Informationen noch verfolgen wir mögliche illegale Aktivitäten. Sollten illegale Aktivitäten
+            erkannt
+            werden, werden wir unserer Verpflichtung nachkommen, die entsprechenden Inhalte zu sperren oder zu löschen,
+            gemäß
+            den Paragraphen 8 bis 10 des Telemediengesetzes (TMG).&lt;/p&gt;
+        &lt;h6&gt;Haftung für Links&lt;/h6&gt;
+        &lt;p&gt;Die Verantwortung für Inhalte von Drittanbieter-Links (externe Inhalte) liegt bei den jeweiligen
+            Webseitenbetreibern.
+            Zum Zeitpunkt der Verlinkung auf unseren Seiten waren keine illegalen Aktivitäten in diesen Links erkennbar.
+            Sobald
+            wir Kenntnis von illegalen Aktivitäten oder Rechtsverletzungen erlangen, werden wir den entsprechenden Link
+            entfernen.&lt;/p&gt;
+        &lt;h6&gt;Urheberrecht&lt;/h6&gt;
+        &lt;p&gt;Unsere Webseiten und deren Inhalte (Texte, Fotos, Grafiken, Design) unterliegen dem deutschen Urheberrecht.
+            Sofern
+            nicht anders gesetzlich vereinbart, unterliegen die Nutzung, Vervielfältigung, Kopie oder Modifikation der
+            Inhalte
+            dem Urheberrecht. Ausnahmen müssen schriftlich von den Webseitenbetreibern oder Rechteinhabern genehmigt
+            werden.
+            Einzelne Kopien sind nur für den privaten Gebrauch gestattet und dürfen weder direkt noch indirekt für
+            kommerzielle
+            Zwecke verwendet werden. Unbefugte Nutzung urheberrechtlich geschützter Materialien ist nach § 106 strafbar.
+        &lt;/p&gt;
+        &lt;p&gt;Quelle: &lt;a href&#x3D;&quot;http://impressumgeneratorenglisch.de/&quot;&gt;impressumgeneratorenglisch.de&lt;/a&gt;&lt;/p&gt;
+
+        }
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="imprint">    <div class="imprint-content">        <a href="/" class="arrow-div"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;"                [src]="hover ? \'../../assets/img/arrow-blue.svg\' : \'../../assets/img/arrow-default.svg\'" alt="Back Home"                class="arrow"></a>        @if (languageService.language == \'English\') {        <h3>Legal Notice</h3>        <p class="address">Pirathib Mahalingam<br />            Remisbergstrasse 47<br />            8280 Kreuzlingen<br />            Switzerland</p>        <h4>Contact</h4>        <p>Phone: +41 (0)76 433 499 2<br /><br />            E-Mail: hello&commat;pirathib-mahalingam.ch</p>        <h4>Disclaimer</h4>        <h6>Responsibility for Content</h6>        <p>The content of our websites has been created with the utmost care. Nevertheless, we cannot guarantee that the            content is current, reliable, or complete. According to legal regulations, we are responsible for the            content we create ourselves. In this context, we would like to clarify that we are not responsible for            information provided by third parties or collected by them. We neither control the information sent nor do            we track any potential illegal activities. If illegal activities are identified, we will fulfill our            obligation to block or delete the corresponding content, in accordance with paragraphs 8 to 10 of the            Telemedia Act (TMG).</p>        <h6>Responsibility for Links</h6>        <p>The responsibility for content from third-party links (external content) lies with the respective website            operators. At the time of inserting the links used on our pages, no illegal activities were identified in            them. Once we become aware of illegal activities or violations,            we will remove the corresponding link.</p>        <h6>Copyright</h6>        <p>Our websites and their content (texts, photos, graphics, design) are subject to German copyright law. Unless            otherwise legally agreed, the use, reproduction, copying, or modification of the content is subject to            copyright. Exceptions must be approved in writing by the website operators or rights holders. Individual            copies are only permitted for private use and may not be used directly or indirectly for commercial            purposes. Unauthorized use of copyrighted material is punishable under Section 106.</p>        <p>Source: <a href="http://impressumgeneratorenglisch.de/">impressumgeneratorenglisch.de</a></p>        }        @if (languageService.language == \'German\') {        <h3>Impressum</h3>        <p class="address">Pirathib Mahalingam<br />            Remisbergstrasse 47<br />            8280 Kreuzlingen<br />            Schweiz</p>        <h4>Kontakt</h4>        <p>Telefon: +41 (0)76 433 499 2<br /><br />            E-Mail: hello&commat;pirathib-mahalingam.ch</p>        <h4>Haftungsausschluss</h4>        <h6>Haftung für Inhalte</h6>        <p>Die Inhalte unserer Webseiten wurden mit größter Sorgfalt erstellt. Dennoch können wir keine Gewähr für die            Aktualität, Zuverlässigkeit oder Vollständigkeit der Inhalte übernehmen. Gemäß den gesetzlichen Bestimmungen            sind wir            für eigene Inhalte verantwortlich. In diesem Zusammenhang möchten wir klarstellen, dass wir nicht für            Informationen verantwortlich sind, die von Dritten bereitgestellt oder gesammelt wurden. Wir kontrollieren            weder die            übermittelten Informationen noch verfolgen wir mögliche illegale Aktivitäten. Sollten illegale Aktivitäten            erkannt            werden, werden wir unserer Verpflichtung nachkommen, die entsprechenden Inhalte zu sperren oder zu löschen,            gemäß            den Paragraphen 8 bis 10 des Telemediengesetzes (TMG).</p>        <h6>Haftung für Links</h6>        <p>Die Verantwortung für Inhalte von Drittanbieter-Links (externe Inhalte) liegt bei den jeweiligen            Webseitenbetreibern.            Zum Zeitpunkt der Verlinkung auf unseren Seiten waren keine illegalen Aktivitäten in diesen Links erkennbar.            Sobald            wir Kenntnis von illegalen Aktivitäten oder Rechtsverletzungen erlangen, werden wir den entsprechenden Link            entfernen.</p>        <h6>Urheberrecht</h6>        <p>Unsere Webseiten und deren Inhalte (Texte, Fotos, Grafiken, Design) unterliegen dem deutschen Urheberrecht.            Sofern            nicht anders gesetzlich vereinbart, unterliegen die Nutzung, Vervielfältigung, Kopie oder Modifikation der            Inhalte            dem Urheberrecht. Ausnahmen müssen schriftlich von den Webseitenbetreibern oder Rechteinhabern genehmigt            werden.            Einzelne Kopien sind nur für den privaten Gebrauch gestattet und dürfen weder direkt noch indirekt für            kommerzielle            Zwecke verwendet werden. Unbefugte Nutzung urheberrechtlich geschützter Materialien ist nach § 106 strafbar.        </p>        <p>Quelle: <a href="http://impressumgeneratorenglisch.de/">impressumgeneratorenglisch.de</a></p>        }    </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutMeComponent', 'selector': 'app-about-me'},{'name': 'AboveTheFoldComponent', 'selector': 'app-above-the-fold'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BurgerMenuComponent', 'selector': 'app-burger-menu'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImprintComponent', 'selector': 'app-imprint'},{'name': 'InProgressComponent', 'selector': 'app-in-progress'},{'name': 'MailComponent', 'selector': 'app-mail'},{'name': 'MySkillsComponent', 'selector': 'app-my-skills'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'WorkComponent', 'selector': 'app-work'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ImprintComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ImprintComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

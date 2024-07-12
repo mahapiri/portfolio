@@ -1,0 +1,1255 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>portfolio documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">portfolio documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  PrivacyPolicyComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/privacy-policy/privacy-policy.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-privacy-policy</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./privacy-policy.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./privacy-policy.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentLanguage" >currentLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#hover" >hover</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#languageService" >languageService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(languageService: <a href="../injectables/LanguageService.html" target="_self">LanguageService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/privacy-policy/privacy-policy.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Creates an instance of PrivacyPolicyComponent.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>languageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>The language service to manage language settings.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="27"
+                                    class="link-to-prism">src/app/privacy-policy/privacy-policy.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentLanguage"></a>
+                    <span class="name">
+                        <span ><b>currentLanguage</b></span>
+                        <a href="#currentLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/privacy-policy/privacy-policy.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hover"></a>
+                    <span class="name">
+                        <span ><b>hover</b></span>
+                        <a href="#hover"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/privacy-policy/privacy-policy.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="languageService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>languageService</b></span>
+                        <a href="#languageService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/LanguageService.html" target="_self" >LanguageService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/privacy-policy/privacy-policy.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- The language service to manage language settings.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { LanguageService } from &#x27;../services/language/language.service&#x27;;
+
+@Component({
+  selector: &#x27;app-privacy-policy&#x27;,
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: &#x27;./privacy-policy.component.html&#x27;,
+  styleUrl: &#x27;./privacy-policy.component.scss&#x27;
+})
+export class PrivacyPolicyComponent implements OnInit {
+  hover: boolean &#x3D; false;
+  currentLanguage: string;
+
+
+  /**
+  * Creates an instance of PrivacyPolicyComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  */
+  constructor(public languageService: LanguageService) { 
+    this.currentLanguage &#x3D; this.languageService.getLanguage();
+    this.languageService.language &#x3D; this.currentLanguage;
+  }
+
+  ngOnInit(): void {
+
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;privacy-policy&quot;&gt;
+    &lt;div class&#x3D;&quot;privacy-policy-content&quot;&gt;
+        &lt;a href&#x3D;&quot;/#contact&quot; class&#x3D;&quot;arrow-div&quot;&gt;&lt;img (mouseenter)&#x3D;&quot;hover &#x3D; true;&quot; (mouseleave)&#x3D;&quot;hover &#x3D; false;&quot;
+                [src]&#x3D;&quot;hover ? &#x27;../../assets/img/arrow-blue.svg&#x27; : &#x27;../../assets/img/arrow-default.svg&#x27;&quot; alt&#x3D;&quot;Back Home&quot;
+                class&#x3D;&quot;arrow&quot;&gt;&lt;/a&gt;
+        @if (languageService.language &#x3D;&#x3D; &#x27;English&#x27;) {
+        &lt;h3&gt;Privacy Policy&lt;/h3&gt;
+        &lt;p&gt;Last updated: June 12, 2024&lt;/p&gt;
+        &lt;p&gt;This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
+            information when You use the Service and tells You about Your privacy rights and how the law protects You.
+        &lt;/p&gt;
+        &lt;p&gt;We use Your Personal data to provide and improve the Service. By using the Service, You agree to the
+            collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been
+            created with the help of the &lt;a href&#x3D;&quot;https://www.freeprivacypolicy.com/free-privacy-policy-generator/&quot;
+                target&#x3D;&quot;_blank&quot;&gt;Free Privacy Policy Generator&lt;/a&gt;.&lt;/p&gt;
+        &lt;h4&gt;Interpretation and Definitions&lt;/h4&gt;
+        &lt;h6&gt;Interpretation&lt;/h6&gt;
+        &lt;p&gt;The words of which the initial letter is capitalized have meanings defined under the following conditions.
+            The following definitions shall have the same meaning regardless of whether they appear in singular or in
+            plural.&lt;/p&gt;
+        &lt;h6&gt;Definitions&lt;/h6&gt;
+        &lt;p&gt;For the purposes of this Privacy Policy:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Account&lt;/strong&gt; means a unique account created for You to access our Service or parts of our
+                    Service.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Affiliate&lt;/strong&gt; means an entity that controls, is controlled by or is under common control
+                    with a party, where &amp;quot;control&amp;quot; means ownership of 50% or more of the shares, equity
+                    interest or other securities entitled to vote for election of directors or other managing authority.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Application&lt;/strong&gt; refers to Pirathib Mahalingam, the software program provided by the
+                    Company.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Company&lt;/strong&gt; (referred to as either &amp;quot;the Company&amp;quot;, &amp;quot;We&amp;quot;,
+                    &amp;quot;Us&amp;quot; or &amp;quot;Our&amp;quot; in this Agreement) refers to Pirathib Mahalingam.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Cookies&lt;/strong&gt; are small files that are placed on Your computer, mobile device or any other
+                    device by a website, containing the details of Your browsing history on that website among its many
+                    uses.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Country&lt;/strong&gt; refers to: Switzerland&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Device&lt;/strong&gt; means any device that can access the Service such as a computer, a cellphone
+                    or a digital tablet.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Personal Data&lt;/strong&gt; is any information that relates to an identified or identifiable
+                    individual.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Service&lt;/strong&gt; refers to the Application or the Website or both.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Service Provider&lt;/strong&gt; means any natural or legal person who processes the data on behalf
+                    of the Company. It refers to third-party companies or individuals employed by the Company to
+                    facilitate the Service, to provide the Service on behalf of the Company, to perform services related
+                    to the Service or to assist the Company in analyzing how the Service is used.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Usage Data&lt;/strong&gt; refers to data collected automatically, either generated by the use of
+                    the Service or from the Service infrastructure itself (for example, the duration of a page visit).
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Website&lt;/strong&gt; refers to Pirathib Mahalingam, accessible from &lt;a
+                        href&#x3D;&quot;https://www.pirathib-mahalingam.ch&quot; rel&#x3D;&quot;external nofollow noopener&quot;
+                        target&#x3D;&quot;_blank&quot;&gt;https://www.pirathib-mahalingam.ch&lt;/a&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;You&lt;/strong&gt; means the individual accessing or using the Service, or the company, or other
+                    legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+                &lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h4&gt;Collecting and Using Your Personal Data&lt;/h4&gt;
+        &lt;h6&gt;Types of Data Collected&lt;/h6&gt;
+        &lt;h6&gt;Personal Data&lt;/h6&gt;
+        &lt;p&gt;While using Our Service, We may ask You to provide Us with certain personally identifiable information that
+            can be used to contact or identify You. Personally identifiable information may include, but is not limited
+            to:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;Email address&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;First name and last name&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Phone number&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Usage Data&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h6&gt;Usage Data&lt;/h6&gt;
+        &lt;p&gt;Usage Data is collected automatically when using the Service.&lt;/p&gt;
+        &lt;p&gt;Usage Data may include information such as Your Device&#x27;s Internet Protocol address (e.g. IP address), browser
+            type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time
+            spent on those pages, unique device identifiers and other diagnostic data.&lt;/p&gt;
+        &lt;p&gt;When You access the Service by or through a mobile device, We may collect certain information automatically,
+            including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP
+            address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use,
+            unique device identifiers and other diagnostic data.&lt;/p&gt;
+        &lt;p&gt;We may also collect information that Your browser sends whenever You visit our Service or when You access the
+            Service by or through a mobile device.&lt;/p&gt;
+        &lt;h6&gt;Tracking Technologies and Cookies&lt;/h6&gt;
+        &lt;p&gt;We use Cookies and similar tracking technologies to track the activity on Our Service and store certain
+            information. Tracking technologies used are beacons, tags, and scripts to collect and track information and
+            to improve and analyze Our Service. The technologies We use may include:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;Cookies or Browser Cookies.&lt;/strong&gt; A cookie is a small file placed on Your Device. You can
+                instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You
+                do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted
+                Your browser setting so that it will refuse Cookies, our Service may use Cookies.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Web Beacons.&lt;/strong&gt; Certain sections of our Service and our emails may contain small
+                electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel
+                gifs) that permit the Company, for example, to count users who have visited those pages or opened an
+                email and for other related website statistics (for example, recording the popularity of a certain
+                section and verifying system and server integrity).&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;Cookies can be &amp;quot;Persistent&amp;quot; or &amp;quot;Session&amp;quot; Cookies. Persistent Cookies remain on Your
+            personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You
+            close Your web browser. Learn more about cookies on the &lt;a
+                href&#x3D;&quot;https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking&quot;
+                target&#x3D;&quot;_blank&quot;&gt;Free Privacy Policy website&lt;/a&gt; article.&lt;/p&gt;
+        &lt;p&gt;We use both Session and Persistent Cookies for the purposes set out below:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Necessary / Essential Cookies&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Type: Session Cookies&lt;/p&gt;
+                &lt;p&gt;Administered by: Us&lt;/p&gt;
+                &lt;p&gt;Purpose: These Cookies are essential to provide You with services available through the Website and
+                    to enable You to use some of its features. They help to authenticate users and prevent fraudulent
+                    use of user accounts. Without these Cookies, the services that You have asked for cannot be
+                    provided, and We only use these Cookies to provide You with those services.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Cookies Policy / Notice Acceptance Cookies&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Type: Persistent Cookies&lt;/p&gt;
+                &lt;p&gt;Administered by: Us&lt;/p&gt;
+                &lt;p&gt;Purpose: These Cookies identify if users have accepted the use of cookies on the Website.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Functionality Cookies&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Type: Persistent Cookies&lt;/p&gt;
+                &lt;p&gt;Administered by: Us&lt;/p&gt;
+                &lt;p&gt;Purpose: These Cookies allow us to remember choices You make when You use the Website, such as
+                    remembering your login details or language preference. The purpose of these Cookies is to provide
+                    You with a more personal experience and to avoid You having to re-enter your preferences every time
+                    You use the Website.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;For more information about the cookies we use and your choices regarding cookies, please visit our Cookies
+            Policy or the Cookies section of our Privacy Policy.&lt;/p&gt;
+        &lt;h4&gt;Use of Your Personal Data&lt;/h4&gt;
+        &lt;p&gt;The Company may use Personal Data for the following purposes:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;To provide and maintain our Service&lt;/strong&gt;, including to monitor the usage of our Service.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;To manage Your Account:&lt;/strong&gt; to manage Your registration as a user of the Service. The
+                    Personal Data You provide can give You access to different functionalities of the Service that are
+                    available to You as a registered user.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;For the performance of a contract:&lt;/strong&gt; the development, compliance and undertaking of
+                    the purchase contract for the products, items or services You have purchased or of any other
+                    contract with Us through the Service.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;To contact You:&lt;/strong&gt; To contact You by email, telephone calls, SMS, or other equivalent
+                    forms of electronic communication, such as a mobile application&#x27;s push notifications regarding
+                    updates or informative communications related to the functionalities, products or contracted
+                    services, including the security updates, when necessary or reasonable for their implementation.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;To provide You&lt;/strong&gt; with news, special offers and general information about other goods,
+                    services and events which we offer that are similar to those that you have already purchased or
+                    enquired about unless You have opted not to receive such information.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;To manage Your requests:&lt;/strong&gt; To attend and manage Your requests to Us.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;For business transfers:&lt;/strong&gt; We may use Your information to evaluate or conduct a merger,
+                    divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of
+                    Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding,
+                    in which Personal Data held by Us about our Service users is among the assets transferred.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;For other purposes&lt;/strong&gt;: We may use Your information for other purposes, such as data
+                    analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and
+                    to evaluate and improve our Service, products, services, marketing and your experience.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;We may share Your personal information in the following situations:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;With Service Providers:&lt;/strong&gt; We may share Your personal information with Service Providers
+                to monitor and analyze the use of our Service, to contact You.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;For business transfers:&lt;/strong&gt; We may share or transfer Your personal information in
+                connection with, or during negotiations of, any merger, sale of Company assets, financing, or
+                acquisition of all or a portion of Our business to another company.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;With Affiliates:&lt;/strong&gt; We may share Your information with Our affiliates, in which case we
+                will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and
+                any other subsidiaries, joint venture partners or other companies that We control or that are under
+                common control with Us.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;With business partners:&lt;/strong&gt; We may share Your information with Our business partners to
+                offer You certain products, services or promotions.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;With other users:&lt;/strong&gt; when You share personal information or otherwise interact in the
+                public areas with other users, such information may be viewed by all users and may be publicly
+                distributed outside.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;With Your consent&lt;/strong&gt;: We may disclose Your personal information for any other purpose with
+                Your consent.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h4&gt;Retention of Your Personal Data&lt;/h4&gt;
+        &lt;p&gt;The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this
+            Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal
+            obligations (for example, if we are required to retain your data to comply with applicable laws), resolve
+            disputes, and enforce our legal agreements and policies.&lt;/p&gt;
+        &lt;p&gt;The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for
+            a shorter period of time, except when this data is used to strengthen the security or to improve the
+            functionality of Our Service, or We are legally obligated to retain this data for longer time periods.&lt;/p&gt;
+        &lt;h4&gt;Transfer of Your Personal Data&lt;/h4&gt;
+        &lt;p&gt;Your information, including Personal Data, is processed at the Company&#x27;s operating offices and in any other
+            places where the parties involved in the processing are located. It means that this information may be
+            transferred to — and maintained on — computers located outside of Your state, province, country or other
+            governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.&lt;/p&gt;
+        &lt;p&gt;Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement
+            to that transfer.&lt;/p&gt;
+        &lt;p&gt;The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in
+            accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization
+            or a country unless there are adequate controls in place including the security of Your data and other
+            personal information.&lt;/p&gt;
+        &lt;h4&gt;Delete Your Personal Data&lt;/h4&gt;
+        &lt;p&gt;You have the right to delete or request that We assist in deleting the Personal Data that We have collected
+            about You.&lt;/p&gt;
+        &lt;p&gt;Our Service may give You the ability to delete certain information about You from within the Service.&lt;/p&gt;
+        &lt;p&gt;You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one,
+            and visiting the account settings section that allows you to manage Your personal information. You may also
+            contact Us to request access to, correct, or delete any personal information that You have provided to Us.
+        &lt;/p&gt;
+        &lt;p&gt;Please note, however, that We may need to retain certain information when we have a legal obligation or
+            lawful basis to do so.&lt;/p&gt;
+        &lt;h4 style&#x3D;&quot;font-size: 36px; color: white;&quot;&gt;Disclosure of Your Personal Data&lt;/h4&gt;
+        &lt;h4&gt;Business Transactions&lt;/h4&gt;
+        &lt;p&gt;If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We
+            will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy
+            Policy.&lt;/p&gt;
+        &lt;h4&gt;Law enforcement&lt;/h4&gt;
+        &lt;p&gt;Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so
+            by law or in response to valid requests by public authorities (e.g. a court or a government agency).&lt;/p&gt;
+        &lt;h6&gt;Other legal requirements&lt;/h6&gt;
+        &lt;p&gt;The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Comply with a legal obligation&lt;/li&gt;
+            &lt;li&gt;Protect and defend the rights or property of the Company&lt;/li&gt;
+            &lt;li&gt;Prevent or investigate possible wrongdoing in connection with the Service&lt;/li&gt;
+            &lt;li&gt;Protect the personal safety of Users of the Service or the public&lt;/li&gt;
+            &lt;li&gt;Protect against legal liability&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h4&gt;Security of Your Personal Data&lt;/h4&gt;
+        &lt;p&gt;The security of Your Personal Data is important to Us, but remember that no method of transmission over the
+            Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable
+            means to protect Your Personal Data, We cannot guarantee its absolute security.&lt;/p&gt;
+        &lt;h4&gt;Children&#x27;s Privacy&lt;/h4&gt;
+        &lt;p&gt;Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable
+            information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your
+            child has provided Us with Personal Data, please contact Us. If We become aware that We have collected
+            Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to
+            remove that information from Our servers.&lt;/p&gt;
+        &lt;p&gt;If We need to rely on consent as a legal basis for processing Your information and Your country requires
+            consent from a parent, We may require Your parent&#x27;s consent before We collect and use that information.&lt;/p&gt;
+        &lt;h4&gt;Links to Other Websites&lt;/h4&gt;
+        &lt;p&gt;Our Service may contain links to other websites that are not operated by Us. If You click on a third party
+            link, You will be directed to that third party&#x27;s site. We strongly advise You to review the Privacy Policy
+            of every site You visit.&lt;/p&gt;
+        &lt;p&gt;We have no control over and assume no responsibility for the content, privacy policies or practices of any
+            third party sites or services.&lt;/p&gt;
+        &lt;h4&gt;Changes to this Privacy Policy&lt;/h4&gt;
+        &lt;p&gt;We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new
+            Privacy Policy on this page.&lt;/p&gt;
+        &lt;p&gt;We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming
+            effective and update the &amp;quot;Last updated&amp;quot; date at the top of this Privacy Policy.&lt;/p&gt;
+        &lt;p&gt;You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy
+            are effective when they are posted on this page.&lt;/p&gt;
+        &lt;h4&gt;Contact Us&lt;/h4&gt;
+        &lt;p&gt;If you have any questions about this Privacy Policy, You can contact us:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;By email: hello&amp;commat;pirathib-mahalingam.ch&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;By phone number: +41 (0)76 433 499 2&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        }
+        @if (languageService.language &#x3D;&#x3D; &#x27;German&#x27;) {
+        &lt;h3&gt;Datenschutzerklärung&lt;/h3&gt;
+        &lt;p&gt;Letzte Aktualisierung: 12. Juni 2024&lt;/p&gt;
+        &lt;p&gt;Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren bezüglich der Erhebung, Nutzung und
+            Offenlegung Ihrer Informationen, wenn Sie den Dienst nutzen, und informiert Sie über Ihre Datenschutzrechte
+            und darüber, wie das Gesetz Sie schützt.&lt;/p&gt;
+        &lt;p&gt;Wir verwenden Ihre persönlichen Daten, um den Dienst bereitzustellen und zu verbessern. Durch die Nutzung des
+            Dienstes stimmen Sie der Erhebung und Nutzung von Informationen in Übereinstimmung mit dieser
+            Datenschutzerklärung zu. Diese Datenschutzerklärung wurde mit Hilfe des &lt;a
+                href&#x3D;&quot;https://www.freeprivacypolicy.com/free-privacy-policy-generator/&quot; target&#x3D;&quot;_blank&quot;&gt;Free Privacy
+                Policy Generator&lt;/a&gt; erstellt.&lt;/p&gt;
+
+        &lt;h4&gt;Interpretation und Definitionen&lt;/h4&gt;
+        &lt;h6&gt;Interpretation&lt;/h6&gt;
+        &lt;p&gt;Die Wörter, bei denen der Anfangsbuchstabe großgeschrieben ist, haben die unter den folgenden Bedingungen
+            definierten Bedeutungen. Die folgenden Definitionen haben unabhängig davon, ob sie im Singular oder Plural
+            erscheinen, dieselbe Bedeutung.&lt;/p&gt;
+        &lt;h6&gt;Definitionen&lt;/h6&gt;
+        &lt;p&gt;Für die Zwecke dieser Datenschutzerklärung:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Konto&lt;/strong&gt; bedeutet ein einzigartiges Konto, das für Sie erstellt wurde, um auf unseren
+                    Dienst oder Teile unseres Dienstes zuzugreifen.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Affiliate&lt;/strong&gt; bedeutet ein Unternehmen, das eine Partei kontrolliert, von ihr
+                    kontrolliert wird oder unter gemeinsamer Kontrolle mit ihr steht, wobei &quot;Kontrolle&quot; den Besitz von
+                    50% oder mehr der Anteile, Beteiligungen oder anderen Wertpapiere bedeutet, die zur Wahl von
+                    Direktoren oder anderen Verwaltungsbehörden berechtigen.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Anwendung&lt;/strong&gt; bezieht sich auf Pirathib Mahalingam, das von der Firma bereitgestellte
+                    Softwareprogramm.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Unternehmen&lt;/strong&gt; (in diesem Vertrag entweder als &quot;das Unternehmen&quot;, &quot;Wir&quot;, &quot;Uns&quot; oder
+                    &quot;Unser&quot; bezeichnet) bezieht sich auf Pirathib Mahalingam.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Cookies&lt;/strong&gt; sind kleine Dateien, die auf Ihrem Computer, Mobilgerät oder einem anderen
+                    Gerät von einer Website abgelegt werden und unter anderem Details zu Ihrem Browserverlauf auf dieser
+                    Website enthalten.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Land&lt;/strong&gt; bezieht sich auf: Schweiz&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Gerät&lt;/strong&gt; bedeutet jedes Gerät, das auf den Dienst zugreifen kann, wie z.B. ein
+                    Computer, ein Mobiltelefon oder ein digitales Tablet.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Personenbezogene Daten&lt;/strong&gt; sind alle Informationen, die sich auf eine identifizierte
+                    oder identifizierbare Person beziehen.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Dienst&lt;/strong&gt; bezieht sich auf die Anwendung oder die Website oder beides.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Dienstanbieter&lt;/strong&gt; bedeutet jede natürliche oder juristische Person, die die Daten im
+                    Auftrag des Unternehmens verarbeitet. Es bezieht sich auf Drittunternehmen oder Einzelpersonen, die
+                    vom Unternehmen beschäftigt werden, um den Dienst zu erleichtern, den Dienst im Namen des
+                    Unternehmens bereitzustellen, dienstbezogene Dienstleistungen zu erbringen oder dem Unternehmen bei
+                    der Analyse der Nutzung des Dienstes zu helfen.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Nutzungsdaten&lt;/strong&gt; sind Daten, die automatisch gesammelt werden, entweder durch die
+                    Nutzung des Dienstes oder aus der Dienstinfrastruktur selbst (zum Beispiel die Dauer eines
+                    Seitenbesuchs).&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Website&lt;/strong&gt; bezieht sich auf Pirathib Mahalingam, zugänglich von &lt;a
+                        href&#x3D;&quot;https://www.pirathib-mahalingam.ch&quot; rel&#x3D;&quot;external nofollow noopener&quot;
+                        target&#x3D;&quot;_blank&quot;&gt;https://www.pirathib-mahalingam.ch&lt;/a&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Sie&lt;/strong&gt; bezieht sich auf die Person, die auf den Dienst zugreift oder ihn nutzt, oder
+                    das Unternehmen oder eine andere juristische Person, in deren Namen diese Person auf den Dienst
+                    zugreift oder ihn nutzt, je nachdem, was zutrifft.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h4&gt;Erhebung und Nutzung Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;h6&gt;Arten der gesammelten Daten&lt;/h6&gt;
+        &lt;h6&gt;Personenbezogene Daten&lt;/h6&gt;
+        &lt;p&gt;Während der Nutzung unseres Dienstes können wir Sie bitten, uns bestimmte persönlich identifizierbare
+            Informationen zur Verfügung zu stellen, die verwendet werden können, um Sie zu kontaktieren oder zu
+            identifizieren. Persönlich identifizierbare Informationen können unter anderem umfassen:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;E-Mail-Adresse&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Vorname und Nachname&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Telefonnummer&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Nutzungsdaten&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h6&gt;Nutzungsdaten&lt;/h6&gt;
+        &lt;p&gt;Nutzungsdaten werden automatisch bei der Nutzung des Dienstes erhoben.&lt;/p&gt;
+        &lt;p&gt;Nutzungsdaten können Informationen wie die Internetprotokolladresse (z.B. IP-Adresse) Ihres Geräts, den
+            Browsertyp, die Browserversion, die Seiten unseres Dienstes, die Sie besuchen, die Uhrzeit und das Datum
+            Ihres Besuchs, die auf diesen Seiten verbrachte Zeit, eindeutige Gerätekennungen und andere Diagnosedaten
+            umfassen.&lt;/p&gt;
+        &lt;p&gt;Wenn Sie über ein Mobilgerät auf den Dienst zugreifen, können wir bestimmte Informationen automatisch
+            erfassen, einschließlich, aber nicht beschränkt auf die Art des von Ihnen verwendeten Mobilgeräts, die
+            eindeutige ID Ihres Mobilgeräts, die IP-Adresse Ihres Mobilgeräts, Ihr mobiles Betriebssystem, die Art des
+            mobilen Internetbrowsers, den Sie verwenden, eindeutige Gerätekennungen und andere Diagnosedaten.&lt;/p&gt;
+        &lt;p&gt;Wir können auch Informationen sammeln, die Ihr Browser sendet, wann immer Sie unseren Dienst besuchen oder
+            wenn Sie auf den Dienst über ein Mobilgerät zugreifen.&lt;/p&gt;
+        &lt;h6&gt;Tracking-Technologien und Cookies&lt;/h6&gt;
+        &lt;p&gt;Wir verwenden Cookies und ähnliche Tracking-Technologien, um die Aktivitäten auf unserem Dienst zu verfolgen
+            und bestimmte Informationen zu speichern. Zu den verwendeten Tracking-Technologien gehören Beacons, Tags und
+            Skripte, um Informationen zu sammeln und zu verfolgen und unseren Dienst zu verbessern und zu analysieren.
+            Die von uns verwendeten Technologien können umfassen:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;Cookies oder Browser-Cookies.&lt;/strong&gt; Ein Cookie ist eine kleine Datei, die auf Ihr Gerät
+                platziert wird. Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzugeben, wenn ein
+                Cookie gesendet wird. Wenn Sie jedoch keine Cookies akzeptieren, können Sie möglicherweise einige Teile
+                unseres Dienstes nicht nutzen. Sofern Sie Ihre Browsereinstellungen nicht so angepasst haben, dass
+                Cookies abgelehnt werden, kann unser Dienst Cookies verwenden.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Web-Beacons.&lt;/strong&gt; Bestimmte Abschnitte unseres Dienstes und unserer E-Mails können kleine
+                elektronische Dateien enthalten, die als Web-Beacons (auch bekannt als Clear Gifs, Pixel Tags und
+                Single-Pixel Gifs) bezeichnet werden und es dem Unternehmen beispielsweise ermöglichen, Benutzer zu
+                zählen, die diese Seiten besucht oder eine E-Mail geöffnet haben, und für andere verwandte
+                Website-Statistiken (zum Beispiel die Aufzeichnung der Beliebtheit eines bestimmten Abschnitts und die
+                Überprüfung der System- und Serverintegrität).&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;Cookies können &quot;Persistente&quot; oder &quot;Sitzungs&quot;-Cookies sein. Persistente Cookies verbleiben auf Ihrem
+            persönlichen Computer oder Mobilgerät, wenn Sie offline gehen, während Sitzungscookies gelöscht werden,
+            sobald Sie Ihren Webbrowser schließen. Erfahren Sie mehr über Cookies im Artikel auf der &lt;a
+                href&#x3D;&quot;https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking&quot;
+                target&#x3D;&quot;_blank&quot;&gt;Website zur kostenlosen Datenschutzerklärung&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;Wir verwenden sowohl Sitzungs- als auch persistente Cookies für die unten aufgeführten Zwecke:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Notwendige / wesentliche Cookies&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Typ: Sitzungscookies&lt;/p&gt;
+                &lt;p&gt;Verwaltet von: Uns&lt;/p&gt;
+                &lt;p&gt;Zweck: Diese Cookies sind wesentlich, um Ihnen Dienstleistungen zur Verfügung zu stellen, die über
+                    die Website verfügbar sind, und um Ihnen die Nutzung einiger ihrer Funktionen zu ermöglichen. Sie
+                    helfen, Benutzer zu authentifizieren und die betrügerische Nutzung von Benutzerkonten zu verhindern.
+                    Ohne diese Cookies können die von Ihnen angeforderten Dienstleistungen nicht erbracht werden, und
+                    wir verwenden diese Cookies nur, um Ihnen diese Dienstleistungen bereitzustellen.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Cookies-Richtlinie / Hinweis-Akzeptanz-Cookies&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Typ: Persistente Cookies&lt;/p&gt;
+                &lt;p&gt;Verwaltet von: Uns&lt;/p&gt;
+                &lt;p&gt;Zweck: Diese Cookies ident
+
+                    ifizieren, ob Benutzer die Verwendung von Cookies auf der Website akzeptiert haben.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Funktionalitäts-Cookies&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Typ: Persistente Cookies&lt;/p&gt;
+                &lt;p&gt;Verwaltet von: Uns&lt;/p&gt;
+                &lt;p&gt;Zweck: Diese Cookies ermöglichen es uns, die Entscheidungen zu speichern, die Sie bei der Nutzung der
+                    Website treffen, wie z.B. das Speichern Ihrer Anmeldedaten oder Ihrer Sprachpräferenz. Der Zweck
+                    dieser Cookies besteht darin, Ihnen eine persönlichere Erfahrung zu bieten und zu vermeiden, dass
+                    Sie Ihre Präferenzen bei jeder Nutzung der Website erneut eingeben müssen.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;Weitere Informationen zu den von uns verwendeten Cookies und Ihren Auswahlmöglichkeiten bezüglich Cookies
+            finden Sie in unserer Cookies-Richtlinie oder im Abschnitt Cookies unserer Datenschutzerklärung.&lt;/p&gt;
+
+        &lt;h4&gt;Verwendung Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;p&gt;Das Unternehmen kann personenbezogene Daten für die folgenden Zwecke verwenden:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Zur Bereitstellung und Aufrechterhaltung unseres Dienstes&lt;/strong&gt;, einschließlich der
+                    Überwachung der Nutzung unseres Dienstes.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Zur Verwaltung Ihres Kontos:&lt;/strong&gt; zur Verwaltung Ihrer Registrierung als Benutzer des
+                    Dienstes. Die von Ihnen bereitgestellten personenbezogenen Daten können Ihnen Zugang zu
+                    verschiedenen Funktionen des Dienstes ermöglichen, die Ihnen als registriertem Benutzer zur
+                    Verfügung stehen.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Zur Erfüllung eines Vertrags:&lt;/strong&gt; die Entwicklung, Einhaltung und Durchführung des
+                    Kaufvertrags für die von Ihnen erworbenen Produkte, Artikel oder Dienstleistungen oder eines anderen
+                    Vertrags mit uns über den Dienst.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Um Sie zu kontaktieren:&lt;/strong&gt; Um Sie per E-Mail, Telefonanrufe, SMS oder andere
+                    gleichwertige Formen der elektronischen Kommunikation zu kontaktieren, wie z.B.
+                    Push-Benachrichtigungen einer mobilen Anwendung bezüglich Updates oder informativer Mitteilungen im
+                    Zusammenhang mit den Funktionen, Produkten oder vertraglich vereinbarten Dienstleistungen,
+                    einschließlich Sicherheitsupdates, wenn dies für deren Umsetzung erforderlich oder angemessen ist.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Um Ihnen&lt;/strong&gt; Nachrichten, Sonderangebote und allgemeine Informationen über andere von
+                    uns angebotene Waren, Dienstleistungen und Veranstaltungen bereitzustellen, die denen ähneln, die
+                    Sie bereits gekauft haben oder nach denen Sie sich erkundigt haben, es sei denn, Sie haben sich
+                    gegen den Erhalt solcher Informationen entschieden.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Zur Verwaltung Ihrer Anfragen:&lt;/strong&gt; Um Ihre Anfragen an uns zu bearbeiten und zu
+                    verwalten.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Für Geschäftsübertragungen:&lt;/strong&gt; Wir können Ihre Informationen verwenden, um eine Fusion,
+                    Abtretung, Umstrukturierung, Reorganisation, Auflösung oder einen anderen Verkauf oder eine
+                    Übertragung einiger oder aller unserer Vermögenswerte zu bewerten oder durchzuführen, sei es als
+                    Fortführung oder im Rahmen eines Konkurses, einer Liquidation oder eines ähnlichen Verfahrens, bei
+                    dem personenbezogene Daten, die wir über unsere Dienstbenutzer gespeichert haben, zu den
+                    übertragenen Vermögenswerten gehören.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;&lt;strong&gt;Für andere Zwecke&lt;/strong&gt;: Wir können Ihre Informationen für andere Zwecke verwenden, wie
+                    z.B. Datenanalyse, Identifizierung von Nutzungstrends, Bestimmung der Wirksamkeit unserer
+                    Werbekampagnen und zur Bewertung und Verbesserung unseres Dienstes, unserer Produkte,
+                    Dienstleistungen, Marketing und Ihrer Erfahrung.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;Wir können Ihre personenbezogenen Daten in den folgenden Situationen weitergeben:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;Mit Dienstleistern:&lt;/strong&gt; Wir können Ihre personenbezogenen Daten mit Dienstleistern teilen,
+                um die Nutzung unseres Dienstes zu überwachen und zu analysieren, um Sie zu kontaktieren.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Für Geschäftsübertragungen:&lt;/strong&gt; Wir können Ihre personenbezogenen Daten im Zusammenhang mit
+                oder während Verhandlungen über eine Fusion, den Verkauf von Unternehmensvermögen, eine Finanzierung
+                oder den Erwerb eines Teils oder unseres gesamten Unternehmens an ein anderes Unternehmen weitergeben
+                oder übertragen.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Mit Affiliates:&lt;/strong&gt; Wir können Ihre Informationen mit unseren Affiliates teilen, in diesem
+                Fall werden wir von diesen Affiliates verlangen, diese Datenschutzerklärung einzuhalten. Affiliates
+                umfassen unsere Muttergesellschaft und alle anderen Tochtergesellschaften, Joint Venture Partner oder
+                andere Unternehmen, die wir kontrollieren oder die unter gemeinsamer Kontrolle mit uns stehen.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Mit Geschäftspartnern:&lt;/strong&gt; Wir können Ihre Informationen mit unseren Geschäftspartnern
+                teilen, um Ihnen bestimmte Produkte, Dienstleistungen oder Werbeaktionen anzubieten.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Mit anderen Benutzern:&lt;/strong&gt; Wenn Sie persönliche Informationen teilen oder anderweitig in
+                den öffentlichen Bereichen mit anderen Benutzern interagieren, können diese Informationen von allen
+                Benutzern eingesehen und öffentlich nach außen verbreitet werden.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Mit Ihrer Zustimmung&lt;/strong&gt;: Wir können Ihre personenbezogenen Daten für jeden anderen Zweck
+                mit Ihrer Zustimmung offenlegen.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h4&gt;Aufbewahrung Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;p&gt;Das Unternehmen wird Ihre personenbezogenen Daten nur so lange aufbewahren, wie es für die in dieser
+            Datenschutzerklärung festgelegten Zwecke erforderlich ist. Wir werden Ihre personenbezogenen Daten in dem
+            Umfang aufbewahren und verwenden, wie es zur Erfüllung unserer gesetzlichen Verpflichtungen (zum Beispiel,
+            wenn wir Ihre Daten zur Einhaltung geltender Gesetze aufbewahren müssen), zur Beilegung von Streitigkeiten
+            und zur Durchsetzung unserer rechtlichen Vereinbarungen und Richtlinien erforderlich ist.&lt;/p&gt;
+        &lt;p&gt;Das Unternehmen wird auch Nutzungsdaten für interne Analysezwecke aufbewahren. Nutzungsdaten werden in der
+            Regel für einen kürzeren Zeitraum aufbewahrt, es sei denn, diese Daten werden verwendet, um die Sicherheit
+            zu stärken oder die Funktionalität unseres Dienstes zu verbessern, oder wir sind gesetzlich verpflichtet,
+            diese Daten für längere Zeiträume aufzubewahren.&lt;/p&gt;
+
+        &lt;h4&gt;Übertragung Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;p&gt;Ihre Informationen, einschließlich personenbezogener Daten, werden in den Betriebsbüros des Unternehmens und
+            an allen anderen Orten verarbeitet, an denen sich die an der Verarbeitung beteiligten Parteien befinden. Das
+            bedeutet, dass diese Informationen an – und auf – Computern außerhalb Ihres Bundesstaates, Ihrer Provinz,
+            Ihres Landes oder einer anderen staatlichen Gerichtsbarkeit übertragen und gespeichert werden können, wo die
+            Datenschutzgesetze möglicherweise von denen Ihrer Gerichtsbarkeit abweichen.&lt;/p&gt;
+        &lt;p&gt;Ihre Zustimmung zu dieser Datenschutzerklärung, gefolgt von Ihrer Übermittlung solcher Informationen, stellt
+            Ihre Zustimmung zu dieser Übertragung dar.&lt;/p&gt;
+        &lt;p&gt;Das Unternehmen wird alle angemessenen Schritte unternehmen, um sicherzustellen, dass Ihre Daten sicher und
+            in Übereinstimmung mit dieser Datenschutzerklärung behandelt werden, und es wird keine Übertragung Ihrer
+            personenbezogenen Daten an eine Organisation oder ein Land stattfinden, es sei denn, es gibt angemessene
+            Kontrollen, einschließlich der Sicherheit Ihrer Daten und anderer persönlicher Informationen.&lt;/p&gt;
+
+        &lt;h4&gt;Löschen Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;p&gt;Sie haben das Recht, Ihre personenbezogenen Daten zu löschen oder die Unterstützung beim Löschen der
+            personenbezogenen Daten zu beantragen, die wir über Sie gesammelt haben.&lt;/p&gt;
+        &lt;p&gt;Unser Dienst kann Ihnen die Möglichkeit geben, bestimmte Informationen über Sie innerhalb des Dienstes zu
+            löschen.&lt;/p&gt;
+        &lt;p&gt;Sie können Ihre Informationen jederzeit aktualisieren, ändern oder löschen, indem Sie sich in Ihr Konto
+            einloggen, falls Sie eines haben, und den Abschnitt mit den Kontoeinstellungen besuchen, der es Ihnen
+            ermöglicht, Ihre persönlichen Informationen zu verwalten. Sie können uns auch kontaktieren, um den Zugriff
+            auf, die Berichtigung oder die Löschung der persönlichen Informationen zu beantragen, die Sie uns zur
+            Verfügung gestellt haben.&lt;/p&gt;
+        &lt;p&gt;Bitte beachten Sie jedoch, dass wir bestimmte Informationen aufbewahren müssen, wenn wir gesetzlich dazu
+            verpflichtet sind oder eine rechtliche Grundlage dafür haben.&lt;/p&gt;
+
+        &lt;h4&gt;Offenlegung Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;h4&gt;Geschäftsvorgänge&lt;/h4&gt;
+        &lt;p&gt;Wenn das Unternehmen an einer Fusion, einem Erwerb oder einem Verkauf von Vermögenswerten beteiligt ist,
+            können Ihre personenbezogenen Daten übertragen werden. Wir werden eine Benachrichtigung bereitstellen, bevor
+            Ihre personenbezogenen Daten übertragen werden und einer anderen Datenschutzerklärung unterliegen.&lt;/p&gt;
+
+        &lt;h4&gt;Gesetzliche Anforderungen&lt;/h4&gt;
+        &lt;p&gt;Unter bestimmten Umständen kann das Unternehmen verpflichtet sein, Ihre personenbezogenen Daten offenzulegen,
+            wenn dies gesetzlich vorgeschrieben ist oder als Reaktion auf gültige Anfragen von öffentlichen Behörden
+            (z.B. einem Gericht oder einer Regierungsbehörde).&lt;/p&gt;
+
+        &lt;h6&gt;Andere rechtliche Anforderungen&lt;/h6&gt;
+        &lt;p&gt;Das Unternehmen kann Ihre personenbezogenen Daten im guten Glauben offenlegen, dass eine solche Maßnahme
+            notwendig ist, um:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;einer gesetzlichen Verpflichtung nachzukommen&lt;/li&gt;
+            &lt;li&gt;die Rechte oder das Eigentum des Unternehmens zu schützen und zu verteidigen&lt;/li&gt;
+            &lt;li&gt;mögliche Fehlverhalten im Zusammenhang mit dem Dienst zu verhindern oder zu untersuchen&lt;/li&gt;
+            &lt;li&gt;die persönliche Sicherheit der Benutzer des Dienstes oder der Öffentlichkeit zu schützen&lt;/li&gt;
+            &lt;li&gt;vor rechtlicher Haftung zu schützen&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h4&gt;Sicherheit Ihrer personenbezogenen Daten&lt;/h4&gt;
+        &lt;p&gt;Die Sicherheit Ihrer personenbezogenen Daten ist
+
+            uns wichtig, aber denken Sie daran, dass keine Methode der Übertragung über das Internet oder der
+            elektronischen Speicherung 100% sicher ist. Während wir uns bemühen, kommerziell akzeptable Mittel zum
+            Schutz Ihrer personenbezogenen Daten zu verwenden, können wir deren absolute Sicherheit nicht garantieren.
+        &lt;/p&gt;
+
+        &lt;h4&gt;Datenschutz von Kindern&lt;/h4&gt;
+        &lt;p&gt;Unser Dienst richtet sich nicht an Personen unter 13 Jahren. Wir sammeln nicht wissentlich persönlich
+            identifizierbare Informationen von Personen unter 13 Jahren. Wenn Sie ein Elternteil oder Vormund sind und
+            wissen, dass Ihr Kind uns personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie uns bitte.
+            Wenn wir feststellen, dass wir personenbezogene Daten von Personen unter 13 Jahren ohne Überprüfung der
+            elterlichen Zustimmung gesammelt haben, unternehmen wir Schritte, um diese Informationen von unseren Servern
+            zu entfernen.&lt;/p&gt;
+        &lt;p&gt;Wenn wir uns auf Zustimmung als rechtliche Grundlage für die Verarbeitung Ihrer Informationen stützen müssen
+            und Ihr Land die Zustimmung eines Elternteils erfordert, können wir die Zustimmung Ihres Elternteils
+            verlangen, bevor wir diese Informationen sammeln und verwenden.&lt;/p&gt;
+
+        &lt;h4&gt;Links zu anderen Websites&lt;/h4&gt;
+        &lt;p&gt;Unser Dienst kann Links zu anderen Websites enthalten, die nicht von uns betrieben werden. Wenn Sie auf einen
+            Link eines Drittanbieters klicken, werden Sie zu dieser Website des Drittanbieters weitergeleitet. Wir
+            empfehlen Ihnen dringend, die Datenschutzerklärung jeder Website, die Sie besuchen, zu überprüfen.&lt;/p&gt;
+        &lt;p&gt;Wir haben keine Kontrolle über und übernehmen keine Verantwortung für die Inhalte, Datenschutzrichtlinien
+            oder Praktiken von Websites oder Diensten Dritter.&lt;/p&gt;
+
+        &lt;h4&gt;Änderungen dieser Datenschutzerklärung&lt;/h4&gt;
+        &lt;p&gt;Wir können unsere Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über alle Änderungen
+            informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.&lt;/p&gt;
+        &lt;p&gt;Wir werden Sie per E-Mail und/oder durch einen auffälligen Hinweis auf unserem Dienst informieren, bevor die
+            Änderung in Kraft tritt, und das Datum der &quot;Letzten Aktualisierung&quot; oben in dieser Datenschutzerklärung
+            aktualisieren.&lt;/p&gt;
+        &lt;p&gt;Sie werden empfohlen, diese Datenschutzerklärung regelmäßig auf Änderungen zu überprüfen. Änderungen dieser
+            Datenschutzerklärung treten in Kraft, wenn sie auf dieser Seite veröffentlicht werden.&lt;/p&gt;
+
+        &lt;h4&gt;Kontaktieren Sie uns&lt;/h4&gt;
+        &lt;p&gt;Wenn Sie Fragen zu dieser Datenschutzerklärung haben, können Sie uns kontaktieren:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;Per E-Mail: hello&amp;commat;pirathib-mahalingam.ch&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Per Telefonnummer: +41 (0)76 433 499 2&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        }
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="privacy-policy">    <div class="privacy-policy-content">        <a href="/#contact" class="arrow-div"><img (mouseenter)="hover = true;" (mouseleave)="hover = false;"                [src]="hover ? \'../../assets/img/arrow-blue.svg\' : \'../../assets/img/arrow-default.svg\'" alt="Back Home"                class="arrow"></a>        @if (languageService.language == \'English\') {        <h3>Privacy Policy</h3>        <p>Last updated: June 12, 2024</p>        <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your            information when You use the Service and tells You about Your privacy rights and how the law protects You.        </p>        <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the            collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been            created with the help of the <a href="https://www.freeprivacypolicy.com/free-privacy-policy-generator/"                target="_blank">Free Privacy Policy Generator</a>.</p>        <h4>Interpretation and Definitions</h4>        <h6>Interpretation</h6>        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions.            The following definitions shall have the same meaning regardless of whether they appear in singular or in            plural.</p>        <h6>Definitions</h6>        <p>For the purposes of this Privacy Policy:</p>        <ul>            <li>                <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our                    Service.</p>            </li>            <li>                <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control                    with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity                    interest or other securities entitled to vote for election of directors or other managing authority.                </p>            </li>            <li>                <p><strong>Application</strong> refers to Pirathib Mahalingam, the software program provided by the                    Company.</p>            </li>            <li>                <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;,                    &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Pirathib Mahalingam.</p>            </li>            <li>                <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other                    device by a website, containing the details of Your browsing history on that website among its many                    uses.</p>            </li>            <li>                <p><strong>Country</strong> refers to: Switzerland</p>            </li>            <li>                <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone                    or a digital tablet.</p>            </li>            <li>                <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable                    individual.</p>            </li>            <li>                <p><strong>Service</strong> refers to the Application or the Website or both.</p>            </li>            <li>                <p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf                    of the Company. It refers to third-party companies or individuals employed by the Company to                    facilitate the Service, to provide the Service on behalf of the Company, to perform services related                    to the Service or to assist the Company in analyzing how the Service is used.</p>            </li>            <li>                <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of                    the Service or from the Service infrastructure itself (for example, the duration of a page visit).                </p>            </li>            <li>                <p><strong>Website</strong> refers to Pirathib Mahalingam, accessible from <a                        href="https://www.pirathib-mahalingam.ch" rel="external nofollow noopener"                        target="_blank">https://www.pirathib-mahalingam.ch</a></p>            </li>            <li>                <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other                    legal entity on behalf of which such individual is accessing or using the Service, as applicable.                </p>            </li>        </ul>        <h4>Collecting and Using Your Personal Data</h4>        <h6>Types of Data Collected</h6>        <h6>Personal Data</h6>        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that            can be used to contact or identify You. Personally identifiable information may include, but is not limited            to:</p>        <ul>            <li>                <p>Email address</p>            </li>            <li>                <p>First name and last name</p>            </li>            <li>                <p>Phone number</p>            </li>            <li>                <p>Usage Data</p>            </li>        </ul>        <h6>Usage Data</h6>        <p>Usage Data is collected automatically when using the Service.</p>        <p>Usage Data may include information such as Your Device\'s Internet Protocol address (e.g. IP address), browser            type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time            spent on those pages, unique device identifiers and other diagnostic data.</p>        <p>When You access the Service by or through a mobile device, We may collect certain information automatically,            including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP            address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use,            unique device identifiers and other diagnostic data.</p>        <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the            Service by or through a mobile device.</p>        <h6>Tracking Technologies and Cookies</h6>        <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain            information. Tracking technologies used are beacons, tags, and scripts to collect and track information and            to improve and analyze Our Service. The technologies We use may include:</p>        <ul>            <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can                instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You                do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted                Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>            <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small                electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel                gifs) that permit the Company, for example, to count users who have visited those pages or opened an                email and for other related website statistics (for example, recording the popularity of a certain                section and verifying system and server integrity).</li>        </ul>        <p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your            personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You            close Your web browser. Learn more about cookies on the <a                href="https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking"                target="_blank">Free Privacy Policy website</a> article.</p>        <p>We use both Session and Persistent Cookies for the purposes set out below:</p>        <ul>            <li>                <p><strong>Necessary / Essential Cookies</strong></p>                <p>Type: Session Cookies</p>                <p>Administered by: Us</p>                <p>Purpose: These Cookies are essential to provide You with services available through the Website and                    to enable You to use some of its features. They help to authenticate users and prevent fraudulent                    use of user accounts. Without these Cookies, the services that You have asked for cannot be                    provided, and We only use these Cookies to provide You with those services.</p>            </li>            <li>                <p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>                <p>Type: Persistent Cookies</p>                <p>Administered by: Us</p>                <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>            </li>            <li>                <p><strong>Functionality Cookies</strong></p>                <p>Type: Persistent Cookies</p>                <p>Administered by: Us</p>                <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as                    remembering your login details or language preference. The purpose of these Cookies is to provide                    You with a more personal experience and to avoid You having to re-enter your preferences every time                    You use the Website.</p>            </li>        </ul>        <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies            Policy or the Cookies section of our Privacy Policy.</p>        <h4>Use of Your Personal Data</h4>        <p>The Company may use Personal Data for the following purposes:</p>        <ul>            <li>                <p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.                </p>            </li>            <li>                <p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The                    Personal Data You provide can give You access to different functionalities of the Service that are                    available to You as a registered user.</p>            </li>            <li>                <p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of                    the purchase contract for the products, items or services You have purchased or of any other                    contract with Us through the Service.</p>            </li>            <li>                <p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent                    forms of electronic communication, such as a mobile application\'s push notifications regarding                    updates or informative communications related to the functionalities, products or contracted                    services, including the security updates, when necessary or reasonable for their implementation.</p>            </li>            <li>                <p><strong>To provide You</strong> with news, special offers and general information about other goods,                    services and events which we offer that are similar to those that you have already purchased or                    enquired about unless You have opted not to receive such information.</p>            </li>            <li>                <p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>            </li>            <li>                <p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger,                    divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of                    Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding,                    in which Personal Data held by Us about our Service users is among the assets transferred.</p>            </li>            <li>                <p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data                    analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and                    to evaluate and improve our Service, products, services, marketing and your experience.</p>            </li>        </ul>        <p>We may share Your personal information in the following situations:</p>        <ul>            <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers                to monitor and analyze the use of our Service, to contact You.</li>            <li><strong>For business transfers:</strong> We may share or transfer Your personal information in                connection with, or during negotiations of, any merger, sale of Company assets, financing, or                acquisition of all or a portion of Our business to another company.</li>            <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we                will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and                any other subsidiaries, joint venture partners or other companies that We control or that are under                common control with Us.</li>            <li><strong>With business partners:</strong> We may share Your information with Our business partners to                offer You certain products, services or promotions.</li>            <li><strong>With other users:</strong> when You share personal information or otherwise interact in the                public areas with other users, such information may be viewed by all users and may be publicly                distributed outside.</li>            <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with                Your consent.</li>        </ul>        <h4>Retention of Your Personal Data</h4>        <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this            Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal            obligations (for example, if we are required to retain your data to comply with applicable laws), resolve            disputes, and enforce our legal agreements and policies.</p>        <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for            a shorter period of time, except when this data is used to strengthen the security or to improve the            functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>        <h4>Transfer of Your Personal Data</h4>        <p>Your information, including Personal Data, is processed at the Company\'s operating offices and in any other            places where the parties involved in the processing are located. It means that this information may be            transferred to — and maintained on — computers located outside of Your state, province, country or other            governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>        <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement            to that transfer.</p>        <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in            accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization            or a country unless there are adequate controls in place including the security of Your data and other            personal information.</p>        <h4>Delete Your Personal Data</h4>        <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected            about You.</p>        <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>        <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one,            and visiting the account settings section that allows you to manage Your personal information. You may also            contact Us to request access to, correct, or delete any personal information that You have provided to Us.        </p>        <p>Please note, however, that We may need to retain certain information when we have a legal obligation or            lawful basis to do so.</p>        <h4 style="font-size: 36px; color: white;">Disclosure of Your Personal Data</h4>        <h4>Business Transactions</h4>        <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We            will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy            Policy.</p>        <h4>Law enforcement</h4>        <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so            by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>        <h6>Other legal requirements</h6>        <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>        <ul>            <li>Comply with a legal obligation</li>            <li>Protect and defend the rights or property of the Company</li>            <li>Prevent or investigate possible wrongdoing in connection with the Service</li>            <li>Protect the personal safety of Users of the Service or the public</li>            <li>Protect against legal liability</li>        </ul>        <h4>Security of Your Personal Data</h4>        <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the            Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable            means to protect Your Personal Data, We cannot guarantee its absolute security.</p>        <h4>Children\'s Privacy</h4>        <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable            information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your            child has provided Us with Personal Data, please contact Us. If We become aware that We have collected            Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to            remove that information from Our servers.</p>        <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires            consent from a parent, We may require Your parent\'s consent before We collect and use that information.</p>        <h4>Links to Other Websites</h4>        <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party            link, You will be directed to that third party\'s site. We strongly advise You to review the Privacy Policy            of every site You visit.</p>        <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any            third party sites or services.</p>        <h4>Changes to this Privacy Policy</h4>        <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new            Privacy Policy on this page.</p>        <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming            effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy            are effective when they are posted on this page.</p>        <h4>Contact Us</h4>        <p>If you have any questions about this Privacy Policy, You can contact us:</p>        <ul>            <li>                <p>By email: hello&commat;pirathib-mahalingam.ch</p>            </li>            <li>                <p>By phone number: +41 (0)76 433 499 2</p>            </li>        </ul>        }        @if (languageService.language == \'German\') {        <h3>Datenschutzerklärung</h3>        <p>Letzte Aktualisierung: 12. Juni 2024</p>        <p>Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren bezüglich der Erhebung, Nutzung und            Offenlegung Ihrer Informationen, wenn Sie den Dienst nutzen, und informiert Sie über Ihre Datenschutzrechte            und darüber, wie das Gesetz Sie schützt.</p>        <p>Wir verwenden Ihre persönlichen Daten, um den Dienst bereitzustellen und zu verbessern. Durch die Nutzung des            Dienstes stimmen Sie der Erhebung und Nutzung von Informationen in Übereinstimmung mit dieser            Datenschutzerklärung zu. Diese Datenschutzerklärung wurde mit Hilfe des <a                href="https://www.freeprivacypolicy.com/free-privacy-policy-generator/" target="_blank">Free Privacy                Policy Generator</a> erstellt.</p>        <h4>Interpretation und Definitionen</h4>        <h6>Interpretation</h6>        <p>Die Wörter, bei denen der Anfangsbuchstabe großgeschrieben ist, haben die unter den folgenden Bedingungen            definierten Bedeutungen. Die folgenden Definitionen haben unabhängig davon, ob sie im Singular oder Plural            erscheinen, dieselbe Bedeutung.</p>        <h6>Definitionen</h6>        <p>Für die Zwecke dieser Datenschutzerklärung:</p>        <ul>            <li>                <p><strong>Konto</strong> bedeutet ein einzigartiges Konto, das für Sie erstellt wurde, um auf unseren                    Dienst oder Teile unseres Dienstes zuzugreifen.</p>            </li>            <li>                <p><strong>Affiliate</strong> bedeutet ein Unternehmen, das eine Partei kontrolliert, von ihr                    kontrolliert wird oder unter gemeinsamer Kontrolle mit ihr steht, wobei "Kontrolle" den Besitz von                    50% oder mehr der Anteile, Beteiligungen oder anderen Wertpapiere bedeutet, die zur Wahl von                    Direktoren oder anderen Verwaltungsbehörden berechtigen.</p>            </li>            <li>                <p><strong>Anwendung</strong> bezieht sich auf Pirathib Mahalingam, das von der Firma bereitgestellte                    Softwareprogramm.</p>            </li>            <li>                <p><strong>Unternehmen</strong> (in diesem Vertrag entweder als "das Unternehmen", "Wir", "Uns" oder                    "Unser" bezeichnet) bezieht sich auf Pirathib Mahalingam.</p>            </li>            <li>                <p><strong>Cookies</strong> sind kleine Dateien, die auf Ihrem Computer, Mobilgerät oder einem anderen                    Gerät von einer Website abgelegt werden und unter anderem Details zu Ihrem Browserverlauf auf dieser                    Website enthalten.</p>            </li>            <li>                <p><strong>Land</strong> bezieht sich auf: Schweiz</p>            </li>            <li>                <p><strong>Gerät</strong> bedeutet jedes Gerät, das auf den Dienst zugreifen kann, wie z.B. ein                    Computer, ein Mobiltelefon oder ein digitales Tablet.</p>            </li>            <li>                <p><strong>Personenbezogene Daten</strong> sind alle Informationen, die sich auf eine identifizierte                    oder identifizierbare Person beziehen.</p>            </li>            <li>                <p><strong>Dienst</strong> bezieht sich auf die Anwendung oder die Website oder beides.</p>            </li>            <li>                <p><strong>Dienstanbieter</strong> bedeutet jede natürliche oder juristische Person, die die Daten im                    Auftrag des Unternehmens verarbeitet. Es bezieht sich auf Drittunternehmen oder Einzelpersonen, die                    vom Unternehmen beschäftigt werden, um den Dienst zu erleichtern, den Dienst im Namen des                    Unternehmens bereitzustellen, dienstbezogene Dienstleistungen zu erbringen oder dem Unternehmen bei                    der Analyse der Nutzung des Dienstes zu helfen.</p>            </li>            <li>                <p><strong>Nutzungsdaten</strong> sind Daten, die automatisch gesammelt werden, entweder durch die                    Nutzung des Dienstes oder aus der Dienstinfrastruktur selbst (zum Beispiel die Dauer eines                    Seitenbesuchs).</p>            </li>            <li>                <p><strong>Website</strong> bezieht sich auf Pirathib Mahalingam, zugänglich von <a                        href="https://www.pirathib-mahalingam.ch" rel="external nofollow noopener"                        target="_blank">https://www.pirathib-mahalingam.ch</a></p>            </li>            <li>                <p><strong>Sie</strong> bezieht sich auf die Person, die auf den Dienst zugreift oder ihn nutzt, oder                    das Unternehmen oder eine andere juristische Person, in deren Namen diese Person auf den Dienst                    zugreift oder ihn nutzt, je nachdem, was zutrifft.</p>            </li>        </ul>        <h4>Erhebung und Nutzung Ihrer personenbezogenen Daten</h4>        <h6>Arten der gesammelten Daten</h6>        <h6>Personenbezogene Daten</h6>        <p>Während der Nutzung unseres Dienstes können wir Sie bitten, uns bestimmte persönlich identifizierbare            Informationen zur Verfügung zu stellen, die verwendet werden können, um Sie zu kontaktieren oder zu            identifizieren. Persönlich identifizierbare Informationen können unter anderem umfassen:</p>        <ul>            <li>                <p>E-Mail-Adresse</p>            </li>            <li>                <p>Vorname und Nachname</p>            </li>            <li>                <p>Telefonnummer</p>            </li>            <li>                <p>Nutzungsdaten</p>            </li>        </ul>        <h6>Nutzungsdaten</h6>        <p>Nutzungsdaten werden automatisch bei der Nutzung des Dienstes erhoben.</p>        <p>Nutzungsdaten können Informationen wie die Internetprotokolladresse (z.B. IP-Adresse) Ihres Geräts, den            Browsertyp, die Browserversion, die Seiten unseres Dienstes, die Sie besuchen, die Uhrzeit und das Datum            Ihres Besuchs, die auf diesen Seiten verbrachte Zeit, eindeutige Gerätekennungen und andere Diagnosedaten            umfassen.</p>        <p>Wenn Sie über ein Mobilgerät auf den Dienst zugreifen, können wir bestimmte Informationen automatisch            erfassen, einschließlich, aber nicht beschränkt auf die Art des von Ihnen verwendeten Mobilgeräts, die            eindeutige ID Ihres Mobilgeräts, die IP-Adresse Ihres Mobilgeräts, Ihr mobiles Betriebssystem, die Art des            mobilen Internetbrowsers, den Sie verwenden, eindeutige Gerätekennungen und andere Diagnosedaten.</p>        <p>Wir können auch Informationen sammeln, die Ihr Browser sendet, wann immer Sie unseren Dienst besuchen oder            wenn Sie auf den Dienst über ein Mobilgerät zugreifen.</p>        <h6>Tracking-Technologien und Cookies</h6>        <p>Wir verwenden Cookies und ähnliche Tracking-Technologien, um die Aktivitäten auf unserem Dienst zu verfolgen            und bestimmte Informationen zu speichern. Zu den verwendeten Tracking-Technologien gehören Beacons, Tags und            Skripte, um Informationen zu sammeln und zu verfolgen und unseren Dienst zu verbessern und zu analysieren.            Die von uns verwendeten Technologien können umfassen:</p>        <ul>            <li><strong>Cookies oder Browser-Cookies.</strong> Ein Cookie ist eine kleine Datei, die auf Ihr Gerät                platziert wird. Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzugeben, wenn ein                Cookie gesendet wird. Wenn Sie jedoch keine Cookies akzeptieren, können Sie möglicherweise einige Teile                unseres Dienstes nicht nutzen. Sofern Sie Ihre Browsereinstellungen nicht so angepasst haben, dass                Cookies abgelehnt werden, kann unser Dienst Cookies verwenden.</li>            <li><strong>Web-Beacons.</strong> Bestimmte Abschnitte unseres Dienstes und unserer E-Mails können kleine                elektronische Dateien enthalten, die als Web-Beacons (auch bekannt als Clear Gifs, Pixel Tags und                Single-Pixel Gifs) bezeichnet werden und es dem Unternehmen beispielsweise ermöglichen, Benutzer zu                zählen, die diese Seiten besucht oder eine E-Mail geöffnet haben, und für andere verwandte                Website-Statistiken (zum Beispiel die Aufzeichnung der Beliebtheit eines bestimmten Abschnitts und die                Überprüfung der System- und Serverintegrität).</li>        </ul>        <p>Cookies können "Persistente" oder "Sitzungs"-Cookies sein. Persistente Cookies verbleiben auf Ihrem            persönlichen Computer oder Mobilgerät, wenn Sie offline gehen, während Sitzungscookies gelöscht werden,            sobald Sie Ihren Webbrowser schließen. Erfahren Sie mehr über Cookies im Artikel auf der <a                href="https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking"                target="_blank">Website zur kostenlosen Datenschutzerklärung</a>.</p>        <p>Wir verwenden sowohl Sitzungs- als auch persistente Cookies für die unten aufgeführten Zwecke:</p>        <ul>            <li>                <p><strong>Notwendige / wesentliche Cookies</strong></p>                <p>Typ: Sitzungscookies</p>                <p>Verwaltet von: Uns</p>                <p>Zweck: Diese Cookies sind wesentlich, um Ihnen Dienstleistungen zur Verfügung zu stellen, die über                    die Website verfügbar sind, und um Ihnen die Nutzung einiger ihrer Funktionen zu ermöglichen. Sie                    helfen, Benutzer zu authentifizieren und die betrügerische Nutzung von Benutzerkonten zu verhindern.                    Ohne diese Cookies können die von Ihnen angeforderten Dienstleistungen nicht erbracht werden, und                    wir verwenden diese Cookies nur, um Ihnen diese Dienstleistungen bereitzustellen.</p>            </li>            <li>                <p><strong>Cookies-Richtlinie / Hinweis-Akzeptanz-Cookies</strong></p>                <p>Typ: Persistente Cookies</p>                <p>Verwaltet von: Uns</p>                <p>Zweck: Diese Cookies ident                    ifizieren, ob Benutzer die Verwendung von Cookies auf der Website akzeptiert haben.</p>            </li>            <li>                <p><strong>Funktionalitäts-Cookies</strong></p>                <p>Typ: Persistente Cookies</p>                <p>Verwaltet von: Uns</p>                <p>Zweck: Diese Cookies ermöglichen es uns, die Entscheidungen zu speichern, die Sie bei der Nutzung der                    Website treffen, wie z.B. das Speichern Ihrer Anmeldedaten oder Ihrer Sprachpräferenz. Der Zweck                    dieser Cookies besteht darin, Ihnen eine persönlichere Erfahrung zu bieten und zu vermeiden, dass                    Sie Ihre Präferenzen bei jeder Nutzung der Website erneut eingeben müssen.</p>            </li>        </ul>        <p>Weitere Informationen zu den von uns verwendeten Cookies und Ihren Auswahlmöglichkeiten bezüglich Cookies            finden Sie in unserer Cookies-Richtlinie oder im Abschnitt Cookies unserer Datenschutzerklärung.</p>        <h4>Verwendung Ihrer personenbezogenen Daten</h4>        <p>Das Unternehmen kann personenbezogene Daten für die folgenden Zwecke verwenden:</p>        <ul>            <li>                <p><strong>Zur Bereitstellung und Aufrechterhaltung unseres Dienstes</strong>, einschließlich der                    Überwachung der Nutzung unseres Dienstes.</p>            </li>            <li>                <p><strong>Zur Verwaltung Ihres Kontos:</strong> zur Verwaltung Ihrer Registrierung als Benutzer des                    Dienstes. Die von Ihnen bereitgestellten personenbezogenen Daten können Ihnen Zugang zu                    verschiedenen Funktionen des Dienstes ermöglichen, die Ihnen als registriertem Benutzer zur                    Verfügung stehen.</p>            </li>            <li>                <p><strong>Zur Erfüllung eines Vertrags:</strong> die Entwicklung, Einhaltung und Durchführung des                    Kaufvertrags für die von Ihnen erworbenen Produkte, Artikel oder Dienstleistungen oder eines anderen                    Vertrags mit uns über den Dienst.</p>            </li>            <li>                <p><strong>Um Sie zu kontaktieren:</strong> Um Sie per E-Mail, Telefonanrufe, SMS oder andere                    gleichwertige Formen der elektronischen Kommunikation zu kontaktieren, wie z.B.                    Push-Benachrichtigungen einer mobilen Anwendung bezüglich Updates oder informativer Mitteilungen im                    Zusammenhang mit den Funktionen, Produkten oder vertraglich vereinbarten Dienstleistungen,                    einschließlich Sicherheitsupdates, wenn dies für deren Umsetzung erforderlich oder angemessen ist.                </p>            </li>            <li>                <p><strong>Um Ihnen</strong> Nachrichten, Sonderangebote und allgemeine Informationen über andere von                    uns angebotene Waren, Dienstleistungen und Veranstaltungen bereitzustellen, die denen ähneln, die                    Sie bereits gekauft haben oder nach denen Sie sich erkundigt haben, es sei denn, Sie haben sich                    gegen den Erhalt solcher Informationen entschieden.</p>            </li>            <li>                <p><strong>Zur Verwaltung Ihrer Anfragen:</strong> Um Ihre Anfragen an uns zu bearbeiten und zu                    verwalten.</p>            </li>            <li>                <p><strong>Für Geschäftsübertragungen:</strong> Wir können Ihre Informationen verwenden, um eine Fusion,                    Abtretung, Umstrukturierung, Reorganisation, Auflösung oder einen anderen Verkauf oder eine                    Übertragung einiger oder aller unserer Vermögenswerte zu bewerten oder durchzuführen, sei es als                    Fortführung oder im Rahmen eines Konkurses, einer Liquidation oder eines ähnlichen Verfahrens, bei                    dem personenbezogene Daten, die wir über unsere Dienstbenutzer gespeichert haben, zu den                    übertragenen Vermögenswerten gehören.</p>            </li>            <li>                <p><strong>Für andere Zwecke</strong>: Wir können Ihre Informationen für andere Zwecke verwenden, wie                    z.B. Datenanalyse, Identifizierung von Nutzungstrends, Bestimmung der Wirksamkeit unserer                    Werbekampagnen und zur Bewertung und Verbesserung unseres Dienstes, unserer Produkte,                    Dienstleistungen, Marketing und Ihrer Erfahrung.</p>            </li>        </ul>        <p>Wir können Ihre personenbezogenen Daten in den folgenden Situationen weitergeben:</p>        <ul>            <li><strong>Mit Dienstleistern:</strong> Wir können Ihre personenbezogenen Daten mit Dienstleistern teilen,                um die Nutzung unseres Dienstes zu überwachen und zu analysieren, um Sie zu kontaktieren.</li>            <li><strong>Für Geschäftsübertragungen:</strong> Wir können Ihre personenbezogenen Daten im Zusammenhang mit                oder während Verhandlungen über eine Fusion, den Verkauf von Unternehmensvermögen, eine Finanzierung                oder den Erwerb eines Teils oder unseres gesamten Unternehmens an ein anderes Unternehmen weitergeben                oder übertragen.</li>            <li><strong>Mit Affiliates:</strong> Wir können Ihre Informationen mit unseren Affiliates teilen, in diesem                Fall werden wir von diesen Affiliates verlangen, diese Datenschutzerklärung einzuhalten. Affiliates                umfassen unsere Muttergesellschaft und alle anderen Tochtergesellschaften, Joint Venture Partner oder                andere Unternehmen, die wir kontrollieren oder die unter gemeinsamer Kontrolle mit uns stehen.</li>            <li><strong>Mit Geschäftspartnern:</strong> Wir können Ihre Informationen mit unseren Geschäftspartnern                teilen, um Ihnen bestimmte Produkte, Dienstleistungen oder Werbeaktionen anzubieten.</li>            <li><strong>Mit anderen Benutzern:</strong> Wenn Sie persönliche Informationen teilen oder anderweitig in                den öffentlichen Bereichen mit anderen Benutzern interagieren, können diese Informationen von allen                Benutzern eingesehen und öffentlich nach außen verbreitet werden.</li>            <li><strong>Mit Ihrer Zustimmung</strong>: Wir können Ihre personenbezogenen Daten für jeden anderen Zweck                mit Ihrer Zustimmung offenlegen.</li>        </ul>        <h4>Aufbewahrung Ihrer personenbezogenen Daten</h4>        <p>Das Unternehmen wird Ihre personenbezogenen Daten nur so lange aufbewahren, wie es für die in dieser            Datenschutzerklärung festgelegten Zwecke erforderlich ist. Wir werden Ihre personenbezogenen Daten in dem            Umfang aufbewahren und verwenden, wie es zur Erfüllung unserer gesetzlichen Verpflichtungen (zum Beispiel,            wenn wir Ihre Daten zur Einhaltung geltender Gesetze aufbewahren müssen), zur Beilegung von Streitigkeiten            und zur Durchsetzung unserer rechtlichen Vereinbarungen und Richtlinien erforderlich ist.</p>        <p>Das Unternehmen wird auch Nutzungsdaten für interne Analysezwecke aufbewahren. Nutzungsdaten werden in der            Regel für einen kürzeren Zeitraum aufbewahrt, es sei denn, diese Daten werden verwendet, um die Sicherheit            zu stärken oder die Funktionalität unseres Dienstes zu verbessern, oder wir sind gesetzlich verpflichtet,            diese Daten für längere Zeiträume aufzubewahren.</p>        <h4>Übertragung Ihrer personenbezogenen Daten</h4>        <p>Ihre Informationen, einschließlich personenbezogener Daten, werden in den Betriebsbüros des Unternehmens und            an allen anderen Orten verarbeitet, an denen sich die an der Verarbeitung beteiligten Parteien befinden. Das            bedeutet, dass diese Informationen an – und auf – Computern außerhalb Ihres Bundesstaates, Ihrer Provinz,            Ihres Landes oder einer anderen staatlichen Gerichtsbarkeit übertragen und gespeichert werden können, wo die            Datenschutzgesetze möglicherweise von denen Ihrer Gerichtsbarkeit abweichen.</p>        <p>Ihre Zustimmung zu dieser Datenschutzerklärung, gefolgt von Ihrer Übermittlung solcher Informationen, stellt            Ihre Zustimmung zu dieser Übertragung dar.</p>        <p>Das Unternehmen wird alle angemessenen Schritte unternehmen, um sicherzustellen, dass Ihre Daten sicher und            in Übereinstimmung mit dieser Datenschutzerklärung behandelt werden, und es wird keine Übertragung Ihrer            personenbezogenen Daten an eine Organisation oder ein Land stattfinden, es sei denn, es gibt angemessene            Kontrollen, einschließlich der Sicherheit Ihrer Daten und anderer persönlicher Informationen.</p>        <h4>Löschen Ihrer personenbezogenen Daten</h4>        <p>Sie haben das Recht, Ihre personenbezogenen Daten zu löschen oder die Unterstützung beim Löschen der            personenbezogenen Daten zu beantragen, die wir über Sie gesammelt haben.</p>        <p>Unser Dienst kann Ihnen die Möglichkeit geben, bestimmte Informationen über Sie innerhalb des Dienstes zu            löschen.</p>        <p>Sie können Ihre Informationen jederzeit aktualisieren, ändern oder löschen, indem Sie sich in Ihr Konto            einloggen, falls Sie eines haben, und den Abschnitt mit den Kontoeinstellungen besuchen, der es Ihnen            ermöglicht, Ihre persönlichen Informationen zu verwalten. Sie können uns auch kontaktieren, um den Zugriff            auf, die Berichtigung oder die Löschung der persönlichen Informationen zu beantragen, die Sie uns zur            Verfügung gestellt haben.</p>        <p>Bitte beachten Sie jedoch, dass wir bestimmte Informationen aufbewahren müssen, wenn wir gesetzlich dazu            verpflichtet sind oder eine rechtliche Grundlage dafür haben.</p>        <h4>Offenlegung Ihrer personenbezogenen Daten</h4>        <h4>Geschäftsvorgänge</h4>        <p>Wenn das Unternehmen an einer Fusion, einem Erwerb oder einem Verkauf von Vermögenswerten beteiligt ist,            können Ihre personenbezogenen Daten übertragen werden. Wir werden eine Benachrichtigung bereitstellen, bevor            Ihre personenbezogenen Daten übertragen werden und einer anderen Datenschutzerklärung unterliegen.</p>        <h4>Gesetzliche Anforderungen</h4>        <p>Unter bestimmten Umständen kann das Unternehmen verpflichtet sein, Ihre personenbezogenen Daten offenzulegen,            wenn dies gesetzlich vorgeschrieben ist oder als Reaktion auf gültige Anfragen von öffentlichen Behörden            (z.B. einem Gericht oder einer Regierungsbehörde).</p>        <h6>Andere rechtliche Anforderungen</h6>        <p>Das Unternehmen kann Ihre personenbezogenen Daten im guten Glauben offenlegen, dass eine solche Maßnahme            notwendig ist, um:</p>        <ul>            <li>einer gesetzlichen Verpflichtung nachzukommen</li>            <li>die Rechte oder das Eigentum des Unternehmens zu schützen und zu verteidigen</li>            <li>mögliche Fehlverhalten im Zusammenhang mit dem Dienst zu verhindern oder zu untersuchen</li>            <li>die persönliche Sicherheit der Benutzer des Dienstes oder der Öffentlichkeit zu schützen</li>            <li>vor rechtlicher Haftung zu schützen</li>        </ul>        <h4>Sicherheit Ihrer personenbezogenen Daten</h4>        <p>Die Sicherheit Ihrer personenbezogenen Daten ist            uns wichtig, aber denken Sie daran, dass keine Methode der Übertragung über das Internet oder der            elektronischen Speicherung 100% sicher ist. Während wir uns bemühen, kommerziell akzeptable Mittel zum            Schutz Ihrer personenbezogenen Daten zu verwenden, können wir deren absolute Sicherheit nicht garantieren.        </p>        <h4>Datenschutz von Kindern</h4>        <p>Unser Dienst richtet sich nicht an Personen unter 13 Jahren. Wir sammeln nicht wissentlich persönlich            identifizierbare Informationen von Personen unter 13 Jahren. Wenn Sie ein Elternteil oder Vormund sind und            wissen, dass Ihr Kind uns personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie uns bitte.            Wenn wir feststellen, dass wir personenbezogene Daten von Personen unter 13 Jahren ohne Überprüfung der            elterlichen Zustimmung gesammelt haben, unternehmen wir Schritte, um diese Informationen von unseren Servern            zu entfernen.</p>        <p>Wenn wir uns auf Zustimmung als rechtliche Grundlage für die Verarbeitung Ihrer Informationen stützen müssen            und Ihr Land die Zustimmung eines Elternteils erfordert, können wir die Zustimmung Ihres Elternteils            verlangen, bevor wir diese Informationen sammeln und verwenden.</p>        <h4>Links zu anderen Websites</h4>        <p>Unser Dienst kann Links zu anderen Websites enthalten, die nicht von uns betrieben werden. Wenn Sie auf einen            Link eines Drittanbieters klicken, werden Sie zu dieser Website des Drittanbieters weitergeleitet. Wir            empfehlen Ihnen dringend, die Datenschutzerklärung jeder Website, die Sie besuchen, zu überprüfen.</p>        <p>Wir haben keine Kontrolle über und übernehmen keine Verantwortung für die Inhalte, Datenschutzrichtlinien            oder Praktiken von Websites oder Diensten Dritter.</p>        <h4>Änderungen dieser Datenschutzerklärung</h4>        <p>Wir können unsere Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über alle Änderungen            informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.</p>        <p>Wir werden Sie per E-Mail und/oder durch einen auffälligen Hinweis auf unserem Dienst informieren, bevor die            Änderung in Kraft tritt, und das Datum der "Letzten Aktualisierung" oben in dieser Datenschutzerklärung            aktualisieren.</p>        <p>Sie werden empfohlen, diese Datenschutzerklärung regelmäßig auf Änderungen zu überprüfen. Änderungen dieser            Datenschutzerklärung treten in Kraft, wenn sie auf dieser Seite veröffentlicht werden.</p>        <h4>Kontaktieren Sie uns</h4>        <p>Wenn Sie Fragen zu dieser Datenschutzerklärung haben, können Sie uns kontaktieren:</p>        <ul>            <li>                <p>Per E-Mail: hello&commat;pirathib-mahalingam.ch</p>            </li>            <li>                <p>Per Telefonnummer: +41 (0)76 433 499 2</p>            </li>        </ul>        }    </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutMeComponent', 'selector': 'app-about-me'},{'name': 'AboveTheFoldComponent', 'selector': 'app-above-the-fold'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BurgerMenuComponent', 'selector': 'app-burger-menu'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImprintComponent', 'selector': 'app-imprint'},{'name': 'InProgressComponent', 'selector': 'app-in-progress'},{'name': 'MailComponent', 'selector': 'app-mail'},{'name': 'MySkillsComponent', 'selector': 'app-my-skills'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'WorkComponent', 'selector': 'app-work'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PrivacyPolicyComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PrivacyPolicyComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

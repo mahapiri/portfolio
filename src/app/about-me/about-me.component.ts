@@ -16,19 +16,29 @@ export class AboutMeComponent implements OnInit {
     constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
 
+    /**
+     * start to check the visibility
+     */
     ngOnInit(): void {
         this.checkVisibility();
     }
 
-
+    /**
+     * check the visibilitz while scrolling
+     *
+     * @memberof AboutMeComponent
+     */
     @HostListener('window:scroll', [])
-
 
     onWindowScroll() {
         this.checkVisibility();
     }
 
-
+    /**
+     * it checks the visibility of the section to start the animation
+     *
+     * @memberof AboutMeComponent
+     */
     checkVisibility() {
         setTimeout(() => {
             let elementId = 'about-me';

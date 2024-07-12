@@ -13,7 +13,13 @@ export class ImprintComponent {
   hover: boolean = false;
   currentLanguage: string;
 
-  constructor(public languageService: LanguageService) { 
+
+  /**
+  * Creates an instance of ImprintComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  */
+  constructor(public languageService: LanguageService) {
     this.currentLanguage = this.languageService.getLanguage();
     this.languageService.language = this.currentLanguage;
   }

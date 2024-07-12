@@ -8,6 +8,12 @@ export class VisibilityOnScrollService {
 
   constructor() { }
 
+
+  /**
+  * Updates the visibility status of a given element based on the window's scroll position.
+  * 
+  * @param {string} elementId - The ID of the element to check visibility for.
+  */
   onWindowScroll(elementId: string) {
     let section = document.getElementById(elementId);
     if (section) {
@@ -23,6 +29,12 @@ export class VisibilityOnScrollService {
   }
 
   
+  /**
+  * Checks if the specified element is visible.
+  * 
+  * @param {string} elementId - The ID of the element to check.
+  * @returns {boolean} True if the element is visible, false otherwise.
+  */
   isElementVisible(elementId: string): boolean {
     return this.visibilityMap[elementId] || false;
   }

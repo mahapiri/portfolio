@@ -13,6 +13,12 @@ export class PrivacyPolicyComponent implements OnInit {
   hover: boolean = false;
   currentLanguage: string;
 
+
+  /**
+  * Creates an instance of PrivacyPolicyComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  */
   constructor(public languageService: LanguageService) { 
     this.currentLanguage = this.languageService.getLanguage();
     this.languageService.language = this.currentLanguage;

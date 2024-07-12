@@ -11,6 +11,12 @@ import { LanguageService } from '../services/language/language.service';
 export class MailComponent implements OnInit {
   currentLanguage: string;
 
+
+  /**
+  * Creates an instance of InProgressComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  */
   constructor(public languageService: LanguageService) {
     this.currentLanguage = this.languageService.getLanguage();
     this.languageService.language = this.currentLanguage;

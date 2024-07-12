@@ -12,26 +12,38 @@ import { VisibilityOnScrollService } from '../services/visibility-on-scroll/visi
 export class AboveTheFoldComponent implements OnInit {
   isVisible: boolean = false;
 
-  constructor(public languageService : LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) {}
+  constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
+
+  /**
+  * start to check the visibility
+  */
   ngOnInit(): void {
     this.checkVisibility();
-}
+  }
 
+  /**
+   * check the visibilitz while scrolling
+   *
+   * @memberof AboveTheFoldComponent
+   */
+  @HostListener('window:scroll', [])
 
-@HostListener('window:scroll', [])
-
-
-onWindowScroll() {
+  onWindowScroll() {
     this.checkVisibility();
-}
+  }
 
 
-checkVisibility() {
+  /**
+   * it checks the visibility of the section to start the animation
+   *
+   * @memberof AboutMeComponent
+   */
+  checkVisibility() {
     setTimeout(() => {
-        let elementId = 'atf';
-        this.visibilityOnScrollService.onWindowScroll(elementId);
-        this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
+      let elementId = 'atf';
+      this.visibilityOnScrollService.onWindowScroll(elementId);
+      this.isVisible = this.visibilityOnScrollService.isElementVisible(elementId);
     }, 100);
-}
+  }
 }

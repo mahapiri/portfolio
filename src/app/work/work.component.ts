@@ -43,22 +43,36 @@ export class WorkComponent {
   ]
   isVisible: boolean = false;
 
+
+  /**
+  * Creates an instance of WorkComponent.
+  * 
+  * @param {LanguageService} languageService - The language service to manage language settings.
+  * @param {VisibilityOnScrollService} visibilityOnScrollService - The service to check element visibility on scroll.
+  */
   constructor(public languageService: LanguageService, private visibilityOnScrollService: VisibilityOnScrollService) { }
 
 
+  /**
+  * Initializes the component and checks the visibility of work elements.
+  */
   ngOnInit(): void {
     this.checkVisibility();
   }
 
 
+  /**
+  * Listens to window scroll events and triggers visibility check.
+  */
   @HostListener('window:scroll', [])
-
-
   onWindowScroll() {
     this.checkVisibility();
   }
 
 
+  /**
+  * Checks the visibility of each work element on scroll.
+  */
   checkVisibility() {
     setTimeout(() => {
       for (let i = 0; i < this.work.length; i++) {
@@ -70,6 +84,12 @@ export class WorkComponent {
   }
 
   
+  /**
+  * Checks if a specific work element is visible.
+  * 
+  * @param {number} index - The index of the work element to check.
+  * @returns {boolean} True if the element is visible, false otherwise.
+  */
   isElementVisible(index: number): boolean {
     return this.visibilityOnScrollService.isElementVisible(`work-${index}`);
   }
