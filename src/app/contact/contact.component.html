@@ -35,7 +35,7 @@
                                     errorMsg.name.clicked ? (name.valid ? 'done-border' : 'error-border') : ''"
                                     required>
                                 <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
-                                    alt="Warn Symbol" [ngClass]="errorMsg.name.clicked ? 'warn-symbol' : 'd-none'">
+                                    alt="Warn Symbol" [ngClass]="errorMsg.name.clicked ? 'warn-symbol warn-symbol-txt' : 'd-none'">
                                 @if (errorMsg.name.clicked && !name.valid) {
                                 @if (languageService.language == 'English') {
                                 <span>{{ errorMsg.name.messageEn }}</span>
@@ -53,7 +53,7 @@
                                 [ngClass]="errorMsg.email.clicked ? (email.valid ? 'done-border' : 'error-border') : ''"
                                 required>
                             <img [src]="email.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
-                                [ngClass]="errorMsg.email.clicked ? 'warn-symbol' : 'd-none'">
+                                [ngClass]="errorMsg.email.clicked ? 'warn-symbol warn-symbol-txt' : 'd-none'">
                             @if (errorMsg.email.clicked && !email.valid) {
                             @if (languageService.language == 'English') {
                             <span>{{ errorMsg.email.messageEn }}</span>

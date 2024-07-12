@@ -151,7 +151,7 @@ export class ContactComponent implements OnInit {
   */
   openNewTab() {
     if (typeof window !== 'undefined') {
-      window.open('/mail', '_blank');
+      window.location.href ='/mail';
     }
   }
 
