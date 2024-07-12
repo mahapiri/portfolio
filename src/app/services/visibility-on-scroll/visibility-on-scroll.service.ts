@@ -16,7 +16,7 @@ export class VisibilityOnScrollService {
   */
   onWindowScroll(elementId: string) {
     let section = document.getElementById(elementId);
-    if (section) {
+    if (section && typeof window !== 'undefined') {
       const bounding = section.getBoundingClientRect();
       const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
@@ -28,7 +28,7 @@ export class VisibilityOnScrollService {
     }
   }
 
-  
+
   /**
   * Checks if the specified element is visible.
   * 

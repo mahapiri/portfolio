@@ -28,7 +28,6 @@ export class AboveTheFoldComponent implements OnInit {
    * @memberof AboveTheFoldComponent
    */
   @HostListener('window:scroll', [])
-
   onWindowScroll() {
     this.checkVisibility();
   }

@@ -150,7 +150,9 @@ export class ContactComponent implements OnInit {
   * Opens a new tab with the mail URL.
   */
   openNewTab() {
-    window.open('/mail', '_blank');
+    if (typeof window !== 'undefined') {
+      window.open('/mail', '_blank');
+    }
   }
 
 
