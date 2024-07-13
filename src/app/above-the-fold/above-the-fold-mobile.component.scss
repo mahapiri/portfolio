@@ -1,38 +1,43 @@
 @media screen and (max-height: 900px) {
     .shape {
-        bottom: -630px;
+        bottom: -277px;
     }
 }
 
 @media screen and (min-height: 900px) and (max-height: 1000px) {
     .shape {
-        bottom: -690px;
+        bottom: -372px;
     }
 }
 
 @media screen and (min-height: 1000px) and (max-height: 1100px) {
     .shape {
-        bottom: -750px;
+        bottom: -379px;
     }
 }
 
 @media screen and (min-height: 1100px) and (max-height: 1200px) {
     .shape {
-        bottom: -790px;
+        bottom: -430px;
     }
 }
 
 @media screen and (min-height: 1200px) and (max-height: 1300px) {
     .shape {
-        bottom: -840px;
+        bottom: -480px;
     }
 }
 
 @media screen and (min-height: 1300px) and (max-height: 1368px) {
     .shape {
-        // bottom: -520px;
-        bottom: -880px;
+        bottom: -520px;
+    }
+}
 
+@media screen and (min-width: 4000px) {
+    .profile-img {
+        z-index: 3;
+        border-radius: 50%;
     }
 }
 
@@ -40,10 +45,6 @@
     .atf-content {
         bottom: 305px;
     }
-}
-
-@media screen and (min-width: 1440px) {
-
 }
 
 @media screen and (max-width: 1440px) {

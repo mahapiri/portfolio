@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-margin-top: 114px;
+    scroll-margin-top: 100px;
     padding-top: 114px;
     overflow-x: clip;
     position: relative;
@@ -24,7 +24,7 @@
 .shape {
     width: 100%;
     position: relative;
-    // bottom: -515px;
+    bottom: -515px;
     z-index: 2;
     -webkit-user-select: none;
     user-select: none;
