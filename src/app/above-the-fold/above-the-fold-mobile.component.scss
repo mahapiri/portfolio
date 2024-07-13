@@ -1,36 +1,38 @@
 @media screen and (max-height: 900px) {
     .shape {
-        bottom: -277px;
+        bottom: -630px;
     }
 }
 
 @media screen and (min-height: 900px) and (max-height: 1000px) {
     .shape {
-        bottom: -372px;
+        bottom: -690px;
     }
 }
 
 @media screen and (min-height: 1000px) and (max-height: 1100px) {
     .shape {
-        bottom: -379px;
+        bottom: -750px;
     }
 }
 
 @media screen and (min-height: 1100px) and (max-height: 1200px) {
     .shape {
-        bottom: -430px;
+        bottom: -790px;
     }
 }
 
 @media screen and (min-height: 1200px) and (max-height: 1300px) {
     .shape {
-        bottom: -480px;
+        bottom: -840px;
     }
 }
 
 @media screen and (min-height: 1300px) and (max-height: 1368px) {
     .shape {
-        bottom: -520px;
+        // bottom: -520px;
+        bottom: -880px;
+
     }
 }
 
@@ -38,6 +40,10 @@
     .atf-content {
         bottom: 305px;
     }
+}
+
+@media screen and (min-width: 1440px) {
+
 }
 
 @media screen and (max-width: 1440px) {
