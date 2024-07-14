@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     scroll-margin-top: 100px;
+    margin-top: 114px;
     padding-bottom: 114px;
     overflow-y: clip;
     position: relative;
@@ -42,7 +43,7 @@ h2 {
 .border {
     position: absolute;
     top: 54px;
-    left: -100px;
+    left: -54px;
     width: 50px;
     border-top: 4px solid var(--purple);
 }

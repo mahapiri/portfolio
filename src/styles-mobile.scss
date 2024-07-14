@@ -20,3 +20,9 @@
         line-height: 19.2px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    h2 {
+        font-size: 38px;
+    }
+}

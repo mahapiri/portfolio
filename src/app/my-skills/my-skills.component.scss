@@ -28,9 +28,10 @@
     align-items: center;
 }
 
-.icon-div {
+.icon-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 123px;
     row-gap: 56px;
     position: relative;
@@ -63,7 +64,6 @@
 }
 
 .icon {
-    height: 60px;
     transition: 100ms ease-in-out;
 
     &:hover {
