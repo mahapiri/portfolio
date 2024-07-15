@@ -18,6 +18,7 @@ export class ContactComponent implements OnInit {
   hover: boolean = false;
   boxHover: boolean = false;
   marked: boolean = false;
+  filled: boolean = false;
   clicked: boolean = false;
   http = inject(HttpClient);
   router = inject(Router);
@@ -112,19 +113,20 @@ export class ContactComponent implements OnInit {
     }, 100);
   }
 
-
   /**
   * Handles the form submission, validates the form and sends contact data.
   * 
   * @param {NgForm} ngForm - The form to be submitted.
   */
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.marked) {
-
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.marked && this.validateEmail(this.contactData.email)) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            ngForm.resetForm();
+            setTimeout(() => {
+              ngForm.resetForm();
+              this.marked = !this.marked;
+            }, 1000);
           },
           error: (error) => {
             console.error(error);
@@ -132,16 +134,18 @@ export class ContactComponent implements OnInit {
           complete: () => console.info('send post complete'),
         });
       this.openNewTab();
-      this.marked = !this.marked;
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.marked = !this.marked;
-      ngForm.resetForm();
+      setTimeout(() => {
+        ngForm.resetForm();
+        this.marked = !this.marked;
+      }, 1000);
     } else {
       this.checked('name');
       this.checked('email');
       this.checked('message');
       this.proofCheckbox();
     }
+    this.checkIfFilled();
   }
 
 
@@ -162,7 +166,7 @@ export class ContactComponent implements OnInit {
     this.errorMsg.checkbox.clicked = true;
   }
 
-
+  
   /**
   * Marks the form field as checked and updates the error messages.
   * 
@@ -188,5 +192,26 @@ export class ContactComponent implements OnInit {
       this.errorMsg.message.fieldEn = this.emptyPlaceholder;
       this.errorMsg.message.fieldDe = this.emptyPlaceholder;
     }
+    this.checkIfFilled();
+  }
+
+
+  /**
+  * Checks if all fields are filled, the email is valid, and the checkbox is marked.
+  */
+  checkIfFilled() {
+    this.filled = this.contactData.name !== '' && this.validateEmail(this.contactData.email) && this.contactData.message !== '' && this.marked;
+  }
+
+
+  /**
+  * Validates the email format.
+  * 
+  * @param {string} email - The email to be validated.
+  * @returns {boolean} - Returns true if the email is valid, otherwise false.
+  */
+  validateEmail(email: string): boolean {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
   }
 }

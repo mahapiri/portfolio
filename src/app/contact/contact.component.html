@@ -31,7 +31,7 @@
                             <div class="input-field textfield-height">
                                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
                                     [placeholder]="languageService.language == 'English' ? errorMsg.name.fieldEn : errorMsg.name.fieldDe"
-                                    (click)="checked('name')" [ngClass]="
+                                    (click)="checked('name')" (ngModelChange)="checkIfFilled()" [ngClass]="
                                     errorMsg.name.clicked ? (name.valid ? 'done-border' : 'error-border') : ''"
                                     required>
                                 <img [src]="name.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
@@ -49,7 +49,7 @@
                         <div class="input-field textfield-height">
                             <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
                                 [placeholder]="languageService.language == 'English' ? errorMsg.email.fieldEn : errorMsg.email.fieldDe"
-                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (click)="checked('email')"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (click)="checked('email')" (ngModelChange)="checkIfFilled()"
                                 [ngClass]="errorMsg.email.clicked ? (email.valid ? 'done-border' : 'error-border') : ''"
                                 required>
                             <img [src]="email.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'" alt="Warn Symbol"
@@ -67,7 +67,7 @@
                             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="0" type="text"
                                 id="message" name="message"
                                 [placeholder]="languageService.language == 'English' ? errorMsg.message.fieldEn : errorMsg.message.fieldDe"
-                                rows="7" (click)="checked('message')"
+                                rows="7" (click)="checked('message')" (ngModelChange)="checkIfFilled()"
                                 [ngClass]="errorMsg.message.clicked ? (message.valid ? 'done-border' : 'error-border') : ''"
                                 required></textarea>
                             <img [src]="message.valid ? 'assets/img/done.svg' : 'assets/img/error.svg'"
@@ -88,7 +88,7 @@
                                     <img id="checkbox" (mouseenter)="boxHover = true;" (mouseleave)="boxHover = false;"
                                         [src]=" boxHover ? (marked ? 'assets/img/checkbox/checked-hover.svg' : 'assets/img/checkbox/default-hover.svg') 
                                     : (marked ? 'assets/img/checkbox/checked.svg' : 'assets/img/checkbox/default.svg')"
-                                        alt="Checkbox" (click)="checked('checkbox')">
+                                        alt="Checkbox" (click)="checked('checkbox')" (ngModelChange)="checkIfFilled()">
                                     <div class="checkbox-text">
                                         @if (languageService.language == 'English') {
                                         <p>I've read the </p>
@@ -112,9 +112,9 @@
                                 }
                             </div>
                             <div class="submit-div">
-                                <input [ngClass]="marked ? 'success-btn' : ''"
+                                <input [ngClass]="filled ? 'success-btn' : ''"
                                     *ngIf="languageService.language == 'English'" type="submit" value="Send message :)">
-                                <input [ngClass]="marked ? 'success-btn' : ''"
+                                <input [ngClass]="filled ? 'success-btn' : ''"
                                     *ngIf="languageService.language == 'German'" type="submit"
                                     value="Nachricht senden :)">
                             </div>

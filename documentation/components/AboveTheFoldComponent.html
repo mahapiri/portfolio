@@ -336,8 +336,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/app/above-the-fold/above-the-fold.component.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="31"
+                                    class="link-to-prism">src/app/above-the-fold/above-the-fold.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -377,8 +377,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="42"
-                                    class="link-to-prism">src/app/above-the-fold/above-the-fold.component.ts:42</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/app/above-the-fold/above-the-fold.component.ts:41</a></div>
                         </td>
                     </tr>
 
@@ -464,8 +464,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/app/above-the-fold/above-the-fold.component.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="31"
+                                    class="link-to-prism">src/app/above-the-fold/above-the-fold.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -583,7 +583,6 @@ export class AboveTheFoldComponent implements OnInit {
    * @memberof AboveTheFoldComponent
    */
   @HostListener(&#x27;window:scroll&#x27;, [])
-
   onWindowScroll() {
     this.checkVisibility();
   }
@@ -661,7 +660,7 @@ export class AboveTheFoldComponent implements OnInit {
                             &lt;a href&#x3D;&quot;https://github.com/mahapiri&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;img src&#x3D;&quot;assets/img/github-btn.svg&quot;
                                     alt&#x3D;&quot;Github&quot;&gt;&lt;/a&gt;
                             &lt;a href&#x3D;&quot;#contact&quot;&gt;&lt;img src&#x3D;&quot;assets/img/mail-btn.svg&quot; alt&#x3D;&quot;E-Mail&quot;&gt;&lt;/a&gt;
-                            &lt;a href&#x3D;&quot;https://linkedin.com&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;img src&#x3D;&quot;assets/img/linkedin-btn.svg&quot;
+                            &lt;a href&#x3D;&quot;https://www.linkedin.com/in/mahapiri/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;img src&#x3D;&quot;assets/img/linkedin-btn.svg&quot;
                                     alt&#x3D;&quot;Linkedin&quot;&gt;&lt;/a&gt;
                         &lt;/div&gt;
                         &lt;a href&#x3D;&quot;#contact&quot; class&#x3D;&quot;mail-div&quot;&gt;hello&amp;#64;pirathib-mahalingam.ch&lt;/a&gt;
@@ -699,7 +698,7 @@ export class AboveTheFoldComponent implements OnInit {
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-margin-top: 114px;
+    scroll-margin-top: 100px;
     padding-top: 114px;
     overflow-x: clip;
     position: relative;
@@ -707,7 +706,6 @@ export class AboveTheFoldComponent implements OnInit {
 
 .shape-content {
     width: 100vw;
-    max-width: 2876px;
     position: absolute;
     z-index: 3;
 }
@@ -717,9 +715,6 @@ export class AboveTheFoldComponent implements OnInit {
     max-width: 1440px;
 }
 
-.shape-div {
-    width: 100%;
-}
 
 .shape {
     width: 100%;
@@ -728,6 +723,7 @@ export class AboveTheFoldComponent implements OnInit {
     z-index: 2;
     -webkit-user-select: none;
     user-select: none;
+    object-fit: cover;
 }
 
 .shape-mobile {
@@ -1132,6 +1128,13 @@ export class AboveTheFoldComponent implements OnInit {
     }
 }
 
+@media screen and (min-width: 4000px) {
+    .profile-img {
+        z-index: 3;
+        border-radius: 50%;
+    }
+}
+
 @media screen and (min-width: 2300px) {
     .atf-content {
         bottom: 305px;
@@ -1330,7 +1333,7 @@ export class AboveTheFoldComponent implements OnInit {
     }
 
     .atf-links {
-        bottom: 190px;
+        bottom: 180px;
     }
 
     .contact-section {
@@ -1378,7 +1381,7 @@ export class AboveTheFoldComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div id="atf" class="atf">    <div class="shape-content">        <img src="assets/img/atf-shape.svg" alt="Shape" class="shape" draggable="false">    </div>    <div class="atf-section">        <div class="atf-undersection">            <div class="atf-content">                <div class="atf-title">                    <div class="photo-div">                        <div class="img-block">                            <img class="profile-img" src="assets/img/piri.png" alt="Piri">                        </div>                        <div class="shadow-block">                            <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow">                        </div>                    </div>                    <div class="right-section">                        <div class="title-div">                            <span class="title-content">                                @if (languageService.language == \'English\') {                                <p class="verticalText iam" [class.animationRotation]="isVisible">I am</p>                                }                                @if (languageService.language == \'German\') {                                <p class="verticalText ichbin" [class.animationRotation]="isVisible">Ich bin</p>                                }                                <h3 class="title-name" [class.animationSlideInRight]="isVisible">Pirathib Mahalingam                                </h3>                                @if (languageService.language == \'English\') {                                <p class="title-profession" [class.typewriter]="isVisible">FRONTEND DEVELOPER</p>                                }                                @if (languageService.language == \'German\') {                                <p class="title-profession" [class.typewriter]="isVisible">FRONTEND-ENTWICKLER</p>                                }                            </span>                            <a href="#contact" class="button-div">                                @if (languageService.language == \'English\') {                                <button>Let\'s talk!</button>                                }                                @if (languageService.language == \'German\') {                                <button>Sprechen wir!</button>                                }                            </a>                        </div>                    </div>                </div>            </div>            <div class="atf-links">                <div class="contact-div">                    <div class="contact-section" [class.animationSlideInLeft]="isVisible">                        <div class="border"></div>                        <div class="socialmedia-btns">                            <a href="https://github.com/mahapiri" target="_blank"><img src="assets/img/github-btn.svg"                                    alt="Github"></a>                            <a href="#contact"><img src="assets/img/mail-btn.svg" alt="E-Mail"></a>                            <a href="https://linkedin.com" target="_blank"><img src="assets/img/linkedin-btn.svg"                                    alt="Linkedin"></a>                        </div>                        <a href="#contact" class="mail-div">hello&#64;pirathib-mahalingam.ch</a>                    </div>                </div>                <div class="scroll-shadow-div">                    <div class="scroll-div" [class.animationOscillation]="isVisible">                        <div class="scroll-section">                            @if (languageService.language == \'English\') {                            <p>Scroll down</p>                            }                            @if (languageService.language == \'German\') {                            <p>Scrollen</p>                            }                            <img src="assets/img/arrow-down-line.svg" alt="Arrow-down">                        </div>                    </div>                    <div class="shadow-1">                        <img src="/assets/img/shadows/about-me.svg" alt="Shadow" class="shadow-1-img">                    </div>                </div>            </div>            <img src="assets/img/atf-shape-mobile.svg" alt="Shape" class="shape-mobile" draggable="false">        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div id="atf" class="atf">    <div class="shape-content">        <img src="assets/img/atf-shape.svg" alt="Shape" class="shape" draggable="false">    </div>    <div class="atf-section">        <div class="atf-undersection">            <div class="atf-content">                <div class="atf-title">                    <div class="photo-div">                        <div class="img-block">                            <img class="profile-img" src="assets/img/piri.png" alt="Piri">                        </div>                        <div class="shadow-block">                            <img src="assets/img/shadows/photo-bgr.svg" alt="Shadow" class="shadow">                        </div>                    </div>                    <div class="right-section">                        <div class="title-div">                            <span class="title-content">                                @if (languageService.language == \'English\') {                                <p class="verticalText iam" [class.animationRotation]="isVisible">I am</p>                                }                                @if (languageService.language == \'German\') {                                <p class="verticalText ichbin" [class.animationRotation]="isVisible">Ich bin</p>                                }                                <h3 class="title-name" [class.animationSlideInRight]="isVisible">Pirathib Mahalingam                                </h3>                                @if (languageService.language == \'English\') {                                <p class="title-profession" [class.typewriter]="isVisible">FRONTEND DEVELOPER</p>                                }                                @if (languageService.language == \'German\') {                                <p class="title-profession" [class.typewriter]="isVisible">FRONTEND-ENTWICKLER</p>                                }                            </span>                            <a href="#contact" class="button-div">                                @if (languageService.language == \'English\') {                                <button>Let\'s talk!</button>                                }                                @if (languageService.language == \'German\') {                                <button>Sprechen wir!</button>                                }                            </a>                        </div>                    </div>                </div>            </div>            <div class="atf-links">                <div class="contact-div">                    <div class="contact-section" [class.animationSlideInLeft]="isVisible">                        <div class="border"></div>                        <div class="socialmedia-btns">                            <a href="https://github.com/mahapiri" target="_blank"><img src="assets/img/github-btn.svg"                                    alt="Github"></a>                            <a href="#contact"><img src="assets/img/mail-btn.svg" alt="E-Mail"></a>                            <a href="https://www.linkedin.com/in/mahapiri/" target="_blank"><img src="assets/img/linkedin-btn.svg"                                    alt="Linkedin"></a>                        </div>                        <a href="#contact" class="mail-div">hello&#64;pirathib-mahalingam.ch</a>                    </div>                </div>                <div class="scroll-shadow-div">                    <div class="scroll-div" [class.animationOscillation]="isVisible">                        <div class="scroll-section">                            @if (languageService.language == \'English\') {                            <p>Scroll down</p>                            }                            @if (languageService.language == \'German\') {                            <p>Scrollen</p>                            }                            <img src="assets/img/arrow-down-line.svg" alt="Arrow-down">                        </div>                    </div>                    <div class="shadow-1">                        <img src="/assets/img/shadows/about-me.svg" alt="Shadow" class="shadow-1-img">                    </div>                </div>            </div>            <img src="assets/img/atf-shape-mobile.svg" alt="Shape" class="shape-mobile" draggable="false">        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'AboutMeComponent', 'selector': 'app-about-me'},{'name': 'AboveTheFoldComponent', 'selector': 'app-above-the-fold'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BurgerMenuComponent', 'selector': 'app-burger-menu'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImprintComponent', 'selector': 'app-imprint'},{'name': 'InProgressComponent', 'selector': 'app-in-progress'},{'name': 'MailComponent', 'selector': 'app-mail'},{'name': 'MySkillsComponent', 'selector': 'app-my-skills'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'WorkComponent', 'selector': 'app-work'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AboveTheFoldComponent'};

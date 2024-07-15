@@ -664,9 +664,11 @@ export class PortfolioComponent {
                 <pre class="line-numbers"><code class="language-scss">.portfolio {
     display: flex;
     justify-content: center;
-    scroll-margin-top: 114px;
+    scroll-margin-top: 100px;
     margin-top: 114px;
     overflow-x: clip;
+    position: relative;
+    z-index: 4;
 }
 
 .portfolio-content {
@@ -764,7 +766,12 @@ p {
     }
 
     .shadow-2 {
-        left: 801px;
+        left: 901px;
+    }
+
+    .title::after {
+        right: -525px;
+        width: 520px;
     }
 }
 
@@ -864,13 +871,14 @@ p {
     .shadow-2 {
         left: 201px;
     }
+
+    .title::before {
+        left: -28px;
+        width: 20px;
+    }
 }
 
 @media screen and (max-width: 375px) {
-    .portfolio {
-        scroll-margin-top: 120px;
-    }
-
     .portfolio-content {
         max-width: 375px;
     }
