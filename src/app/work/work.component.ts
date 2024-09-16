@@ -38,7 +38,7 @@ export class WorkComponent {
       descriptionDe: 'Eine Messenger-Plattform.',
       link: 'https://da-bubble.pirathib-mahalingam.ch',
       git: 'https://github.com/mahapiri/dabubble',
-      img: 'assets/img/mockup-vscode.png'
+      img: 'assets/img/mockup-dabubble.png'
     },
   ]
   isVisible: boolean = false;
