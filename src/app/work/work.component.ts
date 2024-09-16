@@ -32,12 +32,12 @@ export class WorkComponent {
       img: 'assets/img/mockup-elpollo.png'
     },
     {
-      title: 'DaBubble (in progress)',
+      title: 'DaBubble',
       subtitle: 'Angular | TypeScript | HTML | CSS | Firebase',
       descriptionEn: 'A messenger plattform.',
       descriptionDe: 'Eine Messenger-Plattform.',
-      link: '/in-progress',
-      git: 'https://github.com/mahapiri',
+      link: 'https://da-bubble.pirathib-mahalingam.ch',
+      git: 'https://github.com/mahapiri/dabubble',
       img: 'assets/img/mockup-vscode.png'
     },
   ]
