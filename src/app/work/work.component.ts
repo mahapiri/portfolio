@@ -40,6 +40,15 @@ export class WorkComponent {
       git: 'https://github.com/mahapiri/dabubble',
       img: 'assets/img/mockup-dabubble.png'
     },
+    {
+      title: 'Alpiger',
+      subtitle: 'Angular | TypeScript | HTML | CSS | Django | Django Rest Framework | Python | SQLite',
+      descriptionEn: 'Truck branch finder with info',
+      descriptionDe: 'LKW-Filialfinder mit Info-Service',
+      link: 'https://alpiger.pirathib-mahalingam.ch',
+      git: 'https://github.com/mahapiri/alpiger-fahrerapp-frontend',
+      img: 'assets/img/mockup-alpiger.png'
+    },
   ]
   isVisible: boolean = false;
 
