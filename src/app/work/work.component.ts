@@ -41,13 +41,22 @@ export class WorkComponent {
       img: 'assets/img/mockup-dabubble.png'
     },
     {
-      title: 'Alpiger',
-      subtitle: 'Angular | TypeScript | HTML | CSS | Django | Django Rest Framework | Python | SQLite',
-      descriptionEn: 'Truck branch finder with info',
-      descriptionDe: 'LKW-Filialfinder mit Info-Service',
+      title: 'Alpiger - Real Project',
+      subtitle: 'Angular | TypeScript | HTML | CSS | Django | Django Rest Framework | Python | SQLite | AWS EC2',
+      descriptionEn: 'Real-world application developed for a Swiss logistics company. A truck branch finder with location-based services and detailed information for drivers. \n\nTo test the app: Login with username: office and password: Hallo123@',
+      descriptionDe: 'Reale Anwendung für ein Schweizer Logistikunternehmen. Ein LKW-Filialfinder mit standortbasierten Services und detaillierten Informationen für Fahrer. \n\nZum Testen der App: Benutzername: office, Passwort: Hallo123@',
       link: 'https://alpiger.pirathib-mahalingam.ch',
       git: 'https://github.com/mahapiri/alpiger-fahrerapp-frontend',
       img: 'assets/img/mockup-alpiger.png'
+    },
+    {
+      title: 'Join Pro (Fullstack)',
+      subtitle: 'Angular | TypeScript | HTML | CSS | Django | Django Rest Framework | Python | SQLite',
+      descriptionEn: 'Advanced Kanban-based task management application with fullstack implementation. Create, update, and delete tasks, assign users and categories, and collaborate in real-time using a REST API backend built with Django.',
+      descriptionDe: 'Erweiterte Aufgabenmanagement-Anwendung basierend auf dem Kanban-System mit vollständiger Fullstack-Implementierung. Aufgaben erstellen, bearbeiten und löschen, Benutzer und Kategorien zuweisen und in Echtzeit zusammenarbeiten – unterstützt durch ein Django REST API-Backend.',
+      link: 'https://join-pro.pirathib-mahalingam.ch',
+      git: 'https://github.com/mahapiri/join-frontend',
+      img: 'assets/img/mockup-join-pro.png'
     },
   ]
   isVisible: boolean = false;
